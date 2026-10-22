@@ -26,7 +26,7 @@ const ogImage = SITE + (image || '/wp-content/uploads/2024/04/AlterPhaseRoofingO
 const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large';
 ---
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,6 +61,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
 
     <!-- Text size preference (set before paint to avoid a jump) -->
     <script is:inline>
+      document.documentElement.classList.replace('no-js', 'js');
       try { var t = localStorage.getItem('aprTextSize'); if (t) document.documentElement.dataset.text = t; } catch (e) {}
     </script>
 
@@ -77,7 +78,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
   </head>
   <body>
     <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${business.gtmId}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Skip to content</a>
     <Header path={path} />
     <main id="main">
       <slot />

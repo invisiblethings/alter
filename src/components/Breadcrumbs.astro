@@ -3,11 +3,7 @@ interface Props { crumbs: { name: string; url: string }[] }
 const { crumbs } = Astro.props;
 ---
 {crumbs.length > 1 && (
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <ol>
-      {crumbs.map((c, i) => (
-        <li>{i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>
-      ))}
-    </ol>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>{crumbs.map((c, i) => <li>{i < crumbs.length - 1 ? <a href={c.url}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}</ol>
   </nav>
 )}

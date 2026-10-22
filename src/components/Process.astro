@@ -1,19 +1,19 @@
 ---
-interface Props { dark?: boolean }
-const { dark = false } = Astro.props;
+interface Props { bg?: string; title?: string }
+const { bg = '', title = 'From first call to finished roof' } = Astro.props;
 ---
-<section class:list={['section', dark ? 'section-navy' : 'section-sand']} aria-labelledby="process-title">
+<section class:list={['sec', bg]} aria-labelledby="proc-h">
   <div class="wrap">
-    <div class="section-head center">
-      <span class="eyebrow">Simple, effective process</span>
-      <h2 id="process-title">What happens after you call</h2>
-      <p class:list={['lead', dark && 'muted']} style={dark ? 'color:#c9d4e8' : undefined}>No pushy salespeople, no surprises. The same four steps on every job.</p>
+    <div class="head center">
+      <span class="kicker">How it works</span>
+      <h2 id="proc-h">{title}</h2>
+      <p class="lead">No pushy salespeople and no surprise bills. Every job follows the same four steps.</p>
     </div>
-    <ol class="steps">
-      <li class="step"><h3>Roof inspection</h3><p>Schedule a no-obligation visit. We get on the roof, take photos, and find the real cause.</p></li>
-      <li class="step"><h3>Customized solutions</h3><p>We review what we found with you and propose clear options: repair or replace, with prices in writing.</p></li>
-      <li class="step"><h3>Quality execution</h3><p>Our own crew does the work, with Marke on site. We protect your property and clean up every day.</p></li>
-      <li class="step"><h3>Enjoy peace of mind</h3><p>Final walkthrough, written warranty, and a follow-up check. Your roof is documented and protected.</p></li>
+    <ol class="process">
+      <li><span class="when">Fast scheduling</span><h3>We inspect your roof</h3><p>We climb up, find the real cause and take photos so you can see exactly what we see.</p></li>
+      <li><span class="when">Within 24 hours</span><h3>You get a written quote</h3><p>Clear options, repair or replace, with materials, cleanup and permits itemized. No pressure to decide.</p></li>
+      <li><span class="when">On your schedule</span><h3>Our own crew does the work</h3><p>Marke is part of every job. We protect your property, keep neighbors happy and clean up daily.</p></li>
+      <li><span class="when">Walkthrough</span><h3>Warranty in writing</h3><p>Up to 50 years on materials and up to 25 years on our workmanship, documented and handed to you.</p></li>
     </ol>
   </div>
 </section>

@@ -18,8 +18,9 @@ import { gfm } from 'turndown-plugin-gfm';
 const ROOT = path.resolve(import.meta.dirname, '../..');
 const CACHE = path.join(import.meta.dirname, '.cache');
 const ORIGIN = 'https://alterphaseroofing.com';
-const OUT_PAGES = path.join(ROOT, 'src/content/pages');
-const OUT_POSTS = path.join(ROOT, 'src/content/posts');
+// Writes to a cache folder: src/content now holds the rewritten pages.
+const OUT_PAGES = path.join(import.meta.dirname, '.cache/migrated/pages');
+const OUT_POSTS = path.join(import.meta.dirname, '.cache/migrated/posts');
 const REFRESH = process.argv.includes('--refresh');
 
 const NOINDEX_LANDING = new Set(['/roofing-lp/', '/vinyl-siding-estimate/', '/roof-replacement-si/']);

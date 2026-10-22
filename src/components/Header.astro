@@ -3,113 +3,123 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 import Icon from './Icon.astro';
 import { business, telHref } from '../data/business';
-import { services, areas, company } from '../data/nav';
+import { services, areas, company, guides } from '../data/nav';
 interface Props { path: string }
 const { path } = Astro.props;
-const current = (url: string) => (path === url ? 'page' : undefined);
+const cur = (u: string) => (path === u || (u !== '/' && path.startsWith(u)) ? 'page' : undefined);
 ---
 <div class="topbar">
   <div class="wrap">
-    <div class="topbar-left">
-      <span><span class="topbar-dot" aria-hidden="true"></span>Family-owned · Staten Island<span class="topbar-hide-sm"> · {business.yearsInRoofing}+ years</span></span>
-      <span class="topbar-hide-sm">Licensed #{business.license.number}</span>
-      <span class="topbar-hide-sm">Mon–Fri 8–8 · Sat 8–5 · Emergencies 24/7</span>
+    <div class="topbar-items">
+      <span><span class="live" aria-hidden="true"></span><strong>Family-owned</strong><span class="hide-sm">&nbsp;roofing contractor</span> · Staten Island, NY</span>
+      <span class="hide-md"><Icon name="shield" /> Licensed &amp; insured · #{business.license.number}</span>
+      <span class="hide-md"><Icon name="clock" /> Emergency calls 24/7</span>
     </div>
     <div class="textsize" role="group" aria-label="Text size">
-      <span class="topbar-hide-sm">Text size</span>
-      <button type="button" data-size="" aria-pressed="true" aria-label="Normal text">A</button>
+      <span class="hide-sm">Text size</span>
+      <button type="button" data-size="" aria-pressed="true" aria-label="Normal text size">A</button>
       <button type="button" data-size="lg" aria-pressed="false" aria-label="Larger text">A</button>
       <button type="button" data-size="xl" aria-pressed="false" aria-label="Largest text">A</button>
     </div>
   </div>
 </div>
-<header class="site-header">
+<header class="header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Alter Phase Roofing, home">
-      <Image src={logo} alt="Alter Phase Roofing Contractor" width={128} loading="eager" fetchpriority="high" />
-    </a>
+    <a class="logo" href="/" aria-label="Alter Phase Roofing home"><Image src={logo} alt="Alter Phase Roofing Contractor" width={132} loading="eager" /></a>
     <nav class="nav" aria-label="Main">
-      <ul>
-        <li class="nav-item">
-          <a class="nav-link" href="/services/" aria-current={current('/services/')}>Services <Icon name="chevron" /></a>
-          <div class="dropdown wide">
-            {services.map((s) => (
-              <div class="dropdown-group">
-                <a href={s.url}><strong>{s.title}</strong><small>{s.blurb}</small></a>
-                {s.children.map((c) => <a href={c.url}>{c.title}</a>)}
-              </div>
-            ))}
+      <div class="nav-item">
+        <a class="nav-link" href="/services/" aria-current={cur('/services/')}>Services <Icon name="chevron" /></a>
+        <div class="mega cols-3">
+          {services.map((s) => (
+            <div class="mega-col">
+              <a class="mega-head" href={s.url}><span class="tile"><Icon name={s.icon as any} /></span><span>{s.title}<small>{s.blurb}</small></span></a>
+              {(s.children || []).map((c) => <a href={c.url} style="padding-left:3.6rem">{c.title}</a>)}
+            </div>
+          ))}
+          <div class="mega-col">
+            <a class="mega-head" href="/property-managers/"><span class="tile"><Icon name="building" /></span><span>Property managers &amp; HOAs<small>Bids, reports, documentation</small></span></a>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/service-area/" aria-current={current('/service-area/')}>Areas <Icon name="chevron" /></a>
-          <div class="dropdown">
-            {areas.map((a) => (
-              <>
-                <a href={a.url}><strong>{a.title}</strong><small>{a.blurb}</small></a>
-                {(a.children || []).map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}
-              </>
-            ))}
+          <div class="mega-foot"><span><strong>Not sure what you need?</strong> We'll inspect and tell you honestly.</span><a class="btn btn-sm btn-gold" href="/free-estimate/">Free inspection</a></div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="/service-area/" aria-current={cur('/service-area/')}>Areas <Icon name="chevron" /></a>
+        <div class="mega cols-2">
+          {areas.map((a) => (
+            <div class="mega-col">
+              <a class="mega-head" href={a.url}><span class="tile"><Icon name="pin" /></span><span>{a.title}<small>{a.blurb}</small></span></a>
+              {(a.children || []).map((c) => <a href={c.url} style="padding-left:3.6rem">{c.title}</a>)}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="/roof-replacement-cost-in-nyc/" aria-current={cur('/roof-replacement-cost-in-nyc/')}>Costs <Icon name="chevron" /></a>
+        <div class="mega cols-2">
+          <div class="mega-col">
+            {guides.slice(0, 3).map((g) => <a class="mega-head" href={g.url}><span class="tile"><Icon name="dollar" /></span><span>{g.title}</span></a>)}
           </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="/commercial-roofing/" aria-current={current('/commercial-roofing/')}>Property Managers</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about/" aria-current={current('/about/')}>About <Icon name="chevron" /></a>
-          <div class="dropdown">
-            {company.map((c) => <a href={c.url}>{c.title}</a>)}
+          <div class="mega-col">
+            {guides.slice(3).map((g) => <a class="mega-head" href={g.url}><span class="tile"><Icon name="file" /></span><span>{g.title}</span></a>)}
+            <a class="mega-head" href="/blog/"><span class="tile"><Icon name="arrow" /></span><span>All roofing guides</span></a>
           </div>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="/reviews/" aria-current={current('/reviews/')}>Reviews</a></li>
-      </ul>
+        </div>
+      </div>
+      <div class="nav-item"><a class="nav-link" href="/reviews/" aria-current={cur('/reviews/')}>Reviews</a></div>
+      <div class="nav-item">
+        <a class="nav-link" href="/about/" aria-current={cur('/about/')}>About <Icon name="chevron" /></a>
+        <div class="mega" style="grid-template-columns:1fr">
+          {company.map((c) => <a href={c.url}>{c.title}</a>)}
+        </div>
+      </div>
     </nav>
-    <div class="header-cta">
-      <a class="header-phone" href={telHref}><small>Call or text</small><span>{business.phone}</span></a>
-      <a class="btn btn-gold" href="/free-estimate/">Free Estimate</a>
-      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><Icon name="menu" /></button>
+    <div class="head-cta">
+      <a class="head-phone" href={telHref}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text Marke's team</small><strong>{business.phone}</strong></span></a>
+      <a class="btn btn-gold btn-sm" href="/free-estimate/">Free estimate</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><Icon name="menu" /></button>
     </div>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobile-menu" hidden>
-  <div class="mobile-menu-head">
-    <a href="/" aria-label="Home"><Image src={logo} alt="Alter Phase Roofing" width={110} /></a>
-    <button class="icon-btn menu-close" type="button" aria-label="Close menu"><Icon name="close" /></button>
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-top">
+    <a href="/" aria-label="Home"><Image src={logo} alt="Alter Phase Roofing" width={116} /></a>
+    <button class="burger drawer-close" style="display:grid" type="button" aria-label="Close menu"><Icon name="close" /></button>
   </div>
   <a class="btn btn-gold btn-block btn-lg" href={telHref}><Icon name="phone" /> Call {business.phone}</a>
-  <nav aria-label="Mobile" style="margin-top:1rem">
-    <details>
-      <summary>Services</summary>
+  <nav aria-label="Mobile" style="margin-top:0.75rem">
+    <details><summary>Services</summary>
       <a href="/services/">All services</a>
-      {services.map((s) => (<><a href={s.url}><strong>{s.title}</strong></a>{s.children.map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}</>))}
+      {services.map((s) => (<><a href={s.url}><strong>{s.title}</strong></a>{(s.children || []).map((c) => <a href={c.url} style="padding-left:1.6rem">{c.title}</a>)}</>))}
     </details>
-    <details>
-      <summary>Service Areas</summary>
-      <a href="/service-area/">All service areas</a>
-      {areas.map((a) => (<><a href={a.url}><strong>{a.title}</strong></a>{(a.children || []).map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}</>))}
+    <details><summary>Service areas</summary>
+      {areas.map((a) => (<><a href={a.url}><strong>{a.title}</strong></a>{(a.children || []).map((c) => <a href={c.url} style="padding-left:1.6rem">{c.title}</a>)}</>))}
     </details>
-    <a href="/commercial-roofing/">Property Managers &amp; HOAs</a>
-    <details>
-      <summary>Company</summary>
-      {company.map((c) => <a href={c.url}>{c.title}</a>)}
+    <details><summary>Costs &amp; guides</summary>
+      {guides.map((g) => <a href={g.url}>{g.title}</a>)}
+      <a href="/blog/">All guides</a>
     </details>
-    <a href="/free-estimate/">Free Estimate</a>
+    <a class="d-link" href="/property-managers/">Property managers &amp; HOAs</a>
+    <a class="d-link" href="/reviews/">Reviews</a>
+    <details><summary>Company</summary>{company.map((c) => <a href={c.url}>{c.title}</a>)}</details>
+    <a class="d-link" href="/free-estimate/">Get a free estimate</a>
   </nav>
 </div>
 
 <script>
-  const menu = document.getElementById('mobile-menu')!;
-  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')!;
-  const close = () => { menu.hidden = true; toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; toggle.focus(); };
-  toggle.addEventListener('click', () => { menu.hidden = false; toggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; menu.querySelector<HTMLElement>('.menu-close')?.focus(); });
-  menu.querySelector('.menu-close')!.addEventListener('click', close);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) close(); });
+  const drawer = document.getElementById('drawer')!;
+  const open = document.querySelector<HTMLButtonElement>('.header .burger')!;
+  const close = () => { drawer.hidden = true; open.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; open.focus(); };
+  open.addEventListener('click', () => { drawer.hidden = false; open.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; drawer.querySelector<HTMLElement>('.drawer-close')?.focus(); });
+  drawer.querySelector('.drawer-close')!.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !drawer.hidden) close(); });
 
-  const buttons = document.querySelectorAll<HTMLButtonElement>('.textsize button');
-  const sync = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String((document.documentElement.dataset.text || '') === b.dataset.size)));
-  buttons.forEach((b) => b.addEventListener('click', () => {
-    const size = b.dataset.size || '';
-    if (size) document.documentElement.dataset.text = size; else delete document.documentElement.dataset.text;
-    try { localStorage.setItem('aprTextSize', size); } catch {}
+  const btns = document.querySelectorAll<HTMLButtonElement>('.textsize button');
+  const sync = () => btns.forEach((b) => b.setAttribute('aria-pressed', String((document.documentElement.dataset.text || '') === b.dataset.size)));
+  btns.forEach((b) => b.addEventListener('click', () => {
+    const s = b.dataset.size || '';
+    if (s) document.documentElement.dataset.text = s; else delete document.documentElement.dataset.text;
+    try { localStorage.setItem('aprTextSize', s); } catch {}
     sync();
   }));
   sync();

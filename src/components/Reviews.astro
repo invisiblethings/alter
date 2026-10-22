@@ -2,30 +2,41 @@
 import Icon from './Icon.astro';
 import { reviews } from '../data/reviews';
 import { business } from '../data/business';
-interface Props { limit?: number; title?: string; eyebrow?: string }
-const { limit = 6, title = 'Your neighbors already called us. Here’s what they said.', eyebrow = 'Google reviews' } = Astro.props;
+interface Props { limit?: number; title?: string; kicker?: string; bg?: string }
+const { limit = 6, title = 'What Staten Island homeowners say', kicker = 'Google reviews', bg = 'warm' } = Astro.props;
+const [first, ...rest] = reviews;
 const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
+const stars = [1, 2, 3, 4, 5];
 ---
-<section class="section" aria-labelledby="reviews-title">
+<section class:list={['sec', bg]} aria-labelledby="rev-h">
   <div class="wrap">
-    <div class="reviews-head">
-      <div class="section-head" style="margin:0">
-        <span class="eyebrow">{eyebrow}</span>
-        <h2 id="reviews-title">{title}</h2>
+    <div class="head-row">
+      <div class="head"><span class="kicker">{kicker}</span><h2 id="rev-h">{title}</h2></div>
+      <a class="btn btn-line" href="/reviews/">Read all reviews <Icon name="arrow" /></a>
+    </div>
+    <div class="review-feature">
+      <div class="review-score">
+        <span class="stars" aria-hidden="true">{stars.map(() => <Icon name="star" />)}</span>
+        <span class="big">{business.rating.label}</span>
+        <p>Rated by <strong style="color:#fff">{business.rating.count} customers</strong> on Google</p>
+        <a href={business.googleReviewUrl} target="_blank" rel="noopener" style="color:var(--gold);font-weight:700;margin-top:0.5rem">See us on Google Maps →</a>
       </div>
-      <a class="rating-badge" href={business.googleReviewUrl} rel="noopener" target="_blank">
-        <span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
-        <div><strong>{business.rating.label}</strong><span>{business.rating.count} reviews on Google</span></div>
-      </a>
+      <figure class="review big">
+        <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
+        <blockquote><p>“{first.text}”</p></blockquote>
+        <figcaption><span class="avatar" aria-hidden="true">{initials(first.name)}</span><span><strong>{first.name}</strong>Google review · {first.tag}</span></figcaption>
+      </figure>
     </div>
-    <div class="reviews">
-      {reviews.slice(0, limit).map((r) => (
-        <figure class="review">
-          <span class="stars" role="img" aria-label="5 out of 5 stars">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
-          <blockquote><p>{r.text}</p></blockquote>
-          <figcaption><span class="avatar" aria-hidden="true">{initials(r.name)}</span><span><strong>{r.name}</strong>Google review{r.tag && ` · ${r.tag}`}</span></figcaption>
-        </figure>
-      ))}
-    </div>
+    {limit > 1 && (
+      <div class="reviews">
+        {rest.slice(0, limit - 1).map((r) => (
+          <figure class="review">
+            <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
+            <blockquote><p>“{r.text}”</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">{initials(r.name)}</span><span><strong>{r.name}</strong>Google review{r.tag && ` · ${r.tag}`}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+    )}
   </div>
 </section>

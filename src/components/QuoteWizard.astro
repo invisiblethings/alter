@@ -1,0 +1,130 @@
+---
+// 3-step estimate request (Netlify Forms). Small steps with big buttons
+// convert better than one long form, and suit older visitors on phones.
+// Without JavaScript every step shows at once and the form still posts.
+import Icon from './Icon.astro';
+import { business, telHref } from '../data/business';
+
+interface Props { id?: string; title?: string; sub?: string; heading?: 'h2' | 'h3'; service?: string }
+const { id = 'q', title = 'Get your free roof estimate', sub = 'Takes 30 seconds. A real person from our team calls you back, usually within the hour.', heading = 'h2', service } = Astro.props;
+const H = heading;
+const needs = [
+  { v: 'Roof leak / repair', icon: 'drop', label: 'Leak or repair' },
+  { v: 'Roof replacement', icon: 'roof', label: 'New roof / replacement' },
+  { v: 'Flat roof', icon: 'layers', label: 'Flat roof work' },
+  { v: 'Inspection', icon: 'clipboard', label: 'Roof inspection' },
+  { v: 'Gutters / siding / skylight', icon: 'gutter', label: 'Gutters, siding, skylight' },
+  { v: 'EMERGENCY', icon: 'bolt', label: 'Water coming in now', urgent: true },
+];
+---
+<div class="wizard" id={`${id}-wizard`} data-wizard>
+  <div class="wizard-top">
+    <H>{title}</H>
+    <span class="step-label" data-step-label aria-live="polite">Step 1 of 3</span>
+  </div>
+  <p class="sub">{sub}</p>
+  <div class="steps-bar" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+  <form name="estimate" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" data-estimate>
+    <input type="hidden" name="form-name" value="estimate" />
+    <input type="hidden" name="page" value={Astro.url.pathname} />
+    <p class="hp"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+    <fieldset data-step="1" class="active">
+      <legend>What do you need help with?</legend>
+      <div class="opts">
+        {needs.map((n) => (
+          <label class:list={['opt', n.urgent && 'urgent']}>
+            <input type="radio" name="service" value={n.v} checked={service === n.v} required />
+            <span><Icon name={n.icon as any} />{n.label}</span>
+          </label>
+        ))}
+      </div>
+      <p class="fine" data-urgent hidden style="color:var(--red);font-weight:700"><Icon name="phone" /> For active leaks, calling is fastest: <a href={telHref}>{business.phone}</a> (24/7)</p>
+    </fieldset>
+
+    <fieldset data-step="2">
+      <legend>Tell us about the property</legend>
+      <div class="opts" style="margin-bottom:1rem">
+        <label class="opt"><input type="radio" name="customer_type" value="Homeowner" /><span><Icon name="home" />My home</span></label>
+        <label class="opt"><input type="radio" name="customer_type" value="Business owner" /><span><Icon name="store" />My business</span></label>
+        <label class="opt" style="grid-column:1 / -1"><input type="radio" name="customer_type" value="Property manager / HOA / board" /><span><Icon name="building" />A building I manage (HOA, co-op, condo)</span></label>
+      </div>
+      <div class="field">
+        <label for={`${id}-address`}>Property address or ZIP code</label>
+        <input id={`${id}-address`} name="address" autocomplete="street-address" required />
+      </div>
+    </fieldset>
+
+    <fieldset data-step="3">
+      <legend>Where should we call you?</legend>
+      <div class="row-2">
+        <div class="field"><label for={`${id}-name`}>Your name</label><input id={`${id}-name`} name="name" autocomplete="name" required /></div>
+        <div class="field"><label for={`${id}-phone`}>Phone</label><input id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+      </div>
+      <div class="field"><label for={`${id}-msg`}>Anything we should know? <small>(optional)</small></label><textarea id={`${id}-msg`} name="message" rows="2" placeholder="e.g. water stain on the bedroom ceiling after the last storm"></textarea></div>
+    </fieldset>
+
+    <div class="wizard-nav">
+      <button class="btn btn-line back" type="button" data-back hidden aria-label="Back"><Icon name="arrow" class="flip" /></button>
+      <button class="btn btn-block next" type="button" data-next>Continue <Icon name="arrow" /></button>
+      <button class="btn btn-gold btn-block" type="submit" data-submit>Get my free estimate <Icon name="arrow" /></button>
+    </div>
+    <p class="form-status" role="alert"></p>
+    <p class="fine"><Icon name="lock" /> No spam, no pressure, no obligation. We never share your details.</p>
+  </form>
+</div>
+
+<style>
+  .flip { transform: scaleX(-1); }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-wizard]').forEach((w) => {
+    const form = w.querySelector('form')!;
+    const steps = [...w.querySelectorAll<HTMLFieldSetElement>('[data-step]')];
+    const bars = [...w.querySelectorAll('.steps-bar span')];
+    const label = w.querySelector('[data-step-label]')!;
+    const back = w.querySelector<HTMLButtonElement>('[data-back]')!;
+    const next = w.querySelector<HTMLButtonElement>('[data-next]')!;
+    const submit = w.querySelector<HTMLButtonElement>('[data-submit]')!;
+    const urgent = w.querySelector<HTMLElement>('[data-urgent]')!;
+    let i = 0;
+    const show = (n: number, focus = true) => {
+      i = n;
+      steps.forEach((s, k) => s.classList.toggle('active', k === n));
+      bars.forEach((b, k) => b.classList.toggle('on', k <= n));
+      label.textContent = `Step ${n + 1} of ${steps.length}`;
+      back.hidden = n === 0;
+      next.hidden = n === steps.length - 1;
+      submit.hidden = n !== steps.length - 1;
+      if (focus) steps[n].querySelector<HTMLElement>('input:not([type=hidden])')?.focus({ preventScroll: true });
+    };
+    const valid = () => [...steps[i].querySelectorAll<HTMLInputElement>('input[required]')].every((el) => el.reportValidity());
+    next.addEventListener('click', () => { if (valid()) show(i + 1); });
+    back.addEventListener('click', () => show(i - 1));
+    steps[0].querySelectorAll<HTMLInputElement>('input[name=service]').forEach((r) => r.addEventListener('change', () => {
+      urgent.hidden = r.value !== 'EMERGENCY';
+      (window as any).dataLayer?.push({ event: 'quote_step', step: 1, service: r.value });
+      if (r.value !== 'EMERGENCY') setTimeout(() => show(1), 180);
+    }));
+    show(0, false);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!valid()) return;
+      const status = form.querySelector('.form-status')!;
+      submit.disabled = true;
+      status.textContent = '';
+      try {
+        const body = new URLSearchParams(new FormData(form) as any).toString();
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+        if (!res.ok) throw new Error(String(res.status));
+        (window as any).dataLayer?.push({ event: 'generate_lead', form_name: 'estimate', page_path: location.pathname });
+        location.href = '/thank-you/';
+      } catch {
+        submit.disabled = false;
+        status.textContent = 'Sorry, that didn’t go through. Please call (929) 370-1552 and we’ll help right away.';
+      }
+    });
+  });
+</script>

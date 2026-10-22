@@ -1,0 +1,89 @@
+---
+// Interactive roof cost estimator built on src/data/costs.ts (Alter Phase's
+// published NYC job averages). Borough adjustment = ratio of our published
+// borough ranges to Staten Island's. Rendered with a default result so it
+// says something useful before (or without) JavaScript.
+import Icon from './Icon.astro';
+import { materials, boroughs, money } from '../data/costs';
+import { telHref } from '../data/business';
+
+interface Props { heading?: 'h2' | 'h3' }
+const { heading = 'h2' } = Astro.props;
+const H = heading;
+const si = boroughs[0];
+const factors = Object.fromEntries(boroughs.map((b) => [b.name, (b.low + b.high) / (si.low + si.high)]));
+const data = { materials: materials.map(({ id, name, type, low, high, life }) => ({ id, name, type, low, high, life })), factors };
+const round = (n: number) => Math.round(n / 100) * 100;
+const def = materials.find((m) => m.id === 'epdm')!;
+---
+<div class="est" data-est={JSON.stringify(data)}>
+  <form class="est-form" onsubmit="return false">
+    <H style="font-size:1.5rem;margin-bottom:0.3rem">Roof cost estimator</H>
+    <p class="muted" style="font-size:0.92rem">Based on our real 2026 job prices in New York City. Move the options to see your range.</p>
+    <fieldset class="group">
+      <legend>Roof type</legend>
+      <div class="seg">
+        <label><input type="radio" name="kind" value="flat" checked /><span>Flat / low-slope</span></label>
+        <label><input type="radio" name="kind" value="pitched" /><span>Sloped (shingles etc.)</span></label>
+      </div>
+    </fieldset>
+    <div class="field group">
+      <label for="est-mat">Material</label>
+      <select id="est-mat" name="material">
+        {materials.map((m) => <option value={m.id} data-kind={m.type} selected={m.id === def.id} hidden={m.type !== 'flat'}>{m.name}: ${m.low}–${m.high}/sq ft</option>)}
+      </select>
+    </div>
+    <div class="group">
+      <label for="est-size" style="font-weight:800;font-size:0.95rem">Roof size</label>
+      <div class="range-row">
+        <input id="est-size" type="range" name="size" min="300" max="5000" step="50" value="1000" />
+        <output for="est-size" data-size-out>1,000 sq ft</output>
+      </div>
+      <p class="muted" style="font-size:0.8rem;margin:0.2rem 0 0">Typical NYC row home: 600–1,000 sq ft. Detached Staten Island home: 1,200–2,200 sq ft.</p>
+    </div>
+    <fieldset class="group" style="margin-bottom:0">
+      <legend>Borough</legend>
+      <div class="seg">
+        {boroughs.map((b, i) => <label><input type="radio" name="borough" value={b.name} checked={i === 0} /><span>{b.name}</span></label>)}
+      </div>
+    </fieldset>
+  </form>
+  <div class="est-out" aria-live="polite">
+    <span class="lbl">Estimated installed price</span>
+    <span class="val" data-val>{money(round(def.low * 1000))} – {money(round(def.high * 1000))}</span>
+    <span class="meta" data-meta>{def.name} · 1,000 sq ft · Staten Island · lasts {def.life}</span>
+    <p class="meta" style="margin:0.6rem 0 0">Exact price depends on layers to tear off, deck condition, access and permits (NYC permits add $300–$1,000 when required).</p>
+    <a class="btn btn-gold" href="/free-estimate/" data-est-cta>Get my exact price, free <Icon name="arrow" /></a>
+    <a href={telHref} style="color:#fff;font-weight:700;margin-top:0.4rem">or call (929) 370-1552</a>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-est]').forEach((el) => {
+    const d = JSON.parse(el.dataset.est!);
+    const f = el.querySelector('form')!;
+    const sel = f.querySelector<HTMLSelectElement>('select')!;
+    const val = el.querySelector('[data-val]')!;
+    const meta = el.querySelector('[data-meta]')!;
+    const sizeOut = el.querySelector('[data-size-out]')!;
+    const money = (n: number) => '$' + (Math.round(n / 100) * 100).toLocaleString('en-US');
+    let used = false;
+    const update = () => {
+      const kind = (f.querySelector('input[name=kind]:checked') as HTMLInputElement).value;
+      [...sel.options].forEach((o) => (o.hidden = o.dataset.kind !== kind));
+      if (sel.selectedOptions[0]?.hidden) sel.value = [...sel.options].find((o) => !o.hidden)!.value;
+      const m = d.materials.find((x: any) => x.id === sel.value);
+      const size = +(f.querySelector('input[name=size]') as HTMLInputElement).value;
+      const b = (f.querySelector('input[name=borough]:checked') as HTMLInputElement).value;
+      const k = d.factors[b];
+      sizeOut.textContent = size.toLocaleString('en-US') + ' sq ft';
+      val.textContent = `${money(m.low * size * k)} – ${money(m.high * size * k)}`;
+      meta.textContent = `${m.name} · ${size.toLocaleString('en-US')} sq ft · ${b} · lasts ${m.life}`;
+    };
+    f.addEventListener('input', () => {
+      update();
+      if (!used) { used = true; (window as any).dataLayer?.push({ event: 'estimator_used' }); }
+    });
+    update();
+  });
+</script>

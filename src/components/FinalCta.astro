@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+import QuoteWizard from './QuoteWizard.astro';
+import { business, telHref } from '../data/business';
+interface Props { title?: string; text?: string; form?: boolean; service?: string }
+const { title = 'Get an honest answer about your roof.', text = "Free inspection, photos of what we find and a written quote. If it only needs a repair, we'll tell you.", form = true, service } = Astro.props;
+---
+<section class="sec" aria-labelledby="final-h">
+  <div class="wrap">
+    <div class="final">
+      <div>
+        <span class="kicker">Free estimate · No obligation</span>
+        <h2 id="final-h">{title}</h2>
+        <p class="lead">{text}</p>
+        <p style="margin:1.5rem 0 0;font-weight:700;color:#fff">Prefer to talk? Call or text, emergencies 24/7:</p>
+        <a class="phone" href={telHref}>{business.phone}</a>
+        <ul class="ticks" style="color:#dfe7f5">
+          <li><Icon name="check" /> Family-owned, Staten Island based</li>
+          <li><Icon name="check" /> Owner on every job</li>
+          <li><Icon name="check" /> Written warranties, permits handled</li>
+        </ul>
+      </div>
+      {form ? <QuoteWizard id="final" heading="h3" service={service} /> : <div style="align-self:center"><a class="btn btn-gold btn-lg" href="/free-estimate/">Get my free estimate <Icon name="arrow" /></a></div>}
+    </div>
+  </div>
+</section>

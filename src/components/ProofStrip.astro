@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+import { business } from '../data/business';
+---
+<section class="proof" aria-label="Credentials">
+  <div class="wrap">
+    <div class="proof-item"><span class="badge-ico" style="background:#fff;box-shadow:inset 0 0 0 1px var(--line)"><Icon name="google" /></span><span><strong>{business.rating.label} on Google</strong>{business.rating.count} reviews</span></div>
+    <div class="proof-item"><img src="/wp-content/uploads/2024/04/GAF-Masterelite-AlterPhaseRoofing-300x110.png" alt="GAF Master Elite certified contractor" width="120" height="44" loading="lazy" /><span><strong>GAF Master Elite®</strong>Top-tier certified</span></div>
+    <div class="proof-item"><img src="/wp-content/uploads/2024/04/AB-seal-horz.svg.svg" alt="BBB Accredited Business" width="94" height="33" loading="lazy" /><span><strong>BBB Accredited</strong>Business</span></div>
+    <div class="proof-item"><span class="badge-ico"><Icon name="shield" /></span><span><strong>Up to {business.warranty.manufacturerYears}-yr warranty</strong>+ {business.warranty.workmanshipYears} yrs workmanship</span></div>
+    <div class="proof-item"><span class="badge-ico"><Icon name="license" /></span><span><strong>Licensed &amp; insured</strong>NYC #{business.license.number}</span></div>
+  </div>
+</section>
