@@ -53,9 +53,10 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
     {description && <meta name="twitter:description" content={description} />}
     <meta name="twitter:image" content={ogImage} />
 
-    <link rel="icon" href="/wp-content/uploads/2024/04/cropped-android-chrome-512x512-1-32x32.png" sizes="32x32" />
-    <link rel="icon" href="/wp-content/uploads/2024/04/cropped-android-chrome-512x512-1-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/wp-content/uploads/2024/04/cropped-android-chrome-512x512-1-180x180.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Alter Phase Roofing Contracting: roofing guides" href="/rss.xml" />
     <meta name="theme-color" content="#08214a" />
     <link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin />
     <meta name="format-detection" content="telephone=no" />
@@ -65,14 +66,31 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
 
     <script is:inline>document.documentElement.classList.replace('no-js', 'js');</script>
 
-    <!-- Google Tag Manager: GA4 G-KKQEPJ782W + Google Ads AW-397936435 (call & click conversions) -->
+    <!-- Google Tag Manager: GA4 G-KKQEPJ782W + Google Ads AW-397936435 (call & click conversions).
+         Loaded after the page is interactive (first tap/scroll/key, or 3 s after load) so the
+         tags don't slow phones down. Events pushed before that (phone clicks, form leads) wait
+         in dataLayer and GTM processes them when it starts. -->
     <script is:inline define:vars={{ gtmId: business.gtmId }}>
       window.dataLayer = window.dataLayer || [];
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', gtmId);
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      (function () {
+        var done = false, evs = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load, true); });
+          var j = document.createElement('script'); j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+          document.head.appendChild(j);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { capture: true, passive: true, once: true }); });
+        addEventListener('load', function () { setTimeout(load, 3000); });
+        // Every call button reports a phone_click event (GTM trigger: Custom Event "phone_click"),
+        // which still counts when the tap happens before GTM has loaded.
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+          if (a) window.dataLayer.push({ event: 'phone_click', phone_number: a.getAttribute('href').slice(4), link_text: (a.textContent || '').trim().slice(0, 60), page_path: location.pathname });
+        }, true);
+      })();
     </script>
     <slot name="head" />
   </head>

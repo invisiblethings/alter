@@ -1,7 +1,7 @@
 ---
 path: "/roof-replacement-guide-nyc/"
 seoTitle: "Roof Replacement NYC (2026): Costs, Permits & Hiring Guide"
-description: "Everything NYC owners need before replacing a roof: 2026 costs by material and borough, when a DOB permit is required, Local Laws 92/94 and how to vet a roofer."
+description: "Before you replace a roof in NYC: when a DOB permit is required, Local Laws 92/94, the process step by step, how to vet a roofer, plus a 2026 cost summary."
 kicker: "NYC roof replacement guide"
 h1: "Roof replacement in NYC: costs, permits and how to hire the right roofer (2026)"
 cardTitle: "Roof Replacement NYC: Costs, Permits & Hiring Guide"
@@ -42,7 +42,7 @@ Most New York City roof replacements land between **$10,000 and $30,000**, with 
 
 | Material | Per sq ft | 1,200 sq ft roof | Lifespan | Common on |
 | --- | --- | --- | --- | --- |
-| Asphalt shingles | $5–$10 | $7,200–$12,000 | 20–30 yrs | Staten Island, Queens houses |
+| Asphalt shingles | $5–$10 | $6,000–$12,000 | 20–30 yrs | Staten Island, Queens houses |
 | EPDM (rubber) | $8–$12 | $9,600–$14,400 | 20–30 yrs | Brooklyn & Queens row homes |
 | TPO | $9–$14 | $10,800–$16,800 | 20–30 yrs | Larger flat roofs, commercial |
 | Modified bitumen | $9–$13 | $10,800–$15,600 | 20–30 yrs | Roofs with foot traffic |

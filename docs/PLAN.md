@@ -164,7 +164,12 @@ To edit content, change the Markdown file and Netlify redeploys on push. A visua
 1. Client review of the deploy preview; confirm the open items in §2.
 2. Netlify: connect the repo, set the production branch, add the custom domain, force HTTPS, and redirect www → apex.
 3. Netlify Forms: enable form notifications to info@alterphaseroofing.com (plus a CRM/Sheets webhook if wanted).
-4. GTM: add a Google Ads conversion on the `generate_lead` event; keep the existing call and click conversions.
+4. GTM:
+   - Add a Google Ads conversion on the `generate_lead` event.
+   - Add a click-to-call conversion on the custom event `phone_click`. The site pushes it on every tel: link, even before GTM has loaded.
+   - Keep the call-from-website conversion, with the number `(929) 370-1552` in that exact format.
+   - Fire GA4 and Ads from a single Google tag inside GTM, and remove any duplicate or unused tags.
+   - GTM now loads on the visitor's first interaction, or 3 seconds after page load, to keep phones fast.
 5. Before DNS cutover:
    - Export a Search Console baseline (Performance by page and query).
    - Run `npm run build && npm run check:seo && npm run check:links`.

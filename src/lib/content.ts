@@ -47,6 +47,10 @@ export async function crumbsFor(path: string, ownTitle: string) {
   return crumbs;
 }
 
-export const readTime = (body = '') => Math.max(3, Math.round(body.split(/\s+/).length / 230));
+// Reading time of everything a reader sees: intro, short answer, takeaways, body and FAQ (about 230 words a minute).
+export const readTime = (body: string | PostEntry = '') => {
+  const text = typeof body === 'string' ? body : [body.data.intro, body.data.answer, ...body.data.takeaways, body.body, ...body.data.faq.flatMap((f) => [f.q, f.a])].join(' ');
+  return Math.max(2, Math.round(text.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length / 230));
+};
 
 export const fmtDate = (s?: string) => (s ? new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '');

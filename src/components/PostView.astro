@@ -11,7 +11,7 @@ interface Props { entry: PostEntry; html: string; crumbs: { name: string; url: s
 const { entry, html, crumbs, headings } = Astro.props;
 const d = entry.data;
 const toc = headings.filter((h) => h.depth === 2);
-const mins = readTime(entry.body);
+const mins = readTime(entry);
 const related = (await posts()).filter((p) => p.data.path !== d.path && !d.related.includes(p.data.path)).slice(0, 3);
 const relatedPinned = (await posts()).filter((p) => d.related.includes(p.data.path));
 const more = [...relatedPinned, ...related].slice(0, 3);
@@ -85,7 +85,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
       {more.map((p) => (
         <a class="post-card" href={p.data.path} data-reveal>
           <div class="img">{p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
-          <span class="meta">{readTime(p.body)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p>
+          <span class="meta">{readTime(p)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p>
         </a>
       ))}
     </div>

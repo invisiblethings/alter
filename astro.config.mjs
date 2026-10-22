@@ -6,8 +6,11 @@ import { rehypeHeadingIds, rehypeImages, rehypeTables, rehypeLinks, rehypeSectio
 // Ads landing pages and utility pages stay live but out of the index.
 const NOINDEX = ['/roofing-lp/', '/brooklyn-roofing-solutions/', '/vinyl-siding-estimate/', '/roof-replacement-si/', '/thank-you/'];
 
-// lastmod for the sitemap, read straight from content frontmatter.
-const lastmod = new Map();
+// lastmod for the sitemap, read straight from content frontmatter (dates edited by hand
+// when content really changes, so builds never move them). The homepage isn't a content
+// file: update HOME_MODIFIED when its copy changes.
+const HOME_MODIFIED = '2026-10-22';
+const lastmod = new Map([['/', HOME_MODIFIED]]);
 for (const dir of ['src/content/pages', 'src/content/posts']) {
   for (const f of fs.readdirSync(dir)) {
     const src = fs.readFileSync(`${dir}/${f}`, 'utf8');

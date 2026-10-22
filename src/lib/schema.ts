@@ -6,6 +6,22 @@ import { services } from '../data/nav';
 
 const abs = (p?: string) => (p ? (p.startsWith('http') ? p : SITE + p) : undefined);
 
+/** Compact business node for every non-home page, so references to #business resolve on each page. */
+export function businessRefNode() {
+  const b = business;
+  return {
+    '@type': ['RoofingContractor', 'HomeAndConstructionBusiness'],
+    '@id': b.id,
+    name: b.name,
+    url: SITE + '/',
+    telephone: b.phoneE164,
+    image: `${SITE}/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg`,
+    priceRange: '$$',
+    address: { '@type': 'PostalAddress', streetAddress: b.address.street, addressLocality: b.address.city, addressRegion: b.address.region, postalCode: b.address.zip, addressCountry: b.address.country },
+    hasMap: b.googleMapsUrl,
+  };
+}
+
 export function businessNode() {
   const b = business;
   return {
@@ -127,7 +143,8 @@ export function pageGraph(p: PageInput) {
   const graph: unknown[] = [webpage];
   if (p.crumbs.length > 1) graph.push(breadcrumbNode(p.url, p.crumbs));
 
-  if (p.kind === 'home') graph.push(websiteNode(), businessNode(), ownerNode());
+  if (p.kind === 'home' || p.kind === 'contact') graph.push(websiteNode(), businessNode(), ownerNode());
+  else graph.push(businessRefNode());
 
   if (p.kind === 'service') {
     graph.push({

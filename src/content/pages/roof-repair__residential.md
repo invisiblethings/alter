@@ -1,10 +1,10 @@
 ---
 path: "/roof-repair/residential/"
 template: service
-seoTitle: "Residential Roof Repair Staten Island, NY | Alter Phase"
+seoTitle: "Shingle Roof Repair for Staten Island Houses | Alter Phase"
 description: "Home roof repair on Staten Island: leaks, missing shingles, chimney flashing and flat roof patches. Most repairs $300–$1,200, in writing."
-kicker: "Residential roof repair · Staten Island"
-h1: "Residential roof repair on Staten Island, fixed at the source"
+kicker: "Shingle & house roof repair · Staten Island"
+h1: "Shingle roof repair for Staten Island houses: shingles, flashing and chimneys"
 intro: "Whether it's a cape in Eltingville, a high-ranch in Bulls Head or a flat-roofed extension behind a two-family in Port Richmond, we find what's actually wrong, fix it properly and back the work with a written warranty."
 highlights:
   - "Shingle and flat roofs repaired"

@@ -4,6 +4,13 @@
 # URLs. Checked by scripts/qa/seo.mjs: every old URL must end at a 200 page
 # in one hop.
 
+# --- One hop from www (http or https) to the canonical host
+http://www.alterphaseroofing.com/*   https://alterphaseroofing.com/:splat 301!
+https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
+
+# --- Duplicate homepage file
+/index.html             /                    301!
+
 # --- Consolidated pages (duplicate / competing content merged in the rebuild)
 /roofing-costs-in-nyc/                                       /roof-replacement-cost-in-nyc/ 301
 /roofing-costs-in-nyc                                        /roof-replacement-cost-in-nyc/ 301
@@ -15,6 +22,12 @@
 /free-roofing-estimates-brooklyn-ny                          /free-estimate/ 301
 /service-area/nyc/commercial-roofing/                        /commercial-roofing/ 301
 /service-area/nyc/commercial-roofing                         /commercial-roofing/ 301
+/category/roofing/                                           /blog/ 301
+/category/roofing                                            /blog/ 301
+/category/roofing/roofing-101/                               /blog/ 301
+/category/roofing/roofing-101                                /blog/ 301
+/privacy-policy/                                             /privacy-policy-2/ 301
+/privacy-policy                                              /privacy-policy-2/ 301
 
 # --- Yoast/Rank Math sitemaps -> Astro sitemap
 /sitemap_index.xml      /sitemap-index.xml   301
@@ -26,14 +39,14 @@
 /local-sitemap.xml      /sitemap-index.xml   301
 
 # --- Feeds, author archive, pagination
-/feed                   /blog/               301
-/feed/                  /blog/               301
-/comments/feed/         /blog/               301
-/blog/feed/             /blog/               301
-/category/roofing/feed/ /category/roofing/   301
+/feed                   /rss.xml             301
+/feed/                  /rss.xml             301
+/comments/feed/         /rss.xml             301
+/blog/feed/             /rss.xml             301
+/category/roofing/feed/ /rss.xml             301
 /author/*               /about/              301
 /blog/page/*            /blog/               301
-/category/roofing/page/* /category/roofing/  301
+/category/roofing/page/* /blog/              301
 /page/*                 /blog/               301
 
 # --- WordPress admin/login/API (no longer exist)

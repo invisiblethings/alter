@@ -28,7 +28,7 @@ const schema = pageGraph({ url: d.path, title: d.seoTitle, description: d.descri
         {list.map((p) => (
           <a class="post-card" href={p.data.path} data-reveal>
             <div class="img">{p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
-            <span class="meta">{readTime(p.body)} min read</span><h2 style="font-size:1.3rem;margin:0">{p.data.cardTitle || p.data.h1}</h2><p>{p.data.description}</p><span class="link-arrow">Read the guide <Icon name="arrow" /></span>
+            <span class="meta">{readTime(p)} min read</span><h2 style="font-size:1.3rem;margin:0">{p.data.cardTitle || p.data.h1}</h2><p>{p.data.description}</p><span class="link-arrow">Read the guide <Icon name="arrow" /></span>
           </a>
         ))}
       </div>
