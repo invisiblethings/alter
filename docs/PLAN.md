@@ -35,7 +35,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 | License | NYC DCWP Home Improvement Contractor **#2129904-DCWP**, active to 2027-02-28 | NYC Open Data |
 | Hours | Mon–Fri 8–8, Sat 8–5, Sun closed, emergencies 24/7 | Current site |
 | Warranties | Up to 50 years manufacturer, up to 25 years workmanship | Current site |
-| Credentials | GAF Master Elite®, BBB Accredited | Current site |
+| Credentials | GAF GAF Certified, BBB Accredited | Current site |
 | Reviews | "Excellent", 108 Google reviews | Current site |
 | Prices | Client's published 2026 job averages, centralized in `src/data/costs.ts` | Current site/blog (client approved) |
 | Areas | Staten Island (priority), Brooklyn, Manhattan, Queens | Client |
@@ -43,12 +43,13 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 | Tags | GTM-M77VVM4Q kept (GA4 G-KKQEPJ782W, Google Ads AW-397936435 call and click conversions) | Client |
 | Logo | Current logo kept | Client |
 
-**Still to confirm with the client before launch**
-1. Marke's surname (for author bylines and Person schema) and approval of the owner quote: "I'm part of every job, to make sure the highest quality work is done on every property."
-2. ~~Name~~ Settled: the site uses **Alter Phase Roofing Contracting**, matching the Google Business Profile. Schema keeps the DCWP legal name ALTER PHASE CONTRACTING INC as `legalName`.
-3. Current GAF certification tier (the site says Master Elite®). gaf.com blocks automated checks.
-4. The "starting at $5,500" offer on `/roof-replacement-si/` (copied from the current ads page). Still valid?
-5. Google Business Profile: phone must be (929) 370-1552, plus categories and services as in §5.
+**Confirmed with the client (October 2026)**
+1. Author byline: "Marke" (no surname).
+2. Legal name: ALTER PHASE CONTRACTING INC is kept as `legalName` in schema; the public name is Alter Phase Roofing Contracting, matching the Google Business Profile.
+3. Certification: shown as "GAF Certified".
+4. The "starting at $5,500" offer on `/roof-replacement-si/` is valid.
+5. Google Business Profile shows (929) 370-1552 and the same address.
+6. The owner quote is approved. Privacy and Terms pages accepted as written.
 
 ---
 

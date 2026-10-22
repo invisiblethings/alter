@@ -98,7 +98,7 @@ No. We protect your yard and shrubs, take every scrap with us and clean up befor
 
 ### Are you licensed and insured?
 
-Yes. NYC DCWP license #2129904-DCWP, fully insured, GAF Master Elite® and BBB Accredited.
+Yes. NYC DCWP license #2129904-DCWP, fully insured, GAF Certified and BBB Accredited.
 
 ## How a repair visit works
 

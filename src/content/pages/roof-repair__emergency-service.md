@@ -88,6 +88,6 @@ Usually not. Most emergencies end with a repair. If the roof is truly done, you'
 
 ## Who picks up the phone
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, GAF Master Elite® and BBB Accredited. Businesses and building managers can call the same number; see [commercial roof repair](/roof-repair/commercial/).
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, GAF Certified and BBB Accredited. Businesses and building managers can call the same number; see [commercial roof repair](/roof-repair/commercial/).
 
 We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

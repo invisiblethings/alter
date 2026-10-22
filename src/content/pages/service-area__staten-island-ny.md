@@ -88,7 +88,7 @@ South and East Shore homes take the brunt of nor'easters. Wind-rated shingles an
 - **We're local.** We're based on the Island. When there's a storm, we're already here.
 - **The owner shows up.** Marke is part of every job, from the first inspection to the final walkthrough.
 - **Honest advice.** Many calls about a "new roof" end in a [repair](/roof-repair/). We'd rather keep a customer for life.
-- **Proper credentials.** GAF Master Elite®, BBB accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured.
+- **Proper credentials.** GAF Certified, BBB accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured.
 - **Warranties in writing.** Up to 50 years on materials and up to 25 years on workmanship.
 
 ## Popular services on Staten Island

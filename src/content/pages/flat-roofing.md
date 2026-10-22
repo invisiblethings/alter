@@ -98,7 +98,7 @@ Our own crew, not subcontractors. Owner Marke is part of every job.
 
 ## Why Staten Island homeowners choose us
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. We're a GAF Master Elite® contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google. New flat roofs come with up to 50-year manufacturer and up to 25-year workmanship warranties, in writing.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. We're a GAF Certified contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google. New flat roofs come with up to 50-year manufacturer and up to 25-year workmanship warranties, in writing.
 
 We work on flat roofs in every neighborhood, from St. George and Rosebank to New Dorp, Eltingville and Tottenville. For stores and larger buildings, see [commercial roofing](/commercial-roofing/).
 

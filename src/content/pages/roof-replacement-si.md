@@ -11,7 +11,7 @@ intro: "Every roof is different, so we inspect yours for free and send a written
 highlights:
   - "Most roofs replaced in a single day"
   - "Up to 50-year material and 25-year workmanship warranties"
-  - "GAF Master Elite® installer, licensed and insured"
+  - "GAF Certified installer, licensed and insured"
 service: "Roof replacement"
 area: "Staten Island"
 wizard: "Roof replacement"

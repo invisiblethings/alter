@@ -139,10 +139,10 @@ Use this checklist before you hire anyone:
 - **Workers' compensation and liability insurance.** Ask for the actual certificates, not a verbal yes.
 - **Permit authority.** Only licensed contractors can file DOB permits. If a roofer suggests you file it yourself, walk away.
 - **Written, itemized contract.** NYC requires written contracts for home improvement work over $200.
-- **Manufacturer certification.** Certified installers (such as GAF Master Elite®) can offer stronger manufacturer warranties.
+- **Manufacturer certification.** Manufacturer-certified installers (we're GAF Certified) install complete systems and can register the manufacturer warranty for you.
 - **Local references** on buildings like yours, in your borough.
 - **Be wary of bids far below the others.** They often mean uninsured labor, cheaper materials or "surprise" charges once the old roof is off.
 
 ## Why NYC owners choose Alter Phase Roofing Contracting
 
-We're a family-owned roofing contractor based on Staten Island, serving [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Our owner, Marke, is part of every job. We're GAF Master Elite® certified, licensed by NYC DCWP, fully insured, and we handle permits and board paperwork as part of the job. Every roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.
+We're a family-owned roofing contractor based on Staten Island, serving [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Our owner, Marke, is part of every job. We're GAF Certified, licensed by NYC DCWP, fully insured, and we handle permits and board paperwork as part of the job. Every roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.

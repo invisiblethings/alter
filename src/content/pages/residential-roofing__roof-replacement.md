@@ -99,7 +99,7 @@ Our own crew, not subcontractors. Owner Marke is part of every job and checks th
 
 ### What if something goes wrong in ten years?
 
-You have up to 25 years on our workmanship and up to 50 years from the manufacturer, in writing. As a GAF Master Elite® contractor, we can offer GAF's strongest warranties.
+You have up to 25 years on our workmanship and up to 50 years from the manufacturer, in writing. As a GAF Certified contractor, we install complete GAF roofing systems and register the manufacturer warranty in your name.
 
 ## Choosing the right material
 
