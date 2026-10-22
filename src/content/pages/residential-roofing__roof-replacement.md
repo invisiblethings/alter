@@ -17,7 +17,7 @@ prices: ["pitched", "flat"]
 estimator: true
 image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
 imageAlt: "New architectural shingle roof installed by Alter Phase Roofing Contracting on a home in Staten Island 10314"
-answer: "A roof replacement on a Staten Island home typically costs <strong>$10,000–$30,000</strong>. Asphalt shingles run $6–$10 per sq ft installed, and a 1,000 sq ft flat roof $8,000–$13,000. Most homes are finished in one to two days. Replace when the roof is 20+ years old, leaks in several places, or the deck is soft."
+answer: "A roof replacement on a Staten Island home typically costs <strong>$10,000–$30,000</strong>. Asphalt shingles run $6–$10 per sq ft installed, and a 1,000 sq ft flat roof $8,000–$13,000. Most homes are finished in a single day. Replace when the roof is 20+ years old, leaks in several places, or the deck is soft."
 related:
   - "/roof-replacement-cost-in-nyc/"
   - "/roof-replacement-guide-nyc/"
@@ -29,7 +29,7 @@ faq:
   - q: "How much does a new roof cost on Staten Island?"
     a: "Most replacements cost $10,000 to $30,000. A 1,200 sq ft asphalt shingle roof is roughly $7,200 to $12,000, and a 1,000 sq ft flat roof is typically $8,000 to $13,000. Layers to remove, deck repairs, roof steepness and access change the final number."
   - q: "How long does a roof replacement take?"
-    a: "Most single-family homes take one to two days. Larger or more complex roofs, or roofs that need major deck repairs, can take longer. Weather can shift the start date."
+    a: "Most homes are done in a single day: tear-off, new roof and cleanup. Larger or more complex roofs, or roofs that need major deck repairs, can take longer. Weather can shift the start date."
   - q: "Do I need a permit to replace my roof?"
     a: "Replacing the roof covering like-for-like on a one- or two-family home often doesn't need a DOB permit. Changing the roof type, replacing the structural deck and some full replacements do. We check this for every job and file when it's required."
   - q: "Can you install a new roof over my old one?"

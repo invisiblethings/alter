@@ -6,6 +6,7 @@ import ReviewWall from './ReviewWall.astro';
 import Process from './Process.astro';
 import Faq from './Faq.astro';
 import FinalCta from './FinalCta.astro';
+import ContentSections from './ContentSections.astro';
 import { business, telHref } from '../data/business';
 import type { PageEntry } from '../lib/content';
 interface Props { entry: PageEntry; html: string; crumbs: { name: string; url: string }[] }
@@ -30,14 +31,39 @@ const legal = d.template === 'legal';
     </div>
   </div>
 </section>
-<section class="sec" style="padding-top:clamp(2rem,4vw,3rem)">
-  <div class="narrow">
-    {d.answer && <div class="answer"><span class="lbl"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>}
-    <div class="prose" set:html={html} />
-    {d.faq.length > 0 && <div style="margin-top:3rem"><Faq items={d.faq} /></div>}
-  </div>
-</section>
+{legal ? (
+  <section class="sec" style="padding-top:clamp(2rem,4vw,3rem)">
+    <div class="narrow">
+      <div class="prose" set:html={html} />
+    </div>
+  </section>
+) : (
+  <>
+    {d.answer && (
+      <section class="answer-band" aria-label="The short answer">
+        <div class="wrap">
+          <div class="ab-answer" data-reveal><span class="ab-k"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>
+          <ul class="ab-facts" data-reveal data-reveal-d="1">
+            <li><span class="ab-ico"><Icon name="users" /></span><span><strong>Family-owned</strong>{business.yearsInRoofing}+ years in roofing</span></li>
+            <li><span class="ab-ico"><Icon name="star" /></span><span><strong>{business.rating.value} stars</strong>{business.rating.count} reviews</span></li>
+            <li><span class="ab-ico"><Icon name="award" /></span><span><strong>GAF Master Elite®</strong>BBB Accredited</span></li>
+            <li><span class="ab-ico"><Icon name="license" /></span><span><strong>Licensed &amp; insured</strong>#{business.license.number}</span></li>
+          </ul>
+        </div>
+      </section>
+    )}
+    <ContentSections html={html} formHref="/free-estimate/" cta={d.template !== 'reviews'} />
+    {d.faq.length > 0 && (
+      <section class="sec">
+        <div class="wrap faq-split">
+          <div data-reveal><span class="kicker">FAQ</span><h2>Questions we get asked</h2><a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a></div>
+          <div data-reveal data-reveal-d="1"><Faq items={d.faq} bare /></div>
+        </div>
+      </section>
+    )}
+  </>
+)}
 {d.template === 'reviews' && <ReviewWall />}
-{d.template === 'company' && <Process bg="bone" />}
+{d.template === 'company' && <Process bg="" />}
 {d.template === 'company' && <Reviews limit={4} bg="" />}
 {!legal && <FinalCta />}

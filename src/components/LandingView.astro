@@ -1,0 +1,134 @@
+---
+// Google Ads landing pages: no site menu, no footer links, no exits. One goal:
+// a call or a form. Every phone number shows the campaign tracking number.
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import Icon from './Icon.astro';
+import QuoteWizard from './QuoteWizard.astro';
+import PriceTables from './PriceTables.astro';
+import ContentSections from './ContentSections.astro';
+import Process from './Process.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import Estimator from './Estimator.astro';
+import { business, telHref } from '../data/business';
+import { reviews, reviewStats, type ReviewTag } from '../data/reviews';
+import type { PageEntry } from '../lib/content';
+
+interface Props { entry: PageEntry; html: string }
+const { entry, html } = Astro.props;
+const d = entry.data;
+const p = d.path;
+const tags: ReviewTag[] = p.includes('siding') ? ['gutters', 'clean'] : p.includes('replacement') ? ['replacement', 'oneday'] : ['repair', 'honest', 'replacement'];
+const heroReview = reviews.find((r) => r.name === (p.includes('replacement') || p.includes('siding') ? 'Denise L.' : 'KT'))!;
+const heroQuote = heroReview.name === 'KT'
+  ? 'Called them up thinking I needed a new roof… it turns out the roof was repairable. They didn\'t try to pressure me into any unnecessary work.'
+  : 'My entire new roof was done in one day! They left the property spotless.';
+const year = new Date().getFullYear();
+---
+<header class="lp-top">
+  <div class="wrap">
+    <span class="lp-logo"><Image src={logo} alt={business.name} width={124} loading="eager" /></span>
+    <span class="lp-rating hide-sm"><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><strong>{reviewStats.average}</strong> from {reviewStats.total} reviews</span>
+    <a class="btn btn-gold lp-call" href={telHref}><Icon name="phone" /><span><small>Free estimate · call now</small>{business.phone}</span></a>
+  </div>
+</header>
+
+<section class="hero lp-hero">
+  <div class="hero-bg"><img src={d.image || '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg'} alt={d.imageAlt || ''} width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>
+  <div class="wrap">
+    <div>
+      {d.kicker && <span class="kicker">{d.kicker}</span>}
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      {d.highlights.length > 0 && <ul class="ticks" style="margin-top:1.5rem">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
+      <div class="cta-row">
+        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
+      </div>
+      <figure class="hero-quote">
+        <blockquote>“{heroQuote}”</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span> {heroReview.name}, {heroReview.source} review</figcaption>
+      </figure>
+    </div>
+    <QuoteWizard id="lp" title="Get your free estimate" sub="Takes 30 seconds. A real person calls you back, usually within the hour." service={d.wizard} />
+  </div>
+</section>
+
+<section class="lp-trust" aria-label="Credentials">
+  <div class="wrap">
+    <div class="lp-t"><img src="/wp-content/uploads/2024/04/GAF-Masterelite-AlterPhaseRoofing-300x110.png" alt="GAF Master Elite certified contractor" width="120" height="44" loading="lazy" /><span><strong>GAF Master Elite®</strong>Certified installer</span></div>
+    <div class="lp-t"><img src="/wp-content/uploads/2024/04/AB-seal-horz.svg.svg" alt="BBB Accredited Business" width="94" height="33" loading="lazy" /><span><strong>BBB Accredited</strong>Business</span></div>
+    <div class="lp-t"><span class="lp-ico"><Icon name="star" /></span><span><strong>{reviewStats.average} stars</strong>{reviewStats.total} reviews</span></div>
+    <div class="lp-t"><span class="lp-ico"><Icon name="shield" /></span><span><strong>Up to {business.warranty.manufacturerYears}-yr warranty</strong>+ {business.warranty.workmanshipYears} yrs workmanship</span></div>
+    <div class="lp-t"><span class="lp-ico"><Icon name="license" /></span><span><strong>Licensed &amp; insured</strong>NYC #{business.license.number}</span></div>
+  </div>
+</section>
+
+{d.answer && (
+  <section class="answer-band lp-answer" aria-label="Prices at a glance">
+    <div class="wrap">
+      <div class="ab-answer"><span class="ab-k"><Icon name="dollar" /> Prices at a glance</span><p set:html={d.answer} /></div>
+      <ul class="ab-facts">
+        <li><span class="ab-ico"><Icon name="camera" /></span><span><strong>Free inspection</strong>With photos of what we find</span></li>
+        <li><span class="ab-ico"><Icon name="file" /></span><span><strong>Written price in 24h</strong>Itemized, no pressure</span></li>
+        {p.includes('siding')
+          ? <li><span class="ab-ico"><Icon name="shield" /></span><span><strong>Written warranty</strong>On materials and labor</span></li>
+          : <li><span class="ab-ico"><Icon name="calendar" /></span><span><strong>Most roofs in 1 day</strong>Tear-off to cleanup</span></li>}
+        <li><span class="ab-ico"><Icon name="users" /></span><span><strong>Owner on every job</strong>Our own crew</span></li>
+      </ul>
+    </div>
+  </section>
+)}
+
+<ContentSections html={html} formHref="#lp-wizard" />
+
+<Reviews limit={4} tags={tags} title="Real reviews from real homeowners" noLinks />
+
+{(d.prices.length > 0 || d.estimator) && (
+  <section class="sec dark price-sec" aria-labelledby="prices-h">
+    <div class="wrap">
+      <div class="head-split">
+        <div><span class="kicker">Honest, upfront pricing</span><h2 id="prices-h">What it typically costs</h2></div>
+        <p class="lead">Averages from our own jobs. Your exact price comes in writing after a free inspection.</p>
+      </div>
+      {d.prices.length > 0 && <PriceTables kinds={d.prices} area={d.area} />}
+      {d.estimator && <div style="margin-top:2.5rem"><Estimator heading="h3" /></div>}
+      <p class="cta-row" style="margin-top:2rem"><a class="btn btn-lg btn-gold" href="#lp-wizard">Get my exact price, free <Icon name="arrow" /></a></p>
+    </div>
+  </section>
+)}
+
+<Process />
+
+{d.faq.length > 0 && (
+  <section class="sec">
+    <div class="wrap faq-split">
+      <div>
+        <span class="kicker">Questions</span>
+        <h2>Before you call</h2>
+        <p class="lead">Or skip the reading and ask us directly. You'll talk to someone who works on roofs.</p>
+        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </div>
+      <Faq items={d.faq} title="Questions and answers" bare />
+    </div>
+  </section>
+)}
+
+<FinalCta service={d.wizard} title="Get your free estimate today." />
+
+<footer class="lp-foot">
+  <div class="wrap">
+    <span>© {year} {business.name} · {business.address.street}, {business.address.city}, {business.address.region} {business.address.zip} · NYC DCWP Home Improvement Contractor #{business.license.number}</span>
+    <span><a href="/privacy-policy-2/">Privacy</a> · <a href="/terms-and-conditions/">Terms</a></span>
+  </div>
+</footer>
+
+{d.trackingPhone && (
+  <script is:inline define:vars={{ shown: d.trackingPhone, digits: d.trackingPhone.replace(/\D/g, '') }}>
+    // Ads landing page: show the campaign's tracking number everywhere.
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.href = 'tel:+1' + digits; });
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (w.nextNode()) { if (w.currentNode.nodeValue.indexOf('(929) 370-1552') > -1) w.currentNode.nodeValue = w.currentNode.nodeValue.split('(929) 370-1552').join(shown); }
+  </script>
+)}

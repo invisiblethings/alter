@@ -1,5 +1,5 @@
 ---
-// Price tables rendered from src/data/costs.ts so every page quotes the same
+// Price cards rendered from src/data/costs.ts so every page quotes the same
 // numbers (and Service schema matches what's visible).
 import { materials, repairs, repairTiers, skylights, boroughs, money, range, COSTS_UPDATED } from '../data/costs';
 import { fmtDate } from '../lib/content';
@@ -12,34 +12,30 @@ const titles: Record<Kind, string> = {
   repairs: 'Roof repair prices',
   tiers: 'Repair cost by size of the job',
   skylights: 'Skylight prices',
-  flat: 'Flat roof replacement prices',
-  pitched: 'Shingle & sloped roof prices',
+  flat: 'New flat roof, installed',
+  pitched: 'New shingle & sloped roof, installed',
   boroughs: 'Flat roof replacement by borough (≈1,000 sq ft)',
 };
 ---
-<div class="price-tables">
+<div class="price-groups">
   {kinds.map((k) => (
-    <div>
-      <h3 style="margin:1.5rem 0 0.25rem">{titles[k]}{area && k !== 'boroughs' ? ` in ${area}` : ''}</h3>
-      <div class="table-wrap">
-        {k === 'repairs' && (
-          <table class="t"><thead><tr><th>Repair</th><th>Typical cost</th></tr></thead>
-            <tbody>{repairs.map((r) => <tr><td>{r.name}</td><td class="num">{range(r.low, r.high)}</td></tr>)}</tbody></table>
-        )}
-        {(k === 'tiers' || k === 'skylights') && (
-          <table class="t"><thead><tr><th>Job</th><th>Typical cost</th><th>What it usually covers</th></tr></thead>
-            <tbody>{(k === 'tiers' ? repairTiers : skylights).map((r) => <tr><td><strong>{r.name}</strong></td><td class="num">{range(r.low, r.high)}</td><td>{r.what}</td></tr>)}</tbody></table>
-        )}
-        {(k === 'flat' || k === 'pitched') && (
-          <table class="t"><thead><tr><th>Material</th><th>Installed, per sq ft</th><th>1,000 sq ft roof</th><th>Lifespan</th><th>Best for</th></tr></thead>
-            <tbody>{(k === 'flat' ? flat : pitched).map((m) => <tr><td><strong>{m.name}</strong></td><td class="num">${m.low}–${m.high}</td><td class="num">{range(m.low * 1000, m.high * 1000)}</td><td>{m.life}</td><td>{m.bestFor}</td></tr>)}</tbody></table>
-        )}
-        {k === 'boroughs' && (
-          <table class="t"><thead><tr><th>Borough</th><th>Typical range</th><th>What drives the price</th></tr></thead>
-            <tbody>{boroughs.map((b) => <tr><td><strong>{b.name}</strong></td><td class="num">{money(b.low)}–{money(b.high)}+</td><td>{b.drivers}</td></tr>)}</tbody></table>
-        )}
+    <div class="price-group">
+      <h3>{titles[k]}{area && k !== 'boroughs' && area !== 'New York City' ? ` · ${area}` : ''}</h3>
+      <div class="price-cards">
+        {k === 'repairs' && repairs.map((r) => (
+          <div class="pc"><span class="pc-name">{r.name}</span><span class="pc-val">{range(r.low, r.high)}</span></div>
+        ))}
+        {(k === 'tiers' || k === 'skylights') && (k === 'tiers' ? repairTiers : skylights).map((r) => (
+          <div class="pc"><span class="pc-name">{r.name}</span><span class="pc-val">{range(r.low, r.high)}</span><span class="pc-note">{r.what}</span></div>
+        ))}
+        {(k === 'flat' || k === 'pitched') && (k === 'flat' ? flat : pitched).map((m) => (
+          <div class="pc"><span class="pc-name">{m.name}</span><span class="pc-val">${m.low}–${m.high}<small>/sq ft</small></span><span class="pc-note">1,000 sq ft: {range(m.low * 1000, m.high * 1000)} · lasts {m.life}</span><span class="pc-tag">{m.bestFor}</span></div>
+        ))}
+        {k === 'boroughs' && boroughs.map((b, i) => (
+          <div class:list={['pc', i === 0 && 'pc-hl']}><span class="pc-name">{b.name}</span><span class="pc-val">{money(b.low)}–{money(b.high)}+</span><span class="pc-note">{b.drivers}</span></div>
+        ))}
       </div>
     </div>
   ))}
-  <p class="muted" style="font-size:0.85rem;margin:0">Alter Phase Roofing Contracting job averages, updated {fmtDate(COSTS_UPDATED)}. Your exact price comes from a free on-site inspection.</p>
+  <p class="price-note">Alter Phase Roofing Contracting job averages, updated {fmtDate(COSTS_UPDATED)}. Your exact price comes from a free on-site inspection.</p>
 </div>

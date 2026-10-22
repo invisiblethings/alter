@@ -19,8 +19,10 @@ interface Props {
   modified?: string;
   schema?: object;
   preloadImage?: string;
+  /** Ads landing pages: no site header, menu or footer. */
+  bare?: boolean;
 }
-const { title, description = '', path, image, imageAlt, noindex = false, canonical, ogType = 'website', published, modified, schema, preloadImage } = Astro.props;
+const { title, description = '', path, image, imageAlt, noindex = false, canonical, ogType = 'website', published, modified, schema, preloadImage, bare = false } = Astro.props;
 const canonicalUrl = SITE + (canonical || path);
 const ogImage = SITE + (image || '/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg');
 // Same robots policy the old site sent (Rank Math defaults), minus WordPress noise.
@@ -77,12 +79,12 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
   <body>
     <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${business.gtmId}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
     <a class="skip" href="#main">Skip to content</a>
-    <Header path={path} />
+    {!bare && <Header path={path} />}
     <main id="main">
       <slot />
     </main>
-    <Footer />
-    <CallBar />
+    {!bare && <Footer />}
+    <CallBar quoteHref={bare ? '#lp-wizard' : undefined} />
     <script>
       // Scroll reveal: progressive enhancement only; CSS keeps content visible without JS or with reduced motion.
       const els = document.querySelectorAll('[data-reveal]');

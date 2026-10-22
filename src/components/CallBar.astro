@@ -1,9 +1,11 @@
 ---
+interface Props { quoteHref?: string }
+const { quoteHref = '/free-estimate/' } = Astro.props;
 import Icon from './Icon.astro';
 import { telHref, smsHref } from '../data/business';
 ---
 <nav class="callbar" aria-label="Quick contact">
   <a class="call" href={telHref}><Icon name="phone" />Call now</a>
   <a href={smsHref}><Icon name="sms" />Text us</a>
-  <a href="/free-estimate/"><Icon name="clipboard" />Free quote</a>
+  <a href={quoteHref}><Icon name="clipboard" />Free quote</a>
 </nav>

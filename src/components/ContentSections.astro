@@ -1,0 +1,49 @@
+---
+// Page body as alternating, designed sections with a call-to-action strip
+// after every second section. See src/lib/sections.ts.
+import Icon from './Icon.astro';
+import { toSections } from '../lib/sections';
+import { business, telHref } from '../data/business';
+interface Props { html: string; cta?: boolean; startBone?: boolean; formHref?: string }
+const { html, cta = true, startBone = false, formHref = '#pg-wizard' } = Astro.props;
+const sections = toSections(html);
+let n = 0;
+const ctas = [
+  { t: 'Not sure what your roof needs?', s: 'Free inspection with photos and a written price, usually within 24 hours.' },
+  { t: 'Talk to the people who do the work.', s: `Family-owned on Staten Island. ${business.rating.value} stars from ${business.rating.count} reviews.` },
+  { t: 'Most new roofs are done in a single day.', s: `Up to ${business.warranty.manufacturerYears}-year manufacturer and ${business.warranty.workmanshipYears}-year workmanship warranties, in writing.` },
+];
+---
+{sections.map((s, i) => {
+  const bone = (i % 2 === 1) !== startBone;
+  if (s.title) n++;
+  const num = String(n).padStart(2, '0');
+  const showCta = cta && i > 0 && i % 2 === 1 && i < sections.length - 1;
+  const c = ctas[Math.floor(i / 2) % ctas.length];
+  return (
+    <>
+      <section class:list={['csec', bone && 'bone', s.wide ? 'csec-wide' : 'csec-split', s.lead && 'csec-lead']} aria-labelledby={s.title ? s.id : undefined}>
+        <div class="wrap">
+          {s.title && (
+            <div class="csec-head" data-reveal>
+              <span class="csec-num" aria-hidden="true">{num}</span>
+              <h2 id={s.id} set:html={s.title} />
+            </div>
+          )}
+          <div class="csec-body prose" data-reveal set:html={s.body} />
+        </div>
+      </section>
+      {showCta && (
+        <aside class="cta-strip" aria-label="Free inspection">
+          <div class="wrap">
+            <p><strong>{c.t}</strong> {c.s}</p>
+            <div class="cta-row">
+              <a class="btn btn-gold" href={telHref}><Icon name="phone" /> {business.phone}</a>
+              <a class="btn btn-ghost" href={formHref}>Free inspection <Icon name="arrow" /></a>
+            </div>
+          </div>
+        </aside>
+      )}
+    </>
+  );
+})}

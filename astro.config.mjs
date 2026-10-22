@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import { rehypeHeadingIds, rehypeImages, rehypeTables, rehypeLinks, rehypeSectionGroups } from './src/lib/rehype.mjs';
 
 // Ads landing pages and utility pages stay live but out of the index.
-const NOINDEX = ['/roofing-lp/', '/vinyl-siding-estimate/', '/roof-replacement-si/', '/thank-you/'];
+const NOINDEX = ['/roofing-lp/', '/brooklyn-roofing-solutions/', '/vinyl-siding-estimate/', '/roof-replacement-si/', '/thank-you/'];
 
 // lastmod for the sitemap, read straight from content frontmatter.
 const lastmod = new Map();

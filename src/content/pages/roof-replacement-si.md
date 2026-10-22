@@ -4,12 +4,12 @@ template: landing
 noindex: true
 trackingPhone: "(929) 800-8572"
 seoTitle: "Roof Replacement Staten Island | Free Estimate | Alter Phase"
-description: "Roof replacement on Staten Island starting at $5,500. Family-owned crew, most roofs done in a day or two, up to 50-year warranties. Free written estimate."
+description: "Roof replacement on Staten Island starting at $5,500. Family-owned crew, most roofs done in one day, up to 50-year warranties. Free written estimate."
 kicker: "Roof replacement · Staten Island"
 h1: "Roof replacement on Staten Island, starting at $5,500"
 intro: "Every roof is different, so we inspect yours for free and send a written, itemized price within 24 hours. No pushy sales, no surprise fees."
 highlights:
-  - "Most roofs replaced in one to two days"
+  - "Most roofs replaced in a single day"
   - "Up to 50-year material and 25-year workmanship warranties"
   - "GAF Master Elite® installer, licensed and insured"
 service: "Roof replacement"

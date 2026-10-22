@@ -36,7 +36,7 @@ modified: "2026-10-22"
 
 ## What makes us different
 
-- **Fast turnarounds.** Most roof replacements are done in one to two days.
+- **Fast turnarounds.** Most roof replacements are done in a single day.
 - **Real warranties.** Up to 50 years on materials and 25 years on workmanship, in writing.
 - **No pushy sales.** You get photos, a written estimate and time to decide.
 - **Local and family-owned.** Our shop is at 61 Appleby Ave, Staten Island.

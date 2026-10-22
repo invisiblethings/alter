@@ -54,14 +54,13 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 
 ## 3. Structure and URLs
 
-Every URL that ranks keeps its exact path, with the trailing slash. Content, titles and H1s are rewritten. Six pages were merged into stronger ones:
+Every URL that ranks keeps its exact path, with the trailing slash. Content, titles and H1s are rewritten. Five pages were merged into stronger ones:
 
 | Old URL | Now | Why |
 |---|---|---|
 | `/roofing-costs-in-nyc/` | 301 → `/roof-replacement-cost-in-nyc/` | Same intent; the target has 3× the impressions |
 | `/guide-roofing-material-for-home-staten-island-brooklyn/` | 301 → `/top-roofing-materials-for-homes-in-new-york/` | Duplicate topic |
 | `/flat-roofing-brooklyn/` | 301 → `/service-area/brooklyn-ny/flat-roofing/` | Google already ranks the target |
-| `/brooklyn-roofing-solutions/` | 301 → `/service-area/brooklyn-ny/` | Duplicate Brooklyn hub |
 | `/free-roofing-estimates-brooklyn-ny/` | 301 → `/free-estimate/` | Duplicate form page |
 | `/service-area/nyc/commercial-roofing/` | 301 → `/commercial-roofing/` | Duplicate commercial page |
 
@@ -92,7 +91,8 @@ WordPress system URLs (`/sitemap_index.xml`, Yoast sub-sitemaps, `/feed/`, `/aut
   - Staten Island house types and neighborhoods grouped by shore
   - a mega menu with service photos, prices, an emergency path and an inspection CTA
 - **Trust everywhere:** Google rating, GAF and BBB badges, license number, warranty, owner promise, real reviews.
-- **Ads landing pages:** same design, `noindex`, and every phone link and display number swaps to the tracking number.
+- **Google Ads landing pages** (`/roofing-lp/`, `/brooklyn-roofing-solutions/`, `/roof-replacement-si/`, `/vinyl-siding-estimate/`): `noindex`, no site header, menu or footer links (logo, rating and call button only), form above the fold, trust bar, review proof, prices, process, FAQ and a closing form. Every phone link and display number swaps to the tracking number (929) 800-8572.
+- **Service, area and company pages:** a photo hero with the form, a short-answer band with quick facts, the content split into numbered sections with alternating layouts (lists become feature tiles or checklists), call-to-action strips, price cards, related-page tiles, tagged reviews and a split FAQ. Not article-style.
 
 ---
 
