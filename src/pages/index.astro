@@ -327,7 +327,7 @@ const shores = [
     <div class="wrap">
       <div class="head-split" data-reveal>
         <div><span class="kicker">From St. George to Tottenville</span><h2 id="area-h">A roofing company for every Staten Island neighborhood</h2></div>
-        <p class="lead">We're based on Staten Island and we come to you, in every neighborhood and ZIP code from 10301 to 10314.</p>
+        <p class="lead">We're based at <a href={business.googleMapsUrl} target="_blank" rel="noopener" style="color:#fff">{business.address.street}, Staten Island, NY {business.address.zip}</a> and work in every neighborhood and ZIP code from 10301 to 10314.</p>
       </div>
       <div class="shores" data-reveal>
         {shores.map((s) => (

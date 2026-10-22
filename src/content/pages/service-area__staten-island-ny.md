@@ -38,7 +38,7 @@ related:
   - "/all-seasons-roofing-staten-island/"
 faq:
   - q: "Where are you based?"
-    a: "We're based on Staten Island and we come to you. Our office is for our crew and isn't open to the public. Call or text (929) 370-1552 Monday to Friday 8am–8pm and Saturday 8am–5pm, and we answer emergency calls 24/7."
+    a: "Our address is 61 Appleby Ave, Staten Island, NY 10305, and we come to you for every inspection. Call or text (929) 370-1552 Monday to Friday 8am–8pm and Saturday 8am–5pm, and we answer emergency calls 24/7."
   - q: "Which Staten Island neighborhoods do you serve?"
     a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
   - q: "How much does a new roof cost on Staten Island?"

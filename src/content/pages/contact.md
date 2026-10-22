@@ -9,7 +9,7 @@ intro: "Call, text, email or send the form. You'll reach our Staten Island team,
 highlights:
   - "<strong>Phone & text:</strong> <a href=\"tel:+19293701552\">(929) 370-1552</a>"
   - "<strong>Email:</strong> <a href=\"mailto:info@alterphaseroofing.com\">info@alterphaseroofing.com</a>"
-  - "<strong>We come to you:</strong> free on-site inspections across Staten Island and NYC"
+  - "<strong>Address:</strong> 61 Appleby Ave, Staten Island, NY 10305"
 answer: "Call or text Alter Phase Roofing Contracting at <a href=\"tel:+19293701552\">(929) 370-1552</a> or email info@alterphaseroofing.com. We come to you for every inspection. Hours: Monday–Friday 8am–8pm, Saturday 8am–5pm, Sunday closed. Emergency roof repair calls are answered 24/7."
 related:
   - "/free-estimate/"
@@ -27,9 +27,11 @@ modified: "2026-10-22"
 | Sunday | Closed |
 | Emergencies | 24/7 at (929) 370-1552 |
 
-## We come to you
+## Our address
 
-Every inspection and estimate happens at your property. Our office at 61 Appleby Ave, Staten Island, NY 10305 is for our crew and isn't open to the public, so please call, text or email instead of stopping by. You can read our reviews on [Google Maps](https://www.google.com/maps?cid=15794678866958250729).
+[Alter Phase Roofing Contracting, 61 Appleby Ave, Staten Island, NY 10305](https://www.google.com/maps?cid=15794678866958250729)
+
+Every inspection and estimate happens at your property, so the fastest way to reach us is to call, text or email.
 
 We serve [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).
 
