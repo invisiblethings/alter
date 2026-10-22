@@ -1,0 +1,13 @@
+# Alter Phase Roofing
+User-agent: *
+Allow: /
+
+# Search and AI answer engines are welcome: being cited in AI answers helps
+# local customers find us.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://alterphaseroofing.com/sitemap-index.xml

@@ -34,7 +34,7 @@ const schema = pageGraph({ url: page.path, title: page.seoTitle, description: pa
             {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="600" height="375" loading="lazy" decoding="async" />}
             <div class="post-card-body">
               <time datetime={p.data.published}>{fmt(p.data.published)}</time>
-              <h2 style="font-size:1.2rem;margin:0">{p.data.h1}</h2>
+              <h2 style="font-size:1.2rem;margin:0">{p.data.cardTitle || p.data.h1}</h2>
               <p>{excerpt(p.body || '', 24)}</p>
             </div>
           </a>

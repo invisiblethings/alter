@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roof Repair in NYC: What Homeowners Need to Know"
 description: "New York City property owners face a unique set of challenges when it comes to roof repairs. From unpredictable weather to stringent building codes, the"
 h1: "Roof Repair in NYC: What Homeowners Need to Know"
+cardTitle: "Roof Repair in NYC: What Homeowners Need to Know"
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "New York City Aerial View of Roofs"
 published: "2024-10-07"

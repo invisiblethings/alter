@@ -4,6 +4,7 @@ template: post
 seoTitle: "Flat Roof Repair and Replacement in NYC: What You Need to Know"
 description: "At Alter Phase Roofing, we understand the complexities of flat roof repair in New York City. Given the weather conditions and structural demands of the city,"
 h1: "Flat Roof Repair and Replacement in NYC: What You Need to Know"
+cardTitle: "Flat Roof Repair and Replacement in NYC: What You Need to Know"
 image: "/wp-content/uploads/2024/10/Flat-Roofing-AlterPhaseRoofing.webp"
 imageAlt: "Flat Roofing NYC Alter Phase Roofing"
 published: "2024-10-09"

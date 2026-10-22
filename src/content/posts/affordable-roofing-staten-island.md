@@ -4,6 +4,7 @@ template: post
 seoTitle: "Affordable Roofing Staten Island: Quality Roofing at Budget-Friendly Prices"
 description: "Top-quality, affordable roofing solutions in Staten Island with Alter Phase Roofing. From repairs to full replacements, our budget-friendly services ensure your home stays protected. Contact us today at (929) 370-1552 for a free quote!"
 h1: "Affordable Roofing Staten Island"
+cardTitle: "Affordable Roofing Staten Island"
 image: "/wp-content/uploads/2024/11/Affordable-Roofing-Staten-Island-AlterPhaseRoofing.jpg"
 imageAlt: "Affordable Roofing Staten Island"
 published: "2024-11-02"

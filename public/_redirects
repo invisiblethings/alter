@@ -1,0 +1,88 @@
+# Netlify redirects for the WordPress -> Astro migration.
+# Every content URL keeps its exact path, so there are NO content redirects
+# here at launch. These rules only catch WordPress system URLs that Google
+# or old links may still request.
+
+# --- Yoast/Rank Math sitemaps -> Astro sitemap
+/sitemap_index.xml      /sitemap-index.xml   301
+/sitemap.xml            /sitemap-index.xml   301
+/wp-sitemap.xml         /sitemap-index.xml   301
+/post-sitemap.xml       /sitemap-index.xml   301
+/page-sitemap.xml       /sitemap-index.xml   301
+/category-sitemap.xml   /sitemap-index.xml   301
+/local-sitemap.xml      /sitemap-index.xml   301
+
+# --- Feeds, author archive, pagination
+/feed                   /blog/               301
+/feed/                  /blog/               301
+/comments/feed/         /blog/               301
+/blog/feed/             /blog/               301
+/category/roofing/feed/ /category/roofing/   301
+/author/*               /about/              301
+/blog/page/*            /blog/               301
+/category/roofing/page/* /category/roofing/  301
+/page/*                 /blog/               301
+
+# --- WordPress admin/login/API (no longer exist)
+/wp-admin/*             /                    301
+/wp-login.php           /                    301
+/xmlrpc.php             /                    301
+/wp-json/*              /                    301
+
+# --- Old plain permalinks (?p= / ?page_id=) -> pretty URLs
+/ p=1331 /roof-replacement-cost-in-brooklyn-ny/ 301
+/ p=2555 /roofing-costs-in-nyc/ 301
+/ p=1001 /roof-replacement-guide-nyc/ 301
+/ p=1947 /top-roofing-materials-for-homes-in-new-york/ 301
+/ p=1724 /all-seasons-roofing-staten-island/ 301
+/ p=1670 /affordable-roofing-staten-island/ 301
+/ p=1435 /roof-sheathing-explained/ 301
+/ p=1371 /cost-to-repair-roof-leak/ 301
+/ p=1328 /roof-replacement-cost-in-nyc/ 301
+/ p=1271 /flat-roof-repair-and-replacement-in-nyc/ 301
+/ p=1269 /roof-repair-in-nyc-what-homeowners-need-to-know/ 301
+/ p=1216 /types-of-asphalt-shingles/ 301
+/ p=1206 /tpo-roofing-guide/ 301
+/ p=1131 /guide-roofing-material-for-home-staten-island-brooklyn/ 301
+/ page_id=3006 /roofing-lp/ 301
+/ page_id=2631 /roof-replacement-si/ 301
+/ page_id=2563 /service-area/nyc/commercial-roofing/ 301
+/ page_id=2488 /free-roofing-estimates-brooklyn-ny/ 301
+/ page_id=2238 /reviews/ 301
+/ page_id=1765 /flat-roofing-brooklyn/ 301
+/ page_id=1453 /vinyl-siding-estimate/ 301
+/ page_id=1439 /service-area/brooklyn-ny/flat-roofing/ 301
+/ page_id=1381 /service-area/brooklyn-ny/roof-repair/ 301
+/ page_id=1375 /service-area/brooklyn-ny/roof-replacement/ 301
+/ page_id=1304 /service-area/manhattan-ny/ 301
+/ page_id=1293 /service-area/staten-island-ny/ 301
+/ page_id=1276 /service-area/nyc/ 301
+/ page_id=1245 /service-area/brooklyn-ny/ 301
+/ page_id=1240 /accessibility-statement/ 301
+/ page_id=1174 /blog/ 301
+/ page_id=922 /careers/ 301
+/ page_id=894 /flat-roofing/ 301
+/ page_id=888 /siding-gutter/gutter-installation-repair/ 301
+/ page_id=882 /siding-gutter/siding-installation-repair/ 301
+/ page_id=876 /roof-repair/emergency-service/ 301
+/ page_id=870 /roof-repair/commercial/ 301
+/ page_id=864 /roof-repair/residential/ 301
+/ page_id=858 /commercial-roofing/roof-inspection/ 301
+/ page_id=852 /commercial-roofing/roof-replacement/ 301
+/ page_id=846 /residential-roofing/skylight-installation-repair/ 301
+/ page_id=837 /residential-roofing/roof-inspections/ 301
+/ page_id=830 /residential-roofing/roof-replacement/ 301
+/ page_id=738 /brooklyn-roofing-solutions/ 301
+/ page_id=718 /siding-gutter/ 301
+/ page_id=706 /roof-repair/ 301
+/ page_id=700 /commercial-roofing/ 301
+/ page_id=690 /residential-roofing/ 301
+/ page_id=672 /how-we-work/ 301
+/ page_id=643 /service-area/ 301
+/ page_id=633 /privacy-policy-2/ 301
+/ page_id=631 /terms-and-conditions/ 301
+/ page_id=620 /services/ 301
+/ page_id=515 /about/ 301
+/ page_id=432 /free-estimate/ 301
+/ page_id=423 /contact/ 301
+/ page_id=244 / 301

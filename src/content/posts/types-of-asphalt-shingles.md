@@ -4,6 +4,7 @@ template: post
 seoTitle: "Types of Asphalt Shingles: Pros & Cons - Which To Choose?"
 description: "Everything you need to know about the types of asphalt shingles. Discover the different types, their pros and cons, and how to select the perfect shingle for your roof."
 h1: "Types of Asphalt Shingles: Pros & Cons – Which To Choose?"
+cardTitle: "Types of Asphalt Shingles: Pros & Cons – Which To Choose?"
 image: "/wp-content/uploads/2024/06/Types-of-Asphalt-Shingles-GAF-Alterphaseroofing.webp"
 published: "2024-05-16"
 modified: "2024-11-02"

@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roof Replacement NYC (2026 Guide): Permits, Costs & Contractors"
 description: "Navigating roof replacement in NYC? This expert guide covers permits, top materials, finding the right contractor, and ensuring a stress-free project."
 h1: "Roof Replacement NYC: Cost, Permits & Everything You Need to Know"
+cardTitle: "Roof Replacement NYC (2026 Guide): Permits, Costs & Contractors"
 intro: "A roof replacement in New York City costs $10,000 to $30,000+, and getting it wrong costs far more. This guide covers exact 2026 NYC pricing by borough, the permit rules most homeowners get wrong, material comparisons for NYC's specific conditions, and how to vet any contractor before you sign."
 image: "/wp-content/uploads/2024/10/Flat-Roof-in-NYC-by-AlterPhaseRoofingContracting.webp"
 imageAlt: "Flat Roof Replacement in NYC"

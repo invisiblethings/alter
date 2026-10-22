@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roof Replacement Cost in New York City (2026)"
 description: "Discover the average roof replacement costs in NYC. Explore pricing by material, including asphalt shingles, metal, slate, and more, to plan your roofing project effectively."
 h1: "Roof Replacement Cost in New York City (2026)"
+cardTitle: "Roof Replacement Cost in New York City (2026)"
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12.jpg"
 imageAlt: "Alter Phase Roofing team installing a TPO Flat Roofing system on a commercial building in Staten Island, NY"
 published: "2024-10-12"

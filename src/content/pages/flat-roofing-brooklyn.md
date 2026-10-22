@@ -12,12 +12,16 @@ modified: "2025-04-28"
 projects:
   - title: "Roof Replacement"
     location: "Residential Asphalt Shingle Roof Replacement in Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg"
   - title: "TPO Flat Roof"
     location: "TPO Roofing in Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
   - title: "TPO Flat Roof Replacement"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
   - title: "EPDM Roof Install"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
 ---
 -   100% satisfaction guarantee.
 -   LICENSED, INSURED & BONDED
@@ -31,7 +35,7 @@ Fill out the form below to receive a detailed cost estimate for your roofing pro
 
 ![Flat Roofing NYC Alter Phase Roofing](/wp-content/uploads/2024/10/Flat-Roofing-AlterPhaseRoofing.webp)
 
-![TPO Flat Roof install by Alter Phase Roofing](/wp-content/uploads/elementor/thumbs/AlterPhaseRoofingProjects-10-qnptpbq8bxvyiicbq73iqm4bfj0nc3nfm4qk53q7sg.jpg)
+![TPO Flat Roof install by Alter Phase Roofing](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg)
 
 ## Flat Roof Problems? We’ve Got You Covered.
 

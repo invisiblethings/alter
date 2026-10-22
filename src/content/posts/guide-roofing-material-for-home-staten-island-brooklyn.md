@@ -4,6 +4,7 @@ template: post
 seoTitle: "The Ultimate Guide to Choosing the Right Roofing Material for Staten Island & Brooklyn (2026)"
 description: "Choosing the right roofing material is essential for maximizing the lifespan of your roof, boosting energy efficiency, and enhancing the overall look of your"
 h1: "The Ultimate Guide to Choosing the Right Roofing Material for Staten Island & Brooklyn (2026)"
+cardTitle: "The Ultimate Guide to Choosing the Right Roofing Material for Staten Island & Brooklyn (2026)"
 image: "/wp-content/uploads/2024/04/Roofing-AlterPhase.jpg"
 published: "2024-05-05"
 modified: "2026-01-31"

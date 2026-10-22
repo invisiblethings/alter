@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roofing Costs NYC (2026) | Roof Replacement & Repair Prices"
 description: "Curious about roofing costs in NYC? Get a full breakdown of 2026 roof repair and roof replacement prices for asphalt shingles, flat roofs, metal, and more.."
 h1: "Roofing Costs in NYC (2026)"
+cardTitle: "Roofing Costs in NYC (2026)"
 image: "/wp-content/uploads/2025/05/Roofing-Costs-NYC-Replacement-Repair.jpg"
 imageAlt: "Roofing Costs in NYC"
 published: "2025-05-13"
@@ -88,4 +89,4 @@ or
 
 [
 Request Free Estimate Online
-](/free-estimate)
+](/free-estimate/)

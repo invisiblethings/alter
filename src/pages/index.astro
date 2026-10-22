@@ -178,7 +178,7 @@ const projects = [
         {projects.map((p) => (
           <figure class="project">
             <img src={p.img} alt={`${p.title}: ${p.where}`} width="600" height="600" loading="lazy" decoding="async" />
-            <figcaption><strong>{p.title}</strong>{p.where}</figcaption>
+            <figcaption><h3>{p.title}</h3>{p.where}</figcaption>
           </figure>
         ))}
       </div>
@@ -218,7 +218,7 @@ const projects = [
             {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="600" height="375" loading="lazy" decoding="async" />}
             <div class="post-card-body">
               <time datetime={p.data.published}>{new Date(p.data.published + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
-              <h3>{p.data.h1}</h3>
+              <h3>{p.data.cardTitle || p.data.h1}</h3>
               <p>{excerpt(p.body || '', 22)}</p>
             </div>
           </a>

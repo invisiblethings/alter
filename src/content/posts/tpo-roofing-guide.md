@@ -4,6 +4,7 @@ template: post
 seoTitle: "TPO Roofing: Your Ultimate Guide to the Future of Flat Roofs"
 description: "Discover the ins and outs of TPO roofing – from its energy efficiency and durability to installation costs and maintenance. Is TPO right for your flat roof? Find out now."
 h1: "TPO Roofing: Your Ultimate Guide to the Future of Flat Roofs"
+cardTitle: "TPO Roofing: Your Ultimate Guide to the Future of Flat Roofs"
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
 imageAlt: "TPO Roof Install work-in-progress by Alter Phase Roofing in 11209 Brooklyn, NY"
 published: "2024-05-10"

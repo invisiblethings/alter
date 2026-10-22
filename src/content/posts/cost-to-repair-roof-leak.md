@@ -4,6 +4,7 @@ template: post
 seoTitle: "How Much Does It Cost to Repair a Roof Leak in NYC? - A Comprehensive Guide for NYC Homeowners"
 description: "As soon as you spot a roof leak, repairing it quickly is crucial to preventing further issues. But how much should homeowners in New York City expect to pay"
 h1: "How Much Does It Cost to Repair a Roof Leak in NYC? – A Comprehensive Guide for NYC Homeowners"
+cardTitle: "How Much Does It Cost to Repair a Roof Leak in NYC? – A Comprehensive Guide for NYC Homeowners"
 image: "/wp-content/uploads/2024/06/Damaged-Asphalt-Shingles-AlterPhaseRoofing.webp"
 published: "2024-10-14"
 modified: "2024-12-04"

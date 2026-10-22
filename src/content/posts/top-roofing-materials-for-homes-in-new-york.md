@@ -4,6 +4,7 @@ template: post
 seoTitle: "Top Roofing Materials for Homes in New York: Pros & Cons | Alter Phase Roofing Inc."
 description: "Discover the best roofing materials for homes in New York, including asphalt shingles, flat roofing, slate, and more. Explore the pros and cons of each option to help you make an informed decision for your next roofing project."
 h1: "Top Roofing Materials for Homes in New York: Pros & Cons"
+cardTitle: "Top Roofing Materials for Homes in New York: Pros & Cons"
 image: "/wp-content/uploads/2024/11/Top-Roofing-Materials-New-York-AlterPhaseRoofing.jpg"
 imageAlt: "Top Roofing Materials for Homes in New York"
 published: "2024-11-14"

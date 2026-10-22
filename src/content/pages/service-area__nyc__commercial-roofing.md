@@ -12,12 +12,16 @@ modified: "2025-05-15"
 projects:
   - title: "PVC Roofing System Installation"
     location: "Manhattan, NY"
+    image: "/wp-content/uploads/2025/04/A-detail-shot-of-a-PVC-flat-roof.webp"
   - title: "TPO Flat Roof"
     location: "TPO Roofing in NYC"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
   - title: "Flat Roof Replacement"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
   - title: "EPDM Roof Install"
     location: "NYC"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
 ---
 -   100% satisfaction guarantee.
 -   FULLY INSURED AND LICENSED
@@ -38,7 +42,7 @@ Completely FREE Quotes, No Obligation
 
 ![An image of a bright white TPO flat roof, emphasizing its clean and reflective surface. Wide shot showing a commercial building with this type of roof.](/wp-content/uploads/2025/04/TPO-flat-roof-emphasizing-its-clean-and-reflective-surface.webp)
 
-![The Alter Phase Roofing Contracting crew installing a flat roof in Brooklyn](/wp-content/uploads/elementor/thumbs/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn-r40463u7fxoknsu0ylhq5yiottyfd04d97xofm38q8.webp)
+![The Alter Phase Roofing Contracting crew installing a flat roof in Brooklyn](/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn.webp)
 
 ## Need a Commercial Roofer in NYC You Can Trust?
 

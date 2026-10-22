@@ -12,12 +12,16 @@ modified: "2026-03-09"
 projects:
   - title: "Roof Replacement"
     location: "Residential Asphalt Shingle Roof Replacement in Staten Island, NY"
+    image: "/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304.jpg"
   - title: "Roof Replacment"
     location: "10314, Staten Island"
+    image: "/wp-content/uploads/2025/05/IMG-d52b89e8d54e11c5b9d6a9577467ad33-V.jpg"
   - title: "Newly Installed Roof"
     location: "Staten Island, NY"
+    image: "/wp-content/uploads/2025/04/New-roof-replacement-in-Staten-Island.jpg"
   - title: "GAF Shingle Roof Replacement"
     location: "Staten Island, NY"
+    image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
 ---
 ![](/wp-content/uploads/2025/05/Alter-Phase-Roofing-Rating.png)
 
@@ -81,7 +85,7 @@ That's why our customers love us.
 
 ![](/wp-content/uploads/2025/05/Roof-Replacement-STATEN-ISLAND.webp)
 
-![Roof Replacement in Staten Island, NY](/wp-content/uploads/elementor/thumbs/Roofing-AlterPhase2-qmuocu0wpqgroxtud702rynoxw6bl4jbsncf30hre8.jpg)
+![Roof Replacement in Staten Island, NY](/wp-content/uploads/2024/04/Roofing-AlterPhase2.jpg)
 
 ## Full-Service Roofing: Replacement, Repair & Everything In Between
 

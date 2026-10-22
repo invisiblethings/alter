@@ -87,7 +87,7 @@ const relatedLinks = related.length >= 2 ? related : all.filter((l) => l.url !==
         {d.projects.filter((p) => p.image).slice(0, 8).map((p) => (
           <figure class="project">
             <img src={p.image} alt={`${p.title}, ${p.location}`} width="600" height="600" loading="lazy" decoding="async" />
-            <figcaption><strong>{p.title}</strong>{p.location}</figcaption>
+            <figcaption><h3>{p.title}</h3>{p.location}</figcaption>
           </figure>
         ))}
       </div>

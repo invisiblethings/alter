@@ -4,6 +4,7 @@ template: post
 seoTitle: "All Seasons Roofing Staten Island | Year-Round Protection by Alter Phase Roofing"
 description: "Looking for reliable all seasons roofing in Staten Island? Trust Alter Phase Roofing for expert roofing and siding services that withstand any weather. Call (929) 370-1552 today for a free quote! Quality and protection all year long."
 h1: "All Seasons Roofing Staten Island | Year-Round Protection by Alter Phase Roofing"
+cardTitle: "All Seasons Roofing Staten Island | Year-Round Protection by Alter Phase Roofing"
 image: "/wp-content/uploads/2024/11/All-Seasons-Roofing-Staten-Island-AlterPhaseRoofing.jpg"
 imageAlt: "All Seasons Roofing Staten Island"
 published: "2024-11-06"

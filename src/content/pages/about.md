@@ -24,7 +24,7 @@ We're not just roofers; we're certified experts in asphalt shingle and metal roo
 
 ![Alter Phase Roofing team photo taken on a worksite in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15-1024x1014.jpg)
 
-![Flat Roofing by Alter Phase Roofing in Staten Island, NY](/wp-content/uploads/elementor/thumbs/AlterPhaseRoofingProjects-11-qnptq2zju4x9v78qb0vp8x8onpaajbnndvnn24lss0.jpg)
+![Flat Roofing by Alter Phase Roofing in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11.jpg)
 
 ## Our Values
 

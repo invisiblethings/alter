@@ -86,7 +86,7 @@ const related = (await posts()).filter((p) => p.data.path !== d.path).slice(0, 3
           {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="600" height="375" loading="lazy" decoding="async" />}
           <div class="post-card-body">
             <time datetime={p.data.published}>{fmt(p.data.published)}</time>
-            <h3>{p.data.h1}</h3>
+            <h3>{p.data.cardTitle || p.data.h1}</h3>
             <p>{excerpt(p.body || '', 20)}</p>
           </div>
         </a>

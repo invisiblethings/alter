@@ -46,10 +46,14 @@ const decode = (s) => cheerio.load(`<i>${s}</i>`)('i').text();
 const yamlStr = (s) => JSON.stringify(s ?? '');
 const relUrl = (href) => {
   if (!href) return href;
+  href = href.replace(/^https?:\/\/(www\.)?alterphaseroofing\.com/, ORIGIN);
   if (href.startsWith(ORIGIN + '/wp-content/')) return href.slice(ORIGIN.length);
-  if (href.startsWith(ORIGIN)) {
-    const u = new URL(href);
-    return u.pathname + u.search + u.hash;
+  if (href === ORIGIN) return '/';
+  if (href.startsWith(ORIGIN) || href.startsWith('/')) {
+    const u = new URL(href, ORIGIN);
+    // WordPress always used trailing slashes; links without one would redirect.
+    const p = /\.[a-z0-9]+$/i.test(u.pathname) || u.pathname.endsWith('/') ? u.pathname : u.pathname + '/';
+    return p + u.search + u.hash;
   }
   return href;
 };
@@ -60,6 +64,26 @@ export const tocId = (text) =>
     .replace(/[^\p{L}\p{N}\s_-]/gu, '')
     .trim()
     .replace(/\s+/g, '_');
+
+// Map an uploads URL to a file we actually have. Elementor's generated
+// /elementor/thumbs/<name>-<hash>.jpg crops fall back to the original image.
+const PUBLIC = path.join(ROOT, 'public');
+const uploadsIndex = new Map();
+(function walk(d) {
+  if (!fs.existsSync(d)) return;
+  for (const f of fs.readdirSync(d, { withFileTypes: true })) {
+    const p = path.join(d, f.name);
+    if (f.isDirectory()) walk(p);
+    else uploadsIndex.set(f.name, '/' + path.relative(PUBLIC, p).split(path.sep).join('/'));
+  }
+})(path.join(PUBLIC, 'wp-content/uploads'));
+function localImage(src) {
+  if (!src || !src.startsWith('/wp-content/')) return src;
+  if (fs.existsSync(path.join(PUBLIC, decodeURI(src)))) return src;
+  const thumb = src.match(/\/elementor\/thumbs\/(.+)-[a-z0-9]{20,}\.(\w+)$/);
+  if (thumb) return uploadsIndex.get(`${thumb[1]}.${thumb[2]}`) || null;
+  return null;
+}
 
 // ---------- hand-coded "apr-*" HTML sections (newer pages) ----------
 // Hero chrome, trust bars, inline forms and CTA blocks duplicate what the new
@@ -119,7 +143,9 @@ function cleanFragment($, $el) {
     const $img = $(img);
     const src = $img.attr('data-src') || $img.attr('src');
     if (!src || src.startsWith('data:')) return void $img.remove();
-    $img.attr('src', relUrl(src));
+    const local = localImage(relUrl(src));
+    if (!local) return void $img.remove(); // already 404 on the live site
+    $img.attr('src', local);
     for (const a of ['srcset', 'sizes', 'class', 'data-src', 'loading', 'decoding', 'style', 'fetchpriority']) $img.removeAttr(a);
   });
   $el.find('a').each((_, a) => {
@@ -211,8 +237,11 @@ function elementorToHtml($, rootSel, boilerplate, ctx) {
       case 'flip-box.default': {
         const title = squash($w.find('.elementor-flip-box__layer__title').first().text());
         const sub = squash($w.find('.elementor-flip-box__layer__description').first().text());
-        const bg = ($w.find('.elementor-flip-box__front').attr('style') || '').match(/url\(([^)]+)\)/);
-        ctx.projects.push({ title, location: sub, image: bg ? relUrl(bg[1].replace(/['"]/g, '')) : null });
+        // Elementor keeps the photo in the page's generated CSS file.
+        const id = $w.attr('data-id');
+        const re = new RegExp(`elementor-element-${id} \\.elementor-flip-box__front\\{[^}]*background-image:url\\("?([^")]+)"?\\)`);
+        const bg = (ctx.css || '').match(re);
+        ctx.projects.push({ title, location: sub, image: bg ? localImage(relUrl(bg[1])) : null });
         return;
       }
       case 'icon-list.default': {
@@ -229,7 +258,7 @@ function elementorToHtml($, rootSel, boilerplate, ctx) {
       }
       case 'image.default': {
         const $img = $w.find('img').first();
-        const src = relUrl($img.attr('data-src') || $img.attr('src'));
+        const src = localImage(relUrl($img.attr('data-src') || $img.attr('src')));
         if (!src || src.startsWith('data:') || /logo/i.test(src)) return;
         flushCards();
         out.push(`<p><img src="${src}" alt="${($img.attr('alt') || '').replace(/"/g, '&quot;')}"></p>`);
@@ -237,7 +266,7 @@ function elementorToHtml($, rootSel, boilerplate, ctx) {
       }
       case 'image-carousel.default': {
         const imgs = $w.find('img').map((_, i) => {
-          const src = relUrl($(i).attr('data-src') || $(i).attr('src'));
+          const src = localImage(relUrl($(i).attr('data-src') || $(i).attr('src')));
           return src && !src.startsWith('data:') ? `<img src="${src}" alt="${($(i).attr('alt') || '').replace(/"/g, '&quot;')}">` : null;
         }).get().filter(Boolean);
         if (imgs.length) { flushCards(); out.push(`<p>${imgs.join(' ')}</p>`); }
@@ -384,11 +413,14 @@ for (const p of paths) {
   const meta = liveMeta(html);
   const wp = wpByPath.get(p);
   const isPost = wp?.type === 'post';
-  const ctx = { h1s: [], intro: '', faq: [], projects: [], warnings: [] };
+  const ctx = { h1s: [], intro: '', faq: [], projects: [], warnings: [], css: '' };
   let body = '';
 
   if (wp && !CUSTOM.has(p)) {
     const $ = cheerio.load(wp.content.rendered);
+    if ($('[data-widget_type="flip-box.default"]').length) {
+      ctx.css = await cached(`css/post-${wp.id}.css`, `${ORIGIN}/wp-content/uploads/elementor/css/post-${wp.id}.css`).catch(() => '');
+    }
     // The NYC cost calculator is rebuilt as a component; keep its position.
     $('#roofingForm').each((_, f) => {
       $('#result').remove();
@@ -415,7 +447,7 @@ for (const p of paths) {
   md = md.replace(new RegExp(`^## ${meta.h1.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*\\n`), '');
 
   const featured = wp?.featured_media ? mediaById.get(wp.featured_media) : null;
-  const image = featured ? relUrl(featured.source_url) : meta.ogImage ? relUrl(meta.ogImage) : '';
+  const image = localImage(featured ? relUrl(featured.source_url) : meta.ogImage ? relUrl(meta.ogImage) : '') || '';
   const imageAlt = featured ? squash(featured.alt_text) : meta.ogImageAlt;
   const template = templateFor(p, isPost);
   const noindex = /noindex/.test(meta.robots) || NOINDEX_LANDING.has(p);
@@ -429,6 +461,7 @@ for (const p of paths) {
     `seoTitle: ${yamlStr(meta.title)}`,
     `description: ${yamlStr(meta.description)}`,
     `h1: ${yamlStr(meta.h1 || (wp ? decode(wp.title.rendered) : ''))}`,
+    isPost ? `cardTitle: ${yamlStr(decode(wp.title.rendered))}` : null,
     ctx.intro ? `intro: ${yamlStr(ctx.intro)}` : null,
     image ? `image: ${yamlStr(image)}` : null,
     imageAlt ? `imageAlt: ${yamlStr(imageAlt)}` : null,

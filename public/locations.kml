@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Alter Phase Roofing</name>
+    <Placemark>
+      <name>Alter Phase Roofing</name>
+      <description>Roofing contractor in Staten Island, NY. (929) 370-1552. https://alterphaseroofing.com/</description>
+      <address>61 Appleby Ave, Staten Island, NY 10305</address>
+      <Point><coordinates>-74.079555,40.591462,0</coordinates></Point>
+    </Placemark>
+  </Document>
+</kml>

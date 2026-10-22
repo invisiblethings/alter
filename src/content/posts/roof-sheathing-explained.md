@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roof Sheathing Explained: The Critical Layer That Keeps Your Home Protected"
 description: "Your roof is more than just the shingles you see from the street. Underneath those layers lies a crucial component that acts as the backbone of your entire"
 h1: "Roof Sheathing Explained: The Critical Layer That Keeps Your Home Protected"
+cardTitle: "Roof Sheathing Explained: The Critical Layer That Keeps Your Home Protected"
 image: "/wp-content/uploads/2024/10/Plywood-Roof-Deck.webp"
 imageAlt: "Plywood Roof Deck"
 published: "2024-10-24"

@@ -29,6 +29,7 @@ const posts = defineCollection({
   schema: z.object({
     ...base,
     template: z.literal('post'),
+    cardTitle: z.string().optional(),
     categories: z.array(z.number()).default([1]),
   }),
 });

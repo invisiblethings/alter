@@ -4,6 +4,7 @@ template: post
 seoTitle: "Roof Replacement Cost in Brooklyn, NY (2026)"
 description: "Roof replacement costs in Brooklyn typically range between $10,000 and $25,000, but this can vary significantly depending on several key factors."
 h1: "Roof Replacement Cost in Brooklyn, NY (2026)"
+cardTitle: "Roof Replacement Cost in Brooklyn, NY (2026)"
 image: "/wp-content/uploads/2024/04/Brooklyn-AlterPhaseRoofing.webp"
 imageAlt: "Brooklyn picture of buildings and roofs"
 published: "2025-10-11"

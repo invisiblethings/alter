@@ -5,7 +5,6 @@ seoTitle: "Siding & Gutter Services | Alter Phase Roofing Inc."
 description: "Siding Installation & Repair: Transform your home with beautiful, durable siding. We offer a variety of styles and materials to suit your home's"
 h1: "Siding & Gutter Services"
 intro: "Protect your home from the elements with Alter Phase Roofing's siding and gutter services. Quality installations, expert repairs, and maintenance solutions."
-image: "/wp-content/uploads/2024/04/maintenance-engineer-repair-and-programing-robotic-arm-in-factory-industry-robot-service-shop-1.jpg"
 imageAlt: "Siding & Gutter Services"
 published: "2024-04-14"
 modified: "2024-11-24"
@@ -13,8 +12,6 @@ modified: "2024-11-24"
 ## Upgrade Your Home's Curb Appeal & Protection with Siding & Gutters
 
 Your siding and gutters play a crucial role in safeguarding your home and enhancing its appearance. Alter Phase Roofing provides a full range of siding and gutter services to keep your home looking its best and protected from the elements.
-
-![](/wp-content/uploads/2024/04/maintenance-engineer-repair-and-programing-robotic-arm-in-factory-industry-robot-service-shop-1.jpg) ![](/wp-content/uploads/2024/04/carpenters-assembling-furniture-business-young-man-in-production-of-furniture-factory-background-.jpg) ![](/wp-content/uploads/2024/04/bearded-handyman-lying-on-floor-near-toolbox-in-bathroom.jpg)
 
 ### Our Siding & Gutter Services:
 -   **Siding Installation & Repair:** Transform your home with beautiful, durable siding. We offer a variety of styles and materials to suit your home’s aesthetic, and provide expert repair for damaged or worn siding.

@@ -12,12 +12,16 @@ modified: "2025-05-15"
 projects:
   - title: "Roof Replacement"
     location: "Residential Asphalt Shingle Roof Replacement in Staten Island, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg"
   - title: "TPO Flat Roof"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
   - title: "TPO Flat Roof Replacement"
     location: "Newark, NJ"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
   - title: "EPDM Roof Install"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
 ---
 ### Expert Siding Installation, Replacement & Repair
 
@@ -38,7 +42,7 @@ Google review
 
 ![Siding Staten Island, NY](/wp-content/uploads/2024/10/Vinyl-Siding-Staten-Island.webp)
 
-![Siding Staten Island](/wp-content/uploads/elementor/thumbs/Siding-Staten-Island-qw2mkyazccy4rsj740qvtfxedj4712y4l4y84umkts.webp)
+![Siding Staten Island](/wp-content/uploads/2024/10/Siding-Staten-Island.webp)
 
 ## YOUR SATISFACTION IS OUR TOP PRIORITY
 

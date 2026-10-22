@@ -11,12 +11,16 @@ modified: "2025-06-03"
 projects:
   - title: "Roof Replacement"
     location: "Residential Asphalt Shingle Roof Replacement in Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg"
   - title: "TPO Flat Roof"
     location: "TPO Roofing in Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
   - title: "TPO Flat Roof Replacement"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
   - title: "EPDM Roof Install"
     location: "Brooklyn, NY"
+    image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
 ---
 ![](/wp-content/uploads/2025/05/Alter-Phase-Roofing-Rating.png)
 
@@ -30,7 +34,7 @@ Completely FREE Detailed Estimates, No Obligation
 
 ![Shot of a flat roof on a typical Brooklyn building (like a brownstone).](/wp-content/uploads/2025/04/flat-roof-on-a-typical-Brooklyn-building.webp)
 
-![Replaced-Roof-10305-Staten-Island-10304](/wp-content/uploads/elementor/thumbs/Replaced-Roof-10305-Staten-Island-10304-r4vd0w4vbrzpf7wbuovln8nwo8b6bxm4rsvft42f3k.jpg)
+![Replaced-Roof-10305-Staten-Island-10304](/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304.jpg)
 
 ## YOUR SATISFACTION IS OUR TOP PRIORITY
 
