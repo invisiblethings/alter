@@ -6,10 +6,10 @@ export const SITE = 'https://alterphaseroofing.com';
 
 export const business = {
   id: `${SITE}/#business`,
-  name: 'Alter Phase Roofing',
-  // Shown in schema as alternateName; DCWP registers the company under this name.
+  name: 'Alter Phase Roofing Contracting',
+  // Name matches the Google Business Profile exactly. DCWP registers the company as legalName.
   legalName: 'Alter Phase Contracting Inc',
-  alternateNames: ['Alter Phase Roofing Contracting', 'Alter Phase Roofing Inc.'],
+  alternateNames: ['Alter Phase Roofing', 'Alter Phase Contracting Inc'],
   slogan: 'The Staten Island roofer your neighbors already called.',
   owner: { name: 'Marke', role: 'Owner', id: `${SITE}/about/#marke` },
   yearsInRoofing: 13,
@@ -63,7 +63,7 @@ export const business = {
     { name: 'Staten Island', url: '/service-area/staten-island-ny/', primary: true },
     { name: 'Brooklyn', url: '/service-area/brooklyn-ny/' },
     { name: 'Manhattan', url: '/service-area/manhattan-ny/' },
-    { name: 'Queens', url: '/service-area/nyc/' },
+    { name: 'Queens', url: '/service-area/queens-ny/' },
   ],
   gtmId: 'GTM-M77VVM4Q',
 } as const;

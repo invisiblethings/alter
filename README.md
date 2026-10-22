@@ -1,6 +1,6 @@
 # alterphaseroofing.com
 
-Static Astro site for Alter Phase Roofing, deployed on Netlify. See [docs/PLAN.md](docs/PLAN.md) for the strategy, decisions and launch checklist.
+Static Astro site for Alter Phase Roofing Contracting, deployed on Netlify. See [docs/PLAN.md](docs/PLAN.md) for the strategy, decisions and launch checklist.
 
 ```bash
 npm install

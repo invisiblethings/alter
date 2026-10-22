@@ -3,79 +3,144 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 import Icon from './Icon.astro';
 import { business, telHref } from '../data/business';
-import { services, areas, company, guides } from '../data/nav';
+import { areas, company } from '../data/nav';
+import { repairs, materials, range, typicalReplacement } from '../data/costs';
 interface Props { path: string }
 const { path } = Astro.props;
 const cur = (u: string) => (path === u || (u !== '/' && path.startsWith(u)) ? 'page' : undefined);
+const asphalt = materials.find((m) => m.id === 'asphalt')!;
+const flatLow = Math.min(...materials.filter((m) => m.type === 'flat').map((m) => m.low));
+
+// Header mega menu, homeowner-first. Commercial work sits in its own strip.
+const homeServices = [
+  { t: 'Roof Repair', u: '/roof-repair/', d: 'Leaks, shingles, flashing, storm damage', p: `From $${repairs[0].low}`, img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11-150x150.jpg' },
+  { t: 'Roof Replacement', u: '/residential-roofing/roof-replacement/', d: 'Full tear-off, new roof in 1–2 days', p: `$${asphalt.low}–$${asphalt.high}/sq ft`, img: '/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY-150x150.jpg' },
+  { t: 'Flat Roofing', u: '/flat-roofing/', d: 'Extensions, garages, attached homes', p: `From $${flatLow}/sq ft`, img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-150x150.jpg' },
+  { t: 'Roof Inspections', u: '/residential-roofing/roof-inspections/', d: 'Photo report and an honest answer', p: 'Free estimate', img: '/wp-content/uploads/2024/04/AlterPhase-Roof-Inspection-150x150.jpg' },
+  { t: 'Skylights', u: '/residential-roofing/skylight-installation-repair/', d: 'Leaking skylights fixed or replaced', p: 'Repair from $450', img: '/wp-content/uploads/2024/04/Skylight-Services-Alter-Phase-Roofing-150x150.jpg' },
+  { t: 'Gutters & Siding', u: '/siding-gutter/', d: 'Seamless gutters, vinyl siding', p: 'Gutters from $150', img: '/wp-content/uploads/2024/10/Vinyl-Siding-Installation-Staten-Island-150x150.webp' },
+];
+const bizLinks = [
+  { t: 'Commercial roofing', u: '/commercial-roofing/' },
+  { t: 'Commercial roof repair', u: '/roof-repair/commercial/' },
+  { t: 'Commercial roof replacement', u: '/commercial-roofing/roof-replacement/' },
+  { t: 'Commercial inspections', u: '/commercial-roofing/roof-inspection/' },
+  { t: 'Property managers & HOAs', u: '/property-managers/' },
+];
+const costLinks = [
+  { t: 'New roof cost', s: 'Typical Staten Island home', v: `${range(typicalReplacement.low, typicalReplacement.high)}`, u: '/roof-replacement-cost-in-nyc/' },
+  { t: 'Roof leak repair cost', s: 'Most leaks, fixed properly', v: range(300, 1200), u: '/cost-to-repair-roof-leak/' },
+  { t: 'Best roofing materials', s: 'Shingles, metal, flat systems', v: 'Compared', u: '/top-roofing-materials-for-homes-in-new-york/' },
+  { t: 'Roof replacement guide', s: 'Permits, timing, what to ask', v: 'Step by step', u: '/roof-replacement-guide-nyc/' },
+  { t: 'TPO flat roof guide', s: 'Cost, lifespan, pros & cons', v: 'Flat roofs', u: '/tpo-roofing-guide/' },
+];
+const si = ['St. George', 'New Dorp', 'Great Kills', 'Tottenville', 'Eltingville', 'Annadale', 'Dongan Hills', 'Westerleigh'];
+const imgUrls = homeServices.map((s) => s.img);
 ---
 <div class="topbar">
   <div class="wrap">
-    <div class="topbar-items">
-      <span><span class="live" aria-hidden="true"></span><strong>Family-owned</strong><span class="hide-sm">&nbsp;· Staten Island, NY</span></span>
+    <p class="topbar-items">
+      <span><span class="live" aria-hidden="true"></span><strong>Family-owned on Staten Island</strong></span>
       <span class="hide-md"><Icon name="shield" /> Licensed &amp; insured · #{business.license.number}</span>
-      <span class="hide-md"><Icon name="clock" /> Emergency calls 24/7</span>
-    </div>
-    <div class="textsize" role="group" aria-label="Text size">
-      <span class="hide-sm">Text size</span>
-      <button type="button" data-size="" aria-pressed="true" aria-label="Normal text size">A</button>
-      <button type="button" data-size="lg" aria-pressed="false" aria-label="Larger text">A</button>
-      <button type="button" data-size="xl" aria-pressed="false" aria-label="Largest text">A</button>
-    </div>
+      <span class="hide-md"><Icon name="award" /> GAF Master Elite®</span>
+    </p>
+    <a class="topbar-sos" href="/roof-repair/emergency-service/"><Icon name="drop" /> Roof leaking? We answer 24/7</a>
   </div>
 </div>
-<header class="header">
+<header class="header" data-header>
   <div class="wrap">
-    <a class="logo" href="/" aria-label="Alter Phase Roofing home"><Image src={logo} alt="Alter Phase Roofing Contractor" width={132} loading="eager" /></a>
+    <a class="logo" href="/" aria-label={`${business.name} home`}><Image src={logo} alt={business.name} width={132} loading="eager" /></a>
     <nav class="nav" aria-label="Main">
-      <div class="nav-item">
-        <a class="nav-link" href="/services/" aria-current={cur('/services/')}>Services <Icon name="chevron" /></a>
-        <div class="mega cols-3">
-          {services.map((s) => (
-            <div class="mega-col">
-              <a class="mega-head" href={s.url}><span class="tile"><Icon name={s.icon as any} /></span><span>{s.title}<small>{s.blurb}</small></span></a>
-              {(s.children || []).map((c) => <a href={c.url} style="padding-left:3.6rem">{c.title}</a>)}
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/services/" aria-current={cur('/services/')} aria-haspopup="true" aria-expanded="false">Services <Icon name="chevron" /></a>
+        <div class="panel">
+          <div class="wrap panel-grid">
+            <div>
+              <p class="panel-h">For your home</p>
+              <div class="svc-menu">
+                {homeServices.map((s) => (
+                  <a class="svc-link" href={s.u} aria-current={cur(s.u)}>
+                    <img src={s.img} alt="" width="72" height="72" loading="lazy" decoding="async" />
+                    <span><strong>{s.t}</strong><small>{s.d}</small><em>{s.p}</em></span>
+                  </a>
+                ))}
+              </div>
+              <div class="panel-strip">
+                <span class="panel-strip-h"><Icon name="store" /> Business or building?</span>
+                {bizLinks.map((l) => <a href={l.u}>{l.t}</a>)}
+              </div>
             </div>
-          ))}
-          <div class="mega-col">
-            <a class="mega-head" href="/property-managers/"><span class="tile"><Icon name="building" /></span><span>Property managers &amp; HOAs<small>Bids, reports, documentation</small></span></a>
+            <aside class="panel-feature">
+              <a class="pf-sos" href="/roof-repair/emergency-service/"><span class="pulse"><Icon name="drop" /></span><span><strong>Emergency roof repair</strong>Water coming in? We answer 24/7.</span></a>
+              <div class="pf-body">
+                <p class="pf-k">Not sure what you need?</p>
+                <p class="pf-t">Get a free inspection with photos and a written price, usually within 24 hours.</p>
+                <a class="btn btn-gold btn-block" href="/free-estimate/">Book a free inspection <Icon name="arrow" /></a>
+                <a class="pf-phone" href={telHref}><Icon name="phone" /> {business.phone}</a>
+              </div>
+            </aside>
           </div>
-          <div class="mega-foot"><span><strong>Not sure what you need?</strong> We'll inspect and tell you honestly.</span><a class="btn btn-sm btn-gold" href="/free-estimate/">Free inspection</a></div>
         </div>
       </div>
-      <div class="nav-item">
-        <a class="nav-link" href="/service-area/" aria-current={cur('/service-area/')}>Areas <Icon name="chevron" /></a>
-        <div class="mega cols-2">
-          {areas.map((a) => (
-            <div class="mega-col">
-              <a class="mega-head" href={a.url}><span class="tile"><Icon name="pin" /></span><span>{a.title}<small>{a.blurb}</small></span></a>
-              {(a.children || []).map((c) => <a href={c.url} style="padding-left:3.6rem">{c.title}</a>)}
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/roof-replacement-cost-in-nyc/" aria-current={cur('/roof-replacement-cost-in-nyc/')} aria-haspopup="true" aria-expanded="false">Costs <Icon name="chevron" /></a>
+        <div class="panel">
+          <div class="wrap panel-grid">
+            <div>
+              <p class="panel-h">Real prices from our own Staten Island jobs</p>
+              <ul class="cost-menu">
+                {costLinks.map((c) => (
+                  <li><a href={c.u}><span><strong>{c.t}</strong><small>{c.s}</small></span><b>{c.v}</b><Icon name="arrow" /></a></li>
+                ))}
+              </ul>
+              <p class="panel-more"><a href="/blog/">All roofing guides <Icon name="arrow" /></a></p>
             </div>
-          ))}
+            <aside class="panel-feature est-teaser">
+              <div class="pf-body">
+                <p class="pf-k">30-second estimator</p>
+                <p class="pf-t">Pick your type of home and roof. See a price range based on what our customers actually paid.</p>
+                <a class="btn btn-gold btn-block" href="/#estimate">Estimate my roof <Icon name="arrow" /></a>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
-      <div class="nav-item">
-        <a class="nav-link" href="/roof-replacement-cost-in-nyc/" aria-current={cur('/roof-replacement-cost-in-nyc/')}>Costs <Icon name="chevron" /></a>
-        <div class="mega cols-2">
-          <div class="mega-col">
-            {guides.slice(0, 3).map((g) => <a class="mega-head" href={g.url}><span class="tile"><Icon name="dollar" /></span><span>{g.title}</span></a>)}
-          </div>
-          <div class="mega-col">
-            {guides.slice(3).map((g) => <a class="mega-head" href={g.url}><span class="tile"><Icon name="file" /></span><span>{g.title}</span></a>)}
-            <a class="mega-head" href="/blog/"><span class="tile"><Icon name="arrow" /></span><span>All roofing guides</span></a>
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/service-area/" aria-current={cur('/service-area/')} aria-haspopup="true" aria-expanded="false">Areas <Icon name="chevron" /></a>
+        <div class="panel">
+          <div class="wrap panel-grid">
+            <a class="area-hero" href="/service-area/staten-island-ny/">
+              <img src="/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304-300x300.jpg" alt="" width="300" height="300" loading="lazy" decoding="async" />
+              <span><em>Home base</em><strong>Staten Island</strong><small>{si.join(' · ')} and every neighborhood on the island</small></span>
+            </a>
+            <div>
+              <p class="panel-h">Also serving</p>
+              <ul class="area-menu">
+                {areas.filter((a) => a.title !== 'Staten Island').map((a) => (
+                  <li>
+                    <a href={a.url}><strong>{a.title}</strong><small>{a.blurb}</small></a>
+                    {a.children && <span class="area-kids">{a.children.map((c) => <a href={c.url}>{c.title.replace(' Brooklyn', '')}</a>)}</span>}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="nav-item"><a class="nav-link" href="/reviews/" aria-current={cur('/reviews/')}>Reviews</a></div>
-      <div class="nav-item">
-        <a class="nav-link" href="/about/" aria-current={cur('/about/')}>About <Icon name="chevron" /></a>
-        <div class="mega" style="grid-template-columns:1fr">
-          {company.map((c) => <a href={c.url}>{c.title}</a>)}
+      <div class="nav-item" data-menu>
+        <a class="nav-link" href="/about/" aria-current={cur('/about/')} aria-haspopup="true" aria-expanded="false">About <Icon name="chevron" /></a>
+        <div class="panel panel-sm">
+          <div class="panel-grid">
+            <ul class="plain-menu">{company.map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>
+            <div class="owner-mini"><span class="avatar-s">M</span><p><strong>Marke, owner</strong>“I'm part of every job, to make sure the highest quality work is done on every property.”</p></div>
+          </div>
         </div>
       </div>
     </nav>
     <div class="head-cta">
-      <a class="head-phone" href={telHref} aria-label={`Call ${business.phone}`}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text Marke's team</small><strong>{business.phone}</strong></span></a>
-      <a class="btn btn-gold btn-sm" href="/free-estimate/">Free estimate</a>
+      <a class="head-phone" href={telHref} aria-label={`Call ${business.phone}`}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text</small><strong>{business.phone}</strong></span></a>
+      <a class="btn btn-gold btn-sm" href="/free-estimate/">Free inspection</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><Icon name="menu" /></button>
     </div>
   </div>
@@ -83,44 +148,66 @@ const cur = (u: string) => (path === u || (u !== '/' && path.startsWith(u)) ? 'p
 
 <div class="drawer" id="drawer" hidden>
   <div class="drawer-top">
-    <a href="/" aria-label="Home"><Image src={logo} alt="Alter Phase Roofing" width={116} /></a>
-    <button class="burger drawer-close" style="display:grid" type="button" aria-label="Close menu"><Icon name="close" /></button>
+    <a href="/" aria-label="Home"><Image src={logo} alt={business.name} width={116} /></a>
+    <button class="burger drawer-close" type="button" aria-label="Close menu"><Icon name="close" /></button>
   </div>
-  <a class="btn btn-gold btn-block btn-lg" href={telHref}><Icon name="phone" /> Call {business.phone}</a>
-  <nav aria-label="Mobile" style="margin-top:0.75rem">
-    <details><summary>Services</summary>
-      <a href="/services/">All services</a>
-      {services.map((s) => (<><a href={s.url}><strong>{s.title}</strong></a>{(s.children || []).map((c) => <a href={c.url} style="padding-left:1.6rem">{c.title}</a>)}</>))}
-    </details>
+  <div class="drawer-ctas">
+    <a class="btn btn-gold btn-lg" href={telHref}><Icon name="phone" /> Call {business.phone}</a>
+    <a class="btn btn-ghost btn-lg" href="/free-estimate/">Free inspection</a>
+  </div>
+  <a class="pf-sos" href="/roof-repair/emergency-service/"><span class="pulse"><Icon name="drop" /></span><span><strong>Roof leaking right now?</strong>Emergency repair, 24/7</span></a>
+  <nav aria-label="Mobile">
+    <p class="drawer-h">Services for your home</p>
+    <div class="drawer-svcs">
+      {homeServices.map((s, i) => (
+        <a href={s.u}><img src={imgUrls[i]} alt="" width="56" height="56" loading="lazy" decoding="async" /><span><strong>{s.t}</strong><small>{s.p}</small></span></a>
+      ))}
+    </div>
+    <details><summary>Business &amp; buildings</summary>{bizLinks.map((l) => <a href={l.u}>{l.t}</a>)}</details>
+    <details><summary>Costs &amp; guides</summary>{costLinks.map((c) => <a href={c.u}>{c.t} <small>{c.v}</small></a>)}<a href="/blog/">All guides</a></details>
     <details><summary>Service areas</summary>
       {areas.map((a) => (<><a href={a.url}><strong>{a.title}</strong></a>{(a.children || []).map((c) => <a href={c.url} style="padding-left:1.6rem">{c.title}</a>)}</>))}
     </details>
-    <details><summary>Costs &amp; guides</summary>
-      {guides.map((g) => <a href={g.url}>{g.title}</a>)}
-      <a href="/blog/">All guides</a>
-    </details>
-    <a class="d-link" href="/property-managers/">Property managers &amp; HOAs</a>
     <a class="d-link" href="/reviews/">Reviews</a>
     <details><summary>Company</summary>{company.map((c) => <a href={c.url}>{c.title}</a>)}</details>
-    <a class="d-link" href="/free-estimate/">Get a free estimate</a>
   </nav>
 </div>
 
 <script>
+  // Mega menu: opens on hover with a short close delay (so moving the mouse
+  // down into the panel never closes it), on keyboard focus, and on first tap
+  // for touch screens. Escape closes.
+  const items = [...document.querySelectorAll<HTMLElement>('[data-menu]')];
+  let timer: number | undefined;
+  const setOpen = (el: HTMLElement | null) => {
+    items.forEach((i) => {
+      const on = i === el;
+      i.classList.toggle('open', on);
+      i.querySelector('.nav-link')?.setAttribute('aria-expanded', String(on));
+    });
+    document.querySelector('[data-header]')?.classList.toggle('menu-open', !!el);
+  };
+  items.forEach((item) => {
+    const link = item.querySelector<HTMLAnchorElement>('.nav-link')!;
+    item.addEventListener('pointerenter', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      clearTimeout(timer);
+      // Switching from another open menu waits a moment, so a diagonal move toward the open panel doesn't flip menus.
+      const other = items.some((i) => i !== item && i.classList.contains('open'));
+      timer = window.setTimeout(() => setOpen(item), other ? 200 : 60);
+    });
+    item.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') { clearTimeout(timer); timer = window.setTimeout(() => setOpen(null), 220); } });
+    link.addEventListener('click', (e) => { if (!item.classList.contains('open') && matchMedia('(hover: none)').matches) { e.preventDefault(); setOpen(item); } });
+    item.addEventListener('focusin', () => { clearTimeout(timer); setOpen(item); });
+    item.addEventListener('focusout', (e) => { if (!item.contains(e.relatedTarget as Node)) setOpen(null); });
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(null); });
+  document.addEventListener('click', (e) => { if (!(e.target as Element).closest('[data-menu]')) setOpen(null); });
+
   const drawer = document.getElementById('drawer')!;
   const open = document.querySelector<HTMLButtonElement>('.header .burger')!;
   const close = () => { drawer.hidden = true; open.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; open.focus(); };
   open.addEventListener('click', () => { drawer.hidden = false; open.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; drawer.querySelector<HTMLElement>('.drawer-close')?.focus(); });
   drawer.querySelector('.drawer-close')!.addEventListener('click', close);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !drawer.hidden) close(); });
-
-  const btns = document.querySelectorAll<HTMLButtonElement>('.textsize button');
-  const sync = () => btns.forEach((b) => b.setAttribute('aria-pressed', String((document.documentElement.dataset.text || '') === b.dataset.size)));
-  btns.forEach((b) => b.addEventListener('click', () => {
-    const s = b.dataset.size || '';
-    if (s) document.documentElement.dataset.text = s; else delete document.documentElement.dataset.text;
-    try { localStorage.setItem('aprTextSize', s); } catch {}
-    sync();
-  }));
-  sync();
 </script>

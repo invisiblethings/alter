@@ -2,9 +2,9 @@
 import Icon from './Icon.astro';
 import { reviews } from '../data/reviews';
 import { business } from '../data/business';
-interface Props { limit?: number; title?: string; kicker?: string; bg?: string; grid?: boolean }
-const { limit = 4, title = 'What Staten Island homeowners say', kicker = 'Google reviews', bg = '', grid = false } = Astro.props;
-const [first, ...rest] = reviews;
+interface Props { limit?: number; title?: string; kicker?: string; bg?: string; grid?: boolean; offset?: number }
+const { limit = 4, title = 'What Staten Island homeowners say', kicker = 'Google reviews', bg = '', grid = false, offset = 0 } = Astro.props;
+const [first, ...rest] = reviews.slice(offset);
 const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
 const stars = [1, 2, 3, 4, 5];
 ---

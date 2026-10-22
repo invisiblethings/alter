@@ -1,4 +1,4 @@
-# Alter Phase Roofing: Rebuild, SEO & Launch Plan
+# Alter Phase Roofing Contracting: Rebuild, SEO & Launch Plan
 
 **Status:** Site built (v3 redesign). Ready for client review, then launch on Netlify.
 **Updated:** 2026-10-22
@@ -45,7 +45,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 
 **Still to confirm with the client before launch**
 1. Marke's surname (for author bylines and Person schema) and approval of the owner quote: "I'm part of every job, to make sure the highest quality work is done on every property."
-2. Legal name to show: DCWP lists **ALTER PHASE CONTRACTING INC**; the old footer said "Alter Phase Roofing Inc."
+2. ~~Name~~ Settled: the site uses **Alter Phase Roofing Contracting**, matching the Google Business Profile. Schema keeps the DCWP legal name ALTER PHASE CONTRACTING INC as `legalName`.
 3. Current GAF certification tier (the site says Master Elite®). gaf.com blocks automated checks.
 4. The "starting at $5,500" offer on `/roof-replacement-si/` (copied from the current ads page). Still valid?
 5. Google Business Profile: phone must be (929) 370-1552, plus categories and services as in §5.
@@ -81,10 +81,16 @@ WordPress system URLs (`/sitemap_index.xml`, Yoast sub-sitemaps, `/feed/`, `/aut
 ## 4. Design and conversion
 
 - **Look (v3):** cinematic and photo-led, following the Intent UX evaluation in [`docs/design/ux-evaluation.md`](design/ux-evaluation.md). Full-bleed photo heroes with the quote card on top, a gold credential marquee, a services bento of large photo tiles, an owner statement band, a dark estimator, outlined 01–04 process numerals, one big review, a project mosaic, typographic borough links and a photo closing CTA. Type is Archivo (expanded heavy weights for headlines). Deep navy (#061530 / #10346F) and gold (#FBC45A) are used boldly. Subtle scroll reveals are switched off for reduced motion. Real crew and job photos only; no stock imagery.
-- **Built for 40+ readers:** 18–19px body text, a text-size control (A / A / A) on every page, 56–64px tap targets, the phone number visible in the header at all times, and a sticky Call / Text / Quote bar on phones.
+- **Readable, not oversized:** 16–17px body text, 52–58px tap targets, the phone number visible in the header at all times, and a sticky Call / Text / Quote bar on phones.
 - **3-step quote wizard** (what you need → property type and address → name and phone) in the hero of every service page. It works without JavaScript, posts to Netlify Forms, and pushes a `generate_lead` event to GTM so forms can become a Google Ads conversion.
 - **Live roof cost estimator** (material × size × borough) built on the client's own prices, on the homepage, cost guides and replacement pages.
-- **Audience paths:** homeowner / business owner / building manager / "water is coming in now".
+- **Homeowner and Staten Island first (v4):** about 90% of the work is residential, so the homepage, estimator and service pages target Staten Island homeowners. Commercial work and property managers get their own strip and pages, and other boroughs keep their location pages.
+- **Homepage conversion devices:**
+  - a symptom picker ("What's going on with your roof?") with the likely cause, the Staten Island price and the next step for each problem
+  - a repair-first promise backed by a real review
+  - a house-type estimator (detached / semi-attached / townhouse / flat) that starts from typical Staten Island roof sizes
+  - Staten Island house types and neighborhoods grouped by shore
+  - a mega menu with service photos, prices, an emergency path and an inspection CTA
 - **Trust everywhere:** Google rating, GAF and BBB badges, license number, warranty, owner promise, real reviews.
 - **Ads landing pages:** same design, `noindex`, and every phone link and display number swaps to the tracking number.
 

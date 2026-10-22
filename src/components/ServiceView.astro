@@ -48,7 +48,7 @@ const related = d.related.map((p) => ({ url: p, title: titleOf(p) }));
     <article>
       {d.answer && <div class="answer"><span class="lbl"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>}
       <div class="prose" set:html={html} />
-      {d.estimator && <section id="Roof_Replacement_Cost_Calculator" style="margin-top:3rem"><Estimator heading="h2" /></section>}
+      {d.estimator && <section id="Roof_Replacement_Cost_Calculator" style="margin-top:3rem"><Estimator heading="h2" home={d.prices.includes('flat') && !d.prices.includes('pitched') ? 'flat' : 'detached'} /></section>}
       {d.prices.length > 0 && (
         <section id="prices" aria-labelledby="prices-h" style="margin-top:3rem">
           <span class="kicker">Real prices</span>

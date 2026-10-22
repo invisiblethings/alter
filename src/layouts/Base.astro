@@ -61,11 +61,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
 
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 
-    <!-- Text size preference (set before paint to avoid a jump) -->
-    <script is:inline>
-      document.documentElement.classList.replace('no-js', 'js');
-      try { var t = localStorage.getItem('aprTextSize'); if (t) document.documentElement.dataset.text = t; } catch (e) {}
-    </script>
+    <script is:inline>document.documentElement.classList.replace('no-js', 'js');</script>
 
     <!-- Google Tag Manager: GA4 G-KKQEPJ782W + Google Ads AW-397936435 (call & click conversions) -->
     <script is:inline define:vars={{ gtmId: business.gtmId }}>
