@@ -13,6 +13,7 @@ interface Props { entry: PageEntry; html: string; crumbs: { name: string; url: s
 const { entry, html, crumbs } = Astro.props;
 const d = entry.data;
 const legal = d.template === 'legal';
+const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => ({ id: m[1], t: m[2] }));
 ---
 <section class:list={[d.image && !legal ? 'hero' : 'ghero']}>
   {d.image && !legal && <div class="hero-bg"><img src={d.image} alt={d.imageAlt || ''} width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>}
@@ -32,9 +33,22 @@ const legal = d.template === 'legal';
   </div>
 </section>
 {legal ? (
-  <section class="sec" style="padding-top:clamp(2rem,4vw,3rem)">
-    <div class="narrow">
-      <div class="prose" set:html={html} />
+  <section class="sec legal-sec">
+    <div class="wrap legal-grid">
+      <aside class="legal-aside" aria-label="On this page">
+        {toc.length > 2 && (
+          <nav class="legal-toc" aria-label="Contents">
+            <p class="legal-toc-h">On this page</p>
+            <ol>{toc.map((h) => <li><a href={`#${h.id}`} set:html={h.t} /></li>)}</ol>
+          </nav>
+        )}
+        <div class="legal-contact">
+          <p><strong>Questions?</strong> Talk to a real person.</p>
+          <a class="btn btn-gold btn-block btn-sm" href={telHref}><Icon name="phone" /> {business.phone}</a>
+          <a class="legal-mail" href={`mailto:${business.email}`}><Icon name="mail" /> {business.email}</a>
+        </div>
+      </aside>
+      <article class="prose legal-prose" set:html={html} />
     </div>
   </section>
 ) : (
