@@ -1,41 +1,44 @@
 ---
 path: "/residential-roofing/"
 template: hub
-seoTitle: "Residential Roofing Staten Island | Repair & New Roofs"
-description: "Residential roofing for Staten Island and NYC homes: roof repair, replacement, inspections, skylights and gutters. GAF Master Elite."
-kicker: "Residential roofing"
-h1: "Residential roofing for Staten Island and NYC homes"
-intro: "From a single missing shingle to a complete new roof, we take care of homes the way we'd want our own taken care of: honest advice, careful work and warranties in writing."
+seoTitle: "Residential Roofing Staten Island | Repairs & New Roofs"
+description: "Residential roofing for Staten Island homes: roof repair, replacement, inspections, skylights and gutters from a family-owned GAF Master Elite roofer."
+kicker: "Residential roofing · Staten Island"
+h1: "Residential roofing on Staten Island, from one leak to a whole new roof"
+intro: "Colonials, capes, high-ranches, two-families and attached townhouses: we take care of Staten Island homes the way we'd want our own taken care of. Honest advice, careful work by our own crew, and warranties in writing."
 highlights:
   - "Shingle roofs, flat roofs, skylights and gutters"
   - "Owner Marke is part of every job"
-  - "Free inspection and written quote within 24 hours"
+  - "Free inspection and written quote, usually within 24 hours"
 service: "Residential roofing"
 area: "Staten Island"
 prices: ["pitched"]
 image: "/wp-content/uploads/2024/11/Residential-Roofing-AlterPhaseRoofing.jpg"
-imageAlt: "Residential roof completed by Alter Phase Roofing"
-answer: "Alter Phase Roofing repairs and replaces roofs on houses, two-families and row homes across Staten Island, Brooklyn, Manhattan and Queens. Most home repairs cost $300–$1,200, and full replacements $10,000–$30,000. Every job starts with a free inspection and a written quote."
+imageAlt: "Residential roof completed by Alter Phase Roofing Contracting on Staten Island"
+answer: "Alter Phase Roofing Contracting repairs and replaces roofs on Staten Island houses, two-families and attached homes. Most home repairs cost <strong>$300–$1,200</strong>, and full replacements <strong>$10,000–$30,000</strong>. Asphalt shingles run $6–$10 per sq ft installed. Every job starts with a free inspection and a written quote."
 related:
   - "/residential-roofing/roof-replacement/"
   - "/roof-repair/residential/"
   - "/residential-roofing/roof-inspections/"
   - "/residential-roofing/skylight-installation-repair/"
   - "/siding-gutter/"
+  - "/roof-replacement-cost-in-nyc/"
 faq:
   - q: "What types of home roofs do you work on?"
-    a: "Asphalt shingle roofs (the most common on Staten Island and Queens), flat roofs on row homes and extensions (EPDM, TPO, modified bitumen), and metal roofs. We also repair skylights, gutters and siding."
-  - q: "Do you work on two-family and multi-family homes?"
-    a: "Yes. Two-families, small multi-family buildings and attached row homes are a big part of our work."
+    a: "Asphalt shingle roofs, which are the most common on Staten Island, flat roofs on extensions, garages and attached homes (EPDM, TPO, modified bitumen), and metal roofs. We also repair skylights, gutters and siding."
+  - q: "Do you work on two-family and attached homes?"
+    a: "Yes. Two-families, semi-attached and attached townhouses are a big part of our work on Staten Island."
   - q: "Are estimates really free?"
     a: "Yes. We inspect your roof, take photos and give you a written estimate at no charge and with no obligation."
+  - q: "How do I know if I need a repair or a new roof?"
+    a: "A repair usually makes sense when the roof is under about 15 years old and the damage is in one area. If it's over 20 years old, leaks in several places or the deck feels soft, replacement is often the better buy. When it's close, we give you both prices."
 modified: "2026-10-22"
 ---
 ## Home roofing services
 
 ### [Roof replacement](/residential-roofing/roof-replacement/)
 
-Complete tear-off and new roof, usually in one to two days, with up to 50-year material and 25-year workmanship warranties.
+Full tear-off and new roof, with up to 50-year manufacturer and 25-year workmanship warranties.
 
 ### [Roof repair](/roof-repair/residential/)
 
@@ -49,22 +52,34 @@ A photo report of your roof's condition before you buy, sell, or after a big sto
 
 Leak repair, reflashing and replacement for Velux, Fakro and other brands.
 
-### [Gutters](/siding-gutter/gutter-installation-repair/)
+### [Gutters & siding](/siding-gutter/)
 
-Seamless gutters and downspouts that keep water off your roof edge and away from your foundation.
+Seamless gutters and vinyl siding that keep water off your roof edge and out of your walls.
 
 ### [Emergency repair](/roof-repair/emergency-service/)
 
 Active leak or storm damage? We answer 24/7 and stop the water the same day.
 
+## What Staten Island weather does to a roof
+
+Nor'easters peel shingles, especially near the water in South Beach, Midland Beach and Great Kills. Salt air wears out flashing and metal faster on the East and South Shores. Freeze-thaw winters crack sealants and open seams on flat-roofed extensions. Heavy summer storms find every weak spot at once.
+
+That's why we inspect the whole roof, not just the stain on your ceiling, and why we recommend wind-rated architectural shingles and install new flashing on every replacement.
+
 ## Why homeowners trust us with their roof
 
-**We're local and family-owned.** Our shop is at 61 Appleby Ave on Staten Island, and our owner, Marke, is part of every job. You won't be handed off to a salesperson and a crew you never meet.
+**We're local and family-owned.** Our shop is at 61 Appleby Ave, and we've been in roofing for more than 13 years. Owner Marke is part of every job, so you won't be handed off to a salesperson and a crew you never meet.
 
-**We tell you when you don't need a new roof.** A lot of our customers call expecting a replacement and end up with a repair. That honesty is why our customers send their neighbors.
+**We tell you when you don't need a new roof.** Plenty of our customers call expecting a replacement and end up with a repair. That honesty is why they send their neighbors.
 
-**We do it properly.** GAF Master Elite® certification means the manufacturer has vetted our installation standards, and it lets us offer their strongest warranties.
+**We do it properly.** GAF Master Elite® certification means the manufacturer has vetted how we install, and it lets us offer their strongest warranties. We're also BBB Accredited and rated Excellent across 108 Google reviews.
+
+**We're licensed and insured.** NYC DCWP Home Improvement Contractor #2129904-DCWP. Ask for proof of insurance and we'll send it.
 
 ## What a home roof costs
 
-Most homeowners want a number before anything else, so here are our real 2026 prices. For a closer estimate for your house, use the [roof cost guide](/roof-replacement-cost-in-nyc/) or ask for a free inspection.
+Most homeowners want a number before anything else, so the price table below shows our real ranges for shingle and sloped roofs. For a closer estimate, read the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) or the [roof leak repair cost guide](/cost-to-repair-roof-leak/), or ask for a free inspection.
+
+**Next step:** call or text (929) 370-1552. We're open Mon–Fri 8–8 and Sat 8–5, and we answer emergencies 24/7. We work in every neighborhood, from St. George and West Brighton to New Springville, Annadale and Tottenville.
+
+We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

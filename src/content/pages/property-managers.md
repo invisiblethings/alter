@@ -1,28 +1,29 @@
 ---
 path: "/property-managers/"
 template: hub
-seoTitle: "Roofing for Property Managers, HOAs & Co-op Boards NYC"
-description: "Roofing for NYC property managers, HOAs and co-op boards: photo inspections, board-ready proposals, multi-building bids, COIs, 24/7 repair."
+seoTitle: "Property Manager & HOA Roofing Staten Island | Alter Phase"
+description: "Roofing for Staten Island property managers, HOAs and co-op boards: photo inspections, board-ready proposals, multi-building bids, 24/7 repair."
 kicker: "Property managers · HOAs · Co-op & condo boards"
-h1: "Roofing for property managers, HOAs and co-op boards"
-intro: "You manage the building; we take care of the roof. Inspections, repairs and replacements across Staten Island, Brooklyn, Manhattan and Queens, documented properly for owners, residents and boards."
+h1: "Roofing for Staten Island property managers, HOAs and co-op boards"
+intro: "You manage the building; we take care of the roof. Inspections, repairs and replacements for townhouse communities, co-ops, condos and multi-family buildings across Staten Island, documented properly for owners, residents and boards."
 highlights:
   - "Board-ready written proposals with photos"
   - "Certificates of insurance on request"
   - "One contact for every building in your portfolio"
 service: "Commercial and multi-family roofing"
-area: "New York City"
+area: "Staten Island"
 wizard: "Inspection"
 prices: ["flat"]
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12.jpg"
-imageAlt: "Alter Phase Roofing crew working on a building's flat roof"
-answer: "Alter Phase Roofing works with property managers, HOAs and co-op and condo boards across NYC. We provide photo inspection reports, board-ready written proposals, separate scopes and prices for each building, certificates of insurance on request, DOB permit filing and 24/7 emergency response."
+imageAlt: "Alter Phase Roofing Contracting crew working on a building's flat roof"
+answer: "Alter Phase Roofing Contracting works with property managers, HOAs and co-op and condo boards on Staten Island. We provide photo inspection reports, board-ready written proposals, a separate scope and price for each building, certificates of insurance on request, DOB permit filing and 24/7 emergency response."
 related:
   - "/commercial-roofing/"
   - "/commercial-roofing/roof-inspection/"
   - "/commercial-roofing/roof-replacement/"
   - "/roof-repair/commercial/"
-  - "/service-area/manhattan-ny/"
+  - "/residential-roofing/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "Can you provide a certificate of insurance before work starts?"
     a: "Yes. We're licensed and insured, and we provide a certificate of insurance on request before any work begins, naming the building, owner or managing agent as required."
@@ -33,7 +34,7 @@ faq:
   - q: "How do you handle emergencies at a managed building?"
     a: "Call (929) 370-1552. Emergency calls are answered 24/7. We stop the water first, document the damage with photos, then quote the permanent repair."
   - q: "How often should a building roof be inspected?"
-    a: "Twice a year for flat roofs: spring to check winter damage and fall before the cold season. Catching small issues early is far cheaper than an emergency repair."
+    a: "Twice a year for flat roofs: in spring to check winter damage and in fall before the cold season. Catching small issues early is far cheaper than an emergency repair."
 modified: "2026-10-22"
 ---
 ## What you get from us
@@ -62,9 +63,23 @@ Active leak in a resident's unit? We answer around the clock and make the roof w
 
 We plan noisy work and access with you in advance, protect common areas and clean up every day.
 
-## NYC rules, explained before work starts
+## The questions boards ask, answered
 
-Roof work in New York City can involve Department of Buildings permits, and full replacements can trigger the city's cool-roof requirements and the sustainable roofing rules of Local Laws 92 and 94. We tell you which requirements apply to your building before you approve anything, handle the filing when one is needed, and include permit costs in the estimate. For the details, read our [NYC roof replacement guide](/roof-replacement-guide-nyc/).
+### Why should we trust your price?
+
+Every proposal is itemized and backed by photos, so the board sees what it's paying for. When a repair will do, we quote the repair.
+
+### Who will be on site?
+
+Our own crew, not subcontractors. Owner Marke is part of every job and is the person accountable for it.
+
+### What about permits and city rules?
+
+Roof work can involve DOB permits, and full replacements can trigger NYC cool-roof rules and the sustainable roofing rules of Local Laws 92 and 94. We tell you what applies before you approve anything and include permit costs in the estimate. Our [NYC roof replacement guide](/roof-replacement-guide-nyc/) has the details.
+
+### What if something goes wrong later?
+
+New roofs carry up to 50-year manufacturer and up to 25-year workmanship warranties, in writing, so the board has a document to point to.
 
 ## Roof systems we install and repair
 
@@ -76,4 +91,12 @@ Roof work in New York City can involve Department of Buildings permits, and full
 
 ## A maintenance program that saves money
 
-Flat roofs fail early when nobody looks at them. We recommend a simple routine: an inspection each spring and fall, small repairs fixed immediately, drains cleared, and a written report after every visit. It costs far less than one emergency, and it gives your board the paper trail it needs for capital planning.
+Flat roofs fail early when nobody looks at them, and Staten Island's nor'easters and freeze-thaw winters find every neglected seam. We recommend a simple routine: an inspection each spring and fall, small repairs fixed right away, drains cleared, and a written report after every visit. It costs far less than one emergency, and it gives your board the paper trail it needs for capital planning. To see typical numbers, check our [roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+
+## Who you'll be working with
+
+Alter Phase Roofing Contracting is family-owned, based at 61 Appleby Ave, with more than 13 years in roofing. We're GAF Master Elite®, BBB Accredited and rated Excellent across 108 Google reviews.
+
+**Next step:** call (929) 370-1552 or send us your building addresses. You'll usually have a written scope for each within 24 hours of the inspection.
+
+We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

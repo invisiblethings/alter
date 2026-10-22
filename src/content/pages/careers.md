@@ -7,8 +7,8 @@ kicker: "Careers"
 h1: "Roofing jobs with a family-owned Staten Island company"
 intro: "Whether you're just starting out or you've been on roofs for years, there's a place for you on our crew. Steady work, real training, and an owner who works alongside the team."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
-imageAlt: "Alter Phase Roofing crew installing an EPDM roof in Brooklyn"
-answer: "Alter Phase Roofing hires roofers, helpers and experienced crew members for residential and commercial work across Staten Island, Brooklyn, Manhattan and Queens. To apply, call (929) 370-1552 or email info@alterphaseroofing.com with your experience."
+imageAlt: "Alter Phase Roofing Contracting crew installing an EPDM roof in Brooklyn"
+answer: "Alter Phase Roofing Contracting hires roofers, helpers and experienced crew members for residential and commercial work across Staten Island, Brooklyn, Manhattan and Queens. To apply, call (929) 370-1552 or email info@alterphaseroofing.com with your experience."
 modified: "2026-10-22"
 ---
 ## Why work with us

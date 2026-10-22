@@ -7,7 +7,7 @@ h1: "Roof replacement cost in NYC (2026): real prices by material and borough"
 cardTitle: "Roof Replacement Cost in NYC (2026)"
 intro: "Real numbers from a working NYC roofing contractor, not national averages. Use the calculator for your roof, then read what actually moves the price up or down."
 image: "/wp-content/uploads/2025/05/Roof-Replacement-Cost-NYC-Alter-Phase-Roofing.jpg"
-imageAlt: "Roof replacement in New York City, cost guide by Alter Phase Roofing"
+imageAlt: "Roof replacement in New York City, cost guide by Alter Phase Roofing Contracting"
 published: "2024-10-12"
 modified: "2026-10-22"
 estimator: true

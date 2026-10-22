@@ -15,7 +15,7 @@ area: "New York City"
 prices: ["boroughs", "flat", "pitched"]
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "Aerial view of New York City rooftops"
-answer: "Alter Phase Roofing is a family-owned NYC roofing contractor based on Staten Island and serving Staten Island, Brooklyn, Manhattan and Queens. Most NYC roof repairs cost $300–$1,200 and full replacements $10,000–$30,000+, depending on the borough, roof type and access."
+answer: "Alter Phase Roofing Contracting is a family-owned NYC roofing contractor based on Staten Island and serving Staten Island, Brooklyn, Manhattan and Queens. Most NYC roof repairs cost $300–$1,200 and full replacements $10,000–$30,000+, depending on the borough, roof type and access."
 related:
   - "/service-area/staten-island-ny/"
   - "/service-area/brooklyn-ny/"

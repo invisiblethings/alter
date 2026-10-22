@@ -2,11 +2,11 @@
 path: "/reviews/"
 template: reviews
 seoTitle: "Alter Phase Roofing Reviews | 108 Google Reviews"
-description: "Read what customers say about Alter Phase Roofing: 108 Google reviews rated Excellent, for roof repair and replacement across NYC."
+description: "Read what customers say about Alter Phase Roofing Contracting: 108 Google reviews rated Excellent, for roof repair and replacement across NYC."
 kicker: "Customer reviews"
-h1: "Alter Phase Roofing reviews: rated Excellent on Google"
+h1: "Alter Phase Roofing Contracting reviews: rated Excellent on Google"
 intro: "We've earned 108 Google reviews by doing what we say we'll do. Here's what our customers say in their own words."
-answer: "Alter Phase Roofing is rated Excellent across 108 Google reviews. Customers most often mention honest advice (including being told a repair was enough), fast responses, clean job sites and roofs replaced in a single day."
+answer: "Alter Phase Roofing Contracting is rated Excellent across 108 Google reviews. Customers most often mention honest advice (including being told a repair was enough), fast responses, clean job sites and roofs replaced in a single day."
 modified: "2026-10-22"
 ---
 ## Read and leave reviews

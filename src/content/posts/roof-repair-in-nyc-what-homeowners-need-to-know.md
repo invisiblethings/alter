@@ -92,4 +92,4 @@ Repair when the roof is **under about 15 years old**, the damage is **localized*
 
 ## Get your roof looked at
 
-Alter Phase Roofing is a family-owned, DCWP-licensed roofer (#2129904-DCWP) based on Staten Island, repairing roofs across [Staten Island](/roof-repair/), [Brooklyn](/service-area/brooklyn-ny/roof-repair/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Free inspections, written estimates within 24 hours, and [emergency service 24/7](/roof-repair/emergency-service/).
+Alter Phase Roofing Contracting is a family-owned, DCWP-licensed roofer (#2129904-DCWP) based on Staten Island, repairing roofs across [Staten Island](/roof-repair/), [Brooklyn](/service-area/brooklyn-ny/roof-repair/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Free inspections, written estimates within 24 hours, and [emergency service 24/7](/roof-repair/emergency-service/).

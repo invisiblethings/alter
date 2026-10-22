@@ -15,7 +15,7 @@ area: "Brooklyn"
 wizard: "Roof replacement"
 prices: ["boroughs", "flat", "pitched"]
 image: "/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn.webp"
-imageAlt: "Alter Phase Roofing crew replacing a flat roof in Brooklyn"
+imageAlt: "Alter Phase Roofing Contracting crew replacing a flat roof in Brooklyn"
 answer: "A roof replacement in Brooklyn typically costs <strong>$10,000–$17,000</strong> for a 1,000 sq ft flat roof and more for larger or pitched roofs. Brooklyn costs more than Staten Island or Queens because of row-home access, attached walls, brownstone details and board requirements. Most replacements take a few days."
 related:
   - "/service-area/brooklyn-ny/"

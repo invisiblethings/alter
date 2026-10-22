@@ -1,7 +1,7 @@
 ---
 path: "/service-area/staten-island-ny/"
 template: location
-seoTitle: "Roofing Contractor Staten Island, NY | Alter Phase Roofing"
+seoTitle: "Staten Island Roofers in Every Neighborhood | Alter Phase"
 description: "Staten Island's family-owned roofing contractor at 61 Appleby Ave. Roof repair, replacement, flat roofs and gutters in every neighborhood."
 kicker: "Staten Island · our home base"
 h1: "Staten Island roofing contractor, from the North Shore to Tottenville"
@@ -14,8 +14,8 @@ service: "Roofing"
 area: "Staten Island"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2025/04/AlterPhaseRoofing-BG-Home.webp"
-imageAlt: "New roof replaced by Alter Phase Roofing in 10314 Staten Island, NY"
-answer: "Alter Phase Roofing is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY 10305. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $6–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
+imageAlt: "New roof replaced by Alter Phase Roofing Contracting in 10314 Staten Island, NY"
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY 10305. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $6–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
 projects:
   - title: "Full shingle roof replacement"
     location: "Staten Island, NY 10314"

@@ -15,7 +15,7 @@ area: "Brooklyn"
 prices: ["flat", "boroughs"]
 image: "/wp-content/uploads/2024/04/Brooklyn-AlterPhaseRoofing.webp"
 imageAlt: "Brooklyn row houses and rooftops"
-answer: "Alter Phase Roofing repairs and replaces roofs across Brooklyn, mainly flat roofs on brownstones, row homes and mixed-use buildings. A 1,000 sq ft flat roof replacement in Brooklyn typically costs $10,000–$17,000; flat roof leak repairs usually run $400–$1,200."
+answer: "Alter Phase Roofing Contracting repairs and replaces roofs across Brooklyn, mainly flat roofs on brownstones, row homes and mixed-use buildings. A 1,000 sq ft flat roof replacement in Brooklyn typically costs $10,000–$17,000; flat roof leak repairs usually run $400–$1,200."
 projects:
   - title: "TPO flat roof installation"
     location: "Bay Ridge, Brooklyn 11209"

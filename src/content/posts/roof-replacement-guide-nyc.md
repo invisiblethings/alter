@@ -7,7 +7,7 @@ h1: "Roof replacement in NYC: costs, permits and how to hire the right roofer (2
 cardTitle: "Roof Replacement NYC: Costs, Permits & Hiring Guide"
 intro: "Replacing a roof in New York City isn't like replacing one in the suburbs. Permits, cool-roof rules, co-op boards, attached buildings and tight streets all change the job and the price. Here's what to know before you sign anything."
 image: "/wp-content/uploads/2024/10/Flat-Roof-in-NYC-by-AlterPhaseRoofingContracting.webp"
-imageAlt: "Flat roof replacement in New York City by Alter Phase Roofing"
+imageAlt: "Flat roof replacement in New York City by Alter Phase Roofing Contracting"
 published: "2025-05-12"
 modified: "2026-10-22"
 answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $6–$10 per sq ft for asphalt shingles and $8–$14 for flat roofs, more in Manhattan and Brooklyn than in Staten Island or Queens. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do."
@@ -143,6 +143,6 @@ Use this checklist before you hire anyone:
 - **Local references** on buildings like yours, in your borough.
 - **Be wary of bids far below the others.** They often mean uninsured labor, cheaper materials or "surprise" charges once the old roof is off.
 
-## Why NYC owners choose Alter Phase Roofing
+## Why NYC owners choose Alter Phase Roofing Contracting
 
 We're a family-owned roofing contractor based on Staten Island, serving [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Our owner, Marke, is part of every job. We're GAF Master Elite® certified, licensed by NYC DCWP, fully insured, and we handle permits and board paperwork as part of the job. Every roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.

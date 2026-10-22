@@ -2,7 +2,7 @@
 path: "/accessibility-statement/"
 template: legal
 seoTitle: "Accessibility Statement | Alter Phase Roofing"
-description: "Our commitment to making alterphaseroofing.com accessible to everyone, including adjustable text size, keyboard navigation and screen reader support."
+description: "Our commitment to making alterphaseroofing.com accessible to everyone, including readable text, keyboard navigation and screen reader support."
 h1: "Accessibility statement"
 modified: "2026-10-22"
 ---
@@ -10,11 +10,11 @@ This is an accessibility statement from Alter Phase Contracting Inc..
 
 ### Conformance status
 
-The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Alter Phase Roofing is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
+The [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) defines requirements for designers and developers to improve accessibility for people with disabilities. It defines three levels of conformance: Level A, Level AA, and Level AAA. Alter Phase Roofing Contracting is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
 
 ### Feedback
 
-We welcome your feedback on the accessibility of Alter Phase Roofing. Please let us know if you encounter accessibility barriers on Alter Phase Roofing:
+We welcome your feedback on the accessibility of Alter Phase Roofing Contracting. Please let us know if you encounter accessibility barriers on our website:
 
 -   Phone: (929) 370-1552
 -   E-mail: [info@alterphaseroofing.com](mailto:info@alterphaseroofing.com)
@@ -25,7 +25,7 @@ We try to respond to feedback within 2 business days.
 
 ## Features of this website
 
-- **Adjustable text size:** use the A / A / A buttons at the top of every page to make text larger.
+- **Zoom friendly:** text and layouts stay readable when you zoom your browser up to 200% (Ctrl/Cmd and +).
 - **Large tap targets and high-contrast text** throughout the site.
 - **Keyboard navigation** with visible focus outlines and a skip-to-content link.
 - **Descriptive image text** for screen readers.

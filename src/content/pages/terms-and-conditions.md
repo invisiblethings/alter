@@ -2,7 +2,7 @@
 path: "/terms-and-conditions/"
 template: legal
 seoTitle: "Terms and Conditions | Alter Phase Roofing"
-description: "The terms and conditions for using the Alter Phase Roofing website, alterphaseroofing.com, operated from Staten Island, New York."
+description: "The terms and conditions for using the Alter Phase Roofing Contracting website, alterphaseroofing.com, operated from Staten Island, New York."
 h1: "Terms and conditions"
 modified: "2026-10-22"
 ---
@@ -34,7 +34,7 @@ Terms and Conditions (also referred as “Terms”) mean these Terms and Conditi
 
 Third-party Social Media Service means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
 
-Website refers to Alter Phase Roofing, accessible from https://AlterPhaseroofing.com
+Website refers to Alter Phase Roofing Contracting, accessible from https://AlterPhaseroofing.com
 
 You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
