@@ -8,6 +8,33 @@ Supporting data: [`docs/data/url-inventory.csv`](data/url-inventory.csv) lists a
 
 ---
 
+## 0. Decisions and verified facts (updated 2026-10-22)
+
+| Topic | Decision / fact | Source |
+|---|---|---|
+| Main phone (NAP, schema, GBP) | **(929) 370-1552**, always written in exactly this format, because the Google Ads call-conversion tag swaps this exact string for a forwarding number | Client; GTM container |
+| Tracking number | 929-800-8572 is for tracking only. It never appears in schema or the footer NAP | Client |
+| Owner | **Marke**, owner. Family-owned, local, 13+ years in roofing; Marke is on every job | Client |
+| Legal entity | NYC DCWP lists the business as **ALTER PHASE CONTRACTING INC**; the website footer says "Alter Phase Roofing Inc." | NYC Open Data `w7w3-xahh` |
+| License | **Home Improvement Contractor #2129904-DCWP**, active until 2027-02-28. The old #2098943-DCA expired in Feb 2025 but is still printed on 8 pages; the new site fixes this | NYC Open Data |
+| Address / geo | 61 Appleby Ave, Staten Island, NY 10305 · 40.591462, -74.079555 (BIN 5106001) | DCWP record |
+| Hours | Mon–Fri 8am–8pm, Sat 8am–5pm, Sun closed; emergency line 24/7 | Current site |
+| Warranties | Manufacturer warranty up to **50 years**, workmanship warranty up to **25 years**, both written | Current site |
+| Certifications | GAF Master Elite (claimed on the current site), BBB Accredited. GAF's directory page couldn't be checked automatically, so this needs confirming before launch | Current site |
+| Reviews | Google: "Excellent", 108 reviews (Trustindex widget). Birdeye: 5.0 from 101 | Current site; Birdeye |
+| Profiles (`sameAs`) | Google Maps CID 15794678866958250729, Facebook, LinkedIn, Yelp, BBB, Angi, GAF, BuildZoom, D&B, Birdeye, The Blue Book, BestCompany | Current schema plus web search |
+| Service-area priority | **Staten Island first**, then Brooklyn, Manhattan, **Queens** (Queens gets its own borough page in Phase 2) | Client |
+| Costs | Reuse the cost figures already published on the site and blog; they're averages from Alter Phase jobs | Client |
+| Hosting | **Netlify** (native Forms, `_redirects`, deploy previews) | Client |
+| Tags | Keep **GTM-M77VVM4Q** as is. It contains GA4 `G-KKQEPJ782W`, Google Ads `AW-397936435`, Ads call conversion (number swap), and Ads conversions on `tel:` and `sms:` clicks. **New:** a `generate_lead` dataLayer event on successful form submits, so forms can become an Ads conversion | Client; GTM container v9 |
+| Logo | Keep the current logo for launch | Client |
+| Blog author | Bylines move from the generic "alterphaseroofing" account to **Marke**, with an author page (experience, license, certifications) | Plan §7.4 |
+| Hidden LP | `/roof-replacement-si/` is published but `noindex` and missing from the sitemap. It's kept as a `noindex` ads landing page | Crawl |
+
+**Still to confirm with the client:** Marke's surname for the author byline, which legal name to show (Alter Phase Contracting Inc vs Alter Phase Roofing Inc), the current GAF certification tier, and the founding year (schema says 2018; client says 13+ years in roofing, so "since 2013").
+
+---
+
 ## 1. What the data says (read this first)
 
 Sources: the Search Console export (US web search, 16 months, Jun 2025 to Oct 2026), the live sitemap, and a crawl of all 57 URLs on 2026-10-22.
@@ -76,13 +103,13 @@ Google re-evaluates a site when its URLs, content, internal links or templates c
 | Layer | Choice | Why |
 |---|---|---|
 | Framework | **Astro** (static output, no JavaScript by default, interactive islands only where needed) | Fastest delivery of plain HTML; Markdown/MDX content collections; reliable Core Web Vitals |
-| Hosting | **Cloudflare Pages** | Global CDN, free tier, `_redirects` and headers at the edge, Workers for forms and the address lookup (§6A) |
+| Hosting | **Netlify** (client decision) | Global CDN, `_redirects` and headers at the edge, native Forms, deploy previews, Netlify Functions for the address lookup (§6A) |
 | CMS for the client | **Keystatic** (git-based, visual editor) | No database or plugins to maintain; content lives in the repo as Markdown; non-technical editing. Alternative: Sanity if several staff will edit. |
 | Content source | Export from the live WP REST API (`/wp-json/wp/v2/*` responds publicly) → convert to Markdown with frontmatter | Keeps text, dates, authors, categories and media references exactly |
 | Images | Astro image pipeline → AVIF/WebP, responsive `srcset`, explicit width/height, lazy below the fold, `fetchpriority=high` on the LCP image | LCP and CLS |
 | Fonts | Self-hosted, subset, `font-display: swap`, preloaded | No Google Fonts round-trip |
-| Forms | Cloudflare Worker → email (Resend) + CRM/Sheet webhook + optional SMS to the owner; Turnstile anti-spam (no CAPTCHA puzzles for older users) | No WPForms; leads aren't lost |
-| Analytics | GA4 through server-side GTM or Zaraz; call tracking through dynamic number insertion that never touches the NAP in schema | Measurable without hurting speed |
+| Forms | **Netlify Forms** (honeypot spam filtering, no puzzle CAPTCHA) → email notification to info@ + optional webhook to CRM/Sheet/SMS; `generate_lead` dataLayer event on success | No WPForms; leads aren't lost |
+| Analytics | Existing GTM container `GTM-M77VVM4Q` (GA4 + Google Ads) loaded once in `<head>`; phone shown as `(929) 370-1552` so Ads call swap keeps working | Ads tracking unchanged on launch day |
 | Search signals | XML sitemap with accurate `lastmod`, IndexNow ping on deploy (Bing, Yandex), Search Console and Bing Webmaster Tools verified before launch | Fast recrawl after cutover |
 
 **Performance targets** (field data, p75 mobile): LCP < 1.8 s, INP < 150 ms, CLS < 0.05. Page weight < 300 KB on a typical page. JavaScript: 0 KB on content pages, except the call/estimate widgets.
@@ -148,7 +175,7 @@ A visitor types their address. The site pulls public **NYC Open Data**: year bui
 - Permit history, plus a note on whether a permit is likely needed (that question already ranks at position 3.5)
 - A one-tap **"Have a person confirm this"** button
 
-This is the main lead magnet. It qualifies leads before the call (address, roof size, building type), and property managers can paste in several addresses at once. It runs as a Cloudflare Worker with cached responses. Caveats on the results page: footprint area isn't exact roof area, and the range is an estimate to be confirmed in person.
+This is the main lead magnet. It qualifies leads before the call (address, roof size, building type), and property managers can paste in several addresses at once. It runs as a Netlify Function with cached responses. Caveats on the results page: footprint area isn't exact roof area, and the range is an estimate to be confirmed in person.
 
 ### B. NYC Roof Cost Index, built from Alter Phase's own jobs
 Publish anonymized median prices by roof type (TPO, mod-bit, EPDM, asphalt shingle), borough and roof size, from completed jobs, updated quarterly with a methodology note. This:
@@ -260,19 +287,16 @@ Features from §6 can be designed in Phase 1 and built in Phase 2, but they **la
 
 ---
 
-## 11. What I need from you or the client
+## 11. Client inputs
 
-1. **Phone number:** which one is primary? Is 929-800-8572 a call-tracking number?
-2. Access: Google Search Console, GA4/GTM, Google Business Profile, WordPress admin (read-only is fine), DNS registrar, Bing Webmaster Tools
-3. Owner and crew: name(s), photos, short bio, license number(s), insurance carrier, warranty terms, manufacturer certifications (GAF, Carlisle, etc.)
-4. Job data for the Cost Index (anonymized is fine) and project photos with neighborhood and roof type
-5. Reviews: links to the Google, Yelp and other profiles
-6. Which services and boroughs are actually a priority (e.g. is Queens or NJ served?)
-7. Hosting and CMS preference: is Cloudflare Pages + Keystatic acceptable, or does someone else maintain the site?
-8. Is there an ads account that sends traffic to `/roofing-lp/` or `/vinyl-siding-estimate/`? (They stay live, just `noindex`.)
-9. Brand: keep the current logo, or a refresh as part of this project?
+Answered on 2026-10-22 (see §0): main phone, owner, warranties, costs, profiles, borough priority, hosting (Netlify), Google Ads tags, logo. Search Console data comes from the export, so no access is needed.
 
----
+Still open:
+1. Marke's surname for bylines and the author page
+2. Which legal name to show (DCWP has "Alter Phase Contracting Inc")
+3. Confirm the current GAF certification tier (Master Elite?)
+4. Job data and photos for the Cost Index and project ledger (Phase 2)
+5. Netlify account access, and the DNS registrar at cutover
 
 ## 12. Risks
 
