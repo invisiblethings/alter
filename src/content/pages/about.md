@@ -17,7 +17,7 @@ faq:
   - q: "Do you use subcontractors?"
     a: "Your roof is installed by our own crew, with the owner involved from the first inspection to the final walkthrough."
   - q: "What certifications do you have?"
-    a: "GAF Certified certification, BBB accreditation, and an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
+    a: "We are GAF Certified and BBB accredited, and we hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
 modified: "2026-10-22"
 ---
 ## How we're different
