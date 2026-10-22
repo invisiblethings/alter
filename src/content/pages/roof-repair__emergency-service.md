@@ -16,7 +16,7 @@ wizard: "EMERGENCY"
 prices: ["tiers"]
 image: "/wp-content/uploads/2024/04/Storm-Damage-Roofing.webp"
 imageAlt: "Storm damage on the roof of a Staten Island house"
-answer: "If your roof is leaking right now, call <a href=\"tel:+19293701552\">(929) 370-1552</a>. We answer 24/7 and send a crew the same day to tarp or temporarily seal the roof. Our shop is on Staten Island, so this is where we can usually reach you fastest. Meanwhile: move valuables, catch drips in a bucket, and <strong>never climb onto a wet or damaged roof yourself</strong>."
+answer: "If your roof is leaking right now, call <a href=\"tel:+19293701552\">(929) 370-1552</a>. We answer 24/7 and send a crew the same day to tarp or temporarily seal the roof. We're based on Staten Island, so this is where we can usually reach you fastest. Meanwhile: move valuables, catch drips in a bucket, and <strong>never climb onto a wet or damaged roof yourself</strong>."
 related:
   - "/roof-repair/"
   - "/roof-repair/residential/"
@@ -88,6 +88,6 @@ Usually not. Most emergencies end with a repair. If the roof is truly done, you'
 
 ## Who picks up the phone
 
-Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, GAF Master Elite® and BBB Accredited. Businesses and building managers can call the same number; see [commercial roof repair](/roof-repair/commercial/).
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, GAF Master Elite® and BBB Accredited. Businesses and building managers can call the same number; see [commercial roof repair](/roof-repair/commercial/).
 
 We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

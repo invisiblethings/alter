@@ -16,7 +16,7 @@ wizard: "Flat roof"
 prices: ["flat", "boroughs"]
 image: "/wp-content/uploads/2025/05/Commercial-Roofing-NYC-AlterPhaseRoofing.webp"
 imageAlt: "Commercial flat roof by Alter Phase Roofing Contracting"
-answer: "Commercial flat roofs on Staten Island typically cost <strong>$9–$16 per sq ft</strong> to replace (TPO $9–$14, PVC $10–$16) and most leak repairs run <strong>$400–$1,500</strong>. Alter Phase Roofing Contracting repairs, replaces and inspects commercial roofs from our shop at 61 Appleby Ave, and answers emergency calls 24/7."
+answer: "Commercial flat roofs on Staten Island typically cost <strong>$9–$16 per sq ft</strong> to replace (TPO $9–$14, PVC $10–$16) and most leak repairs run <strong>$400–$1,500</strong>. Alter Phase Roofing Contracting repairs, replaces and inspects commercial roofs from our base on Staten Island, and answers emergency calls 24/7."
 related:
   - "/roof-repair/commercial/"
   - "/commercial-roofing/roof-replacement/"

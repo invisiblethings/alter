@@ -107,7 +107,7 @@ Architectural asphalt shingles are the best value for most Staten Island homes, 
 
 ## Who you're hiring
 
-Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing. We're BBB Accredited, licensed by NYC DCWP (#2129904-DCWP), fully insured, and rated 5.0 stars across 154 reviews, 109 of them on Google. We replace roofs across the Island, from Westerleigh and Castleton Corners to Rossville, Annadale and Prince's Bay.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. We're BBB Accredited, licensed by NYC DCWP (#2129904-DCWP), fully insured, and rated 5.0 stars across 154 reviews, 109 of them on Google. We replace roofs across the Island, from Westerleigh and Castleton Corners to Rossville, Annadale and Prince's Bay.
 
 **Next step:** call or text (929) 370-1552 for a free inspection with photos. Want the full picture first? Read our [roof replacement guide](/roof-replacement-guide-nyc/) on permits, costs and choosing a contractor.
 

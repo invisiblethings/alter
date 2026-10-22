@@ -2,10 +2,10 @@
 path: "/service-area/staten-island-ny/"
 template: location
 seoTitle: "Staten Island Neighborhoods & ZIP Codes We Serve | Alter Phase"
-description: "Staten Island's family-owned roofing contractor at 61 Appleby Ave. Roof repair, replacement, flat roofs and gutters in every neighborhood."
+description: "Staten Island's family-owned roofing contractor. Roof repair, replacement, flat roofs and gutters in every neighborhood."
 kicker: "Staten Island · our home base"
 h1: "Roofing in every Staten Island neighborhood, from the North Shore to Tottenville"
-intro: "We're not a Brooklyn company that drives over the bridge. Our shop is at 61 Appleby Ave, so Staten Island is where we're fastest, where most of our work is, and where our customers are our neighbors."
+intro: "We're not a Brooklyn company that drives over the bridge. We're based here, so Staten Island is where we're fastest, where most of our work is, and where our customers are our neighbors."
 highlights:
   - "Shop at <strong>61 Appleby Ave, Staten Island 10305</strong>"
   - "Shingle roofs, flat roofs, skylights, gutters and siding"
@@ -15,7 +15,7 @@ area: "Staten Island"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2025/04/AlterPhaseRoofing-BG-Home.webp"
 imageAlt: "New roof replaced by Alter Phase Roofing Contracting in 10314 Staten Island, NY"
-answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY 10305. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $5–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $5–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
 projects:
   - title: "Full shingle roof replacement"
     location: "Staten Island, NY 10314"
@@ -37,8 +37,8 @@ related:
   - "/affordable-roofing-staten-island/"
   - "/all-seasons-roofing-staten-island/"
 faq:
-  - q: "Where are you located on Staten Island?"
-    a: "Our shop is at 61 Appleby Ave, Staten Island, NY 10305. We're open Monday to Friday 8am–8pm and Saturday 8am–5pm, and we answer emergency calls 24/7 at (929) 370-1552."
+  - q: "Where are you based?"
+    a: "We're based on Staten Island and we come to you. Our office is for our crew and isn't open to the public. Call or text (929) 370-1552 Monday to Friday 8am–8pm and Saturday 8am–5pm, and we answer emergency calls 24/7."
   - q: "Which Staten Island neighborhoods do you serve?"
     a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
   - q: "How much does a new roof cost on Staten Island?"
@@ -85,7 +85,7 @@ South and East Shore homes take the brunt of nor'easters. Wind-rated shingles an
 
 ## Why Staten Island hires us
 
-- **We're local.** Our shop is on Appleby Ave. When there's a storm, we're already here.
+- **We're local.** We're based on the Island. When there's a storm, we're already here.
 - **The owner shows up.** Marke is part of every job, from the first inspection to the final walkthrough.
 - **Honest advice.** Many calls about a "new roof" end in a [repair](/roof-repair/). We'd rather keep a customer for life.
 - **Proper credentials.** GAF Master Elite®, BBB accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured.

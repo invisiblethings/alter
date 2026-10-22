@@ -90,4 +90,4 @@ Hire a manufacturer-certified, licensed installer so a long warranty actually pr
 
 ## Affordable doesn't mean cutting corners
 
-We're a family-owned roofer based at 61 Appleby Ave on Staten Island, and we keep prices fair by being local, running our own crew and not paying for a sales team. Every job gets a free inspection, a written itemized estimate and warranties in writing. See our [Staten Island roofing](/service-area/staten-island-ny/) page or the full [NYC roof cost guide](/roof-replacement-cost-in-nyc/).
+We're a family-owned roofer based on Staten Island, and we keep prices fair by being local, running our own crew and not paying for a sales team. Every job gets a free inspection, a written itemized estimate and warranties in writing. See our [Staten Island roofing](/service-area/staten-island-ny/) page or the full [NYC roof cost guide](/roof-replacement-cost-in-nyc/).

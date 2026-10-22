@@ -2,10 +2,10 @@
 path: "/service-area/"
 template: hub
 seoTitle: "Service Areas: Staten Island, Brooklyn, Manhattan, Queens"
-description: "Alter Phase Roofing Contracting serves Staten Island, Brooklyn, Manhattan and Queens from our shop at 61 Appleby Ave. Find roofing services in your borough."
+description: "Alter Phase Roofing Contracting serves Staten Island, Brooklyn, Manhattan and Queens from our base on Staten Island. Find roofing services in your borough."
 kicker: "Service areas"
 h1: "Where we work: Staten Island, Brooklyn, Manhattan and Queens"
-intro: "Our shop is on Staten Island, and most of our work is here. We also take on a lot of roofing in Brooklyn, Manhattan and Queens. Pick your borough to see local services, prices and neighborhoods."
+intro: "We're based on Staten Island, and most of our work is here. We also take on a lot of roofing in Brooklyn, Manhattan and Queens. Pick your borough to see local services, prices and neighborhoods."
 highlights:
   - "Shop at 61 Appleby Ave, Staten Island 10305"
   - "Emergency response 24/7"
@@ -15,7 +15,7 @@ area: "New York City"
 prices: ["boroughs"]
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "Aerial view of New York City roofs"
-answer: "Alter Phase Roofing Contracting is based at 61 Appleby Ave, Staten Island, NY 10305 and serves Staten Island, Brooklyn, Manhattan and Queens. Roof prices vary by borough: a 1,000 sq ft flat roof runs about $8,000–$13,000 on Staten Island, $9,000–$15,000 in Queens, $10,000–$17,000 in Brooklyn and $13,000–$22,000+ in Manhattan."
+answer: "Alter Phase Roofing Contracting is based on Staten Island and serves Staten Island, Brooklyn, Manhattan and Queens. Roof prices vary by borough: a 1,000 sq ft flat roof runs about $8,000–$13,000 on Staten Island, $9,000–$15,000 in Queens, $10,000–$17,000 in Brooklyn and $13,000–$22,000+ in Manhattan."
 related:
   - "/service-area/staten-island-ny/"
   - "/service-area/brooklyn-ny/"

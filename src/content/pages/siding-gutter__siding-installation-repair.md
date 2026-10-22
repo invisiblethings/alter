@@ -87,6 +87,6 @@ Because we're a roofing company first, we pay attention to where siding meets th
 
 ## Who you're hiring
 
-Alter Phase Roofing Contracting is a family-owned contractor at 61 Appleby Ave, with more than 13 years in roofing. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google. Our work comes with a written workmanship warranty.
+Alter Phase Roofing Contracting is a family-owned contractor based on Staten Island, with more than 13 years in roofing. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google. Our work comes with a written workmanship warranty.
 
 **Next step:** call or text (929) 370-1552 for a free estimate. Mon–Fri 8–8, Sat 8–5. We work across the Island, from Port Richmond and West Brighton to Great Kills, Annadale and Tottenville.
