@@ -1,10 +1,10 @@
 ---
 path: "/service-area/staten-island-ny/"
 template: location
-seoTitle: "Staten Island Roofers in Every Neighborhood | Alter Phase"
+seoTitle: "Staten Island Neighborhoods & ZIP Codes We Serve | Alter Phase"
 description: "Staten Island's family-owned roofing contractor at 61 Appleby Ave. Roof repair, replacement, flat roofs and gutters in every neighborhood."
 kicker: "Staten Island · our home base"
-h1: "Staten Island roofing contractor, from the North Shore to Tottenville"
+h1: "Roofing in every Staten Island neighborhood, from the North Shore to Tottenville"
 intro: "We're not a Brooklyn company that drives over the bridge. Our shop is at 61 Appleby Ave, so Staten Island is where we're fastest, where most of our work is, and where our customers are our neighbors."
 highlights:
   - "Shop at <strong>61 Appleby Ave, Staten Island 10305</strong>"
@@ -49,7 +49,7 @@ modified: "2026-10-22"
 ---
 ## Roofing for every kind of Staten Island home
 
-Staten Island's housing is different from the rest of the city, and so are its roofs.
+Staten Island's housing is different from the rest of the city, and so are its roofs. As a [Staten Island roofing company](/) based at 61 Appleby Ave, we work on all of them.
 
 ### Detached & semi-detached homes
 

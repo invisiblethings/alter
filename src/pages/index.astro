@@ -16,8 +16,8 @@ import heroImg from '../assets/hero-new-roof.jpg';
 import crew from '../assets/crew-on-roof.jpg';
 
 // Homepage: Staten Island homeowners first. Other boroughs have their own pages.
-const title = 'Roofing Contractor Staten Island, NY | Alter Phase Roofing';
-const description = 'Family-owned Staten Island roofers for roof repair and new roofs. Free inspection with photos, written price in 24 hrs, 50-yr warranty. (929) 370-1552';
+const title = 'Staten Island Roofers & Roofing Company | Alter Phase Roofing';
+const description = 'Family-owned roofing contractor on Staten Island. Roof repair and replacement, most roofs done in 1 day. 5.0★ from 154 reviews. Free inspection.';
 const h1 = "Staten Island roofers who'll tell you if a repair is enough";
 
 const asphalt = byId('asphalt');
@@ -31,6 +31,8 @@ const skyLeak = repairs.find((r) => /skylight/i.test(r.name)) || skylights[0];
 
 const faq = [
   { q: 'How much does a new roof cost on Staten Island?', a: `Most Staten Island roof replacements cost ${range(typicalReplacement.low, typicalReplacement.high)}. Asphalt shingles run about $${asphalt.low}–$${asphalt.high} per square foot installed, so a typical detached house with about 1,800 sq ft of roof lands around ${range(asphalt.low * 1800, asphalt.high * 1800)}. A 1,000 sq ft flat roof is about ${range(si.low, si.high)}. You get an exact, written price after a free inspection.` },
+  { q: 'How much does roof repair cost on Staten Island?', a: `Most roof repairs on Staten Island cost ${range(repairs[0].low, 1200)}. A small leak patch is ${range(leak.low, leak.high)}, a shingle repair ${range(shingle.low, shingle.high)} and new flashing ${range(flash.low, flash.high)}. Larger storm or deck repairs can run $1,500–$3,500. The inspection and written estimate are free.` },
+  { q: 'How do I choose a roofing company on Staten Island?', a: `Check five things before you sign. Ask for the NYC DCWP Home Improvement Contractor license number and a certificate of insurance. Make sure someone actually climbs your roof and shows you photos, not just drone shots. Get an itemized, written estimate and the warranty terms in writing. Then read the reviews: ${business.name} is license #${business.license.number}, GAF Master Elite® certified and rated ${business.rating.value} stars from ${business.rating.count} reviews.` },
   { q: 'Do I need a new roof, or can it be repaired?', a: 'If your roof is under about 15 years old and the damage is in one area, a repair usually makes sense. If it leaks in several places, the shingles are curling or brittle all over, or it is over 20 years old, replacement is usually cheaper in the long run. We show you photos and tell you honestly. Many homeowners who call us about a new roof end up with a repair.' },
   { q: 'How long does a roof replacement take?', a: 'Most Staten Island homes are done in a single day. We tear off the old roof, inspect and repair the deck, install the new system and clean up before we leave.' },
   { q: 'Do I need a permit to replace my roof on Staten Island?', a: 'Not always. Replacing shingles like-for-like usually does not need a NYC DOB permit, but replacing the deck, changing the roof type and some full replacements do. We check this for every job and file the permit for you when it is needed.' },
@@ -52,6 +54,7 @@ const praise = [
   { n: `${mentions('oneday')}+`, t: 'mention a new roof done in one day', ...quote('Denise L.', 'My entire new roof was done in one day! They left the property spotless.') },
   { n: `${mentions('honest')}+`, t: 'mention honest advice', ...quote('Lisa F.', 'He was honest and did not create a major (expensive) project out of something that was a quick fix.') },
 ];
+const best = quote('Nafis I.', 'Mark is the best roofer I have worked with.');
 const climb = quote('Chi C.', 'climbed up the roof to investigate the condition unlike other contractors which were only using a drone to take pictures.');
 
 // "What's going on with your roof?" Each symptom maps to a likely cause, a real price and a next step.
@@ -121,7 +124,7 @@ const shores = [
   <section class="sec" aria-labelledby="sym-h">
     <div class="wrap">
       <div class="head-split" data-reveal>
-        <div><span class="kicker">Start with the problem</span><h2 id="sym-h">What's going on with your roof?</h2></div>
+        <div><span class="kicker">Roof repair or a new roof?</span><h2 id="sym-h">What's going on with your roof?</h2></div>
         <p class="lead">Pick what you're seeing. We'll tell you what it usually means, what Staten Island homeowners typically pay to fix it, and what to do next.</p>
       </div>
       <div class="sym" data-sym data-reveal>
@@ -174,7 +177,7 @@ const shores = [
   <section class="sec" aria-labelledby="svc-h">
     <div class="wrap">
       <div class="head-split" data-reveal>
-        <div><span class="kicker">Roofing services for your home</span><h2 id="svc-h">Everything over your head, handled by one local crew.</h2></div>
+        <div><span class="kicker">Everything over your head, one local crew</span><h2 id="svc-h">Roofing services for Staten Island homes</h2></div>
         <p class="lead">Repairs, full replacements, flat roofs, skylights and gutters for Staten Island houses, with real prices up front.</p>
       </div>
       <div class="bento">
@@ -232,7 +235,7 @@ const shores = [
   <section class="sec dark" aria-labelledby="cost-h">
     <div class="wrap">
       <div class="head-split" data-reveal>
-        <div><span class="kicker">Real prices, not "call for a quote"</span><h2 id="cost-h">See your price before anyone climbs a ladder.</h2></div>
+        <div><span class="kicker">See your price before anyone climbs a ladder</span><h2 id="cost-h">How much does a new roof cost on Staten Island?</h2></div>
         <p class="lead">Pick your type of house. The range comes from what our Staten Island customers actually paid in {new Date().getFullYear()}. Then we confirm the exact number, free.</p>
       </div>
       <div data-reveal><Estimator /></div>
@@ -279,8 +282,8 @@ const shores = [
   <section class="sec praise-sec" id="reviews-sec" aria-labelledby="praise-h">
     <div class="wrap">
       <div class="head-split" data-reveal>
-        <div><span class="kicker">{reviewStats.average} stars · {reviewStats.total} reviews</span><h2 id="praise-h">We read all {reviewStats.total} of our reviews. Here's what keeps coming up.</h2></div>
-        <p class="lead">{reviewStats.bySource.Google} on Google, the rest on Yelp, HomeAdvisor, Angi and the BBB. {reviewStats.fiveStar} of them are five stars.</p>
+        <div><span class="kicker">{reviewStats.average} stars · {reviewStats.total} reviews</span><h2 id="praise-h">Why customers call us the best roofers on Staten Island</h2></div>
+        <p class="lead">“{best.q}” <span class="muted">{best.who}</span><br />We read all {reviewStats.total} of our reviews ({reviewStats.bySource.Google} on Google, {reviewStats.fiveStar} of them five stars). Here's what keeps coming up.</p>
       </div>
       <div class="praise">
         {praise.map((p, i) => (
@@ -320,7 +323,7 @@ const shores = [
   <section class="sec dark" aria-labelledby="area-h">
     <div class="wrap">
       <div class="head-split" data-reveal>
-        <div><span class="kicker">Where we work</span><h2 id="area-h">From St. George to Tottenville.</h2></div>
+        <div><span class="kicker">From St. George to Tottenville</span><h2 id="area-h">A roofing company for every Staten Island neighborhood</h2></div>
         <p class="lead">Our shop is at {business.address.street}, {business.address.zip}. We work in every Staten Island neighborhood and ZIP code from 10301 to 10314.</p>
       </div>
       <div class="shores" data-reveal>
@@ -339,7 +342,7 @@ const shores = [
     <div class="wrap faq-split">
       <div data-reveal>
         <span class="kicker">FAQ</span>
-        <h2>Straight answers for Staten Island homeowners</h2>
+        <h2>Staten Island roofing questions, answered straight</h2>
         <p class="lead">Still unsure? Ask the people who'll actually do the work.</p>
         <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
       </div>
