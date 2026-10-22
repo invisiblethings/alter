@@ -139,7 +139,7 @@ const imgUrls = homeServices.map((s) => s.img);
       </div>
     </nav>
     <div class="head-cta">
-      <a class="head-phone" href={telHref} aria-label={`Call ${business.phone}`}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text</small><strong>{business.phone}</strong></span></a>
+      <a class="head-phone" href={telHref} aria-label={`Call ${business.phone}`}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text</small><strong data-call-ref>{business.phone}</strong></span></a>
       <a class="btn btn-gold btn-sm" href="/free-estimate/">Free inspection</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><Icon name="menu" /></button>
     </div>

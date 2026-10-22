@@ -866,3 +866,18 @@ table.t td.num { font-weight: 820; white-space: nowrap; }
 .lp-foot { background: var(--night); color: var(--muted-d); font-size: 0.82rem; }
 .lp-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; padding-block: 1.5rem; }
 .lp-foot a { color: #e3eaf6; }
+
+/* big hero call button */
+.call-big { display: inline-flex; align-items: center; gap: 1rem; padding: 0.75rem 1.5rem 0.75rem 0.75rem; border-radius: 999px; background: var(--gold); color: var(--ink); text-decoration: none; box-shadow: 0 14px 40px rgb(251 196 90 / 0.35), inset 0 -3px 0 rgb(0 0 0 / 0.12); transition: transform 0.2s var(--ease), box-shadow 0.2s, background 0.2s; }
+.call-big:hover { color: var(--ink); background: #ffd476; transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 50px rgb(251 196 90 / 0.45), inset 0 -3px 0 rgb(0 0 0 / 0.12); }
+.call-big:active { transform: translateY(0) scale(0.99); }
+.call-ring { position: relative; width: 60px; height: 60px; border-radius: 50%; background: var(--night); color: var(--gold); display: grid; place-items: center; flex: none; }
+.call-ring .icon { width: 26px; height: 26px; animation: ring 2.6s ease-in-out infinite; }
+.call-ring::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--night); opacity: 0; animation: ripple 2.6s ease-out infinite; }
+.call-txt small { display: block; font-size: 0.74rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
+.call-txt strong { display: block; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); font-weight: 900; font-stretch: 112%; letter-spacing: -0.02em; line-height: 1.1; }
+.call-arrow { width: 24px; height: 24px; transition: transform 0.2s var(--ease); }
+.call-big:hover .call-arrow { transform: translateX(4px); }
+@keyframes ring { 0%, 70%, 100% { transform: rotate(0); } 74% { transform: rotate(-14deg); } 78% { transform: rotate(12deg); } 82% { transform: rotate(-10deg); } 86% { transform: rotate(8deg); } 90% { transform: rotate(0); } }
+@keyframes ripple { 0%, 60% { opacity: 0; transform: scale(1); } 65% { opacity: 0.5; } 100% { opacity: 0; transform: scale(1.35); } }
+@media (max-width: 480px) { .call-big { width: 100%; padding-right: 1.1rem; } .call-txt { flex: 1; } }

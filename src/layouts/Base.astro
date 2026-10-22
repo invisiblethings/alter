@@ -85,6 +85,25 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
     </main>
     {!bare && <Footer />}
     <CallBar quoteHref={bare ? '#lp-wizard' : undefined} />
+    <script is:inline>
+      // Google Ads call tracking: the Google tag (via GTM) swaps the visible
+      // number for a Google forwarding number for ad visitors. It can only
+      // rewrite text it can see, so when the reference number changes we point
+      // every call button (icons, "Call now", the mobile bar) at the new number.
+      (function () {
+        var ref = document.querySelector('[data-call-ref]');
+        if (!ref || !window.MutationObserver) return;
+        var digits = function () { var d = ref.textContent.replace(/\D/g, ''); return d.slice(-10); };
+        var start = digits();
+        var obs = new MutationObserver(function () {
+          var now = digits();
+          if (now.length !== 10 || now === start) return;
+          document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.href = 'tel:+1' + now; });
+          obs.disconnect();
+        });
+        obs.observe(ref, { subtree: true, childList: true, characterData: true });
+      })();
+    </script>
     <script>
       // Scroll reveal: progressive enhancement only; CSS keeps content visible without JS or with reduced motion.
       const els = document.querySelectorAll('[data-reveal]');

@@ -31,7 +31,7 @@ const year = new Date().getFullYear();
   <div class="wrap">
     <span class="lp-logo"><Image src={logo} alt={business.name} width={124} loading="eager" /></span>
     <span class="lp-rating hide-sm"><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><strong>{reviewStats.average}</strong> from {reviewStats.total} reviews</span>
-    <a class="btn btn-gold lp-call" href={telHref}><Icon name="phone" /><span><small>Free estimate · call now</small>{business.phone}</span></a>
+    <a class="btn btn-gold lp-call" href={telHref}><Icon name="phone" /><span data-call-ref><small>Free estimate · call now</small>{business.phone}</span></a>
   </div>
 </header>
 

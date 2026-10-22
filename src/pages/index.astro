@@ -8,7 +8,7 @@ import Estimator from '../components/Estimator.astro';
 import Process from '../components/Process.astro';
 import Faq from '../components/Faq.astro';
 import FinalCta from '../components/FinalCta.astro';
-import { business, telHref, smsHref } from '../data/business';
+import { business, telHref } from '../data/business';
 import { materials, repairs, skylights, boroughs, range, typicalReplacement, byId } from '../data/costs';
 import { reviews, reviewStats, mentions } from '../data/reviews';
 import { pageGraph } from '../lib/schema';
@@ -16,7 +16,7 @@ import heroImg from '../assets/hero-new-roof.jpg';
 import crew from '../assets/crew-on-roof.jpg';
 
 // Homepage: Staten Island homeowners first. Other boroughs have their own pages.
-const title = 'Staten Island Roofers & Roofing Company | Alter Phase Roofing';
+const title = 'Staten Island Roofing Company | Repair & Replacement | Alter Phase Roofing';
 const description = 'Family-owned roofing contractor on Staten Island. Roof repair and replacement, most roofs done in 1 day. 5.0★ from 154 reviews. Free inspection.';
 const h1 = "Staten Island roofers who'll tell you if a repair is enough";
 
@@ -102,8 +102,11 @@ const shores = [
         <h1>Staten Island roofers who'll tell you <span class="gold">if a repair is enough.</span></h1>
         <p class="lead">Family-owned roofing contractor on Staten Island for {business.yearsInRoofing}+ years. Free inspection with photos, a written price usually within 24 hours, and the owner on every job. Most new roofs are done in a single day.</p>
         <div class="cta-row" style="margin-top:1.75rem">
-          <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call for a free inspection</small>{business.phone}</span></a>
-          <a class="text-link" href={smsHref}><Icon name="sms" /> or text us a photo of your roof</a>
+          <a class="call-big" href={telHref}>
+            <span class="call-ring" aria-hidden="true"><Icon name="phone" /></span>
+            <span class="call-txt"><small>Tap to call · free inspection</small><strong>{business.phone}</strong></span>
+            <Icon name="arrow" class="call-arrow" />
+          </a>
         </div>
         <figure class="hero-quote">
           <blockquote>“Called them thinking I needed a new roof… <strong>turns out the roof was repairable.</strong> They didn't try to pressure me into any unnecessary work.”</blockquote>
