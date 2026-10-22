@@ -89,7 +89,7 @@ You get photos of the finished work and a written workmanship warranty.
 - **Photo report** of the whole roof, so you can plan budgets instead of reacting to leaks
 - **Work scheduled around customers and tenants**, with daily cleanup
 
-Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing. We're GAF Master Elite®, BBB Accredited and rated Excellent across 108 Google reviews. We repair commercial roofs from St. George and Stapleton to New Springville, Great Kills and Tottenville.
+Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing. We're GAF Master Elite®, BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google. We repair commercial roofs from St. George and Stapleton to New Springville, Great Kills and Tottenville.
 
 **Next step:** call (929) 370-1552. For active leaks, the line is answered 24/7. For a full condition report, book a [commercial roof inspection](/commercial-roofing/roof-inspection/). Managing several buildings? See [property managers, HOAs and co-op boards](/property-managers/).
 

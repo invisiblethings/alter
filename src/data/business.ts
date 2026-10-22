@@ -39,7 +39,8 @@ export const business = {
   },
   warranty: { manufacturerYears: 50, workmanshipYears: 25 },
   certifications: ['GAF Master Elite®', 'BBB Accredited Business'],
-  rating: { label: 'Excellent', count: 108, source: 'Google' },
+  // From the public review profile (Google, Yelp, HomeAdvisor, Angi, BBB); see src/data/reviews.ts.
+  rating: { value: '5.0', count: 154, googleCount: 109, label: '5.0 stars' },
   googleMapsUrl: 'https://www.google.com/maps?cid=15794678866958250729',
   googleReviewUrl: 'https://www.google.com/maps?cid=15794678866958250729',
   sameAs: [

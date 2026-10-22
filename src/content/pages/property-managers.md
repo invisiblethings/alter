@@ -95,7 +95,7 @@ Flat roofs fail early when nobody looks at them, and Staten Island's nor'easters
 
 ## Who you'll be working with
 
-Alter Phase Roofing Contracting is family-owned, based at 61 Appleby Ave, with more than 13 years in roofing. We're GAF Master Elite®, BBB Accredited and rated Excellent across 108 Google reviews.
+Alter Phase Roofing Contracting is family-owned, based at 61 Appleby Ave, with more than 13 years in roofing. We're GAF Master Elite®, BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 **Next step:** call (929) 370-1552 or send us your building addresses. You'll usually have a written scope for each within 24 hours of the inspection.
 

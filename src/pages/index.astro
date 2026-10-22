@@ -6,12 +6,11 @@ import QuoteWizard from '../components/QuoteWizard.astro';
 import Marquee from '../components/ProofStrip.astro';
 import Estimator from '../components/Estimator.astro';
 import Process from '../components/Process.astro';
-import Reviews from '../components/Reviews.astro';
 import Faq from '../components/Faq.astro';
 import FinalCta from '../components/FinalCta.astro';
 import { business, telHref, smsHref } from '../data/business';
 import { materials, repairs, skylights, boroughs, range, typicalReplacement, byId } from '../data/costs';
-import { reviews } from '../data/reviews';
+import { reviews, reviewStats, mentions } from '../data/reviews';
 import { pageGraph } from '../lib/schema';
 import heroImg from '../assets/hero-new-roof.jpg';
 import crew from '../assets/crew-on-roof.jpg';
@@ -44,6 +43,16 @@ const schema = pageGraph({ url: '/', title, description, crumbs: [{ name: 'Home'
 const hero = await getImage({ src: heroImg, width: 1024, format: 'webp', quality: 72 });
 const band = await getImage({ src: crew, width: 1284, format: 'webp', quality: 62 });
 const kt = reviews[0];
+// What customers praise most, counted from the published reviews (src/data/reviews.ts).
+const quote = (name: string, part: string) => { const r = reviews.find((x) => x.name === name && x.text.includes(part)); if (!r) throw new Error(`Review quote not found: ${name}`); return { q: part, who: `${r.name}, ${r.source}` }; };
+const praise = [
+  { n: `${mentions('price')}+`, t: 'mention fair, upfront prices', ...quote('Andrey K.', 'The price quoted was the price I paid, no gimmicks. True Staten Islanders.') },
+  { n: `${mentions('fast')}+`, t: 'mention fast replies and visits', ...quote('Valerie C.', 'Alter Phase was the only one that returned my call promptly & showed up the next day to give the estimate.') },
+  { n: `${mentions('clean')}+`, t: 'mention the cleanup', ...quote('Dee', 'they left the working area cleaner than it was originally.') },
+  { n: `${mentions('oneday')}+`, t: 'mention a new roof done in one day', ...quote('Denise L.', 'My entire new roof was done in one day! They left the property spotless.') },
+  { n: `${mentions('honest')}+`, t: 'mention honest advice', ...quote('Lisa F.', 'He was honest and did not create a major (expensive) project out of something that was a quick fix.') },
+];
+const climb = quote('Chi C.', 'climbed up the roof to investigate the condition unlike other contractors which were only using a drone to take pictures.');
 
 // "What's going on with your roof?" Each symptom maps to a likely cause, a real price and a next step.
 const symptoms = [
@@ -85,10 +94,10 @@ const shores = [
         <a class="rating-chip" href={business.googleReviewUrl} target="_blank" rel="noopener">
           <span class="g"><Icon name="google" /></span>
           <span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
-          {business.rating.label} · {business.rating.count} Google reviews
+          {business.rating.value} · {business.rating.count} reviews
         </a>
         <h1>Staten Island roofers who'll tell you <span class="gold">if a repair is enough.</span></h1>
-        <p class="lead">Family-owned roofing contractor on Staten Island for {business.yearsInRoofing}+ years. Free inspection with photos, a written price usually within 24 hours, and the owner on every job.</p>
+        <p class="lead">Family-owned roofing contractor on Staten Island for {business.yearsInRoofing}+ years. Free inspection with photos, a written price usually within 24 hours, and the owner on every job. New roofs are often done in a single day.</p>
         <div class="cta-row" style="margin-top:1.75rem">
           <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call for a free inspection</small>{business.phone}</span></a>
           <a class="text-link" href={smsHref}><Icon name="sms" /> or text us a photo of your roof</a>
@@ -155,6 +164,7 @@ const shores = [
       <ol class="promise-list" data-reveal data-reveal-d="1">
         <li><Icon name="camera" /><span><strong>Photos of everything we find</strong>You see your roof the way we see it, not a sales pitch.</span></li>
         <li><Icon name="file" /><span><strong>Repair and replacement options, in writing</strong>Itemized prices, usually within 24 hours.</span></li>
+        <li><Icon name="roof" /><span><strong>We climb up and look. No drone guesses.</strong>“{climb.q}” <em>{climb.who}</em></span></li>
         <li><Icon name="clock" /><span><strong>No pressure, no "sign today" pricing</strong>Take your time to decide.</span></li>
         <li><Icon name="users" /><span><strong>The owner on every job</strong>Our own crew, never subcontractors.</span></li>
       </ol>
@@ -259,14 +269,36 @@ const shores = [
         <div class="stat"><b>{business.yearsInRoofing}+</b><span>years in roofing</span></div>
         <div class="stat"><b>{business.warranty.manufacturerYears}<small style="font-size:0.45em"> yr</small></b><span>manufacturer warranty</span></div>
         <div class="stat"><b>{business.warranty.workmanshipYears}<small style="font-size:0.45em"> yr</small></b><span>workmanship warranty</span></div>
-        <div class="stat"><b>{business.rating.count}</b><span>Google reviews, rated {business.rating.label}</span></div>
+        <div class="stat"><b>{business.rating.value}</b><span>stars from {business.rating.count} reviews</span></div>
       </div>
     </div>
   </section>
 
   <Process />
 
-  <div id="reviews-sec"><Reviews limit={5} offset={1} title="What Staten Island homeowners say" /></div>
+  <section class="sec praise-sec" id="reviews-sec" aria-labelledby="praise-h">
+    <div class="wrap">
+      <div class="head-split" data-reveal>
+        <div><span class="kicker">{reviewStats.average} stars · {reviewStats.total} reviews</span><h2 id="praise-h">We read all {reviewStats.total} of our reviews. Here's what keeps coming up.</h2></div>
+        <p class="lead">{reviewStats.bySource.Google} on Google, the rest on Yelp, HomeAdvisor, Angi and the BBB. {reviewStats.fiveStar} of them are five stars.</p>
+      </div>
+      <div class="praise">
+        {praise.map((p, i) => (
+          <figure class:list={['praise-card', i === 0 && 'wide']} data-reveal data-reveal-d={String(i % 3)}>
+            <p class="praise-n"><b>{p.n}</b> reviews {p.t}</p>
+            <blockquote>“{p.q}”</blockquote>
+            <figcaption><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span> {p.who}</figcaption>
+          </figure>
+        ))}
+        <a class="praise-card praise-cta" href="/reviews/" data-reveal data-reveal-d="2">
+          <span class="g"><Icon name="google" /></span>
+          <b>{reviewStats.average}</b>
+          <span>Read all {reviewStats.total} reviews, filtered by the job you need</span>
+          <span class="link-arrow">See every review <Icon name="arrow" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section class="sec bone" aria-labelledby="proj-h">
     <div class="wrap">

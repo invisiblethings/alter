@@ -96,6 +96,6 @@ Licensed by NYC DCWP (#2129904-DCWP), insured, GAF Master Elite® and BBB Accred
 
 ## Book your free inspection
 
-Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing and a rating of Excellent across 108 Google reviews. Call or text (929) 370-1552, Mon–Fri 8–8 or Sat 8–5. Managing a commercial property or HOA? See [commercial roof inspections](/commercial-roofing/roof-inspection/).
+Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing and a 5.0-star rating across 154 reviews (109 on Google). Call or text (929) 370-1552, Mon–Fri 8–8 or Sat 8–5. Managing a commercial property or HOA? See [commercial roof inspections](/commercial-roofing/roof-inspection/).
 
 We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

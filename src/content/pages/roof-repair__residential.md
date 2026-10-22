@@ -83,7 +83,7 @@ No. We protect your yard and shrubs, take every scrap with us and sweep for nail
 
 ### Can I trust you on my roof?
 
-We're licensed by NYC DCWP (#2129904-DCWP), fully insured and BBB Accredited, with a rating of Excellent across 108 Google reviews.
+We're licensed by NYC DCWP (#2129904-DCWP), fully insured and BBB Accredited, with a 5.0-star rating across 154 reviews (109 on Google).
 
 ## When we'll tell you not to repair
 

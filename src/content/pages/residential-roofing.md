@@ -72,7 +72,7 @@ That's why we inspect the whole roof, not just the stain on your ceiling, and wh
 
 **We tell you when you don't need a new roof.** Plenty of our customers call expecting a replacement and end up with a repair. That honesty is why they send their neighbors.
 
-**We do it properly.** GAF Master Elite® certification means the manufacturer has vetted how we install, and it lets us offer their strongest warranties. We're also BBB Accredited and rated Excellent across 108 Google reviews.
+**We do it properly.** GAF Master Elite® certification means the manufacturer has vetted how we install, and it lets us offer their strongest warranties. We're also BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 **We're licensed and insured.** NYC DCWP Home Improvement Contractor #2129904-DCWP. Ask for proof of insurance and we'll send it.
 

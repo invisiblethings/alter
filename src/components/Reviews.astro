@@ -1,12 +1,18 @@
 ---
 import Icon from './Icon.astro';
-import { reviews } from '../data/reviews';
+import { reviews as all, reviewsTagged, reviewStats, type ReviewTag } from '../data/reviews';
 import { business } from '../data/business';
-interface Props { limit?: number; title?: string; kicker?: string; bg?: string; grid?: boolean; offset?: number }
-const { limit = 4, title = 'What Staten Island homeowners say', kicker = 'Google reviews', bg = '', grid = false, offset = 0 } = Astro.props;
-const [first, ...rest] = reviews.slice(offset);
+// Featured review + a short stack. `tags` picks reviews about the page's
+// service (falls back to the general list when too few match).
+interface Props { limit?: number; title?: string; kicker?: string; bg?: string; offset?: number; tags?: ReviewTag[] }
+const { limit = 4, title = 'What Staten Island homeowners say', kicker = `${reviewStats.average} stars · ${reviewStats.total} reviews`, bg = '', offset = 0, tags } = Astro.props;
+const pool = tags && reviewsTagged(...tags).filter((r) => r.text.length > 90).length >= 2
+  ? [...reviewsTagged(...tags).filter((r) => r.text.length > 90), ...all.filter((r) => !tags.some((t) => r.tags.includes(t)))]
+  : all.slice(offset);
+const [first, ...rest] = pool;
 const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
 const stars = [1, 2, 3, 4, 5];
+const short = (t: string) => (t.length > 200 ? t.slice(0, t.lastIndexOf(' ', 195)) + '…' : t);
 ---
 <section class:list={['sec', bg]} aria-labelledby="rev-h">
   <div class="wrap">
@@ -14,39 +20,27 @@ const stars = [1, 2, 3, 4, 5];
       <div><span class="kicker">{kicker}</span><h2 id="rev-h">{title}</h2></div>
       <p><a class="btn btn-line" href="/reviews/">Read all reviews <Icon name="arrow" /></a></p>
     </div>
-    {grid ? (
-      <div class="reviews-cols">
-        {reviews.slice(0, limit).map((r) => (
-          <figure class="mini">
-            <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
-            <blockquote><p>“{r.text}”</p></blockquote>
-            <figcaption><strong>{r.name}</strong> · Google review{r.tag && ` · ${r.tag}`}</figcaption>
-          </figure>
-        ))}
-      </div>
-    ) : (
-      <div class="reviews-wrap">
-        <figure class="bigquote" data-reveal>
-          <span class="qmark" aria-hidden="true">“</span>
-          <blockquote><p>{first.text}</p></blockquote>
-          <figcaption><span class="avatar-s" aria-hidden="true">{initials(first.name)}</span><span><strong>{first.name}</strong><span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span> Google review{first.tag && ` · ${first.tag}`}</span></figcaption>
-        </figure>
-        <div data-reveal data-reveal-d="1">
-          <a class="score" href={business.googleReviewUrl} target="_blank" rel="noopener">
-            <span class="g"><Icon name="google" /></span>
-            <span><b>{business.rating.label}</b><small>{business.rating.count} reviews on Google Maps →</small></span>
-          </a>
-          <div class="mini-reviews">
-            {rest.slice(0, Math.max(limit - 1, 0)).map((r) => (
-              <figure class="mini">
-                <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
-                <blockquote><p>“{r.text.length > 190 ? r.text.slice(0, r.text.lastIndexOf(' ', 185)) + '…' : r.text}”</p></blockquote>
-                <figcaption><strong>{r.name}</strong> · Google review</figcaption>
-              </figure>
-            ))}
-          </div>
+    <div class="reviews-wrap">
+      <figure class="bigquote" data-reveal>
+        <span class="qmark" aria-hidden="true">“</span>
+        <blockquote><p>{first.text}</p></blockquote>
+        <figcaption><span class="avatar-s" aria-hidden="true">{initials(first.name)}</span><span><strong>{first.name}</strong><span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span> {first.source} review</span></figcaption>
+      </figure>
+      <div data-reveal data-reveal-d="1">
+        <a class="score" href={business.googleReviewUrl} target="_blank" rel="noopener">
+          <span class="g"><Icon name="google" /></span>
+          <span><b>{reviewStats.average}</b><small>{reviewStats.total} reviews · {reviewStats.bySource.Google} on Google →</small></span>
+        </a>
+        <div class="mini-reviews">
+          {rest.slice(0, Math.max(limit - 1, 0)).map((r) => (
+            <figure class="mini">
+              <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
+              <blockquote><p>“{short(r.text)}”</p></blockquote>
+              <figcaption><strong>{r.name}</strong> · {r.source} review</figcaption>
+            </figure>
+          ))}
         </div>
       </div>
-    )}
+    </div>
   </div>
 </section>

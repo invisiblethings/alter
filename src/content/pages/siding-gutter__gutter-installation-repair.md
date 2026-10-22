@@ -97,6 +97,6 @@ If you're planning a [new roof](/residential-roofing/roof-replacement/), replace
 
 ## Who you're hiring
 
-Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. Licensed by NYC DCWP (#2129904-DCWP), insured, BBB Accredited and rated Excellent across 108 Google reviews.
+Alter Phase Roofing Contracting is a family-owned roofer at 61 Appleby Ave, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. Licensed by NYC DCWP (#2129904-DCWP), insured, BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 **Next step:** call or text (929) 370-1552 for a free estimate. You'll usually have a written price within 24 hours. Seeing a ceiling stain near the roof edge too? See [roof repair](/roof-repair/) and our [roof leak repair cost guide](/cost-to-repair-roof-leak/).

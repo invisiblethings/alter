@@ -2,6 +2,7 @@
 import Icon from './Icon.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Reviews from './Reviews.astro';
+import ReviewWall from './ReviewWall.astro';
 import Process from './Process.astro';
 import Faq from './Faq.astro';
 import FinalCta from './FinalCta.astro';
@@ -36,7 +37,7 @@ const legal = d.template === 'legal';
     {d.faq.length > 0 && <div style="margin-top:3rem"><Faq items={d.faq} /></div>}
   </div>
 </section>
-{d.template === 'reviews' && <Reviews limit={9} title="Every review, in our customers' own words" bg="" />}
+{d.template === 'reviews' && <ReviewWall />}
 {d.template === 'company' && <Process bg="bone" />}
 {d.template === 'company' && <Reviews limit={4} bg="" />}
 {!legal && <FinalCta />}
