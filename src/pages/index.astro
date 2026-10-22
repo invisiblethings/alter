@@ -1,9 +1,9 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import QuoteWizard from '../components/QuoteWizard.astro';
-import ProofStrip from '../components/ProofStrip.astro';
+import Marquee from '../components/ProofStrip.astro';
 import Estimator from '../components/Estimator.astro';
 import Process from '../components/Process.astro';
 import Reviews from '../components/Reviews.astro';
@@ -13,8 +13,8 @@ import { business, telHref } from '../data/business';
 import { materials, repairs, range, typicalReplacement } from '../data/costs';
 import { pageGraph } from '../lib/schema';
 import { posts } from '../lib/content';
+import heroImg from '../assets/hero-new-roof.jpg';
 import crew from '../assets/crew-on-roof.jpg';
-import flatCrew from '../assets/flat-roof-brooklyn-crew.webp';
 
 const title = 'Staten Island Roofers | Roof Repair & New Roofs | Alter Phase';
 const description = 'Family-owned Staten Island roofers: roof repair, replacement and flat roofs with up to 50-year warranties. GAF Master Elite. Free estimates: (929) 370-1552.';
@@ -33,172 +33,153 @@ const faq = [
 const schema = pageGraph({ url: '/', title, description, crumbs: [{ name: 'Home', url: '/' }], kind: 'home', h1, image: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg', faq });
 const latest = (await posts()).slice(0, 3);
 const shingles = materials.find((m) => m.id === 'asphalt')!;
-const services = [
-  { t: 'Roof repair', u: '/roof-repair/', img: '/wp-content/uploads/2024/04/AlterPhase-Roof-Repair-Service.jpg', alt: 'Roof repair on a Staten Island home', d: 'Leaks, missing shingles, flashing and storm damage, fixed at the source.', p: `Most repairs ${range(repairs[0].low, repairs[2].high)}` },
-  { t: 'Roof replacement', u: '/residential-roofing/roof-replacement/', img: '/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg', alt: 'New asphalt shingle roof in Staten Island 10314', d: 'Complete tear-off and new roof, usually finished in one to two days.', p: `Shingles $${shingles.low}–$${shingles.high} per sq ft` },
-  { t: 'Flat roofing', u: '/flat-roofing/', img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg', alt: 'White TPO flat roof installed by Alter Phase Roofing', d: 'TPO, EPDM and modified bitumen for row homes, brownstones and businesses.', p: 'From $8 per sq ft installed' },
-  { t: 'Emergency roof repair', u: '/roof-repair/emergency-service/', img: '/wp-content/uploads/2024/04/Storm-Damage-Roofing.webp', alt: 'Storm damaged roof on a Staten Island house', d: 'Water coming in? We answer 24/7, tarp it fast and document it for insurance.', p: 'Call any time: (929) 370-1552' },
-  { t: 'Skylights', u: '/residential-roofing/skylight-installation-repair/', img: '/wp-content/uploads/2024/04/Skylight-Services-Alter-Phase-Roofing.jpg', alt: 'Skylight installed on a shingle roof', d: 'Leaking or foggy skylights repaired, reflashed or replaced.', p: 'Skylight leak repair $500–$1,200' },
-  { t: 'Gutters & siding', u: '/siding-gutter/', img: '/wp-content/uploads/2024/10/Vinyl-Siding-Installation-Staten-Island.webp', alt: 'Vinyl siding installation in Staten Island', d: 'Seamless gutters and vinyl siding that keep water away from your walls.', p: 'Gutter repairs from $150' },
-];
+const hero = await getImage({ src: heroImg, width: 1024, format: 'webp', quality: 72 });
+const band = await getImage({ src: crew, width: 1284, format: 'webp', quality: 62 });
 const projects = [
-  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg', t: 'Full shingle roof replacement', w: 'Staten Island, NY 10314' },
-  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg', t: 'TPO flat roof installation', w: 'Bay Ridge, Brooklyn 11209' },
-  { img: '/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304.jpg', t: 'New architectural shingle roof', w: 'Staten Island, NY' },
-  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg', t: 'EPDM rubber roof install', w: 'Brooklyn, NY' },
+  { img: '/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg', t: 'New architectural shingle roof', w: 'Staten Island, NY 10314' },
+  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg', t: 'Tear-off down to the deck', w: 'Staten Island, NY' },
+  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg', t: 'TPO flat roof', w: 'Brooklyn, NY' },
+  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-14.jpg', t: 'Commercial flat roof', w: 'New York City' },
+  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg', t: 'Modified bitumen roof', w: 'Brooklyn, NY' },
 ];
 const si = ['St. George', 'Stapleton', 'Rosebank', 'South Beach', 'Dongan Hills', 'Grant City', 'New Dorp', 'Midland Beach', 'Oakwood', 'Great Kills', 'Eltingville', 'Annadale', 'Huguenot', "Prince's Bay", 'Tottenville', 'Rossville', 'Travis', 'New Springville', 'Bulls Head', 'Westerleigh', 'Port Richmond', 'West Brighton', 'Todt Hill', 'Castleton Corners'];
-const thumb = await getImage({ src: crew, width: 192, format: 'webp', quality: 70 });
+const areaLinks = [
+  { u: '/service-area/staten-island-ny/', n: 'Staten Island', s: 'Home base. Fastest response and most of our work.', tag: 'Home base' },
+  { u: '/service-area/brooklyn-ny/', n: 'Brooklyn', s: 'Brownstones, row homes and mixed-use flat roofs.' },
+  { u: '/service-area/manhattan-ny/', n: 'Manhattan', s: 'Co-ops, condos and commercial roofs.' },
+  { u: '/service-area/queens-ny/', n: 'Queens', s: 'Detached homes and attached rows.' },
+];
 ---
-<Base title={title} description={description} path="/" image="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg" imageAlt="The Alter Phase Roofing crew on a Staten Island roof" schema={schema}>
-  <section class="hero">
+<Base title={title} description={description} path="/" image="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg" imageAlt="The Alter Phase Roofing crew on a Staten Island roof" schema={schema} preloadImage={hero.src}>
+  <section class="hero home">
+    <div class="hero-bg"><img src={hero.src} alt="" width="1024" height="1024" fetchpriority="high" decoding="async" /></div>
     <div class="wrap">
       <div>
-        <a class="rating-pill" href={business.googleReviewUrl} target="_blank" rel="noopener">
+        <a class="rating-chip" href={business.googleReviewUrl} target="_blank" rel="noopener">
           <span class="g"><Icon name="google" /></span>
           <span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
-          Rated {business.rating.label} · {business.rating.count} Google reviews
+          {business.rating.label} · {business.rating.count} Google reviews
         </a>
-        <h1>Staten Island roofers who treat your home <span class="hl">like family</span></h1>
-        <p class="lead">Family-owned roof repair and replacement for Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is on every job, so you get honest advice, clean work and a warranty in writing.</p>
-        <ul class="ticks">
-          <li><Icon name="check" /> Free inspection with photos and a written quote</li>
-          <li><Icon name="check" /> Up to {business.warranty.manufacturerYears}-year material and {business.warranty.workmanshipYears}-year workmanship warranties</li>
-          <li><Icon name="check" /> GAF Master Elite® installer, licensed and insured</li>
+        <h1>Staten Island roofers who treat your home <span class="gold">like family.</span></h1>
+        <p class="lead">Roof repair, new roofs and flat roofs across Staten Island, Brooklyn, Manhattan and Queens. Family-owned for {business.yearsInRoofing}+ years, and the owner is on every job.</p>
+        <div class="cta-row" style="margin-top:2rem">
+          <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a>
+          <a class="btn btn-lg btn-ghost" href="#cost-h">What will it cost? <Icon name="arrow" /></a>
+        </div>
+        <a class="sos" href="/roof-repair/emergency-service/">
+          <span class="pulse"><Icon name="drop" /></span>
+          <span><strong>Water coming in right now?</strong>We answer 24/7, tarp it fast and document it for insurance.</span>
+        </a>
+        <ul class="hero-proof">
+          <li><Icon name="award" /><span><strong>GAF Master Elite®</strong> installer</span></li>
+          <li><Icon name="shield" /><span><strong>{business.warranty.manufacturerYears}-yr</strong> material warranty</span></li>
+          <li><Icon name="license" /><span>Licensed &amp; insured <strong>#{business.license.number}</strong></span></li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text, emergencies 24/7</small>{business.phone}</span></a>
-          <a class="btn btn-lg btn-line" href="#reviews-sec">Read our reviews</a>
-        </div>
-        <div class="float" style="position:relative;margin-top:2rem;max-width:440px;box-shadow:var(--sh-1);border:1px solid var(--line)">
-          <img src={thumb.src} alt="" width="84" height="84" style="width:84px;height:84px;border-radius:14px;object-fit:cover" />
-          <span><strong>“The owner is on every job.”</strong>Our own crew, not subcontractors. {business.yearsInRoofing}+ years in roofing.</span>
-        </div>
       </div>
       <QuoteWizard id="hero" />
     </div>
   </section>
 
-  <ProofStrip />
+  <Marquee />
 
-  <section class="sec" aria-labelledby="paths-h">
+  <section class="sec" aria-labelledby="svc-h">
     <div class="wrap">
-      <div class="head center">
-        <span class="kicker">Start here</span>
-        <h2 id="paths-h">What kind of roof help do you need?</h2>
-        <p class="lead">Homeowners, business owners and building managers need different things. Pick yours.</p>
+      <div class="head-split" data-reveal>
+        <div><span class="kicker">What we do</span><h2 id="svc-h">Every part of the roof. One local crew.</h2></div>
+        <p class="lead">Honest repair-or-replace advice, real prices up front, and the same people from the first inspection to the final walkthrough.</p>
       </div>
-      <div class="grid-4">
-        <a class="path" href="/residential-roofing/">
-          <span class="badge-ico"><Icon name="home" /></span>
-          <h3>I own a home</h3>
-          <p>Leaks, new roofs, skylights and gutters for houses and row homes.</p>
-          <ul><li><Icon name="tick" />Honest repair-or-replace advice</li><li><Icon name="tick" />Clean one-to-two-day installs</li></ul>
-          <span class="link-arrow">Homeowner roofing <Icon name="arrow" /></span>
+      <div class="bento">
+        <a class="tile b-a" href="/residential-roofing/roof-replacement/" data-reveal>
+          <img src="/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg" alt="New asphalt shingle roof in Staten Island 10314" width="1024" height="1024" loading="lazy" decoding="async" />
+          <span class="go"><Icon name="arrow" /></span>
+          <span class="price">Shingles ${shingles.low}–${shingles.high} per sq ft</span>
+          <h3>Roof replacement</h3>
+          <p>Complete tear-off and a new roof, usually finished in one to two days. Warranty in writing.</p>
         </a>
-        <a class="path" href="/commercial-roofing/">
-          <span class="badge-ico"><Icon name="store" /></span>
-          <h3>I own a business</h3>
-          <p>Flat roof repair and replacement that keeps you open.</p>
-          <ul><li><Icon name="tick" />TPO, EPDM, PVC, mod-bit</li><li><Icon name="tick" />Scheduled around your hours</li></ul>
-          <span class="link-arrow">Commercial roofing <Icon name="arrow" /></span>
+        <a class="tile b-b" href="/roof-repair/" data-reveal data-reveal-d="1">
+          <img src="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11.jpg" alt="Roofer repairing flashing on a flat roof" width="1284" height="1268" loading="lazy" decoding="async" />
+          <span class="go"><Icon name="arrow" /></span>
+          <span class="price">Most repairs {range(repairs[0].low, repairs[2].high)}</span>
+          <h3>Roof repair</h3>
+          <p>Leaks, shingles, flashing and storm damage, fixed at the source.</p>
         </a>
-        <a class="path" href="/property-managers/">
-          <span class="badge-ico"><Icon name="building" /></span>
-          <h3>I manage a building</h3>
-          <p>HOAs, co-op and condo boards, property management companies.</p>
-          <ul><li><Icon name="tick" />Board-ready written proposals</li><li><Icon name="tick" />Insurance certificates on request</li></ul>
-          <span class="link-arrow">For managers &amp; boards <Icon name="arrow" /></span>
+        <a class="tile b-c" href="/flat-roofing/" data-reveal data-reveal-d="2">
+          <img src="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7.jpg" alt="White TPO flat roof being installed" width="1284" height="1268" loading="lazy" decoding="async" />
+          <span class="go"><Icon name="arrow" /></span>
+          <span class="price">From $8 per sq ft</span>
+          <h3>Flat roofing</h3>
+          <p>TPO, EPDM and modified bitumen for row homes and businesses.</p>
         </a>
-        <a class="path urgent" href="/roof-repair/emergency-service/">
-          <span class="badge-ico"><Icon name="drop" /></span>
-          <h3>Water is coming in</h3>
-          <p>Active leak or storm damage? Call now. We answer 24/7.</p>
-          <ul><li><Icon name="tick" />Emergency tarping</li><li><Icon name="tick" />Photos for your insurance</li></ul>
-          <span class="link-arrow" style="color:var(--red)">Emergency help <Icon name="arrow" /></span>
+        <a class="tile solid t-red b-d" href="/roof-repair/emergency-service/" data-reveal>
+          <span class="go"><Icon name="arrow" /></span>
+          <Icon name="bolt" class="big-ico" />
+          <h3>Emergency roof repair, 24/7</h3>
+          <p>Active leak or storm damage? We stop the water first, then fix it properly.</p>
+          <span class="price" style="margin:1rem 0 0">{business.phone}</span>
         </a>
+        <a class="tile b-e" href="/commercial-roofing/" data-reveal data-reveal-d="1">
+          <img src="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg" alt="Roofers sealing a commercial flat roof edge" width="1284" height="1254" loading="lazy" decoding="async" />
+          <span class="go"><Icon name="arrow" /></span>
+          <h3>Commercial roofing</h3>
+          <p>Scheduled around your business hours.</p>
+        </a>
+        <a class="tile b-f" href="/siding-gutter/" data-reveal data-reveal-d="2">
+          <img src="/wp-content/uploads/2024/10/Vinyl-Siding-Installation-Staten-Island.webp" alt="Vinyl siding installation in Staten Island" width="1604" height="832" loading="lazy" decoding="async" />
+          <span class="go"><Icon name="arrow" /></span>
+          <h3>Gutters &amp; siding</h3>
+          <p>Seamless gutters and vinyl siding.</p>
+        </a>
+        <a class="tile solid t-ink b-g" href="/property-managers/" data-reveal>
+          <span class="go"><Icon name="arrow" /></span>
+          <h3>Managing a building?</h3>
+          <p>HOAs, co-op and condo boards, property managers: board-ready proposals, photo reports and insurance certificates.</p>
+        </a>
+      </div>
+      <p class="muted" style="margin:1.5rem 0 0;font-size:0.95rem">Also: <a href="/residential-roofing/skylight-installation-repair/">skylight repair &amp; installation</a> · <a href="/residential-roofing/roof-inspections/">roof inspections</a> · <a href="/services/">all services</a></p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="owner-h">
+    <div class="band-bg"><img src={band.src} alt="The Alter Phase Roofing crew on a roof in Staten Island" width="1284" height="1271" loading="lazy" decoding="async" style="object-position:70% 40%" /></div>
+    <div class="wrap">
+      <span class="kicker" data-reveal>Our promise</span>
+      <h2 id="owner-h" data-reveal>The owner is on your roof. Every job.</h2>
+      <blockquote data-reveal>“I'm part of every job, to make sure the highest quality work is done on every property.”</blockquote>
+      <div class="sig" data-reveal><span class="avatar">M</span><span><strong>Marke</strong>Owner, Alter Phase Roofing</span></div>
+      <div class="stats" data-reveal>
+        <div class="stat"><b>{business.yearsInRoofing}+</b><span>years in roofing, family-owned</span></div>
+        <div class="stat"><b>{business.warranty.manufacturerYears}<small style="font-size:0.45em"> yr</small></b><span>manufacturer material warranty</span></div>
+        <div class="stat"><b>{business.warranty.workmanshipYears}<small style="font-size:0.45em"> yr</small></b><span>workmanship warranty, in writing</span></div>
+        <div class="stat"><b>24/7</b><span>emergency response</span></div>
       </div>
     </div>
   </section>
 
-  <section class="sec warm" aria-labelledby="svc-h">
+  <section class="sec dark" aria-labelledby="cost-h" style="scroll-margin-top:var(--head)">
     <div class="wrap">
-      <div class="head-row">
-        <div class="head"><span class="kicker">Our services</span><h2 id="svc-h">Roofing services on Staten Island and across NYC</h2><p class="lead">One local crew for every part of the roof, with real prices up front.</p></div>
-        <a class="btn btn-line" href="/services/">All services <Icon name="arrow" /></a>
+      <div class="head-split" data-reveal>
+        <div><span class="kicker">Real prices, not "call for a quote"</span><h2 id="cost-h">What will your roof cost?</h2></div>
+        <p class="lead">Our actual {new Date().getFullYear()} New York City job averages. Pick your roof and see a range in seconds, then get the exact number with a free inspection.</p>
       </div>
-      <div class="grid-3">
-        {services.map((s) => (
-          <a class="svc" href={s.u}>
-            <div class="svc-img"><img src={s.img} alt={s.alt} width="640" height="400" loading="lazy" decoding="async" /></div>
-            <div class="svc-body"><h3>{s.t}</h3><p>{s.d}</p><span class="svc-price">{s.p}</span><span class="link-arrow">Learn more <Icon name="arrow" /></span></div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="why-h">
-    <div class="wrap grid-2">
-      <div class="photo" style="aspect-ratio:4/4.3">
-        <Image src={crew} alt="The Alter Phase Roofing crew on a roof in Staten Island" width={760} />
-        <div class="photo-tag"><strong>Our crew, not subcontractors</strong>Staten Island, NY</div>
-      </div>
-      <div>
-        <span class="kicker">Why Alter Phase</span>
-        <h2 id="why-h">The roofer you'd hire if your neighbor was a roofer</h2>
-        <p class="lead">Most bad roofing jobs come from salespeople who never come back and crews nobody supervises. We built Alter Phase to be the opposite.</p>
-        <div class="grid-2" style="gap:1.75rem 1.5rem;margin-top:2rem;align-items:start">
-          <div><div class="big-num">{business.yearsInRoofing}+</div><h3 style="margin:0.5rem 0 0.25rem">Years in roofing</h3><p class="muted" style="margin:0;font-size:0.95rem">A family business that lives and works on Staten Island.</p></div>
-          <div><div class="big-num">100%</div><h3 style="margin:0.5rem 0 0.25rem">Owner-checked jobs</h3><p class="muted" style="margin:0;font-size:0.95rem">Marke is part of every job and walks you through the finished work.</p></div>
-          <div><div class="big-num">50<small style="font-size:0.45em"> yr</small></div><h3 style="margin:0.5rem 0 0.25rem">Material warranty</h3><p class="muted" style="margin:0;font-size:0.95rem">Plus up to 25 years on our workmanship, in writing.</p></div>
-          <div><div class="big-num">24/7</div><h3 style="margin:0.5rem 0 0.25rem">Emergency response</h3><p class="muted" style="margin:0;font-size:0.95rem">Leaks don't wait for business hours, and neither do we.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec blue" aria-labelledby="cost-h">
-    <div class="wrap">
-      <div class="head center">
-        <span class="kicker">Real prices, not "call for quote"</span>
-        <h2 id="cost-h">What will your roof cost?</h2>
-        <p class="lead">Estimate your price in seconds using our actual 2026 New York City job averages. Then get the exact number with a free inspection.</p>
-      </div>
-      <Estimator />
-      <p class="center" style="margin-top:1.5rem"><a class="link-arrow" href="/roof-replacement-cost-in-nyc/">See the full NYC roof cost guide <Icon name="arrow" /></a></p>
+      <div data-reveal><Estimator /></div>
+      <p style="margin-top:1.5rem"><a class="link-arrow" style="color:var(--gold)" href="/roof-replacement-cost-in-nyc/">Read the full NYC roof cost guide <Icon name="arrow" /></a></p>
     </div>
   </section>
 
   <Process />
 
-  <section class="sec-tight" aria-labelledby="owner-h">
-    <div class="wrap">
-      <div class="owner">
-        <div class="photo"><Image src={flatCrew} alt="Alter Phase Roofing crew installing a flat roof in Brooklyn" width={700} /></div>
-        <div class="owner-body">
-          <span class="kicker">Our promise</span>
-          <h2 id="owner-h">The owner is on your roof. Every job.</h2>
-          <p class="owner-quote">“I'm part of every job, to make sure the highest quality work is done on every property.”</p>
-          <p>Alter Phase Roofing is a family-owned business, not a call center. You talk to the people who do the work, and the person whose name is on the company checks it before we call it done.</p>
-          <div class="owner-sig"><span class="avatar">M</span><span><strong>Marke</strong>Owner, Alter Phase Roofing</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="reviews-sec"><Reviews limit={7} /></div>
+  <div id="reviews-sec"><Reviews limit={4} /></div>
 
   <section class="sec" aria-labelledby="proj-h">
     <div class="wrap">
-      <div class="head-row">
-        <div class="head"><span class="kicker">Recent work</span><h2 id="proj-h">Real roofs we've finished lately</h2></div>
-        <a class="btn btn-line" href="/about/">About our crew <Icon name="arrow" /></a>
+      <div class="head-split" data-reveal>
+        <div><span class="kicker">Recent work</span><h2 id="proj-h">Real roofs. Real neighborhoods.</h2></div>
+        <p class="lead">Every photo here is our own crew on our own jobs. No stock photos, ever.</p>
       </div>
-      <div class="projects">
-        {projects.map((p) => (
-          <figure class="project">
-            <img src={p.img} alt={`${p.t} in ${p.w} by Alter Phase Roofing`} width="600" height="750" loading="lazy" decoding="async" />
+      <div class="mosaic">
+        {projects.map((p, i) => (
+          <figure data-reveal data-reveal-d={String(i % 3)}>
+            <img src={p.img} alt={`${p.t} in ${p.w} by Alter Phase Roofing`} width="1024" height="1024" loading="lazy" decoding="async" />
             <figcaption><h3>{p.t}</h3>{p.w}</figcaption>
           </figure>
         ))}
@@ -206,41 +187,47 @@ const thumb = await getImage({ src: crew, width: 192, format: 'webp', quality: 7
     </div>
   </section>
 
-  <section class="sec warm" aria-labelledby="area-h">
-    <div class="wrap">
-      <div class="grid-2" style="align-items:start">
-        <div>
-          <span class="kicker">Where we work</span>
-          <h2 id="area-h">Based on Staten Island. Working across New York City.</h2>
-          <p class="lead">Our shop is at {business.address.street}, Staten Island. That's where most of our work is, and we do a lot in Brooklyn, Manhattan and Queens too.</p>
-          <p style="font-weight:800;margin:1.5rem 0 0.6rem">Staten Island neighborhoods we serve</p>
-          <p class="muted" style="font-size:0.95rem">{si.join(' · ')}, and every other neighborhood on the island.</p>
-        </div>
-        <div class="grid-2" style="gap:1rem">
-          <a class="area home" href="/service-area/staten-island-ny/"><span class="tag">Home base</span><h3>Staten Island</h3><p>Fastest response, most of our work</p></a>
-          <a class="area" href="/service-area/brooklyn-ny/"><span class="tag">Flat roof experts</span><h3>Brooklyn</h3><p>Brownstones, row homes, mixed-use</p></a>
-          <a class="area" href="/service-area/manhattan-ny/"><span class="tag">Boards welcome</span><h3>Manhattan</h3><p>Co-ops, condos, commercial roofs</p></a>
-          <a class="area" href="/service-area/queens-ny/"><span class="tag">Homes &amp; rows</span><h3>Queens</h3><p>Detached homes and attached rows</p></a>
-        </div>
+  <section class="sec dark" aria-labelledby="area-h">
+    <div class="wrap grid-2" style="align-items:start">
+      <div data-reveal>
+        <span class="kicker">Where we work</span>
+        <h2 id="area-h">Based on Staten Island. Working across New York City.</h2>
+        <p class="lead">Our shop is at {business.address.street}, Staten Island. That's where most of our work is, and we do a lot in Brooklyn, Manhattan and Queens too.</p>
+        <p style="font-weight:800;color:#fff;margin:2rem 0 0.8rem">Staten Island neighborhoods we serve</p>
+        <div class="chips">{si.map((n) => <span>{n}</span>)}</div>
       </div>
+      <ul class="boroughs" data-reveal data-reveal-d="1">
+        {areaLinks.map((a) => (
+          <li><a href={a.u}><span><b>{a.n}{a.tag && <span class="tag">{a.tag}</span>}</b><small>{a.s}</small></span><Icon name="arrow" /></a></li>
+        ))}
+        <li><a href="/service-area/"><span><b style="font-size:1.4rem">All service areas</b></span><Icon name="arrow" /></a></li>
+      </ul>
     </div>
   </section>
 
-  <section class="sec">
-    <div class="narrow"><Faq items={faq} title="Roofing questions we hear every day" /></div>
+  <section class="sec bone">
+    <div class="wrap faq-split">
+      <div data-reveal>
+        <span class="kicker">FAQ</span>
+        <h2>Roofing questions we hear every day</h2>
+        <p class="lead">Still unsure? Ask the people who'll do the work.</p>
+        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </div>
+      <div data-reveal data-reveal-d="1"><Faq items={faq} title="Roofing questions and answers" bare /></div>
+    </div>
   </section>
 
-  <section class="sec warm" aria-labelledby="guides-h">
+  <section class="sec" aria-labelledby="guides-h">
     <div class="wrap">
-      <div class="head-row">
-        <div class="head"><span class="kicker">Homeowner guides</span><h2 id="guides-h">Know the facts before you hire anyone</h2></div>
-        <a class="btn btn-line" href="/blog/">All guides <Icon name="arrow" /></a>
+      <div class="head-split" data-reveal>
+        <div><span class="kicker">Homeowner guides</span><h2 id="guides-h">Know the facts before you hire anyone.</h2></div>
+        <p><a class="btn btn-line" href="/blog/">All guides <Icon name="arrow" /></a></p>
       </div>
       <div class="grid-3">
-        {latest.map((p) => (
-          <a class="post-card" href={p.data.path}>
-            {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}
-            <div class="b"><span class="meta">Guide</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p></div>
+        {latest.map((p, i) => (
+          <a class="post-card" href={p.data.path} data-reveal data-reveal-d={String(i)}>
+            <div class="img">{p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
+            <span class="meta">Guide</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p>
           </a>
         ))}
       </div>

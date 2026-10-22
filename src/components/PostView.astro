@@ -16,7 +16,7 @@ const related = (await posts()).filter((p) => p.data.path !== d.path && !d.relat
 const relatedPinned = (await posts()).filter((p) => d.related.includes(p.data.path));
 const more = [...relatedPinned, ...related].slice(0, 3);
 ---
-<section class="phero simple">
+<section class="ghero">
   <div class="wrap">
     <div>
       <Breadcrumbs crumbs={crumbs} />
@@ -24,7 +24,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
       <h1>{d.h1}</h1>
       {d.intro && <p class="lead">{d.intro}</p>}
       <div class="byline">
-        <span class="avatar" aria-hidden="true">M</span>
+        <span class="avatar-s" aria-hidden="true" style="background:var(--gold);color:var(--ink)">M</span>
         <span>By <a href="/about/"><strong>Marke</strong></a>, owner of Alter Phase Roofing · NYC licensed roofing contractor<br />
           Updated <time datetime={d.modified || d.published}>{fmtDate(d.modified || d.published)}</time> · {mins} min read</span>
       </div>
@@ -57,7 +57,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
       {d.faq.length > 0 && <Faq items={d.faq} />}
 
       <section class="author" aria-label="About the author">
-        <span class="avatar" aria-hidden="true">M</span>
+        <span class="avatar-s" aria-hidden="true">M</span>
         <div>
           <h2>Written by Marke, owner of Alter Phase Roofing</h2>
           <p>Marke runs Alter Phase Roofing, a family-owned roofing contractor in Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Manhattan and Queens. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
@@ -78,14 +78,14 @@ const more = [...relatedPinned, ...related].slice(0, 3);
   </div>
 </section>
 
-<section class="sec warm" aria-labelledby="more-h">
+<section class="sec bone" aria-labelledby="more-h">
   <div class="wrap">
     <div class="head"><span class="kicker">Keep reading</span><h2 id="more-h">More roofing guides</h2></div>
     <div class="grid-3">
       {more.map((p) => (
-        <a class="post-card" href={p.data.path}>
-          {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}
-          <div class="b"><span class="meta">{readTime(p.body)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p></div>
+        <a class="post-card" href={p.data.path} data-reveal>
+          <div class="img">{p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
+          <span class="meta">{readTime(p.body)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p>
         </a>
       ))}
     </div>

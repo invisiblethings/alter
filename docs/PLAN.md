@@ -1,6 +1,6 @@
 # Alter Phase Roofing: Rebuild, SEO & Launch Plan
 
-**Status:** Site built (v2). Ready for client review, then launch on Netlify.
+**Status:** Site built (v3 redesign). Ready for client review, then launch on Netlify.
 **Updated:** 2026-10-22
 **Data:** [`docs/data/url-inventory.csv`](data/url-inventory.csv) lists every old URL with its Search Console numbers, old title and H1, its status on the new site (live / 301), and its new title and H1.
 
@@ -80,7 +80,7 @@ WordPress system URLs (`/sitemap_index.xml`, Yoast sub-sitemaps, `/feed/`, `/aut
 
 ## 4. Design and conversion
 
-- **Look:** bright, photo-led, high contrast. Brand navy (#10346F) and gold (#FBC45A) from the logo, Plus Jakarta Sans throughout. Real crew and job photos only; no stock imagery.
+- **Look (v3):** cinematic and photo-led, following the Intent UX evaluation in [`docs/design/ux-evaluation.md`](design/ux-evaluation.md). Full-bleed photo heroes with the quote card on top, a gold credential marquee, a services bento of large photo tiles, an owner statement band, a dark estimator, outlined 01–04 process numerals, one big review, a project mosaic, typographic borough links and a photo closing CTA. Type is Archivo (expanded heavy weights for headlines). Deep navy (#061530 / #10346F) and gold (#FBC45A) are used boldly. Subtle scroll reveals are switched off for reduced motion. Real crew and job photos only; no stock imagery.
 - **Built for 40+ readers:** 18–19px body text, a text-size control (A / A / A) on every page, 56–64px tap targets, the phone number visible in the header at all times, and a sticky Call / Text / Quote bar on phones.
 - **3-step quote wizard** (what you need → property type and address → name and phone) in the hero of every service page. It works without JavaScript, posts to Netlify Forms, and pushes a `generate_lead` event to GTM so forms can become a Google Ads conversion.
 - **Live roof cost estimator** (material × size × borough) built on the client's own prices, on the homepage, cost guides and replacement pages.

@@ -1,26 +1,28 @@
 ---
+import { getImage } from 'astro:assets';
 import Icon from './Icon.astro';
 import QuoteWizard from './QuoteWizard.astro';
 import { business, telHref } from '../data/business';
+import bg from '../assets/flat-roof-brooklyn-crew.webp';
 interface Props { title?: string; text?: string; form?: boolean; service?: string }
 const { title = 'Get an honest answer about your roof.', text = "Free inspection, photos of what we find and a written quote. If it only needs a repair, we'll tell you.", form = true, service } = Astro.props;
+const img = await getImage({ src: bg, width: 1400, format: 'webp', quality: 62 });
 ---
-<section class="sec" aria-labelledby="final-h">
+<section class="closer" aria-labelledby="final-h">
+  <div class="closer-bg"><img src={img.src} alt="" width="1400" height="1400" loading="lazy" decoding="async" /></div>
   <div class="wrap">
-    <div class="final">
-      <div>
-        <span class="kicker">Free estimate · No obligation</span>
-        <h2 id="final-h">{title}</h2>
-        <p class="lead">{text}</p>
-        <p style="margin:1.5rem 0 0;font-weight:700;color:#fff">Prefer to talk? Call or text, emergencies 24/7:</p>
-        <a class="phone" href={telHref}>{business.phone}</a>
-        <ul class="ticks" style="color:#dfe7f5">
-          <li><Icon name="check" /> Family-owned, Staten Island based</li>
-          <li><Icon name="check" /> Owner on every job</li>
-          <li><Icon name="check" /> Written warranties, permits handled</li>
-        </ul>
-      </div>
-      {form ? <QuoteWizard id="final" heading="h3" service={service} /> : <div style="align-self:center"><a class="btn btn-gold btn-lg" href="/free-estimate/">Get my free estimate <Icon name="arrow" /></a></div>}
+    <div data-reveal>
+      <span class="kicker">Free estimate · No obligation</span>
+      <h2 id="final-h">{title}</h2>
+      <p class="lead">{text}</p>
+      <p style="margin:1.75rem 0 0;font-weight:700;color:#fff">Prefer to talk? Call or text, emergencies 24/7:</p>
+      <a class="phone" href={telHref}>{business.phone}</a>
+      <ul class="ticks" style="color:#dfe7f5;margin:0">
+        <li><Icon name="check" /> Family-owned, Staten Island based</li>
+        <li><Icon name="check" /> Owner on every job</li>
+        <li><Icon name="check" /> Written warranties, permits handled</li>
+      </ul>
     </div>
+    {form ? <div data-reveal data-reveal-d="1"><QuoteWizard id="final" heading="h3" service={service} /></div> : <div style="align-self:center" data-reveal><a class="btn btn-gold btn-lg" href="/free-estimate/">Get my free estimate <Icon name="arrow" /></a></div>}
   </div>
 </section>

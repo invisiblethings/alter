@@ -1,19 +1,18 @@
 ---
 interface Props { bg?: string; title?: string }
-const { bg = '', title = 'From first call to finished roof' } = Astro.props;
+const { bg = 'bone', title = 'From first call to finished roof.' } = Astro.props;
 ---
 <section class:list={['sec', bg]} aria-labelledby="proc-h">
   <div class="wrap">
-    <div class="head center">
-      <span class="kicker">How it works</span>
-      <h2 id="proc-h">{title}</h2>
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">How it works</span><h2 id="proc-h">{title}</h2></div>
       <p class="lead">No pushy salespeople and no surprise bills. Every job follows the same four steps.</p>
     </div>
-    <ol class="process">
-      <li><span class="when">Fast scheduling</span><h3>We inspect your roof</h3><p>We climb up, find the real cause and take photos so you can see exactly what we see.</p></li>
-      <li><span class="when">Within 24 hours</span><h3>You get a written quote</h3><p>Clear options, repair or replace, with materials, cleanup and permits itemized. No pressure to decide.</p></li>
-      <li><span class="when">On your schedule</span><h3>Our own crew does the work</h3><p>Marke is part of every job. We protect your property, keep neighbors happy and clean up daily.</p></li>
-      <li><span class="when">Walkthrough</span><h3>Warranty in writing</h3><p>Up to 50 years on materials and up to 25 years on our workmanship, documented and handed to you.</p></li>
+    <ol class="steps">
+      <li data-reveal><span class="when">Fast scheduling</span><h3>We inspect your roof</h3><p>We climb up, find the real cause and take photos so you see exactly what we see.</p></li>
+      <li data-reveal data-reveal-d="1"><span class="when">Within 24 hours</span><h3>You get a written quote</h3><p>Clear options, repair or replace, with materials, cleanup and permits itemized. No pressure.</p></li>
+      <li data-reveal data-reveal-d="2"><span class="when">On your schedule</span><h3>Our own crew does the work</h3><p>Marke is part of every job. We protect your property and clean up every day.</p></li>
+      <li data-reveal data-reveal-d="3"><span class="when">Final walkthrough</span><h3>Warranty in writing</h3><p>Up to 50 years on materials and up to 25 years on our workmanship, handed to you.</p></li>
     </ol>
   </div>
 </section>

@@ -1,13 +1,13 @@
 ---
 // Visible FAQ. The same list feeds FAQPage schema, so markup always matches the page.
-interface Props { items: { q: string; a: string }[]; title?: string; kicker?: string; id?: string }
-const { items, title = 'Frequently asked questions', kicker = 'FAQ', id = 'faq' } = Astro.props;
+// `bare` renders just the accordion (the caller supplies the heading).
+interface Props { items: { q: string; a: string }[]; title?: string; kicker?: string; id?: string; bare?: boolean }
+const { items, title = 'Frequently asked questions', kicker = 'FAQ', id = 'faq', bare = false } = Astro.props;
 ---
 {items.length > 0 && (
   <section class="faq-sec" aria-labelledby={`${id}-h`} id={id}>
-    <span class="kicker">{kicker}</span>
-    <h2 id={`${id}-h`}>{title}</h2>
-    <div class="faq">
+    {bare ? <h2 id={`${id}-h`} class="sr-only">{title}</h2> : <><span class="kicker">{kicker}</span><h2 id={`${id}-h`}>{title}</h2></>}
+    <div class="faq" style={bare ? 'margin:0' : undefined}>
       {items.map((f, i) => (
         <details open={i === 0}>
           <summary><h3>{f.q}</h3></summary>

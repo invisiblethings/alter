@@ -21,24 +21,23 @@ const entries = await allEntries();
 const titleOf = (p: string) => allLinks().find((l) => l.url === p)?.title || entries.find((e) => e.data.path === p)?.data.h1 || p;
 const related = d.related.map((p) => ({ url: p, title: titleOf(p) }));
 ---
-<section class="phero">
+<section class="hero">
+  <div class="hero-bg"><img src={d.image || '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg'} alt={d.imageAlt || ''} width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>
   <div class="wrap">
     <div>
       <Breadcrumbs crumbs={crumbs} />
       {d.kicker && <span class="kicker">{d.kicker}</span>}
       <h1>{d.h1}</h1>
       {d.intro && <p class="lead">{d.intro}</p>}
-      {d.highlights.length > 0 && <ul class="ticks">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
+      {d.highlights.length > 0 && <ul class="ticks" style="margin-top:1.5rem">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
       <div class="cta-row">
-        <a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · emergencies 24/7</small>{business.phone}</span></a>
+        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
       </div>
-      <ul class="mini-proof">
-        <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>{business.rating.count} Google reviews</li>
-        <li><Icon name="award" /> GAF Master Elite®</li>
-        <li><Icon name="shield" /> Up to {business.warranty.manufacturerYears}-yr warranty</li>
-        <li><Icon name="license" /> Lic. #{business.license.number}</li>
+      <ul class="hero-proof">
+        <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><span><strong>{business.rating.count}</strong> Google reviews</span></li>
+        <li><Icon name="award" /><span>GAF Master Elite®</span></li>
+        <li><Icon name="shield" /><span>Up to <strong>{business.warranty.manufacturerYears}-yr</strong> warranty</span></li>
       </ul>
-      {d.image && <div class="phero-img"><img src={d.image} alt={d.imageAlt || ''} width="1200" height="600" loading="eager" fetchpriority="high" decoding="async" /></div>}
     </div>
     <QuoteWizard id="pg" service={d.wizard} />
   </div>
@@ -82,20 +81,20 @@ const related = d.related.map((p) => ({ url: p, title: titleOf(p) }));
 </section>
 
 {d.projects.length > 0 && (
-  <section class="sec warm" aria-labelledby="pj-h">
+  <section class="sec bone" aria-labelledby="pj-h">
     <div class="wrap">
       <div class="head"><span class="kicker">Recent work</span><h2 id="pj-h">Recent projects{d.area ? ` in ${d.area}` : ''}</h2></div>
-      <div class="projects">
+      <div class="mosaic">
         {d.projects.map((p) => (
-          <figure class="project"><img src={p.image} alt={`${p.title}, ${p.location}`} width="600" height="750" loading="lazy" decoding="async" /><figcaption><h3>{p.title}</h3>{p.location}</figcaption></figure>
+          <figure data-reveal><img src={p.image} alt={`${p.title}, ${p.location}`} width="600" height="750" loading="lazy" decoding="async" /><figcaption><h3>{p.title}</h3>{p.location}</figcaption></figure>
         ))}
       </div>
     </div>
   </section>
 )}
 
-{!isLanding && <Process bg={d.projects.length ? '' : 'warm'} />}
-<Reviews limit={4} title={d.area ? `What ${d.area} customers say` : 'What our customers say'} bg={d.projects.length ? 'warm' : ''} />
+{!isLanding && <Process bg={d.projects.length ? '' : 'bone'} />}
+<Reviews limit={4} title={d.area ? `What ${d.area} customers say` : 'What our customers say'} bg={d.projects.length ? 'bone' : ''} />
 <FinalCta form={false} />
 {d.trackingPhone && (
   <script is:inline define:vars={{ shown: d.trackingPhone, digits: d.trackingPhone.replace(/\D/g, '') }}>
