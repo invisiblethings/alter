@@ -1,7 +1,22 @@
 # Netlify redirects for the WordPress -> Astro migration.
-# Every content URL keeps its exact path, so there are NO content redirects
-# here at launch. These rules only catch WordPress system URLs that Google
-# or old links may still request.
+# Every ranking URL keeps its exact path. The only content redirects are
+# pages merged into a stronger page (below); the rest catch WordPress system
+# URLs. Checked by scripts/qa/seo.mjs: every old URL must end at a 200 page
+# in one hop.
+
+# --- Consolidated pages (duplicate / competing content merged in the rebuild)
+/roofing-costs-in-nyc/                                       /roof-replacement-cost-in-nyc/ 301
+/roofing-costs-in-nyc                                        /roof-replacement-cost-in-nyc/ 301
+/guide-roofing-material-for-home-staten-island-brooklyn/     /top-roofing-materials-for-homes-in-new-york/ 301
+/guide-roofing-material-for-home-staten-island-brooklyn      /top-roofing-materials-for-homes-in-new-york/ 301
+/flat-roofing-brooklyn/                                      /service-area/brooklyn-ny/flat-roofing/ 301
+/flat-roofing-brooklyn                                       /service-area/brooklyn-ny/flat-roofing/ 301
+/brooklyn-roofing-solutions/                                 /service-area/brooklyn-ny/ 301
+/brooklyn-roofing-solutions                                  /service-area/brooklyn-ny/ 301
+/free-roofing-estimates-brooklyn-ny/                         /free-estimate/ 301
+/free-roofing-estimates-brooklyn-ny                          /free-estimate/ 301
+/service-area/nyc/commercial-roofing/                        /commercial-roofing/ 301
+/service-area/nyc/commercial-roofing                         /commercial-roofing/ 301
 
 # --- Yoast/Rank Math sitemaps -> Astro sitemap
 /sitemap_index.xml      /sitemap-index.xml   301
@@ -31,7 +46,7 @@
 
 # --- Old plain permalinks (?p= / ?page_id=) -> pretty URLs
 / p=1331 /roof-replacement-cost-in-brooklyn-ny/ 301
-/ p=2555 /roofing-costs-in-nyc/ 301
+/ p=2555 /roof-replacement-cost-in-nyc/ 301
 / p=1001 /roof-replacement-guide-nyc/ 301
 / p=1947 /top-roofing-materials-for-homes-in-new-york/ 301
 / p=1724 /all-seasons-roofing-staten-island/ 301
@@ -43,13 +58,13 @@
 / p=1269 /roof-repair-in-nyc-what-homeowners-need-to-know/ 301
 / p=1216 /types-of-asphalt-shingles/ 301
 / p=1206 /tpo-roofing-guide/ 301
-/ p=1131 /guide-roofing-material-for-home-staten-island-brooklyn/ 301
+/ p=1131 /top-roofing-materials-for-homes-in-new-york/ 301
 / page_id=3006 /roofing-lp/ 301
 / page_id=2631 /roof-replacement-si/ 301
-/ page_id=2563 /service-area/nyc/commercial-roofing/ 301
-/ page_id=2488 /free-roofing-estimates-brooklyn-ny/ 301
+/ page_id=2563 /commercial-roofing/ 301
+/ page_id=2488 /free-estimate/ 301
 / page_id=2238 /reviews/ 301
-/ page_id=1765 /flat-roofing-brooklyn/ 301
+/ page_id=1765 /service-area/brooklyn-ny/flat-roofing/ 301
 / page_id=1453 /vinyl-siding-estimate/ 301
 / page_id=1439 /service-area/brooklyn-ny/flat-roofing/ 301
 / page_id=1381 /service-area/brooklyn-ny/roof-repair/ 301
@@ -72,7 +87,7 @@
 / page_id=846 /residential-roofing/skylight-installation-repair/ 301
 / page_id=837 /residential-roofing/roof-inspections/ 301
 / page_id=830 /residential-roofing/roof-replacement/ 301
-/ page_id=738 /brooklyn-roofing-solutions/ 301
+/ page_id=738 /service-area/brooklyn-ny/ 301
 / page_id=718 /siding-gutter/ 301
 / page_id=706 /roof-repair/ 301
 / page_id=700 /commercial-roofing/ 301

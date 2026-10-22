@@ -41,7 +41,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
         <div class="takeaways"><h2>Key takeaways</h2><ul>{d.takeaways.map((t) => <li><Icon name="check" /><span set:html={t} /></li>)}</ul></div>
       )}
       {toc.length >= 3 && (
-        <details class="box toc" style="margin-bottom:2rem" open>
+        <details class="box toc toc-inline" style="margin-bottom:2rem">
           <summary style="cursor:pointer;font-weight:800">In this guide</summary>
           <ol style="margin-top:0.75rem">{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
         </details>

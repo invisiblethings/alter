@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "migrate": "node scripts/migrate/run.mjs",
-    "check:parity": "node scripts/qa/parity.mjs",
+    "check:seo": "node scripts/qa/seo.mjs",
     "check:links": "node scripts/qa/links.mjs"
   },
   "dependencies": {

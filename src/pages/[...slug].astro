@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props as { entry: Entry };
 const d = entry.data;
-const crumbs = await crumbsFor(d.path, d.h1);
+const crumbs = await crumbsFor(d.path, ('cardTitle' in d && d.cardTitle) || d.h1);
 const html = entry.rendered?.html || '';
 const headings = (entry.rendered?.metadata?.headings as { depth: number; slug: string; text: string }[]) || [];
 const t = d.template;

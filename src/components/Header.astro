@@ -11,7 +11,7 @@ const cur = (u: string) => (path === u || (u !== '/' && path.startsWith(u)) ? 'p
 <div class="topbar">
   <div class="wrap">
     <div class="topbar-items">
-      <span><span class="live" aria-hidden="true"></span><strong>Family-owned</strong><span class="hide-sm">&nbsp;roofing contractor</span> · Staten Island, NY</span>
+      <span><span class="live" aria-hidden="true"></span><strong>Family-owned</strong><span class="hide-sm">&nbsp;· Staten Island, NY</span></span>
       <span class="hide-md"><Icon name="shield" /> Licensed &amp; insured · #{business.license.number}</span>
       <span class="hide-md"><Icon name="clock" /> Emergency calls 24/7</span>
     </div>
@@ -74,7 +74,7 @@ const cur = (u: string) => (path === u || (u !== '/' && path.startsWith(u)) ? 'p
       </div>
     </nav>
     <div class="head-cta">
-      <a class="head-phone" href={telHref}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text Marke's team</small><strong>{business.phone}</strong></span></a>
+      <a class="head-phone" href={telHref} aria-label={`Call ${business.phone}`}><span class="ring"><Icon name="phone" /></span><span class="txt"><small>Call or text Marke's team</small><strong>{business.phone}</strong></span></a>
       <a class="btn btn-gold btn-sm" href="/free-estimate/">Free estimate</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><Icon name="menu" /></button>
     </div>

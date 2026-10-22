@@ -19,7 +19,7 @@ export const GET: APIRoute = async () => {
 - Hours: Mon-Fri 8am-8pm, Sat 8am-5pm, emergencies 24/7
 
 ## Services
-${group(['service'])}
+${group(['hub', 'service'])}
 
 ## Service areas
 ${group(['location'])}
