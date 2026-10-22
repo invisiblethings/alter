@@ -1,13 +1,10 @@
 ---
 path: "/accessibility-statement/"
 template: legal
-seoTitle: "Accessibility Statement for Alter Phase Roofing | Alter Phase Roofing Inc."
-description: "This is an accessibility statement from Alter Phase Contracting Inc.."
-h1: "Accessibility Statement for Alter Phase Roofing"
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-09-21"
-modified: "2024-09-21"
+seoTitle: "Accessibility Statement | Alter Phase Roofing"
+description: "Our commitment to making alterphaseroofing.com accessible to everyone, including adjustable text size, keyboard navigation and screen reader support."
+h1: "Accessibility statement"
+modified: "2026-10-22"
 ---
 This is an accessibility statement from Alter Phase Contracting Inc..
 
@@ -25,3 +22,12 @@ We welcome your feedback on the accessibility of Alter Phase Roofing. Please let
 -   Postal Address: 61 Appleby Ave, Staten Island, NY 10305
 
 We try to respond to feedback within 2 business days.
+
+## Features of this website
+
+- **Adjustable text size:** use the A / A / A buttons at the top of every page to make text larger.
+- **Large tap targets and high-contrast text** throughout the site.
+- **Keyboard navigation** with visible focus outlines and a skip-to-content link.
+- **Descriptive image text** for screen readers.
+
+If anything on this site is hard to use, call us at [(929) 370-1552](tel:+19293701552) or email [info@alterphaseroofing.com](mailto:info@alterphaseroofing.com) and we'll help.

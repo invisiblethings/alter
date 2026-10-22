@@ -1,55 +1,41 @@
 ---
 path: "/how-we-work/"
 template: company
-seoTitle: "How We Work: 4-Step Process | Alter Phase Roofing"
-description: "At Alter Phase Roofing, we believe a smooth and transparent roofing project builds trust and delivers exceptional results. That's why we follow a clear, customer-focused process to ensure your complete satisfaction."
-h1: "How We Work"
-intro: "At Alter Phase Roofing, we believe a smooth and transparent roofing project builds trust and delivers exceptional results. That's why we follow a clear, customer-focused process to ensure your complete satisfaction."
+seoTitle: "How We Work: Our 4-Step Roofing Process | Alter Phase"
+description: "What to expect: free inspection with photos, written estimate within 24 hours, our own crew on the job, and warranties in writing."
+kicker: "How we work"
+h1: "What to expect when you hire us, step by step"
+intro: "Hiring a roofer shouldn't feel like a gamble. Here's exactly how a job goes with Alter Phase Roofing, from your first call to the warranty in your hand."
 image: "/wp-content/uploads/2024/04/AlterPhase-Roof-Inspection.jpg"
-imageAlt: "AlterPhase Roof Inspection"
-published: "2024-04-13"
-modified: "2025-04-17"
+imageAlt: "Alter Phase Roofing roofer inspecting a roof"
+answer: "Every Alter Phase Roofing job follows four steps: a free on-site inspection with photos; a written, itemized estimate, usually within 24 hours; the work done by our own crew with the owner involved; and a final walkthrough with written warranties of up to 50 years on materials and 25 years on workmanship."
+faq:
+  - q: "How much does the inspection cost?"
+    a: "Nothing. Inspections and estimates are free and come with no obligation."
+  - q: "How soon will I get my estimate?"
+    a: "Usually within 24 hours of the inspection, in writing and itemized."
+  - q: "Do I have to decide on the spot?"
+    a: "No. We never pressure anyone to sign during the visit. Take the estimate, compare it, ask questions."
+  - q: "What happens if something goes wrong after the job?"
+    a: "Call us. Your workmanship warranty is in writing, and we come back to fix anything that's ours to fix."
+modified: "2026-10-22"
 ---
-### Our 4-Step Process
+## Step 1: Free inspection
 
-![AlterPhase Roof Inspection](/wp-content/uploads/2024/04/AlterPhase-Roof-Inspection-768x338.jpg)
+You call or fill in the [estimate form](/free-estimate/). We set a time that works for you and come out to look at the roof. Not from the driveway, but up on the roof. We check the surface, flashing, vents, gutters and, when we can, the attic. Then we show you photos of what we found.
 
-## 01
+## Step 2: Written estimate
 
-### Consultation & Assessment
+Within about 24 hours, you get a written, itemized estimate: what's wrong, what we recommend, the materials we'll use, and the price, including cleanup, disposal and permits when they're needed. When it's close between repair and replacement, you get both prices. No pressure to decide.
 
-**Get Started with a Free Consultation:** Contact us to schedule your assessment. We'll discuss your needs, thoroughly inspect your roof, and provide an honest evaluation of its condition.
+## Step 3: The work
 
-## 02
+We schedule a start date and keep you updated if weather moves it. On the day, we protect your property: tarps over landscaping, care around neighbors and the sidewalk. Our own crew does the work, and owner Marke is part of every job. For replacements, rotted decking is replaced and new flashing goes in; nothing important gets reused to save time. We clean up every day.
 
-### Personalized Solutions & Estimate
+## Step 4: Walkthrough and warranty
 
-**Tailored Solutions That Fit Your Needs:** Based on our inspection, we'll recommend the best roofing solutions for your home or business, explain your options, and provide a detailed, transparent estimate.
+When we're done, we walk the job with you, show you photos, and answer every question. You get your warranties in writing: up to 50 years from the manufacturer on materials and up to 25 years from us on workmanship. Then we're one phone call away for as long as you own the house.
 
-![A roof repair process on a residential house in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhase-Roof-Repair-Service.jpg)
+## Our commitment: 100% satisfaction
 
-![Residential Roof tear-off and replaced by Alter Phase Roofing in 10314 Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9-768x772.jpg)
-
-## 03
-
-### Expert Installation or Repair
-
-**Quality Workmanship You Can Trust:** Our skilled team will meticulously complete your project using premium materials, ensuring it's done right the first time. We prioritize timely completion and respect for your property.
-
-## 04
-
-### Project Completion & Follow-Up
-
-**Satisfaction Guaranteed:** Upon completion, we'll walk you through the work, answer any questions, and ensure you're delighted with your new roof. We also offer maintenance tips to keep your roof in top shape.
-
-![A beautiful house in Staten Island, NY with a beautiful new roof replaced by Alter Phase Roofing - Staten Island](/wp-content/uploads/2024/04/Roofing-Home-768x524.jpg)
-
-![Alter Phase Roofing team photo taken on a worksite in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg)
-
-## Our Commintment: 100% Satisfaction Guarantee.
-
-Alter Phase Roofing isn't just about fixing roofs; we're about building trust. From your first call to years after your project is complete, we strive to be the [roofing company](/) you recommend to your friends and family. Here's how we make that happen:
-
--   Clear Communication: No confusing jargon or hidden costs. We explain your roofing needs in plain language, offer transparent pricing, and keep you updated every step of the way.
--   Quality Craftsmanship: We treat your home or business like our own. Our skilled team uses premium materials, adheres to the highest industry standards, and pays meticulous attention to detail.
--   Lasting Customer Relationships: We're not just in it for one project. We offer ongoing maintenance advice, extended warranties, and are always here to answer your roofing questions, big or small.
+We want to be the roofing company you recommend to your family and neighbors. That only happens if you're genuinely happy with the work, so if something isn't right, we make it right.

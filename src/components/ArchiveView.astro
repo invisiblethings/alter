@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from './Icon.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import FinalCta from './FinalCta.astro';
+import { getEntry } from 'astro:content';
+import { posts, crumbsFor, readTime } from '../lib/content';
+import { pageGraph } from '../lib/schema';
+interface Props { id: string; category?: number }
+const { id, category } = Astro.props;
+const d = (await getEntry('pages', id))!.data;
+const list = (await posts()).filter((p) => !category || p.data.categories.includes(category));
+const crumbs = await crumbsFor(d.path, d.h1);
+const schema = pageGraph({ url: d.path, title: d.seoTitle, description: d.description, crumbs, kind: 'collection', h1: d.h1 });
+---
+<Base title={d.seoTitle} description={d.description} path={d.path} schema={schema} noindex={d.noindex}>
+  <section class="phero simple">
+    <div class="wrap"><div>
+      <Breadcrumbs crumbs={crumbs} />
+      {d.kicker && <span class="kicker">{d.kicker}</span>}
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+    </div></div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="grid-3">
+        {list.map((p) => (
+          <a class="post-card" href={p.data.path}>
+            {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}
+            <div class="b"><span class="meta">{readTime(p.body)} min read</span><h2 style="font-size:1.15rem;margin:0">{p.data.cardTitle || p.data.h1}</h2><p>{p.data.description}</p><span class="link-arrow" style="margin-top:auto">Read the guide <Icon name="arrow" /></span></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <FinalCta />
+</Base>

@@ -1,134 +1,68 @@
 ---
 path: "/service-area/brooklyn-ny/roof-replacement/"
 template: location
-seoTitle: "Roof Replacement Brooklyn, NY | Residential & Commercial Roofing Company"
-description: "At Alter Phase Roofing, we specialize in roof replacement services throughout Brooklyn, delivering top-quality solutions to ensure your property is safe, durable, and energy-efficient."
-h1: "Roof Replacement in Brooklyn, NY"
-intro: "Brooklyn is a borough of dynamic neighborhoods and diverse architectural styles, from charming brownstones in Park Slope to modern condos in Williamsburg. Regardless of the property type, the roof plays a crucial role in protecting your home or business from the elements."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-10-15"
-modified: "2025-05-15"
+seoTitle: "Roof Replacement Brooklyn, NY | Free Estimates | Alter Phase"
+description: "Roof replacement in Brooklyn for brownstones, row homes and houses. Flat and shingle roofs, permits handled, up to 50-year warranties."
+kicker: "Roof replacement · Brooklyn"
+h1: "Roof replacement in Brooklyn, done properly from the deck up"
+intro: "Many Brooklyn roofs have three or four layers of patches and old roofing on them. We strip it back, fix the deck and drainage, and install a new roof with warranties that last decades."
+highlights:
+  - "Flat roofs for row homes, shingles for houses"
+  - "Permits, board paperwork and insurance certificates handled"
+  - "Up to 50-year material, 25-year workmanship warranties"
+service: "Roof replacement"
+area: "Brooklyn"
+wizard: "Roof replacement"
+prices: ["boroughs", "flat", "pitched"]
+image: "/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn.webp"
+imageAlt: "Alter Phase Roofing crew replacing a flat roof in Brooklyn"
+answer: "A roof replacement in Brooklyn typically costs <strong>$10,000–$17,000</strong> for a 1,000 sq ft flat roof and more for larger or pitched roofs. Brooklyn costs more than Staten Island or Queens because of row-home access, attached walls, brownstone details and board requirements. Most replacements take a few days."
+related:
+  - "/service-area/brooklyn-ny/"
+  - "/roof-replacement-cost-in-brooklyn-ny/"
+  - "/service-area/brooklyn-ny/flat-roofing/"
+  - "/roof-replacement-guide-nyc/"
+  - "/residential-roofing/roof-replacement/"
+faq:
+  - q: "How much does a new roof cost in Brooklyn?"
+    a: "About $10,000–$17,000 for a typical 1,000 sq ft flat roof. Shingle roofs on detached homes in southern Brooklyn run about $6–$10 per sq ft installed. The number of old layers, deck repairs, parapet work and access make the biggest difference."
+  - q: "Do co-op and condo buildings need board approval?"
+    a: "Yes, regardless of whether a DOB permit is needed. Boards usually ask for a scope of work, insurance certificates and a contractor application. We prepare those documents; allow a few weeks for approval."
+  - q: "How long does a roof replacement take on a Brooklyn row home?"
+    a: "Usually a few days, depending on size, layers to remove and weather. We keep the roof watertight at the end of every day."
+modified: "2026-10-22"
 ---
-## Expert Roof Replacement Services in Brooklyn, NY by Alter Phase Roofing
+## What a Brooklyn roof replacement includes
 
-At Alter Phase Roofing, we specialize in roof replacement services throughout Brooklyn, delivering top-quality solutions to ensure your property is safe, durable, and energy-efficient. If your roof is damaged beyond repair, aged, or simply needs an upgrade, Alter Phase Roofing is the trusted choice for professional roof replacement in Brooklyn.
+### Tear-off of old layers
 
-We combine expert craftsmanship, high-quality materials, and competitive pricing to give your property the protection it deserves.
+Brooklyn roofs often have several. Removing them reveals rot and lets the new roof sit flat and drain properly.
 
-## Why Choose Alter Phase Roofing for Roof Replacement in Brooklyn?
+### Deck repair
 
-When it comes to roof replacement, not all roofing companies are created equal. At Alter Phase Roofing, we stand out for several key reasons:
+Rotted planks and plywood replaced before anything new goes down.
 
-### Experienced Team of Roofers
-With years of experience in Brooklyn’s unique roofing landscape, we’ve worked on every type of roof, from traditional pitched roofs on brownstones to flat roofs on commercial properties. Our experienced team understands the specific challenges faced by Brooklyn homeowners, including weather conditions, building codes, and architectural styles.
+### Insulation & drainage
 
-### Top-Quality Materials
-We work with the industry’s leading manufacturers to source the best materials for your new roof. Whether you prefer the classic look of **asphalt shingles**, the longevity of **metal roofing**, or the durability of **TPO**, we have the right materials to match your style and budget.
+Tapered insulation or crickets where water used to pond; insulation to meet the NYC Energy Code.
 
-### Licensed, Insured, and Local
-As a fully licensed and insured [roofing company](/), we ensure that all work is performed to the highest safety and quality standards. We are also proud to be locally based in New York City, meaning we are familiar with Brooklyn’s architectural trends and specific needs.
+### New membrane or shingles
 
-### Free Roof Inspection and Estimate
-We provide **free roof inspections** and transparent estimates for roof replacement services. During the inspection, we’ll thoroughly assess your roof’s condition and offer an honest recommendation based on its current state.
+EPDM, TPO or modified bitumen for flat roofs; GAF architectural shingles for pitched roofs.
 
-* * *
+### Parapets & flashing
 
-## Signs You Need a Roof Replacement in Brooklyn
+New flashing up the parapet walls, tied into your neighbors' roofs, plus coping repairs.
 
-Not sure if it’s time for a roof replacement? Here are some common signs that your roof may need replacing:
+### Permits & paperwork
 
-### 1\. **Age of the Roof**
+DOB permits, Local Law 92/94 review and co-op/condo board documentation when needed.
 
-Most roofs last between 20 to 25 years. If your roof is approaching or has exceeded this lifespan, it’s time to start considering a replacement before bigger issues arise.
+## Brooklyn-specific things we plan for
 
-### 2\. **Visible Damage**
+- **Attached buildings:** your new roof has to tie cleanly into the roofs next door.
+- **Access:** no driveways, so we plan material hoisting and debris removal around street parking and neighbors.
+- **Landmarks:** homes in historic districts like Park Slope, Brooklyn Heights or Fort Greene may need Landmarks Preservation Commission approval for visible changes.
+- **Cool roofs:** most low-slope roofs need a reflective surface under NYC code.
 
-If you notice missing or cracked shingles, rusting on metal roofs, or bald spots where granules have worn off asphalt shingles, your roof may need to be replaced. These signs often indicate that your roof can no longer provide adequate protection.
-
-### 3\. **Water Leaks and Stains**
-
-Leaks in your attic, water stains on your ceiling, or mold growth are all signs that your roof is no longer watertight. This could be due to worn materials or structural damage that requires a complete roof replacement.
-
-### 4\. **Energy Inefficiency**
-
-If your home’s energy bills are rising unexpectedly, your roof may no longer be providing proper insulation. A new roof can improve your home’s energy efficiency, keeping it cooler in the summer and warmer in the winter.
-
-### 5\. **Sagging or Structural Problems**
-
-A sagging roofline can indicate serious structural issues, often caused by moisture damage or prolonged exposure to the elements. If you notice any sagging, it’s crucial to act quickly to prevent further damage to your home.
-
-* * *
-
-## Our Roof Replacement Process in Brooklyn
-
-At Alter Phase Roofing, we follow a structured process to ensure that your roof replacement is seamless and stress-free.
-
-### 1\. Initial Consultation and Roof Inspection
-Our process begins with a thorough consultation and inspection of your existing roof. We examine its condition, check for underlying structural issues, and discuss your specific needs and preferences for the new roof.
-
-### 2\. Material Selection
-Once we assess your roof, we provide a variety of roofing material options, including:
-
--   **Flat Roofing Systems**: For commercial properties or buildings with flat roofs, we offer materials such as **TPO**, **EPDM**, and **PVC**.
--   **Asphalt Shingles**: Affordable, durable, and available in a wide range of colors and styles.
--   **Metal Roofing**: Long-lasting and energy-efficient, metal roofs are ideal for homeowners looking for durability and modern aesthetics.
--   **Slate Roofing**: A premium option, slate offers unparalleled longevity and a timeless, elegant look.
-
-### 3\. Transparent Estimate
-We provide a clear and detailed estimate of the roof replacement costs, ensuring you know exactly what to expect in terms of pricing, materials, and labor. Our pricing is competitive, and we never surprise our customers with hidden fees.
-
-### 4\. Roof Removal
-Before installing your new roof, we carefully remove the old roofing materials. We ensure the underlying decking is in good condition, making any necessary repairs to guarantee a strong foundation for your new roof.
-
-### 5\. New Roof Installation
-Once the old roof is removed, we begin the installation of your new roof. Our expert roofers work with precision and care, ensuring that every layer is properly installed for maximum durability and protection. We follow all manufacturer guidelines to preserve any warranties and guarantee the longevity of your new roof.
-
-### 6\. Final Inspection and Clean-Up
-After installation, we perform a final inspection to ensure every aspect of your roof is perfect. We also take care of a thorough clean-up, removing all debris and leaving your property spotless.
-
-* * *
-
-## Roof Replacement Materials We Offer
-
-Choosing the right roofing material is essential to the performance and appearance of your roof. Here’s a look at some of the materials we commonly install for Brooklyn homeowners:
-
-### Flat Roofing Systems
-For [Brooklyn’s commercial properties or homes with flat roofs](/service-area/brooklyn-ny/flat-roofing/), we specialize in modern flat roofing materials such as **TPO**, **EPDM**, and **PVC**. These materials offer superior weather resistance, energy efficiency, and low maintenance requirements.
-
-### Asphalt Shingles
-One of the most popular choices for residential roofing, asphalt shingles are affordable, durable, and available in a wide range of colors and styles. They’re a great option for Brooklyn homeowners looking for a cost-effective yet reliable roofing solution.
-
-### Metal Roofing
-For those seeking longevity, **metal roofing** is an excellent choice. It’s highly resistant to weather elements, energy-efficient, and offers a sleek, modern look. Metal roofs can last 50 years or more with proper care, making them an investment in the future of your home.
-
-### Slate Roofing
-If you own a historic or luxury property, **slate roofing** is a high-end option that offers unmatched beauty and longevity. Slate can last up to 100 years, making it one of the most durable roofing materials available.
-
-* * *
-
-## Why Brooklyn Homeowners Trust Alter Phase Roofing
-
-When it comes to roof replacement in Brooklyn, our commitment to quality, customer service, and expert craftsmanship sets us apart. Here’s why we’re the top choice for roof replacement in Brooklyn:
-
-### Local Brooklyn Experts
-As a locally owned and operated company, we understand Brooklyn’s architecture and climate. We’ve worked on a wide range of properties, from row houses in Brooklyn Heights to commercial buildings in DUMBO, and we know how to deliver roofing solutions that stand up to Brooklyn’s weather and building codes.
-
-### Exceptional Customer Service
-Our customer-first approach means we’re always available to answer your questions, provide updates, and ensure you’re completely satisfied with our work. We pride ourselves on being transparent, communicative, and easy to work with.
-
-### Quality You Can Count On
-Every roof replacement we complete is built to last. We use only the highest-quality materials and proven installation techniques to ensure your roof performs well for decades to come.
-
-### Competitive Pricing
-Roof replacement is a significant investment, but with Alter Phase Roofing, you get excellent value for your money. We offer competitive rates, flexible financing options, and long-term warranties to protect your investment.
-
-* * *
-
-## Contact Alter Phase Roofing for Roof Replacement in Brooklyn
-
-Ready to replace your roof in Brooklyn? Alter Phase Roofing is here to provide you with expert solutions, competitive pricing, and the highest-quality materials. Whether your roof is leaking, aging, or simply in need of an upgrade, we have the experience and expertise to handle the job efficiently and professionally.
-
-**Contact us today for a free roof inspection and estimate**, and let Alter Phase Roofing be your trusted partner for roof replacement in Brooklyn.
-
-## Fill out the form on this page or Call us for a free estimate: [(929) 370-1552](tel:+19293701552)
+Want the numbers first? Read our full [Brooklyn roof replacement cost guide](/roof-replacement-cost-in-brooklyn-ny/), or the citywide [NYC roof replacement guide](/roof-replacement-guide-nyc/) covering permits and contractor checks.

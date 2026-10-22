@@ -1,0 +1,107 @@
+---
+import Icon from './Icon.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import QuoteWizard from './QuoteWizard.astro';
+import PriceTables from './PriceTables.astro';
+import Process from './Process.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import Estimator from './Estimator.astro';
+import { business, telHref } from '../data/business';
+import { allLinks } from '../data/nav';
+import { allEntries, type PageEntry } from '../lib/content';
+
+interface Props { entry: PageEntry; html: string; crumbs: { name: string; url: string }[] }
+const { entry, html, crumbs } = Astro.props;
+const d = entry.data;
+const isLanding = d.template === 'landing';
+
+const entries = await allEntries();
+const titleOf = (p: string) => allLinks().find((l) => l.url === p)?.title || entries.find((e) => e.data.path === p)?.data.h1 || p;
+const related = d.related.map((p) => ({ url: p, title: titleOf(p) }));
+---
+<section class="phero">
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      {d.kicker && <span class="kicker">{d.kicker}</span>}
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      {d.highlights.length > 0 && <ul class="ticks">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
+      <div class="cta-row">
+        <a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · emergencies 24/7</small>{business.phone}</span></a>
+      </div>
+      <ul class="mini-proof">
+        <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>{business.rating.count} Google reviews</li>
+        <li><Icon name="award" /> GAF Master Elite®</li>
+        <li><Icon name="shield" /> Up to {business.warranty.manufacturerYears}-yr warranty</li>
+        <li><Icon name="license" /> Lic. #{business.license.number}</li>
+      </ul>
+      {d.image && <div class="phero-img"><img src={d.image} alt={d.imageAlt || ''} width="1200" height="600" loading="eager" fetchpriority="high" decoding="async" /></div>}
+    </div>
+    <QuoteWizard id="pg" service={d.wizard} />
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(2.5rem,5vw,4rem)">
+  <div class="wrap layout">
+    <article>
+      {d.answer && <div class="answer"><span class="lbl"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>}
+      <div class="prose" set:html={html} />
+      {d.estimator && <section id="Roof_Replacement_Cost_Calculator" style="margin-top:3rem"><Estimator heading="h2" /></section>}
+      {d.prices.length > 0 && (
+        <section id="prices" aria-labelledby="prices-h" style="margin-top:3rem">
+          <span class="kicker">Real prices</span>
+          <h2 id="prices-h" style="margin-bottom:0.25rem">How much it costs{d.area ? ` in ${d.area}` : ''}</h2>
+          <PriceTables kinds={d.prices} area={d.area} />
+        </section>
+      )}
+      {d.faq.length > 0 && <div style="margin-top:3.5rem"><Faq items={d.faq} title={`${d.service || d.h1.split(':')[0]}: common questions`} /></div>}
+    </article>
+    <aside class="aside" aria-label="Contact and related pages">
+      <div class="box navy">
+        <h2>Talk to a real roofer</h2>
+        <p style="margin:0;font-size:0.92rem">Family-owned, Staten Island-based. Owner Marke is part of every job.</p>
+        <a class="phone" href={telHref}>{business.phone}</a>
+        <a class="btn btn-gold btn-block btn-sm" href="#pg-wizard">Free estimate</a>
+        <p style="margin:0.8rem 0 0;font-size:0.8rem;color:#b9c7de">Mon–Fri 8–8 · Sat 8–5 · Emergencies 24/7</p>
+      </div>
+      {related.length > 0 && (
+        <nav class="box" aria-label="Related">
+          <h2>Related</h2>
+          <ul class="links">{related.map((r) => <li><a href={r.url}>{r.title}<Icon name="arrow" /></a></li>)}</ul>
+        </nav>
+      )}
+      <div class="box">
+        <h2>Our warranty</h2>
+        <p style="margin:0;font-size:0.92rem">Up to <strong>{business.warranty.manufacturerYears} years</strong> on materials and up to <strong>{business.warranty.workmanshipYears} years</strong> on workmanship, in writing on every roof we install.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{d.projects.length > 0 && (
+  <section class="sec warm" aria-labelledby="pj-h">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Recent work</span><h2 id="pj-h">Recent projects{d.area ? ` in ${d.area}` : ''}</h2></div>
+      <div class="projects">
+        {d.projects.map((p) => (
+          <figure class="project"><img src={p.image} alt={`${p.title}, ${p.location}`} width="600" height="750" loading="lazy" decoding="async" /><figcaption><h3>{p.title}</h3>{p.location}</figcaption></figure>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+{!isLanding && <Process bg={d.projects.length ? '' : 'warm'} />}
+<Reviews limit={4} title={d.area ? `What ${d.area} customers say` : 'What our customers say'} bg={d.projects.length ? 'warm' : ''} />
+<FinalCta form={false} />
+{d.trackingPhone && (
+  <script is:inline define:vars={{ shown: d.trackingPhone, digits: d.trackingPhone.replace(/\D/g, '') }}>
+    // Ads landing page: show the campaign's tracking number everywhere.
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (a) { a.href = 'tel:+1' + digits; });
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (w.nextNode()) { if (w.currentNode.nodeValue.indexOf('(929) 370-1552') > -1) w.currentNode.nodeValue = w.currentNode.nodeValue.split('(929) 370-1552').join(shown); }
+  </script>
+)}

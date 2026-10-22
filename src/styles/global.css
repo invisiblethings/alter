@@ -229,13 +229,13 @@ small { font-size: 0.85em; }
 
 /* ---------- quote wizard ---------- */
 .wizard { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); border: 1px solid var(--line); padding: clamp(1.25rem, 3vw, 2rem); position: relative; }
-.wizard-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.4rem; }
+.wizard-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 0.4rem; }
 .wizard h2, .wizard h3 { font-size: 1.45rem; margin: 0; }
 .wizard .sub { color: var(--muted); font-size: 0.92rem; margin: 0.2rem 0 1.1rem; }
 .steps-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 1.25rem; }
 .steps-bar span { height: 6px; border-radius: 99px; background: var(--line); transition: background 0.2s; }
 .steps-bar span.on { background: var(--gold-2); }
-.step-label { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.step-label { white-space: nowrap; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .wizard fieldset { border: 0; padding: 0; margin: 0 0 1rem; min-width: 0; }
 .wizard legend { font-weight: 800; font-size: 1.08rem; margin-bottom: 0.8rem; padding: 0; color: var(--ink); }
 .js .wizard [data-step]:not(.active) { display: none; }
@@ -522,3 +522,4 @@ table.t td.num { font-weight: 800; white-space: nowrap; }
 .footer-bottom ul { display: flex; flex-wrap: wrap; gap: 1.1rem; }
 .hours { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1rem; }
 .owner .kicker, .final .kicker { color: var(--gold); }
+.phero .wizard h2, .phero .wizard h3 { font-size: 1.3rem; }

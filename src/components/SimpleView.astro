@@ -1,0 +1,42 @@
+---
+import Icon from './Icon.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Reviews from './Reviews.astro';
+import Process from './Process.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import { business, telHref } from '../data/business';
+import type { PageEntry } from '../lib/content';
+interface Props { entry: PageEntry; html: string; crumbs: { name: string; url: string }[] }
+const { entry, html, crumbs } = Astro.props;
+const d = entry.data;
+const legal = d.template === 'legal';
+---
+<section class="phero simple">
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      {d.kicker && <span class="kicker">{d.kicker}</span>}
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      {!legal && (
+        <div class="cta-row" style="margin-top:1.25rem">
+          <a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a>
+          <a class="btn btn-lg btn-gold" href="/free-estimate/">Get a free estimate</a>
+        </div>
+      )}
+      {d.image && <div class="phero-img"><img src={d.image} alt={d.imageAlt || ''} width="1200" height="600" loading="eager" fetchpriority="high" decoding="async" /></div>}
+    </div>
+  </div>
+</section>
+<section class="sec" style="padding-top:clamp(2rem,4vw,3rem)">
+  <div class="narrow">
+    {d.answer && <div class="answer"><span class="lbl"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>}
+    <div class="prose" set:html={html} />
+    {d.faq.length > 0 && <div style="margin-top:3rem"><Faq items={d.faq} /></div>}
+  </div>
+</section>
+{d.template === 'reviews' && <Reviews limit={9} title="Every review, in our customers' own words" bg="" />}
+{d.template === 'company' && <Process bg="warm" />}
+{d.template === 'company' && <Reviews limit={4} bg="" />}
+{!legal && <FinalCta />}

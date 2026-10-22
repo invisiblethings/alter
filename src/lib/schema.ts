@@ -2,6 +2,7 @@
 // page references, instead of the mix of LocalBusiness/RoofingContractor
 // nodes the WordPress plugins produced. Only facts visible on the site go in.
 import { business, SITE } from '../data/business';
+import { services } from '../data/nav';
 
 const abs = (p?: string) => (p ? (p.startsWith('http') ? p : SITE + p) : undefined);
 
@@ -46,6 +47,11 @@ export function businessNode() {
       credentialCategory: 'license',
       name: `${b.license.type} License #${b.license.number}`,
       recognizedBy: { '@type': 'GovernmentOrganization', name: b.license.issuer },
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Roofing services',
+      itemListElement: services.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.title, url: SITE + s.url } })),
     },
     knowsAbout: ['Roof replacement', 'Roof repair', 'Flat roofing', 'TPO roofing', 'EPDM roofing', 'Modified bitumen roofing', 'Asphalt shingle roofing', 'Skylight installation', 'Gutter installation', 'Vinyl siding'],
     sameAs: b.sameAs,
@@ -96,6 +102,8 @@ interface PageInput {
   kind: 'home' | 'page' | 'service' | 'post' | 'contact' | 'about' | 'collection';
   h1: string;
   serviceArea?: string;
+  serviceName?: string;
+  price?: { min: number; max: number; unit?: string };
   faq?: { q: string; a: string }[];
 }
 
@@ -125,12 +133,23 @@ export function pageGraph(p: PageInput) {
     graph.push({
       '@type': 'Service',
       '@id': `${url}#service`,
-      name: p.h1,
-      serviceType: p.h1,
+      name: p.serviceName || p.h1,
+      serviceType: p.serviceName || p.h1,
       url,
       description: p.description || undefined,
       provider: { '@id': business.id },
       areaServed: p.serviceArea ? { '@type': 'City', name: p.serviceArea } : { '@type': 'City', name: 'New York City' },
+      offers: p.price ? {
+        '@type': 'Offer',
+        priceCurrency: 'USD',
+        priceSpecification: {
+          '@type': p.price.unit ? 'UnitPriceSpecification' : 'PriceSpecification',
+          minPrice: p.price.min,
+          maxPrice: p.price.max,
+          priceCurrency: 'USD',
+          ...(p.price.unit ? { unitText: p.price.unit } : {}),
+        },
+      } : undefined,
       mainEntityOfPage: { '@id': `${url}#webpage` },
     });
   }

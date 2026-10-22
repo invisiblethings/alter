@@ -1,0 +1,95 @@
+---
+import Icon from './Icon.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import Estimator from './Estimator.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import { business, telHref } from '../data/business';
+import { posts, readTime, fmtDate, type PostEntry } from '../lib/content';
+
+interface Props { entry: PostEntry; html: string; crumbs: { name: string; url: string }[]; headings: { depth: number; slug: string; text: string }[] }
+const { entry, html, crumbs, headings } = Astro.props;
+const d = entry.data;
+const toc = headings.filter((h) => h.depth === 2);
+const mins = readTime(entry.body);
+const related = (await posts()).filter((p) => p.data.path !== d.path && !d.related.includes(p.data.path)).slice(0, 3);
+const relatedPinned = (await posts()).filter((p) => d.related.includes(p.data.path));
+const more = [...relatedPinned, ...related].slice(0, 3);
+---
+<section class="phero simple">
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      <span class="kicker">{d.kicker || 'Homeowner guide'}</span>
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      <div class="byline">
+        <span class="avatar" aria-hidden="true">M</span>
+        <span>By <a href="/about/"><strong>Marke</strong></a>, owner of Alter Phase Roofing · NYC licensed roofing contractor<br />
+          Updated <time datetime={d.modified || d.published}>{fmtDate(d.modified || d.published)}</time> · {mins} min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:clamp(2rem,4vw,3rem)">
+  <div class="wrap layout">
+    <article>
+      {d.image && <img src={d.image} alt={d.imageAlt || ''} width="1200" height="720" style="width:100%;aspect-ratio:16/9.5;object-fit:cover;border-radius:var(--r);margin-bottom:2rem" loading="eager" fetchpriority="high" decoding="async" />}
+      {d.answer && <div class="answer"><span class="lbl"><Icon name="bolt" /> Quick answer</span><p set:html={d.answer} /></div>}
+      {d.takeaways.length > 0 && (
+        <div class="takeaways"><h2>Key takeaways</h2><ul>{d.takeaways.map((t) => <li><Icon name="check" /><span set:html={t} /></li>)}</ul></div>
+      )}
+      {toc.length >= 3 && (
+        <details class="box toc" style="margin-bottom:2rem" open>
+          <summary style="cursor:pointer;font-weight:800">In this guide</summary>
+          <ol style="margin-top:0.75rem">{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </details>
+      )}
+      {d.estimator && <section id="Roof_Replacement_Cost_Calculator" style="margin:0 0 2.5rem"><Estimator heading="h2" /></section>}
+      <div class="prose" set:html={html} />
+
+      <aside class="callout" aria-label="Free estimate">
+        <div><h2>Want a real number for your roof?</h2><p>Free inspection and a written estimate from a family-owned Staten Island roofer. No pressure.</p></div>
+        <a class="btn btn-gold" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </aside>
+
+      {d.faq.length > 0 && <Faq items={d.faq} />}
+
+      <section class="author" aria-label="About the author">
+        <span class="avatar" aria-hidden="true">M</span>
+        <div>
+          <h2>Written by Marke, owner of Alter Phase Roofing</h2>
+          <p>Marke runs Alter Phase Roofing, a family-owned roofing contractor in Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Manhattan and Queens. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+        </div>
+      </section>
+    </article>
+    <aside class="aside" aria-label="Contents and contact">
+      {toc.length >= 3 && (
+        <nav class="box toc" aria-label="Table of contents"><h2>Contents</h2><ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav>
+      )}
+      <div class="box navy">
+        <h2>Questions about your roof?</h2>
+        <p style="margin:0;font-size:0.92rem">Talk to the people who'll actually do the work.</p>
+        <a class="phone" href={telHref}>{business.phone}</a>
+        <a class="btn btn-gold btn-block btn-sm" href="/free-estimate/">Free estimate</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="sec warm" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="head"><span class="kicker">Keep reading</span><h2 id="more-h">More roofing guides</h2></div>
+    <div class="grid-3">
+      {more.map((p) => (
+        <a class="post-card" href={p.data.path}>
+          {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}
+          <div class="b"><span class="meta">{readTime(p.body)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p></div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<FinalCta />

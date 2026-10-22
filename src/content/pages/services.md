@@ -1,71 +1,90 @@
 ---
 path: "/services/"
-template: service
-seoTitle: "Residential & Commercial Roofing Solutions | Alter Phase Roofing"
-description: "From new roof installations to storm damage restoration, Alter Phase Roofing offers a complete range of residential and commercial roofing services. Get your free estimate today!"
-h1: "Our Services"
-intro: "We can take care of all your roofing needs, from routine maintenance to repairs in an emergency."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-8.jpg"
-imageAlt: "Services"
-published: "2024-04-12"
-modified: "2024-04-22"
+template: hub
+seoTitle: "Roofing Services Staten Island & NYC | Alter Phase Roofing"
+description: "Every roofing service from one family-owned Staten Island contractor: repair, replacement, flat and commercial roofing, skylights, gutters."
+kicker: "Our services"
+h1: "Roofing services for homes, businesses and buildings"
+intro: "One local, family-owned crew for every part of your roof, from a single leak to a complete commercial replacement, with real prices and written warranties."
+highlights:
+  - "Residential and commercial, pitched and flat roofs"
+  - "Free inspection and written quote within 24 hours"
+  - "Emergency repairs 24/7"
+service: "Roofing services"
+area: "Staten Island"
+prices: ["repairs"]
+image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11.jpg"
+imageAlt: "Flat roofing project by Alter Phase Roofing in Staten Island"
+answer: "Alter Phase Roofing provides roof repair, roof replacement, flat roofing, commercial roofing, roof inspections, skylight repair and installation, gutters and siding across Staten Island, Brooklyn, Manhattan and Queens. Most repairs cost $300–$1,200 and most home replacements $10,000–$30,000."
+related:
+  - "/roof-repair/"
+  - "/residential-roofing/roof-replacement/"
+  - "/flat-roofing/"
+  - "/commercial-roofing/"
+  - "/property-managers/"
+faq:
+  - q: "Do you do both residential and commercial roofing?"
+    a: "Yes. Houses and row homes are a big part of our work, and we also repair and replace flat roofs on stores, offices, mixed-use and multi-family buildings."
+  - q: "What areas do you serve?"
+    a: "We're based on Staten Island and work across Staten Island, Brooklyn, Manhattan and Queens."
+  - q: "How quickly can you give me a price?"
+    a: "After a free on-site inspection, you usually receive a written, itemized estimate within 24 hours."
+modified: "2026-10-22"
 ---
-## We offer affordable and effective roofing services.
+## Roofing
 
-We take pride in our professionalism, and we always treat our customers with respect and courtesy. Our roofers are licensed and insured, so you can trust that they are qualified and protected. Plus, we take care to work safely and keep the work area clean, so you can trust that your home will be in good hands.
+### [Roof repair](/roof-repair/)
 
-![](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-8-768x765.jpg)
+Leaks, shingles, flashing and storm damage. Most repairs cost $300–$1,200.
 
-### [Residential Roofing](/residential-roofing/)
+### [Emergency roof repair](/roof-repair/emergency-service/)
 
-Experience the Alter Phase Roofing difference for your residential roofing needs. Our skilled team delivers meticulous workmanship, superior materials, and outstanding customer care, giving you a roof you'll love and service you can trust.
+24/7 response, same-day tarping and photos for insurance.
 
-[Service Details »](/residential-roofing/)
+### [Roof replacement](/residential-roofing/roof-replacement/)
 
-### [Commercial Roofing](/commercial-roofing/)
+New roofs in one to two days with up to 50-year warranties.
 
-For all your commercial roofing needs, you can trust Alter Phase Roofing. From flat roof installations to complex industrial roofing systems, we provide tailored solutions and exceptional workmanship for projects of any scale.
+### [Flat roofing](/flat-roofing/)
 
-[Service Details »](/commercial-roofing/)
+TPO, EPDM, PVC and modified bitumen for row homes and businesses.
 
-### [Roof Repair](/roof-repair/)
+### [Roof inspections](/residential-roofing/roof-inspections/)
 
-Roof leak got you stumped? Alter Phase Roofing's experts diagnose and address any roofing issue. We provide thorough assessments, lasting solutions, and peace of mind knowing your repair is done correctly.
+Photo reports before buying, selling or after storms.
 
-[Service Details »](/roof-repair/)
+### [Skylights](/residential-roofing/skylight-installation-repair/)
 
-### [Flat Roofing](/roof-repair/)
+Leak repair, reflashing, replacement and new installs.
 
-Get exceptional value and expert installation with Alter Phase Roofing's flat roof services. We'll help you choose the ideal materials for your budget and provide flawless workmanship for a roof that protects your investment.
+## Commercial & buildings
 
-[Service Details »](/roof-repair/)
+### [Commercial roofing](/commercial-roofing/)
 
-### [Emergency Roofing](/roof-repair/emergency-service/)
+Repair, replacement and maintenance for businesses and multi-family buildings.
 
-When disaster strikes, Alter Phase Roofing has your back. Our experienced team offers fast emergency roof tarping, thorough damage assessments, and skilled repairs to restore your roof and your peace of mind.
+### [Commercial roof repair](/roof-repair/commercial/)
 
-[Service Details »](/roof-repair/emergency-service/)
+Seams, ponding, flashing and storm damage on flat roofs.
 
-### [Roof Inspections](/residential-roofing/roof-inspections/)
+### [Commercial roof replacement](/commercial-roofing/roof-replacement/)
 
-Protect your investment with Alter Phase Roofing's comprehensive roof inspections. We'll identify potential problems early, recommend proactive repairs, and help you avoid costly surprises.
+Permits, cool-roof and LL92/94 requirements handled.
 
-[Service Details »](/residential-roofing/roof-inspections/)
+### [Property managers & HOAs](/property-managers/)
 
-### [Gutter Services](/siding-gutter/gutter-installation-repair/)
+Board-ready proposals, multi-building bids and inspection programs.
 
-Alter Phase Roofing's gutter services complement our roof repairs and replacements, providing a complete system to safeguard your home.
+## Exterior
 
-[Service Details »](/siding-gutter/gutter-installation-repair/)
+### [Gutters](/siding-gutter/gutter-installation-repair/)
 
-### [Skylight Services](/residential-roofing/skylight-installation-repair/)
+Seamless gutters, guards, downspouts and repairs.
 
-Enhance your home with Alter Phase Roofing's skylight services. We offer expert installation, replacement, and repair for beautiful natural light and added ventilation.
+### [Siding](/siding-gutter/siding-installation-repair/)
 
-[Service Details »](/residential-roofing/skylight-installation-repair/)
+Vinyl and insulated vinyl siding installation and repair.
 
-### [Storm Damage Restoration](/roof-repair/emergency-service/)
+## Not sure what you need?
 
-Storms can be devastating, but Alter Phase Roofing is here to help. We offer fast, compassionate storm damage restoration services, including emergency tarping, damage assessments, expert repairs, and insurance claim assistance.
-
-[Service Details »](/roof-repair/emergency-service/)
+That's what the free inspection is for. We'll get on the roof, show you photos of what we find and tell you honestly whether you need a repair, a replacement or nothing at all yet.

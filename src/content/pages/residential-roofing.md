@@ -1,110 +1,70 @@
 ---
 path: "/residential-roofing/"
-template: service
-seoTitle: "Residential Roofing | Affordable & Fast | Alter Phase Roofing Inc."
-description: "Your home’s roof serves as its first line of defense against the elements, and maintaining its integrity is crucial for ensuring your safety and comfort. At"
-h1: "Residential Roofing"
-intro: "When it comes to your home’s roof, trust the experts at Alter Phase Roofing. We offer a full range of residential roofing solutions across all five boroughs of NYC—from expert roof replacements and timely repairs to comprehensive inspections and gutter services. Our commitment to quality materials, skilled craftsmanship, and exceptional customer service ensures a roof you can rely on for years to come."
+template: hub
+seoTitle: "Residential Roofing Staten Island | Repair & New Roofs"
+description: "Residential roofing for Staten Island and NYC homes: roof repair, replacement, inspections, skylights and gutters. GAF Master Elite."
+kicker: "Residential roofing"
+h1: "Residential roofing for Staten Island and NYC homes"
+intro: "From a single missing shingle to a complete new roof, we take care of homes the way we'd want our own taken care of: honest advice, careful work and warranties in writing."
+highlights:
+  - "Shingle roofs, flat roofs, skylights and gutters"
+  - "Owner Marke is part of every job"
+  - "Free inspection and written quote within 24 hours"
+service: "Residential roofing"
+area: "Staten Island"
+prices: ["pitched"]
 image: "/wp-content/uploads/2024/11/Residential-Roofing-AlterPhaseRoofing.jpg"
-imageAlt: "Residential Roofing by Alter Phase Roofing"
-published: "2024-04-14"
-modified: "2024-11-15"
+imageAlt: "Residential roof completed by Alter Phase Roofing"
+answer: "Alter Phase Roofing repairs and replaces roofs on houses, two-families and row homes across Staten Island, Brooklyn, Manhattan and Queens. Most home repairs cost $300–$1,200, and full replacements $10,000–$30,000. Every job starts with a free inspection and a written quote."
+related:
+  - "/residential-roofing/roof-replacement/"
+  - "/roof-repair/residential/"
+  - "/residential-roofing/roof-inspections/"
+  - "/residential-roofing/skylight-installation-repair/"
+  - "/siding-gutter/"
+faq:
+  - q: "What types of home roofs do you work on?"
+    a: "Asphalt shingle roofs (the most common on Staten Island and Queens), flat roofs on row homes and extensions (EPDM, TPO, modified bitumen), and metal roofs. We also repair skylights, gutters and siding."
+  - q: "Do you work on two-family and multi-family homes?"
+    a: "Yes. Two-families, small multi-family buildings and attached row homes are a big part of our work."
+  - q: "Are estimates really free?"
+    a: "Yes. We inspect your roof, take photos and give you a written estimate at no charge and with no obligation."
+modified: "2026-10-22"
 ---
-## Your Trusted Partners in Roofing Solutions
+## Home roofing services
 
-Your home’s roof serves as its first line of defense against the elements, and maintaining its integrity is crucial for ensuring your safety and comfort. At Alter Phase Roofing, we offer a full suite of services to keep your roof in optimal condition:
+### [Roof replacement](/residential-roofing/roof-replacement/)
 
-![Residential Roofing by Alter Phase Roofing](/wp-content/uploads/2024/11/Residential-Roofing-AlterPhaseRoofing-1024x1024.jpg)
+Complete tear-off and new roof, usually in one to two days, with up to 50-year material and 25-year workmanship warranties.
 
-### Comprehensive Roofing Services Designed for Every Borough
+### [Roof repair](/roof-repair/residential/)
 
-Your home’s roof serves as its first line of defense against the elements, and maintaining its integrity is crucial for ensuring your safety and comfort. At Alter Phase Roofing, we offer a full suite of services to keep your roof in optimal condition:
+Leaks, missing shingles, flashing and flat-roof patches, fixed at the cause and warrantied in writing.
 
-#### 1\. Roof Replacement: Transform Your Home’s Aesthetic and Functionality
-Is your roof showing signs of wear and tear? Whether it’s damage from severe weather or simply age, a roof replacement can significantly enhance the value and appearance of your home. Our expert team offers a diverse selection of roofing materials, including:
+### [Roof inspections](/residential-roofing/roof-inspections/)
 
--   **Asphalt Shingles**: Affordable and versatile, ideal for a range of architectural styles.
+A photo report of your roof's condition before you buy, sell, or after a big storm.
 
--   **Metal Roofing**: Durable, energy-efficient, and available in an array of colors.
+### [Skylights](/residential-roofing/skylight-installation-repair/)
 
--   **Tile Roofing**: A classic option that delivers longevity and character.
+Leak repair, reflashing and replacement for Velux, Fakro and other brands.
 
--   **Slate Roofing**: The ultimate premium choice known for its natural beauty and life expectancy.
+### [Gutters](/siding-gutter/gutter-installation-repair/)
 
-We understand that each neighborhood has distinct architectural styles, and our skilled installers are dedicated to ensuring your new roof complements your home perfectly—whether in the bustling streets of **Manhattan** or the scenic areas of **Staten Island**.
+Seamless gutters and downspouts that keep water off your roof edge and away from your foundation.
 
-#### 2\. Roof Repairs: Swift Solutions for Your Peace of Mind
-Don’t let small roofing issues escalate into significant problems. Our team specializes in prompt and reliable **roof repairs** catering to issues such as:
+### [Emergency repair](/roof-repair/emergency-service/)
 
--   **Leaks and Water Damage**: Identify and resolve leaks early to prevent interior damage.
+Active leak or storm damage? We answer 24/7 and stop the water the same day.
 
--   **Missing or Damaged Shingles**: Quickly restore your roof’s protection and aesthetic.
+## Why homeowners trust us with their roof
 
--   **Flashing Repairs**: Address weak points where roofs meet walls or chimneys to prevent leaks.
+**We're local and family-owned.** Our shop is at 61 Appleby Ave on Staten Island, and our owner, Marke, is part of every job. You won't be handed off to a salesperson and a crew you never meet.
 
-Fast and efficient repairs help maintain the integrity of your roof, protecting your home from potential water damage.
+**We tell you when you don't need a new roof.** A lot of our customers call expecting a replacement and end up with a repair. That honesty is why our customers send their neighbors.
 
-#### 3\. Roof Inspections: Proactive Care for Your Roof’s Longevity
-Understanding the state of your roof is critical, especially in a city with fluctuating weather patterns. Our comprehensive **roof inspection** services include:
+**We do it properly.** GAF Master Elite® certification means the manufacturer has vetted our installation standards, and it lets us offer their strongest warranties.
 
--   **Detailed Assessments**: Thorough evaluations to identify potential weaknesses or damage.
+## What a home roof costs
 
--   **Maintenance Recommendations**: Personalized plans to extend the life of your roof.
-
--   **Pre-storm Inspections**: Ensuring your roof is prepared for severe weather events.
-
-Regular inspections are essential for homeowners in NYC, as they can help prevent costly repairs in the future.
-
-#### 4\. Gutter Services: Safeguarding Your Home’s Foundation
-Sophisticated gutter systems are vital for protecting your home from water damage. We offer a complete range of **gutter services**, including:
-
--   **Gutter Installations**: Custom-designed solutions tailored to your home’s specific needs.
-
--   **Gutter Repairs**: Quick fixes for leaks, clogs, and more.
-
--   **Gutter Cleaning**: Essential for removing debris and ensuring smooth water flow.
-
--   **Gutter Guard Installations**: Reduce the need for frequent cleaning while keeping your gutters free from grit and grime.
-
-Efficient gutters direct water away from your home’s foundation, protecting it from erosion and other water-related issues.
-
-#### 5\. Skylight Services: Brighten Your Home Naturally
-Add natural light and fresh air to your home with our expert **skylight installation and repair services**. Our offerings include:
-
--   **Energy-Efficient Skylights**: Options that help reduce your energy costs while enhancing your home’s ambiance.
-
--   **Skylight Repairs**: Ensure existing installations are functional and leak-free.
-
-Embrace the natural light and ventilation that skylights can provide—an ideal choice for anyone wishing to brighten their indoor spaces.
-
-## Why Choose Alter Phase Roofing?
-
-### Quality Craftsmanship You Can Count On
-
-At Alter Phase Roofing, we take considerable pride in our work. Our team is composed of experienced professionals dedicated to providing:
-
--   **Top-Quality Materials**: We only work with the finest roofing products to ensure longevity and durability.
-
--   **Expert Installation**: Our skilled installers adhere to industry best practices, guaranteeing a flawless result.
-
--   **Customer-Centric Service**: We prioritize clear communication and personalized solutions to meet your specific needs.
-
-### Local Expertise Across All Five Boroughs
-
-As a proud member of the NYC community, we understand the unique roofing challenges presented by each borough:
-
--   **Manhattan**: Our services reflect the modern needs of high-rise residences and historic buildings.
-
--   **Brooklyn**: We cater to a mix of classic brownstones and newer constructions.
-
--   **Queens**: Serving diverse communities with tailored roofing solutions.
-
--   **The Bronx**: Our team addresses a variety of architectural styles found throughout the borough.
-
--   **Staten Island**: We ensure homeowners receive top-notch roofing services in this scenic locale.
-
-## Get Started with Your Free Estimate Today!
-
-Ready to enhance your home’s protection and aesthetic with our comprehensive **residential roofing services**? Alter Phase Roofing is here to help!
-
-Contact us today at [**(929) 370-1552**](tel:+19293701552) or [**fill out our online form**](/free-estimate/) for your **free estimate**. Let us partner with you to provide the high-quality roofing solutions you deserve—protecting your home and enhancing its value, one roof at a time.
+Most homeowners want a number before anything else, so here are our real 2026 prices. For a closer estimate for your house, use the [roof cost guide](/roof-replacement-cost-in-nyc/) or ask for a free inspection.

@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { business, telHref } from '../data/business';
+import { services, areas, guides } from '../data/nav';
+---
+<Base title="Page not found | Alter Phase Roofing" description="This page has moved. Find roof repair, replacement and flat roofing services from Alter Phase Roofing." path="/404/" noindex>
+  <section class="phero simple">
+    <div class="wrap"><div>
+      <span class="kicker">404</span>
+      <h1>This page has moved or no longer exists</h1>
+      <p class="lead">Sorry about that. Here's where people usually want to go, or just give us a call.</p>
+      <div class="cta-row" style="margin-top:1.25rem"><a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a><a class="btn btn-lg btn-line" href="/">Homepage</a></div>
+    </div></div>
+  </section>
+  <section class="sec"><div class="wrap grid-3" style="align-items:start">
+    <div class="box"><h2>Services</h2><ul class="links">{services.map((s) => <li><a href={s.url}>{s.title}</a></li>)}</ul></div>
+    <div class="box"><h2>Areas</h2><ul class="links">{areas.map((a) => <li><a href={a.url}>{a.title}</a></li>)}</ul></div>
+    <div class="box"><h2>Costs &amp; guides</h2><ul class="links">{guides.map((g) => <li><a href={g.url}>{g.title}</a></li>)}</ul></div>
+  </div></section>
+</Base>

@@ -1,60 +1,39 @@
 ---
 path: "/free-estimate/"
 template: contact
-seoTitle: "Free Roofing Estimate NYC | Alter Phase Roofing Inc."
-description: "Get a no-obligation same-day free estimate for your roofing project in NYC. Call (929) 370-1552 or fill out the form."
-h1: "FREE Inspection & Estimate"
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-11"
-modified: "2026-02-10"
+seoTitle: "Free Roofing Estimate Staten Island & NYC | Alter Phase"
+description: "Free roofing estimate: on-site inspection with photos and a written, itemized quote within 24 hours. Call (929) 370-1552."
+kicker: "Free estimate"
+h1: "Get a free roofing estimate"
+intro: "Tell us about your roof in 30 seconds. We'll call to set up a free inspection, show you photos of what we find, and send a written, itemized quote, usually within 24 hours."
+highlights:
+  - "Free on-site inspection, no obligation"
+  - "Written, itemized estimate within 24 hours"
+  - "No pressure. Take your time and compare"
+answer: "Alter Phase Roofing offers free roofing estimates on Staten Island, Brooklyn, Manhattan and Queens. We inspect the roof in person, photograph what we find and send a written, itemized estimate, usually within 24 hours, with no obligation. Call (929) 370-1552 or use the form."
+related:
+  - "/roof-replacement-cost-in-nyc/"
+  - "/how-we-work/"
+  - "/reviews/"
+  - "/contact/"
+faq:
+  - q: "Is the estimate really free?"
+    a: "Yes. The inspection and written estimate are free, with no obligation."
+  - q: "How long does the inspection take?"
+    a: "Usually 30 to 60 minutes for a house, longer for large or commercial roofs."
+  - q: "Do I need to be home?"
+    a: "It helps if we can check the attic or the inside of a leak, but for many exterior roofs we can inspect while you're out and walk you through the photos afterward."
+  - q: "What will the estimate include?"
+    a: "What's wrong, what we recommend, materials, labor, cleanup and disposal, permits when required, the warranty and the total price."
+modified: "2026-10-22"
 ---
-## Request a Free Roofing Estimate
+## What happens after you send the form
 
-Don't let roofing problems get you down - book our services today and start the process of fixing them.
+1. **We call you**, usually within the hour during business hours, to hear what's going on and set a visit time.
+2. **We inspect the roof** in person and take photos.
+3. **You get a written estimate** within about 24 hours, itemized, with options when there's more than one way to fix it.
+4. **You decide.** No pressure, no follow-up calls every day.
 
-## Schedule Your Free Roof Estimate
+Want a ballpark first? Try the cost estimator in our [NYC roof cost guide](/roof-replacement-cost-in-nyc/).
 
--   Your information is never sold or shared. It is used for the sole purpose of contacting you.
-
-## Free Roofing Estimate in Staten Island, Brooklyn & NYC – No-Pressure, All Clarity
-
-Need a **free roofing estimate in Staten Island or Brooklyn**? You’re in the right place. At **Alter Phase Roofing Contracting**, we make the process simple, fast, and transparent. Whether you’re dealing with a small leak, storm damage, or need a full roof replacement, we’ll come out, take a real look at your roof, and give you an honest quote, no strings attached.
-
-Our team is fully licensed, insured, and locally based right here in **Staten Island**, proudly serving all five boroughs with expert craftsmanship and reliable service.
-
-* * *
-
-### ![✅](https://s.w.org/images/core/emoji/15.1.0/svg/2705.svg) What’s Included in Your Free Estimate:
-
--   **On-site inspection by a roofing expert:** no “drone-only” evaluations
-
--   Full assessment of shingles, flashing, ventilation, gutters & roof decking
-
--   Clear recommendations for **repair or replacement**
-
--   **Written quote** with real pricing (no hidden fees or fine print)
-
--   Quick turnaround: most estimates delivered same-day
-
-* * *
-
-### ![📍](https://s.w.org/images/core/emoji/15.1.0/svg/1f4cd.svg) Local Roofing Services You Can Trust
-
-From **Staten Island roof repairs** to **flat roof installations in Brooklyn**, we know New York roofs inside and out. Our estimates are tailored to your home’s specific needs, local building codes, and real NYC weather conditions. We proudly serve:
-
--   Staten Island (Tottenville, West Brighton, New Dorp & more)
-
--   Brooklyn (Bay Ridge, Bensonhurst, Sheepshead Bay, etc.)
-
--   Queens, Manhattan & The Bronx
-
-Whether you’re a homeowner, landlord, or business owner, we’ve got your roof covered.
-
-* * *
-
-### ![📞](https://s.w.org/images/core/emoji/15.1.0/svg/1f4de.svg) Ready to Schedule Your Free Roofing Quote?
-
-Fill out the form above or call us at **[(929) 370-1552](tel:+19293701552)** to schedule your **free roof estimate**.
-
-Have a leak or emergency roof damage? Let us know, we offer fast response and priority scheduling for urgent situations.
+Water coming in right now? Don't wait for the form. Call [(929) 370-1552](tel:+19293701552) for [emergency roof repair](/roof-repair/emergency-service/).

@@ -1,33 +1,60 @@
 ---
 path: "/siding-gutter/siding-installation-repair/"
 template: service
-seoTitle: "Siding Installation & Repair | Alter Phase Roofing Inc."
-description: "Enhance your home's curb appeal and protection with Alter Phase Roofing's siding installation and repair services. Beautiful finishes, expert craftsmanship."
-h1: "Siding Installation & Repair"
-intro: "Enhance your home's curb appeal and protection with Alter Phase Roofing's siding installation and repair services. Beautiful finishes, expert craftsmanship."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-22"
-modified: "2024-11-24"
+seoTitle: "Vinyl Siding Installation & Repair Staten Island | Alter Phase"
+description: "Vinyl and insulated vinyl siding installation, replacement and repair on Staten Island and across NYC. Wide range of colors, written warranty."
+kicker: "Siding installation & repair"
+h1: "Vinyl siding installation and repair on Staten Island"
+intro: "New siding is the fastest way to make a house look new again, and it's your walls' first line of defense against wind-driven rain. We install vinyl and insulated vinyl siding and repair damaged sections."
+highlights:
+  - "Vinyl and insulated vinyl siding"
+  - "Wide range of colors and profiles"
+  - "Installed with proper house wrap and flashing"
+service: "Siding installation and repair"
+area: "Staten Island"
+wizard: "Gutters / siding / skylight"
+image: "/wp-content/uploads/2024/10/Siding-Replacement-Repair-Staten-Island.webp"
+imageAlt: "Siding replacement on a Staten Island home"
+answer: "We install, replace and repair vinyl and insulated vinyl siding on Staten Island and across NYC. Repair damaged panels when the rest of the siding is sound; replace it when it's faded, cracked, warped or letting water in. Insulated vinyl adds a foam backing that improves comfort and reduces outside noise."
+related:
+  - "/siding-gutter/"
+  - "/siding-gutter/gutter-installation-repair/"
+  - "/residential-roofing/roof-replacement/"
+faq:
+  - q: "How long does vinyl siding last?"
+    a: "Quality vinyl siding typically lasts several decades with little maintenance beyond an occasional wash."
+  - q: "What is insulated vinyl siding?"
+    a: "Vinyl siding with a rigid foam backing attached. It stiffens the panels, adds some insulation to the walls and helps reduce outside noise."
+  - q: "Can you match my existing siding for a repair?"
+    a: "We match profile and color as closely as possible. Older siding fades in the sun, so a repair on a sunny wall may look slightly different at first. We'll show you options before we start."
+modified: "2026-10-22"
 ---
-## Upgrade Your Home's Style & Protection with Beautiful Siding
+## Siding services
 
-Your home's siding is more than just an aesthetic element; it's a crucial line of defense against the elements. Alter Phase Roofing offers expert siding installation and repair services to safeguard your home and elevate its curb appeal.
+### Vinyl siding installation
 
-## Benefits of New Siding:
--   **Enhanced Curb Appeal:** Refresh your home’s exterior with a wide range of colors, styles, and materials.
--   **Increased Protection:** New siding protects your home from moisture, pests, and weather damage.
--   **Improved Energy Efficiency:** Insulated siding options can help lower your energy bills.
--   **Low Maintenance:** Modern siding materials are designed for durability and easy upkeep.
+Low-maintenance siding in a wide range of colors and profiles, installed over proper house wrap with flashed windows and doors.
 
-### Our Siding Services:
--   **New Siding Installation:** We’ll help you select the perfect siding for your home and provide meticulous installation for long-lasting beauty.
--   **Siding Repair:** From damaged panels to worn finishes, we expertly restore your siding’s appearance and function.
--   **Siding Replacement:** When repairs aren’t enough, we’ll guide you through a full siding replacement for a total transformation.
+### Insulated vinyl siding
 
-### The Alter Phase Roofing Difference
--   **Quality Materials:** We partner with trusted siding brands for lasting performance and style.
--   **Expert Craftsmanship:** Our team ensures proper installation techniques for a weathertight seal and flawless finish.
--   **Personalized Solutions:** We’ll help you find the siding that perfectly suits your home’s style and your budget.
+Foam-backed panels that feel more solid, help with comfort and reduce noise.
 
-**Ready to Upgrade Your Siding? Get Your Free Estimate Today**
+### Siding repair
+
+Cracked, loose or storm-damaged panels replaced, and the source of any water damage fixed.
+
+### Full siding replacement
+
+Old siding removed, sheathing checked and repaired, and new siding and trim installed.
+
+## Signs it's time for new siding
+
+- **Cracked, warped or loose panels**, especially after storms
+- **Fading** that makes the house look tired
+- **Water stains, peeling paint or mold** on interior walls
+- **Rising heating and cooling bills** with drafty rooms
+- Siding that **bulges** or feels soft, which points to water damage behind it
+
+## Roof, gutters and siding together
+
+Because we're a roofing company first, we pay attention to the places where siding meets the roof: step flashing, kick-out flashing and drip edge. Those details are where most wall leaks start. Doing [gutters](/siding-gutter/gutter-installation-repair/) and siding with a [roof replacement](/residential-roofing/roof-replacement/) is the most efficient way to protect the whole house.

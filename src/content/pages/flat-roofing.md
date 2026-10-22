@@ -1,33 +1,78 @@
 ---
 path: "/flat-roofing/"
 template: service
-seoTitle: "Flat Roofing | Alter Phase Roofing Inc."
-description: "Maximize protection and energy efficiency with Alter Phase Roofing's flat roofing expertise. New installations, repairs, maintenance for all types of flat roofs."
-h1: "Flat Roofing"
-intro: "Maximize protection and energy efficiency with Alter Phase Roofing's flat roofing expertise. New installations, repairs, maintenance for all types of flat roofs."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-22"
-modified: "2025-03-13"
+seoTitle: "Flat Roof Repair & Replacement NYC | TPO, EPDM | Alter Phase"
+description: "Flat roof repair and replacement in NYC: TPO, EPDM, PVC and modified bitumen for row homes and businesses. $8–$14/sq ft installed."
+kicker: "Flat roofing · NYC"
+h1: "Flat roof repair and replacement in New York City"
+intro: "Flat roofs are everywhere in NYC, and they fail in their own ways: open seams, ponding water, blistered membranes. We repair and replace every common flat roof system on homes, row houses and commercial buildings."
+highlights:
+  - "TPO, EPDM, PVC and modified bitumen (torch-down)"
+  - "Drainage fixed so water stops ponding"
+  - "Cool-roof and NYC code requirements handled"
+service: "Flat roofing"
+area: "New York City"
+wizard: "Flat roof"
+prices: ["flat", "boroughs"]
+estimator: true
+image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
+imageAlt: "White TPO flat roof installed by Alter Phase Roofing in New York City"
+answer: "A new flat roof in NYC costs about <strong>$8–$14 per sq ft</strong> installed: EPDM $8–$12, TPO $9–$14, modified bitumen $9–$13 and PVC $10–$16. A typical 1,000 sq ft row-home roof runs $8,000–$13,000 on Staten Island and $10,000–$17,000 in Brooklyn. Flat roof leak repairs usually cost $400–$1,200."
+related:
+  - "/service-area/brooklyn-ny/flat-roofing/"
+  - "/tpo-roofing-guide/"
+  - "/flat-roof-repair-and-replacement-in-nyc/"
+  - "/commercial-roofing/"
+  - "/roof-repair/commercial/"
+faq:
+  - q: "What is the best flat roof material for a NYC row home?"
+    a: "EPDM is the most cost-effective and handles freeze-thaw cycles well. TPO costs a bit more but its white surface keeps top floors cooler and helps meet NYC cool-roof rules. Modified bitumen is the toughest where people walk on the roof. We recommend based on your building, budget and how you use the roof."
+  - q: "How long does a flat roof last?"
+    a: "EPDM, TPO and modified bitumen typically last 20–30 years and PVC 25–35 years when installed properly and maintained. Ponding water and skipped maintenance are what shorten their lives most."
+  - q: "Is ponding water on a flat roof a problem?"
+    a: "Water that is still sitting 48 hours after rain speeds up membrane breakdown and adds weight. It usually means clogged drains or a low spot. We fix it with drain repairs, tapered insulation or crickets."
+  - q: "Can you install a new flat roof over the old one?"
+    a: "Sometimes a recover is allowed, but on most NYC row homes we recommend a tear-off so we can check the deck, fix wet insulation and get a proper manufacturer warranty."
+  - q: "Do I need a permit for a flat roof replacement in NYC?"
+    a: "Like-for-like replacement of the covering often doesn't need one, but changing the system, replacing the deck or work on commercial buildings usually does. Full replacements can also trigger NYC's cool-roof and sustainable roofing rules. We check and file when required."
+modified: "2026-10-22"
 ---
-## The Flat Roofing Specialists: Experience the Difference
+## Flat roof systems we install
 
-Flat roofs demand specialized knowledge and techniques for optimal performance and longevity. Alter Phase Roofing has extensive experience in all aspects of flat roofing, providing tailored solutions for commercial and residential properties.
+### EPDM (rubber)
 
-## Our Flat Roofing Services:
-### New Flat Roof Installations
-From durable TPO and EPDM membranes to innovative PVC and modified bitumen systems, we offer a comprehensive range of flat roofing materials to suit your building’s specific needs, budget, and performance goals. Our [experts work with you to design a flat roof](/service-area/brooklyn-ny/flat-roofing/) that seamlessly integrates with your commercial building’s architecture or enhances the functionality of your residential extension. We specialize in cool roof solutions, including highly reflective coatings and green roof systems, to help you reduce energy costs and improve your building’s environmental impact.
+$8–$12 per sq ft. The most cost-effective flat roof, flexible through NYC freeze-thaw cycles and the most common on residential row homes.
 
-### Flat Roof Repairs
-Whether it’s persistent leaks, membrane failures, ponding water, or damage from weather events, our technicians thoroughly investigate the root cause and provide long-lasting repair solutions. We understand the nuances of flat roofs, addressing not only the surface issue but also inspecting for potential problems in flashing, drainage, and underlying structural elements for comprehensive repairs.
+### TPO
 
-### Flat Roof Maintenance
-Maximize the lifespan of your flat roof with our proactive maintenance programs, which include regular inspections, debris removal, minor repairs, and detailed reporting to help you anticipate future needs. Proactive maintenance is not only about roof protection but also cost-effectiveness. By catching issues early, we help you avoid costly repairs and replacements down the line.
+$9–$14 per sq ft. A white, heat-welded membrane that reflects sun, keeps top floors cooler and suits larger roofs. See our [TPO roofing guide](/tpo-roofing-guide/).
 
-## Why Choose Alter Phase Roofing for Your Flat Roof?
--   **Flat Roof Expertise:** Our team is highly proficient in the complexities of flat roofing systems.
--   **Diverse Solutions:** We work with a wide range of flat roofing materials and technologies to provide the best fit for your needs.
--   **Problem-Solving Approach** We identify long-term solutions, not quick fixes, for your flat roof.
--   **Commitment to Quality:** From premium materials to meticulous workmanship, we ensure your flat roof’s lasting performance.
+### Modified bitumen
 
-**Protect Your Investment with a Superior Flat Roof: Get Your Free Estimate**
+$9–$13 per sq ft. Multi-ply torch-down or self-adhered roofing that stands up to foot traffic and rooftop equipment.
+
+### PVC
+
+$10–$16 per sq ft. Fire-resistant and chemical-resistant, ideal for restaurants and industrial roofs.
+
+## Flat roof repairs
+
+Most flat roof leaks start at the same few places: **seams**, **flashing at walls and parapets**, **drains and scuppers**, **penetrations** like vents and HVAC curbs, and **blisters or splits** in older membranes. We find the source, repair it with materials compatible with your existing roof, and fix the drainage problem that usually caused it. Most flat roof leak repairs cost $400–$1,200.
+
+Water coming in right now? Call our [24/7 emergency line](/roof-repair/emergency-service/).
+
+## Repair or replace your flat roof?
+
+**Repair** if the roof is under about 15 years old, the problem is in one area, and the membrane is still flexible.
+
+**Replace** if the roof is near or past 20 years, the insulation underneath is wet over large areas, there are multiple leaks, or repairs keep repeating.
+
+Our guide to [flat roof repair vs. replacement in NYC](/flat-roof-repair-and-replacement-in-nyc/) goes through the decision in detail.
+
+## Flat roofs and NYC rules
+
+New York City has its own requirements for flat roofs. Most new and replacement low-slope roofs must have a reflective "cool roof" surface, and full replacements on many buildings can trigger the sustainable roofing requirements of Local Laws 92 and 94 (solar or green roof areas). We tell you what applies to your building before you sign, and handle DOB filings when they're needed.
+
+## Where we work
+
+We install and repair flat roofs across [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/flat-roofing/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/), on houses, row homes, mixed-use buildings and [commercial properties](/commercial-roofing/).

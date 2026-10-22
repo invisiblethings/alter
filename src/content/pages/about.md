@@ -1,65 +1,59 @@
 ---
 path: "/about/"
 template: company
-seoTitle: "Our Story | Alter Phase Roofing"
-description: "Who are we and why you should trust us with your home..."
-h1: "About Us"
-intro: "Who are we and why should you trust us with your home"
+seoTitle: "About Us | Family-Owned Staten Island Roofers | Alter Phase"
+description: "Family-owned Staten Island roofing contractor with 13+ years in roofing. Owner Marke is on every job. GAF Master Elite, BBB accredited, NYC licensed."
+kicker: "About us"
+h1: "A family-owned roofing company where the owner is on every job"
+intro: "Alter Phase Roofing is a local, family-owned roofing contractor at 61 Appleby Ave on Staten Island. We've been in roofing for more than 13 years, and we still run the business the way we started it: honest advice, careful work, and our name on every roof."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg"
-imageAlt: "Alter Phase Roofing team photo taken on a worksite in Staten Island, NY"
-published: "2024-04-11"
-modified: "2024-11-24"
+imageAlt: "The Alter Phase Roofing crew on a roof in Staten Island"
+answer: "Alter Phase Roofing is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY, serving Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is part of every job. The company is a GAF Master Elite® contractor, BBB accredited, and licensed by NYC DCWP (#2129904-DCWP)."
+faq:
+  - q: "Who owns Alter Phase Roofing?"
+    a: "Alter Phase Roofing is family-owned and run by Marke, who is part of every job the company does."
+  - q: "How long have you been in business?"
+    a: "Our team has more than 13 years of experience in roofing."
+  - q: "Do you use subcontractors?"
+    a: "Your roof is installed by our own crew, with the owner involved from the first inspection to the final walkthrough."
+  - q: "What certifications do you have?"
+    a: "GAF Master Elite® certification, BBB accreditation, and an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
+modified: "2026-10-22"
 ---
-## The Alter Phase Roofing Story
+## How we're different
 
-We're not just a roofing company; we're a team of dedicated professionals passionate about protecting the homes and businesses of our community. With decades of combined experience, we've seen firsthand the importance of a quality roof. That's why we use only the finest materials, adhere to the highest standards of workmanship, and treat every project as if it were our own.
+Most roofing horror stories have the same ingredients: a salesperson who promises the moon and disappears, a crew nobody supervises, and patches sold as fixes, or new roofs sold to people who only needed a repair.
 
-**The Roofing Company Where You're More Than a Job Number.**
+We run Alter Phase around the opposite idea: **the owner is part of every job.** Marke inspects roofs, checks the work and walks customers through the result. When the person whose name is on the company is accountable for your roof, the work gets done right.
 
-At Alter Phase Roofing, we believe in transparent communication and unmatched customer service. No confusing jargon or hidden fees – just honest guidance, personalized solutions, and a hassle-free experience from start to finish.
+## What we believe
 
-**Decades of Experience. Ironclad Warranties. Peace of Mind Included.**
+### Honesty first
 
-We're not just roofers; we're certified experts in asphalt shingle and metal roofing. Our work is backed by both manufacturer and workmanship warranties, so you can rest assured that your investment is protected.
+If your roof needs a repair, not a replacement, we'll tell you. Many of our customers called expecting a new roof and got a repair instead.
 
-![Alter Phase Roofing team photo taken on a worksite in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15-1024x1014.jpg)
+### Do it once, do it right
 
-![Flat Roofing by Alter Phase Roofing in Staten Island, NY](/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11.jpg)
+Proper flashing, real underlayment, rotted wood replaced. No shortcuts we'd be embarrassed to show you.
 
-## Our Values
+### Clear communication
 
-Integrity: We do what we say we're going to do.
+Plain-English explanations, photos of what we find, and a written, itemized estimate.
 
-Craftsmanship: We take pride in our work.
+### Respect your home
 
-Customer Service: Your satisfaction is our top priority.
+Property protected, neighbors considered, and the site left cleaner than we found it.
 
-#### Efficient Service
+## Credentials
 
-We promise prompt response times for all calls because we value quick and effective service. In order to minimize the disruption to your day, our roofers will arrive at your home quickly, identify the issue, and begin working to fix it.
+- **GAF Master Elite®** certified roofing contractor
+- **BBB Accredited** business
+- **NYC DCWP Home Improvement Contractor** license #2129904-DCWP
+- **Fully insured**, with certificates of insurance available on request
+- **Warranties:** up to 50 years on materials and up to 25 years on workmanship
 
-#### Affordable Prices
+## Where we work
 
-We believe quality roofing should be accessible. Alter Phase Roofing provides competitive pricing and helps you find solutions that fit your budget.
+Our shop is at 61 Appleby Ave, Staten Island, NY 10305. Most of our work is on [Staten Island](/service-area/staten-island-ny/), and we also do a lot of roofing in [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/), for homeowners, businesses and [property managers](/property-managers/).
 
-## Whether you need a simple repair or a complete roof replacement, Alter Phase Roofing is committed to providing exceptional results and an experience that exceeds your expectations.
-
-### Our Mission
-
-Our mission is to deliver exceptional roofing solutions that protect our customers' homes and businesses, providing superior workmanship, honest communication, and lasting peace of mind.
-
-### Our Vision
-
-Our vision is to be a company where skilled professionals thrive, where we continuously expand our expertise, and where we offer the most advanced roofing solutions for our clients.
-
-![Google Guaranteed Badge for Alter Phase Roofing](/wp-content/uploads/2024/04/AlterPhase-Google-Guaranteed-300x115.png)
-
-![Accredited Business from BBB](/wp-content/uploads/2024/04/AB-seal-horz.svg.svg)
-
-![](/wp-content/uploads/2024/04/GAF-Masterelite-AlterPhaseRoofing-300x110.png)
-
-![5-Star Rating on Yelp](/wp-content/uploads/2024/04/AlterPhase-Yelp-Rating.png)
-
-![](/wp-content/uploads/2024/04/AlterPhase-Licensed-Insured-300x300.png)
-
-![](/wp-content/uploads/2024/04/AlterPhase-Google-5Star-300x145.png)
+Want to see how a job runs from start to finish? Read [how we work](/how-we-work/), or see what customers say in our [reviews](/reviews/).

@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { business, telHref } from '../data/business';
+---
+<Base title="Thank you | Alter Phase Roofing" description="We received your estimate request and will call you shortly." path="/thank-you/" noindex>
+  <section class="phero simple">
+    <div class="wrap"><div>
+      <span class="kicker">Request received</span>
+      <h1>Thank you. We'll call you shortly.</h1>
+      <p class="lead">We usually call back within the hour during business hours (Mon–Fri 8–8, Sat 8–5). If water is coming in right now, please call instead.</p>
+      <div class="cta-row" style="margin-top:1.25rem"><a class="btn btn-lg btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a></div>
+    </div></div>
+  </section>
+  <section class="sec"><div class="narrow">
+    <ol class="process" style="grid-template-columns:repeat(3,1fr)">
+      <li><h3>We call you</h3><p>We hear what's going on and set a time to visit.</p></li>
+      <li><h3>We inspect</h3><p>We get on the roof and photograph what we find.</p></li>
+      <li><h3>Written estimate</h3><p>Clear options and prices. No pressure, no obligation.</p></li>
+    </ol>
+    <p class="center" style="margin-top:2rem">While you wait: <a href="/roof-replacement-cost-in-nyc/">what a roof costs in NYC</a> · <a href="/reviews/">read our reviews</a></p>
+  </div></section>
+  <script is:inline>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'thank_you_view' });</script>
+</Base>

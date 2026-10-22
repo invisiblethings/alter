@@ -1,0 +1,45 @@
+---
+// Price tables rendered from src/data/costs.ts so every page quotes the same
+// numbers (and Service schema matches what's visible).
+import { materials, repairs, repairTiers, skylights, boroughs, money, range, COSTS_UPDATED } from '../data/costs';
+import { fmtDate } from '../lib/content';
+type Kind = 'repairs' | 'tiers' | 'flat' | 'pitched' | 'boroughs' | 'skylights';
+interface Props { kinds: Kind[]; area?: string }
+const { kinds, area } = Astro.props;
+const flat = materials.filter((m) => m.type === 'flat');
+const pitched = materials.filter((m) => m.type === 'pitched');
+const titles: Record<Kind, string> = {
+  repairs: 'Roof repair prices',
+  tiers: 'Repair cost by size of the job',
+  skylights: 'Skylight prices',
+  flat: 'Flat roof replacement prices',
+  pitched: 'Shingle & sloped roof prices',
+  boroughs: 'Flat roof replacement by borough (≈1,000 sq ft)',
+};
+---
+<div class="price-tables">
+  {kinds.map((k) => (
+    <div>
+      <h3 style="margin:1.5rem 0 0.25rem">{titles[k]}{area && k !== 'boroughs' ? ` in ${area}` : ''}</h3>
+      <div class="table-wrap">
+        {k === 'repairs' && (
+          <table class="t"><thead><tr><th>Repair</th><th>Typical cost</th></tr></thead>
+            <tbody>{repairs.map((r) => <tr><td>{r.name}</td><td class="num">{range(r.low, r.high)}</td></tr>)}</tbody></table>
+        )}
+        {(k === 'tiers' || k === 'skylights') && (
+          <table class="t"><thead><tr><th>Job</th><th>Typical cost</th><th>What it usually covers</th></tr></thead>
+            <tbody>{(k === 'tiers' ? repairTiers : skylights).map((r) => <tr><td><strong>{r.name}</strong></td><td class="num">{range(r.low, r.high)}</td><td>{r.what}</td></tr>)}</tbody></table>
+        )}
+        {(k === 'flat' || k === 'pitched') && (
+          <table class="t"><thead><tr><th>Material</th><th>Installed, per sq ft</th><th>1,000 sq ft roof</th><th>Lifespan</th><th>Best for</th></tr></thead>
+            <tbody>{(k === 'flat' ? flat : pitched).map((m) => <tr><td><strong>{m.name}</strong></td><td class="num">${m.low}–${m.high}</td><td class="num">{range(m.low * 1000, m.high * 1000)}</td><td>{m.life}</td><td>{m.bestFor}</td></tr>)}</tbody></table>
+        )}
+        {k === 'boroughs' && (
+          <table class="t"><thead><tr><th>Borough</th><th>Typical range</th><th>What drives the price</th></tr></thead>
+            <tbody>{boroughs.map((b) => <tr><td><strong>{b.name}</strong></td><td class="num">{money(b.low)}–{money(b.high)}+</td><td>{b.drivers}</td></tr>)}</tbody></table>
+        )}
+      </div>
+    </div>
+  ))}
+  <p class="muted" style="font-size:0.85rem;margin:0">Alter Phase Roofing job averages, updated {fmtDate(COSTS_UPDATED)}. Your exact price comes from a free on-site inspection.</p>
+</div>

@@ -1,7 +1,9 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { services, areas, company } from '../data/nav';
+import { allLinks, company } from '../data/nav';
 
-export type Entry = CollectionEntry<'pages'> | CollectionEntry<'posts'>;
+export type PageEntry = CollectionEntry<'pages'>;
+export type PostEntry = CollectionEntry<'posts'>;
+export type Entry = PageEntry | PostEntry;
 
 let cache: Entry[] | null = null;
 export async function allEntries(): Promise<Entry[]> {
@@ -11,97 +13,40 @@ export async function allEntries(): Promise<Entry[]> {
 
 export async function posts() {
   const list = await getCollection('posts');
-  return list.sort((a, b) => (b.data.published || '').localeCompare(a.data.published || ''));
+  return list.sort((a, b) => (b.data.modified || b.data.published || '').localeCompare(a.data.modified || a.data.published || ''));
 }
 
-// Short labels for breadcrumbs, taken from the menu where possible.
-const navTitles = new Map<string, string>();
-for (const s of services) {
-  navTitles.set(s.url, s.title);
-  for (const c of s.children) navTitles.set(c.url, c.title);
+export async function byPath(path: string) {
+  return (await allEntries()).find((e) => e.data.path === path);
 }
-for (const a of areas) {
-  navTitles.set(a.url, a.title);
-  for (const c of a.children || []) navTitles.set(c.url, c.title);
-}
-for (const c of company) navTitles.set(c.url, c.title);
-navTitles.set('/service-area/', 'Service Area');
-navTitles.set('/blog/', 'Blog');
+
+// Short breadcrumb labels from the menu; page H1s are too long for crumbs.
+const labels = new Map<string, string>();
+for (const l of [...allLinks(), ...company]) labels.set(l.url, l.title);
+labels.set('/service-area/', 'Service Areas');
+labels.set('/services/', 'Services');
+labels.set('/blog/', 'Roofing Guides');
+labels.set('/residential-roofing/', 'Residential Roofing');
+labels.set('/commercial-roofing/', 'Commercial Roofing');
+labels.set('/siding-gutter/', 'Siding & Gutters');
+labels.set('/roof-repair/', 'Roof Repair');
 
 export async function crumbsFor(path: string, ownTitle: string) {
-  const entries = await allEntries();
   const crumbs = [{ name: 'Home', url: '/' }];
   if (path === '/') return crumbs;
+  const entries = await allEntries();
+  const self = entries.find((e) => e.data.path === path);
+  if (self?.collection === 'posts') crumbs.push({ name: 'Roofing Guides', url: '/blog/' });
   const segs = path.split('/').filter(Boolean);
-  const isPost = entries.find((e) => e.data.path === path)?.collection === 'posts';
-  if (isPost) crumbs.push({ name: 'Blog', url: '/blog/' });
   for (let i = 1; i < segs.length; i++) {
     const p = '/' + segs.slice(0, i).join('/') + '/';
     const e = entries.find((x) => x.data.path === p);
-    if (e || navTitles.has(p)) crumbs.push({ name: navTitles.get(p) || e!.data.h1, url: p });
+    if (e || labels.has(p)) crumbs.push({ name: labels.get(p) || e!.data.h1, url: p });
   }
-  crumbs.push({ name: navTitles.get(path) || ownTitle, url: path });
+  crumbs.push({ name: labels.get(path) || ownTitle, url: path });
   return crumbs;
 }
 
-const stripMd = (s: string) =>
-  s
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
-    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/[*_`>#]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+export const readTime = (body = '') => Math.max(3, Math.round(body.split(/\s+/).length / 230));
 
-// FAQ pairs exactly as they appear on the page (same rule as the accordion
-// in rehypeSectionGroups), so FAQPage markup always matches visible text.
-export function extractFaq(body: string) {
-  const lines = body.split('\n');
-  const out: { q: string; a: string }[] = [];
-  let run: { level: number; q: string; a: string[] }[] = [];
-  const flush = () => {
-    const qs = run.filter((r) => r.q.endsWith('?')).length;
-    if (run.length >= 3 && qs / run.length >= 0.6) {
-      for (const r of run) if (r.q.endsWith('?') && r.a.length) out.push({ q: r.q, a: stripMd(r.a.join(' ')) });
-    }
-    run = [];
-  };
-  let cur: { level: number; q: string; a: string[] } | null = null;
-  for (const line of lines) {
-    const m = line.match(/^(#{2,6})\s+(.*)$/);
-    if (m) {
-      const level = m[1].length;
-      if (level <= 2 || (run.length && level !== run[0].level)) { flush(); cur = null; if (level <= 2) continue; }
-      if (level === 3 || level === 4) { cur = { level, q: stripMd(m[2]), a: [] }; run.push(cur); }
-      else cur = null;
-      continue;
-    }
-    if (cur && line.trim()) cur.a.push(line);
-  }
-  flush();
-  return out;
-}
-
-export function excerpt(body: string, words = 28) {
-  const para = body.split('\n\n').map(stripMd).find((p) => p.split(' ').length > 12) || '';
-  const w = para.split(' ');
-  return w.length > words ? w.slice(0, words).join(' ') + '…' : para;
-}
-
-export function areaFor(path: string, title: string) {
-  const s = (path + ' ' + title).toLowerCase();
-  if (s.includes('brooklyn')) return 'Brooklyn';
-  if (s.includes('manhattan')) return 'Manhattan';
-  if (s.includes('queens')) return 'Queens';
-  if (s.includes('staten')) return 'Staten Island';
-  if (s.includes('nyc') || s.includes('new york')) return 'New York City';
-  return 'Staten Island';
-}
-
-export function headingsOf(body: string) {
-  return body
-    .split('\n')
-    .map((l) => l.match(/^##\s+(.*)$/))
-    .filter(Boolean)
-    .map((m) => stripMd(m![1]));
-}
+export const fmtDate = (s?: string) => (s ? new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '');

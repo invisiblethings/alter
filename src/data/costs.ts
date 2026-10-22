@@ -35,6 +35,18 @@ export const repairs = [
   { name: 'Gutter / downspout repair', low: 150, high: 500 },
 ];
 
+export const repairTiers = [
+  { name: 'Minor repair', low: 150, high: 400, what: 'A few missing shingles, a pipe boot seal, small flashing reseal' },
+  { name: 'Moderate repair', low: 400, high: 1500, what: 'Flashing replacement, valley repair, leak tracing and fix' },
+  { name: 'Extensive repair', low: 1500, high: 3500, what: 'Storm-damaged sections, deck repair, chimney flashing rebuild' },
+];
+
+export const skylights = [
+  { name: 'Skylight repair', low: 450, high: 1500, what: 'Reseal, new flashing, glass or hardware fix' },
+  { name: 'Skylight replacement', low: 2000, high: 5300, what: 'Remove old unit, new skylight and flashing' },
+  { name: 'New skylight installation', low: 2500, high: 6000, what: 'New opening, unit, flashing, interior finish, permits' },
+];
+
 // Typical full replacement for a ~1,000 sq ft flat roof, by borough.
 export const boroughs = [
   { name: 'Staten Island', low: 8000, high: 13000, drivers: 'Least congested; detached homes; easy staging and debris removal' },

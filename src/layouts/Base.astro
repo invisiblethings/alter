@@ -33,7 +33,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content={robots} />
-    {path !== '/404/' && <link rel="canonical" href={canonicalUrl} />}
+    {path !== '/404/' && !noindex && <link rel="canonical" href={canonicalUrl} />}
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content={ogType} />

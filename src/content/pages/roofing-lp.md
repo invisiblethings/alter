@@ -1,137 +1,42 @@
 ---
 path: "/roofing-lp/"
 template: landing
-seoTitle: "Roofing Staten Island | Alter Phase Roofing | Alter Phase Roofing Inc."
-description: "🏠"
-h1: "Staten Island’s #1 Choice for Stress-Free Roof Replacement & Repair"
-image: "/wp-content/uploads/2025/05/BBB-Accredited.png"
-imageAlt: "Roofing Staten Island | Alter Phase Roofing"
 noindex: true
-published: "2026-03-09"
-modified: "2026-03-09"
-projects:
-  - title: "Roof Replacement"
-    location: "Residential Asphalt Shingle Roof Replacement in Staten Island, NY"
-    image: "/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304.jpg"
-  - title: "Roof Replacment"
-    location: "10314, Staten Island"
-    image: "/wp-content/uploads/2025/05/IMG-d52b89e8d54e11c5b9d6a9577467ad33-V.jpg"
-  - title: "Newly Installed Roof"
-    location: "Staten Island, NY"
-    image: "/wp-content/uploads/2025/04/New-roof-replacement-in-Staten-Island.jpg"
-  - title: "GAF Shingle Roof Replacement"
-    location: "Staten Island, NY"
-    image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
+trackingPhone: "(929) 800-8572"
+seoTitle: "Staten Island Roofing | Free Estimate | Alter Phase Roofing"
+description: "Family-owned Staten Island roofers: roof repair and replacement with up to 50-year warranties. Free inspection and written estimate within 24 hours. Call today."
+kicker: "Staten Island roofing"
+h1: "Leaking or worn-out roof? Get an honest answer this week."
+intro: "Family-owned Staten Island roofers. We inspect for free, show you photos, and tell you straight whether you need a repair or a new roof."
+highlights:
+  - "Free inspection and written estimate within 24 hours"
+  - "Up to 50-year material and 25-year workmanship warranties"
+  - "Owner on every job, our own crew, no subcontractors"
+service: "Roofing"
+area: "Staten Island"
+prices: ["pitched", "repairs"]
+image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
+imageAlt: "New roof on a Staten Island home"
+answer: "Most Staten Island roof repairs cost $300–$1,200, and most full replacements $10,000–$30,000. Book a free inspection and you'll have a written, itemized price within about 24 hours, with no pressure to decide."
+faq:
+  - q: "How fast can you come out?"
+    a: "We usually schedule inspections within a few days, and same-day for active leaks."
+  - q: "Do you really tell people when they only need a repair?"
+    a: "Yes. Many of our customers called about a new roof and ended up with a repair. We'd rather keep a customer for life."
+  - q: "Are you licensed and insured?"
+    a: "Yes. NYC DCWP license #2129904-DCWP, fully insured, GAF Master Elite® and BBB accredited."
+modified: "2026-10-22"
 ---
-![](/wp-content/uploads/2025/05/Alter-Phase-Roofing-Rating.png)
+## Still dealing with these?
 
--   UP TO 50 YEARS WARRANTY
--   Licensed & Insured
--   Affordable prices
+- Water stains spreading across a ceiling
+- Shingles cracking, curling or blowing off in storms
+- A "quick fix" from someone else that didn't last
+- A roof that's 20+ years old and you're not sure how long it has left
 
-### Get Your Free Estimate TODAY!
+## What makes us different
 
-Fill out the form below or call us and get a free estimate for your roofing needs today.
-
-![Google Guaranteed Badge for Alter Phase Roofing](/wp-content/uploads/2024/04/AlterPhase-Google-Guaranteed-300x115.png)
-
-![](/wp-content/uploads/2025/05/BBB-Accredited-300x169.png)
-
-![](/wp-content/uploads/2024/04/GAF-Masterelite-AlterPhaseRoofing-300x110.png)
-
-![5-Star Rating on Yelp](/wp-content/uploads/2024/04/AlterPhase-Yelp-Rating.png)
-
-![](/wp-content/uploads/2024/04/AlterPhase-Licensed-Insured-300x300.png)
-
-![](/wp-content/uploads/2024/04/AlterPhase-Google-5Star-300x145.png)
-
-## Still Dealing With…
-
--   ❌ Water stains spreading across your ceiling?
--   ❌ Shingles cracking, curling, or blowing off in storms?
--   ❌ A leaky roof that keeps coming back no matter how many times it's "fixed"?
--   ❌ Contractors who ghost you after giving a quote?
-
-Stop living with a roof that's working against you! **Whether you need a full replacement or a targeted repair, Alter Phase Roofing gets it done right the first time, so you can stop worrying and start living.**
-
-[GET MY FREE ROOF QUOTE](#free-estimate)
-
-## What Makes Us Different?
-
-Fast Turnarounds
-
-Most jobs done in a day.
-No drawn-out projects, no stress.
-
-Up to 50-Year Warranties
-
-Real, certified protection.
-We stand behind every shingle, every repair, every time.
-
-Upfront, Honest Pricing
-
-No bait-and-switch. No hidden fees.
-You get a clear quote before we lift a hammer.
-
-Local Staten Island Team
-
-We know every code, neighborhood,
-and weather pattern—we live here too.
-
-99.9% Satisfaction Rate
-
-We go above and beyond for every project.
-That's why our customers love us.
-
-![](/wp-content/uploads/2025/05/Roof-Replacement-STATEN-ISLAND.webp)
-
-![Roof Replacement in Staten Island, NY](/wp-content/uploads/2024/04/Roofing-AlterPhase2.jpg)
-
-## Full-Service Roofing: Replacement, Repair & Everything In Between
-
-### Roof Replacement
-
-Is your roof past its prime? We'll replace it completely with premium materials, installed by certified pros. Fast, clean, and built to last decades.
-
-### Roof Repair
-
-From minor leaks to major storm damage, we diagnose the problem fast and fix it right. Honest repairs at fair prices. No unnecessary upsells.
-
-### Free Estimates
-
-Not sure if you need a repair or a full replacement? We'll inspect your roof and give you an honest, no-obligation recommendation, same day, no pressure.
-
-### Emergency Roof Services
-
-Severe storm? Fallen tree? Active leak? We offer emergency response across Staten Island. Call us now and we'll be there fast.
-
-[📞 CALL NOW: (929) 800-8572](tel:+19298008572)
-
-One call, one team — replacement, repair, or emergency, we've got you covered.
-
-## Roof Replacement in Staten Island Starting at Just $5,500
-
-Every roof is unique.
-Get a personal price estimate within 24 hours—**no pushy sales, no surprise fees.**
-
-[GET MY FREE ESTIMATE](#free-estimate)
-
-**Fast, No-Obligation. Most quotes delivered same-day!**
-Licensed • Insured • Local Staten Island Crew
-
-### STEP 1
-
-Roof Inspection: Schedule a no-obligation estimate to assess your roofing needs.
-
-## Our Recent Projects
-
-With years of experience and a commitment to excellence, we're the roofing company you can trust.
-
-## Ready for a Roof That Lasts Decades?
-
-Fill out the quick form below for a **same-day inspection & precise estimate**.
-Or, call [(929) 800-8572](tel:+19298008572) to talk to a real Staten Island roofer now.
-
-100% Local • No Obligation • No Spam, Ever
-
-⭐️ **Most estimates delivered same-day!** Your info goes directly to our Staten Island team—never a call center.
+- **Fast turnarounds.** Most roof replacements are done in one to two days.
+- **Real warranties.** Up to 50 years on materials and 25 years on workmanship, in writing.
+- **No pushy sales.** You get photos, a written estimate and time to decide.
+- **Local and family-owned.** Our shop is at 61 Appleby Ave, Staten Island.

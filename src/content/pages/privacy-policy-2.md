@@ -1,13 +1,10 @@
 ---
 path: "/privacy-policy-2/"
 template: legal
-seoTitle: "Privacy Policy | Alter Phase Roofing Inc."
-description: "Last updated: April 02, 2024"
-h1: "Privacy Policy"
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-12"
-modified: "2024-04-12"
+seoTitle: "Privacy Policy | Alter Phase Roofing"
+description: "How Alter Phase Roofing collects, uses and protects your personal information when you visit our website or request a roofing estimate."
+h1: "Privacy policy"
+modified: "2026-10-22"
 ---
 Last updated: April 02, 2024
 

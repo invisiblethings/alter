@@ -1,35 +1,64 @@
 ---
 path: "/commercial-roofing/roof-inspection/"
 template: service
-seoTitle: "Commercial Roof Inspections | Alter Phase Roofing Inc."
-description: "Proactive roof care is essential for commercial buildings. Alter Phase Roofing's inspections uncover potential issues, inform maintenance plans, and extend your roof's lifespan."
-h1: "Commercial Roof Inspections"
-intro: "Proactive roof care is essential for commercial buildings. Alter Phase Roofing's inspections uncover potential issues, inform maintenance plans, and extend your roof's lifespan."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-22"
-modified: "2024-11-24"
+seoTitle: "Commercial Roof Inspection NYC | Photo Reports | Alter Phase"
+description: "Commercial roof inspections in NYC with photo reports on membrane, seams, drains, flashing and remaining life. For owners and managers."
+kicker: "Commercial roof inspections"
+h1: "Commercial roof inspections with photo condition reports"
+intro: "Know what you have on top of your building before it becomes an emergency. Our inspections give owners, managers and boards a clear picture of condition, remaining life and what to budget for."
+highlights:
+  - "Photo report of every issue, with locations"
+  - "Prioritized list: fix now, plan for, monitor"
+  - "Ideal twice a year for flat roofs"
+service: "Commercial roof inspection"
+area: "New York City"
+wizard: "Inspection"
+image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7.jpg"
+imageAlt: "Commercial flat roof project in New York City"
+answer: "A commercial roof inspection checks the membrane, seams, flashing, drains, rooftop equipment curbs and signs of wet insulation, then documents everything with photos. Flat commercial roofs should be inspected twice a year (spring and fall) and after major storms, so small repairs never turn into replacements."
+related:
+  - "/commercial-roofing/"
+  - "/roof-repair/commercial/"
+  - "/commercial-roofing/roof-replacement/"
+  - "/property-managers/"
+  - "/residential-roofing/roof-inspections/"
+faq:
+  - q: "How often should a commercial roof be inspected?"
+    a: "Twice a year, in spring to catch winter damage and in fall before the cold season, plus after major storms or any rooftop equipment work."
+  - q: "What do I get after the inspection?"
+    a: "A photo report showing the roof's overall condition, every issue we found and where it is, and a prioritized list of repairs with prices, so you can budget and get approvals."
+  - q: "Can an inspection help with insurance or a building purchase?"
+    a: "Yes. A documented condition report is useful for insurance claims after storms, for due diligence when buying a building, and for capital planning."
+modified: "2026-10-22"
 ---
-## Minimize Risk, Maximize Protection: Invest in Commercial Roof Inspections
+## What a commercial inspection covers
 
-Your commercial roof is a significant investment that requires proactive care to safeguard your business. Alter Phase Roofing's thorough roof inspections provide a detailed assessment of your roof's condition, empowering you to make informed decisions for its long-term health.
+### Membrane & seams
 
-## Why Are Commercial Roof Inspections Important?
--   **Prevent Costly Repairs:** Catch small issues before they escalate into major problems and disruptions.
--   **Maximize Roof Lifespan:** Proactive maintenance and timely repairs can significantly extend your roof’s lifespan.
--   **Budget Planning:** Inspections help you anticipate future repair or replacement needs for informed budgeting.
--   **Insurance Purposes:** Detailed inspection reports can be valuable for insurance claims or building appraisals.
--   **Peace of Mind:** Gain confidence in your roof’s condition and avoid unexpected surprises.
+Splits, punctures, shrinkage, open seams and UV wear on TPO, PVC, EPDM and modified bitumen.
 
-### Our Inspection Process:
--   **Comprehensive Assessment:** We examine all roof components, including surface materials, flashing, drainage, and more.
--   **Detailed Documentation:** We provide a thorough report with photos, findings, and clear recommendations.
--   **Maintenance Recommendations:** Expert advice on repairs or maintenance to preserve your roof’s integrity.
--   **Risk Assessment:** We identify areas of vulnerability to help you make proactive decisions.
+### Drainage
 
-### Choose Alter Phase Roofing for Your Commercial Roof Inspections
--   **Experienced Technicians:** Our team is trained to identify all types of commercial roof issues.
--   **Non-Invasive Methods:** We prioritize inspection techniques that minimize disruption.
--   **Customized Approach:** We tailor our inspections to your roof’s specific type, age, and condition.
+Drains, scuppers, gutters and ponding areas. Standing water is the fastest way to shorten a roof's life.
 
-**Schedule Your Inspection & Protect Your Business**
+### Flashing & parapets
+
+Wall and parapet flashing, coping, counterflashing and edge metal.
+
+### Penetrations & equipment
+
+HVAC curbs, vents, pipes and anything bolted through the roof.
+
+### Insulation moisture
+
+Soft spots and blisters that indicate wet insulation under the membrane.
+
+### Safety & access
+
+Hatches, ladders and walkway pads, so service techs don't damage the roof.
+
+## Why regular inspections pay for themselves
+
+A commercial flat roof should last 20–30 years. Most don't, because small problems, like a clogged drain, a lifted seam or a cracked boot around a vent, go unnoticed until water reaches the ceiling tiles. Catching those during a twice-yearly inspection costs a few hundred dollars to fix. Finding them after the insulation is saturated can mean a [full replacement](/commercial-roofing/roof-replacement/).
+
+Managing several properties? We can inspect your whole portfolio on a schedule and send each report in the same format. See [roofing for property managers, HOAs and co-op boards](/property-managers/).

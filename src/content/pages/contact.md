@@ -1,27 +1,44 @@
 ---
 path: "/contact/"
 template: contact
-seoTitle: "Get in touch with us | Alter Phase Roofing"
-description: "We value the opportunity to connect with our customers and answer any questions they may have. Call: (929) 370-1552"
-h1: "Contact Us"
-intro: "We value the opportunity to connect with our customers and answer any questions they may have."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-11"
-modified: "2024-11-24"
+seoTitle: "Contact Alter Phase Roofing | Staten Island | (929) 370-1552"
+description: "Contact Alter Phase Roofing, 61 Appleby Ave, Staten Island, NY 10305. Call or text (929) 370-1552. Emergency roof repair 24/7."
+kicker: "Contact us"
+h1: "Contact Alter Phase Roofing"
+intro: "Call, text, email or send the form. You'll reach our Staten Island team, not a call center, and we usually reply within the hour during business hours."
+highlights:
+  - "<strong>Phone & text:</strong> <a href=\"tel:+19293701552\">(929) 370-1552</a>"
+  - "<strong>Email:</strong> <a href=\"mailto:info@alterphaseroofing.com\">info@alterphaseroofing.com</a>"
+  - "<strong>Shop:</strong> 61 Appleby Ave, Staten Island, NY 10305"
+answer: "Call or text Alter Phase Roofing at <a href=\"tel:+19293701552\">(929) 370-1552</a> or email info@alterphaseroofing.com. Our shop is at 61 Appleby Ave, Staten Island, NY 10305. Hours: Monday–Friday 8am–8pm, Saturday 8am–5pm, Sunday closed. Emergency roof repair calls are answered 24/7."
+related:
+  - "/free-estimate/"
+  - "/roof-repair/emergency-service/"
+  - "/service-area/"
+  - "/reviews/"
+modified: "2026-10-22"
 ---
-**(929) 370-1552**
+## Hours
 
-Phone Number
+| Day | Hours |
+| --- | --- |
+| Monday – Friday | 8:00 AM – 8:00 PM |
+| Saturday | 8:00 AM – 5:00 PM |
+| Sunday | Closed |
+| Emergencies | 24/7 at (929) 370-1552 |
 
-**info@alterphaseroofing.com**
+## Find us
 
-Email Address
+Alter Phase Roofing, 61 Appleby Ave, Staten Island, NY 10305. [Open in Google Maps](https://www.google.com/maps?cid=15794678866958250729).
 
-**61 Appleby Ave, Staten Island, NY 10305**
+We serve [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).
 
-Office Address
+## What to tell us
 
-## Leave Us a Message
+The more we know, the faster we can help:
 
-Fill out the form, and one of our friendly customer service representatives will be in touch with you shortly.
+- The **property address** and whether it's a house, row home, or commercial or multi-family building
+- **What you're seeing:** a leak, missing shingles, an old roof, a skylight problem
+- **Photos**, if you can take them safely from the ground or from inside
+
+Looking for work with us? See [careers](/careers/).

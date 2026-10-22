@@ -1,0 +1,53 @@
+---
+// Every page and guide in src/content is served at its own path.
+import Base from '../layouts/Base.astro';
+import ServiceView from '../components/ServiceView.astro';
+import PostView from '../components/PostView.astro';
+import SimpleView from '../components/SimpleView.astro';
+import { allEntries, crumbsFor, type Entry, type PageEntry, type PostEntry } from '../lib/content';
+import { pageGraph } from '../lib/schema';
+import { materials, repairs, repairTiers, skylights } from '../data/costs';
+
+export async function getStaticPaths() {
+  return (await allEntries())
+    .filter((e) => e.data.template !== 'archive')
+    .map((e) => ({ params: { slug: e.data.path.replace(/^\/|\/$/g, '') || undefined }, props: { entry: e } }));
+}
+
+const { entry } = Astro.props as { entry: Entry };
+const d = entry.data;
+const crumbs = await crumbsFor(d.path, d.h1);
+const html = entry.rendered?.html || '';
+const headings = (entry.rendered?.metadata?.headings as { depth: number; slug: string; text: string }[]) || [];
+const t = d.template;
+
+const prices = 'prices' in d ? d.prices : [];
+const flat = materials.filter((m) => m.type === 'flat');
+const pitched = materials.filter((m) => m.type === 'pitched');
+const price = prices.includes('skylights') ? { min: skylights[0].low, max: skylights[2].high }
+  : prices.includes('tiers') ? { min: repairTiers[0].low, max: repairTiers[2].high }
+  : prices.includes('repairs') ? { min: Math.min(...repairs.map((r) => r.low)), max: Math.max(...repairs.map((r) => r.high)) }
+  : prices.includes('flat') ? { min: Math.min(...flat.map((m) => m.low)), max: Math.max(...flat.map((m) => m.high)), unit: 'square foot' }
+  : prices.includes('pitched') ? { min: Math.min(...pitched.map((m) => m.low)), max: Math.max(...pitched.map((m) => m.high)), unit: 'square foot' }
+  : undefined;
+
+const kind = t === 'post' ? 'post'
+  : ['service', 'location', 'hub', 'landing'].includes(t) ? 'service'
+  : t === 'contact' ? 'contact'
+  : d.path === '/about/' ? 'about'
+  : 'page';
+
+const schema = pageGraph({
+  url: d.path, title: d.seoTitle, description: d.description, image: d.image,
+  published: d.published, modified: d.modified, crumbs, kind, h1: d.h1,
+  serviceArea: 'area' in d ? d.area : undefined,
+  serviceName: 'service' in d ? d.service : undefined,
+  price, faq: d.faq,
+});
+---
+<Base title={d.seoTitle} description={d.description} path={d.path} image={d.image} imageAlt={d.imageAlt} noindex={d.noindex}
+  ogType={t === 'post' ? 'article' : 'website'} published={d.published} modified={d.modified} schema={schema}>
+  {t === 'post' ? <PostView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
+    : ['company', 'legal', 'reviews'].includes(t) ? <SimpleView entry={entry as PageEntry} html={html} crumbs={crumbs} />
+    : <ServiceView entry={entry as PageEntry} html={html} crumbs={crumbs} />}
+</Base>

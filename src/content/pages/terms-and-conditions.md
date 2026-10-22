@@ -1,13 +1,10 @@
 ---
 path: "/terms-and-conditions/"
 template: legal
-seoTitle: "Terms and Conditions | Alter Phase Roofing Inc."
-description: "Last updated: April 02, 2024"
-h1: "Terms and Conditions"
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-12"
-modified: "2024-04-12"
+seoTitle: "Terms and Conditions | Alter Phase Roofing"
+description: "The terms and conditions for using the Alter Phase Roofing website, alterphaseroofing.com, operated from Staten Island, New York."
+h1: "Terms and conditions"
+modified: "2026-10-22"
 ---
 Last updated: April 02, 2024
 

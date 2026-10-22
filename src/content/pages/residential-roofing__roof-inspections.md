@@ -1,34 +1,71 @@
 ---
 path: "/residential-roofing/roof-inspections/"
 template: service
-seoTitle: "Residential Roof Inspections | Alter Phase Roofing Inc."
-description: "Gain peace of mind with Alter Phase Roofing's thorough residential roof inspections. Uncover potential problems early, get expert advice, and extend your roof's lifespan."
-h1: "Residential Roof Inspection"
-intro: "Gain peace of mind with Alter Phase Roofing's thorough residential roof inspections. Uncover potential problems early, get expert advice, and extend your roof's lifespan."
-image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
-imageAlt: "alterphaseroofing.com OpenGraph"
-published: "2024-04-22"
-modified: "2024-11-24"
+seoTitle: "Roof Inspection Staten Island & NYC | Photo Reports"
+description: "Roof inspections for Staten Island and NYC homes, with photos and a plain-English report. Free with every estimate. Buying, selling or after storms."
+kicker: "Roof inspections"
+h1: "Roof inspections with photos and an honest report"
+intro: "Find out exactly what shape your roof is in before you buy, sell, file an insurance claim or spend money on repairs. We climb up, photograph everything and explain it in plain English."
+highlights:
+  - "Free with every repair or replacement estimate"
+  - "Photos of every problem area, and of what's fine"
+  - "Clear advice on what needs attention now and what can wait"
+service: "Roof inspection"
+area: "Staten Island"
+wizard: "Inspection"
+image: "/wp-content/uploads/2024/04/AlterPhase-Roof-Inspection.jpg"
+imageAlt: "Alter Phase Roofing roofer inspecting a residential roof"
+answer: "A roof inspection checks shingles or membrane, flashing, vents, gutters, the attic and the deck for damage and remaining life. We include one free with every estimate, with photos and a written summary. Have your roof inspected once a year, after major storms, and before buying or selling a home."
+related:
+  - "/roof-repair/residential/"
+  - "/residential-roofing/roof-replacement/"
+  - "/commercial-roofing/roof-inspection/"
+  - "/all-seasons-roofing-staten-island/"
+faq:
+  - q: "How often should I have my roof inspected?"
+    a: "Once a year for most homes, ideally in spring or fall, plus after any major storm. Flat roofs benefit from twice-yearly checks because small problems spread faster on them."
+  - q: "How long does a roof inspection take?"
+    a: "Usually 30 to 60 minutes for a typical house, longer if we need to check the attic or several roof sections."
+  - q: "Will you try to sell me a roof?"
+    a: "No. If your roof is in good shape, we'll say so and show you the photos. If it needs work, you get a written estimate with options and no pressure."
+  - q: "Can you inspect a house I'm buying?"
+    a: "Yes. A dedicated roof inspection gives you far more detail than a general home inspection, which often only looks from the ground. Call us to schedule before your contingency deadline."
+modified: "2026-10-22"
 ---
-## Proactive Roof Care: Invest in Peace of Mind with a Roof Inspection
+## What we check
 
-Don't wait for leaks or damage to reveal your roof's hidden problems. Alter Phase Roofing's comprehensive residential roof inspections provide an in-depth assessment of your roof's condition, empowering you to make informed decisions for its long-term health.
+### Roof surface
 
-## Why Get a Roof Inspection?
--   **Prevent Costly Surprises:** Catch small issues before they escalate into major repairs or replacements.
--   **Maximize Your Roof’s Lifespan:** Proactive maintenance and timely repairs can add years to your roof’s lifespan.
--   **Insurance & Real Estate:** Inspections can be helpful for insurance claims, appraisals, or when buying/selling a home.
--   **Peace of Mind:** Know the true state of your roof with a detailed inspection report and recommendations.
+Shingles for curling, cracking, missing pieces and granule loss; flat-roof membranes for splits, blisters, open seams and ponding.
 
-### What Our Inspections Include:
--   Thorough assessment of shingles, flashing, gutters, ventilation, and other roof components.
--   Identification of existing damage, wear and tear, or potential problem areas.
--   Detailed report with photos and clear explanations of findings.
--   Recommendations for repairs or maintenance to safeguard your roof.
+### Flashing
 
-### The Alter Phase Roofing Advantage
--   **Certified Experts:** Our technicians are trained to spot even subtle signs of roof deterioration.
--   **Unbiased Assessment:** We provide honest evaluations and solutions tailored to your roof’s needs.
--   **Affordable Prevention:** A roof inspection is a small investment that can save you thousands in the long run.
+Chimneys, walls, valleys, skylights and vents, the most common places leaks start.
 
-**Schedule Your Inspection Today and Protect Your Home**
+### Penetrations & vents
+
+Pipe boots, exhaust vents and ridge ventilation, which affects both leaks and attic moisture.
+
+### Gutters & edges
+
+Drip edge, fascia and gutters, to make sure water actually leaves the roof.
+
+### Attic
+
+Daylight, stains, damp insulation and mold, which reveal leaks you can't see from outside.
+
+### Deck
+
+Soft or sagging spots that point to rotted sheathing underneath.
+
+## When to get an inspection
+
+- **Before buying a home.** Roof problems are expensive surprises, and a general home inspection rarely goes up on the roof.
+- **Before selling.** Know what a buyer's inspector will find, and fix it on your terms.
+- **After a storm.** Wind and hail damage isn't always visible from the ground, and insurers set deadlines for claims.
+- **When you see a stain.** A small ceiling stain today is a much bigger repair next season.
+- **Every year or two.** Regular checks catch cheap fixes before they become [emergency repairs](/roof-repair/emergency-service/).
+
+## What you get
+
+A summary of your roof's condition, photos of anything that needs attention, an estimate of remaining life, and a clear list of what to fix now, what to watch and what can wait. If repairs are needed, we give you a written price, usually within 24 hours. Managing a commercial property or HOA? See [commercial roof inspections](/commercial-roofing/roof-inspection/).
