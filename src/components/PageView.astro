@@ -1,0 +1,102 @@
+---
+import Icon from './Icon.astro';
+import Skyline from './Skyline.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import EstimateForm from './EstimateForm.astro';
+import Reviews from './Reviews.astro';
+import Process from './Process.astro';
+import CtaBand from './CtaBand.astro';
+import CostCalculator from './CostCalculator.astro';
+import { business, telHref } from '../data/business';
+import { services, areas } from '../data/nav';
+import type { Entry } from '../lib/content';
+
+interface Props { entry: Entry; html: string; crumbs: { name: string; url: string }[]; hasCalculator: boolean }
+const { entry, html, crumbs, hasCalculator } = Astro.props;
+const d = entry.data;
+const t = d.template;
+const showForm = ['service', 'location', 'contact', 'landing'].includes(t);
+const lead = d.intro || (t === 'legal' ? '' : d.description);
+const heroImg = d.image && !d.image.includes('OpenGraph') ? d.image : undefined;
+
+// Related links: siblings and parent in the menu, so every page links onward.
+const all = [...services.flatMap((s) => [s, ...s.children]), ...areas.flatMap((a) => [a, ...(a.children || [])])];
+const parentPath = d.path.split('/').filter(Boolean).slice(0, -1).join('/');
+const related = all.filter((l) => l.url !== d.path && (parentPath ? l.url.startsWith('/' + parentPath + '/') : false)).slice(0, 6);
+const relatedLinks = related.length >= 2 ? related : all.filter((l) => l.url !== d.path).slice(0, 6);
+---
+<section class:list={['page-hero', showForm && 'has-form']}>
+  {heroImg && <div class="page-hero-media"><img src={heroImg} alt="" loading="eager" decoding="async" /></div>}
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      <h1>{d.h1}</h1>
+      {lead && <p class="lead">{lead}</p>}
+      {t !== 'legal' && (
+        <>
+          <div class="hero-actions">
+            <a class="btn btn-gold btn-lg" href={telHref}><Icon name="phone" /> Call {business.phone}</a>
+            {!showForm && <a class="btn btn-ghost-light btn-lg" href="/free-estimate/">Free estimate</a>}
+          </div>
+          <ul class="hero-mini-proof">
+            <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span> {business.rating.count} Google reviews</li>
+            <li><Icon name="award" /> GAF Master Elite®</li>
+            <li><Icon name="shield" /> Up to {business.warranty.manufacturerYears}-yr warranty</li>
+            <li><Icon name="license" /> Lic. #{business.license.number}</li>
+          </ul>
+        </>
+      )}
+    </div>
+    {showForm && <EstimateForm idPrefix="hero" compact heading="h2" title="Free inspection & estimate" />}
+  </div>
+  <Skyline />
+</section>
+
+<section class="section" style="padding-top:clamp(2rem,4vw,3rem)">
+  <div class:list={['wrap', t !== 'legal' && 'layout']}>
+    <article class="prose" set:html={html} />
+    {t !== 'legal' && (
+      <aside class="sidebar" aria-label="Contact and related services">
+        <div class="side-card side-call">
+          <h2>Talk to a real roofer</h2>
+          <p style="margin:0;font-size:0.92rem">Family-owned, Staten Island-based. Marke is part of every job.</p>
+          <a class="phone-big" href={telHref}>{business.phone}</a>
+          <a class="btn btn-gold btn-block" href="/free-estimate/">Get a free estimate</a>
+          <p style="margin:0.9rem 0 0;font-size:0.82rem;color:#b8c5dd">Mon–Fri 8–8 · Sat 8–5 · Emergencies 24/7</p>
+        </div>
+        <div class="side-card">
+          <h2>Related services</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem">
+            {relatedLinks.map((l) => <li><a href={l.url} style="display:flex;gap:0.4rem;align-items:center;text-decoration:none;font-weight:700"><Icon name="arrow" class="" />{l.title}</a></li>)}
+          </ul>
+        </div>
+        <div class="side-card">
+          <h2>Our warranty</h2>
+          <p style="font-size:0.92rem;margin:0">Up to <strong>{business.warranty.manufacturerYears} years</strong> manufacturer coverage and up to <strong>{business.warranty.workmanshipYears} years</strong> on our workmanship, in writing on every roof we install.</p>
+        </div>
+      </aside>
+    )}
+  </div>
+</section>
+
+{d.projects && d.projects.length > 0 && (
+  <section class="section section-sand" aria-labelledby="proj-title">
+    <div class="wrap">
+      <div class="section-head"><span class="eyebrow">Recent work</span><h2 id="proj-title">Recent projects</h2></div>
+      <div class="projects">
+        {d.projects.filter((p) => p.image).slice(0, 8).map((p) => (
+          <figure class="project">
+            <img src={p.image} alt={`${p.title}, ${p.location}`} width="600" height="600" loading="lazy" decoding="async" />
+            <figcaption><strong>{p.title}</strong>{p.location}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+{t !== 'legal' && t !== 'reviews' && <Reviews limit={3} title="What our customers say" />}
+{t === 'reviews' && <Reviews limit={20} title="Customer reviews" eyebrow="Verified on Google" />}
+{['company', 'service', 'location'].includes(t) && <Process />}
+{t !== 'legal' && <CtaBand withForm={!showForm} />}
+{hasCalculator && <CostCalculator />}

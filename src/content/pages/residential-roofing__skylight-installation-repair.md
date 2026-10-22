@@ -10,8 +10,7 @@ imageAlt: "alterphaseroofing.com OpenGraph"
 published: "2024-04-22"
 modified: "2026-03-12"
 ---
-## Expert Skylight Repair & Installation
-in Staten Island, NY
+## Expert Skylight Repair & Installation in Staten Island, NY
 
 ## Our Skylight Services in Staten Island
 

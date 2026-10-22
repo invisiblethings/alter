@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import Skyline from './Skyline.astro';
+import { business, telHref } from '../data/business';
+import { services, areas, company, guides, legal } from '../data/nav';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <Skyline />
+  <div class="wrap footer-main">
+    <div class="footer-brand">
+      <Image src={logo} alt="Alter Phase Roofing" width={150} />
+      <p>Family-owned roofing contractor based in Staten Island. Marke is on every job, from the first inspection to the final walkthrough.</p>
+      <a class="footer-phone" href={telHref}>{business.phone}</a>
+      <p><a href={`mailto:${business.email}`}>{business.email}</a></p>
+      <div class="footer-badges">
+        {business.certifications.map((c) => <span>{c}</span>)}
+        <span>Licensed #{business.license.number}</span>
+      </div>
+    </div>
+    <div>
+      <h2>Services</h2>
+      <ul>
+        {services.map((s) => <li><a href={s.url}>{s.title}</a></li>)}
+        <li><a href="/roof-repair/emergency-service/">Emergency Roof Repair</a></li>
+        <li><a href="/residential-roofing/skylight-installation-repair/">Skylights</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Areas</h2>
+      <ul>
+        {areas.map((a) => <li><a href={a.url}>{a.title}</a></li>)}
+      </ul>
+      <h2 style="margin-top:1.75rem">Guides</h2>
+      <ul>
+        {guides.map((g) => <li><a href={g.url}>{g.title}</a></li>)}
+      </ul>
+    </div>
+    <div>
+      <h2>Visit or call</h2>
+      <address style="font-style:normal">
+        <a href={business.googleMapsUrl}>{business.address.street}<br />{business.address.city}, {business.address.region} {business.address.zip}</a>
+      </address>
+      <div class="hours" style="margin-top:1rem">
+        {business.hours.map((h) => (<><span>{h.label}</span><span>{h.text}</span></>))}
+        <span>Sun</span><span>Closed</span>
+      </div>
+      <p style="margin-top:0.75rem;color:var(--gold-300)">Emergency calls answered 24/7</p>
+      <h2 style="margin-top:1.5rem">Company</h2>
+      <ul>
+        {company.map((c) => <li><a href={c.url}>{c.title}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© {year} {business.name} · NYC DCWP Home Improvement Contractor License #{business.license.number}</span>
+    <ul>
+      {legal.map((l) => <li><a href={l.url}>{l.title}</a></li>)}
+      <li><a href={business.social.facebook}>Facebook</a></li>
+      <li><a href={business.social.yelp}>Yelp</a></li>
+      <li><a href={business.social.linkedin}>LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>

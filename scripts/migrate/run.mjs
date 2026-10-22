@@ -112,6 +112,7 @@ function widgetSignature($, el) {
 }
 
 function cleanFragment($, $el) {
+  $el.find('h1 br, h2 br, h3 br, h4 br, h5 br, h6 br').replaceWith(' ');
   $el.find('script, style, form, iframe, noscript, svg, input, button, select, label, link, meta, title').remove();
   $el.find('[class*="ti-widget"], .trustindex, [class*="trustindex"]').remove();
   $el.find('img').each((_, img) => {
@@ -157,6 +158,7 @@ function elementorToHtml($, rootSel, boilerplate, ctx) {
     switch (type) {
       case 'heading.default':
       case 'animated-headline.default': {
+        $w.find('br').replaceWith(' ');
         const h = $w.find('h1,h2,h3,h4,h5,h6').first();
         const tag = h.length ? h.get(0).tagName : 'h2';
         const text = squash((h.length ? h : $w).text());
@@ -182,6 +184,7 @@ function elementorToHtml($, rootSel, boilerplate, ctx) {
       }
       case 'icon-box.default':
       case 'image-box.default': {
+        $w.find('.elementor-icon-box-title br, .elementor-image-box-title br').replaceWith(' ');
         const $t = $w.find('.elementor-icon-box-title, .elementor-image-box-title').first();
         const $d = $w.find('.elementor-icon-box-description, .elementor-image-box-description').first();
         const tTag = $t.length ? $t.get(0).tagName : 'h3';
@@ -307,6 +310,8 @@ function toMarkdown(html) {
 // ---------- head meta from the live page ----------
 function liveMeta(html) {
   const $ = cheerio.load(html);
+  // <br> inside headings separates words visually; keep that as a space.
+  $('h1 br, h2 br, h3 br, title br').replaceWith(' ');
   const m = (sel, attr = 'content') => $(sel).first().attr(attr) || '';
   const ld = $('script[type="application/ld+json"]').map((_, s) => $(s).html()).get();
   const faq = [];

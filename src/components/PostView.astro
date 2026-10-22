@@ -1,0 +1,99 @@
+---
+import Icon from './Icon.astro';
+import Skyline from './Skyline.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import CtaBand from './CtaBand.astro';
+import CostCalculator from './CostCalculator.astro';
+import { business, telHref } from '../data/business';
+import { posts, excerpt, type Entry } from '../lib/content';
+
+interface Props {
+  entry: Entry;
+  html: string;
+  crumbs: { name: string; url: string }[];
+  headings: { depth: number; slug: string; text: string }[];
+  hasCalculator: boolean;
+}
+const { entry, html, crumbs, headings, hasCalculator } = Astro.props;
+const d = entry.data;
+const fmt = (s?: string) => (s ? new Date(s + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '');
+const minutes = Math.max(3, Math.round((entry.body || '').split(/\s+/).length / 220));
+const toc = headings.filter((h) => h.depth === 2);
+const related = (await posts()).filter((p) => p.data.path !== d.path).slice(0, 3);
+---
+<section class="page-hero">
+  <div class="wrap" style="grid-template-columns:1fr">
+    <div style="max-width:880px">
+      <Breadcrumbs crumbs={crumbs} />
+      <h1>{d.h1}</h1>
+      <div class="byline">
+        <span class="avatar" aria-hidden="true">M</span>
+        <span>By <a href="/about/" style="color:#fff"><strong>Marke</strong></a>, Owner of Alter Phase Roofing<br />
+          {d.modified && d.modified !== d.published ? <>Updated <time datetime={d.modified}>{fmt(d.modified)}</time></> : <time datetime={d.published}>{fmt(d.published)}</time>} · {minutes} min read</span>
+      </div>
+    </div>
+  </div>
+  <Skyline />
+</section>
+
+<section class="section" style="padding-top:clamp(2rem,4vw,3rem)">
+  <div class="wrap layout">
+    <div>
+      {d.image && (
+        <img src={d.image} alt={d.imageAlt || ''} width="1200" height="750" style="border-radius:var(--radius-lg);margin-bottom:2rem;aspect-ratio:16/10;object-fit:cover;width:100%" loading="eager" fetchpriority="high" decoding="async" />
+      )}
+      {toc.length >= 3 && (
+        <details class="toc toc-inline" open>
+          <summary>In this guide</summary>
+          <ol style="margin-top:0.75rem">{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </details>
+      )}
+      <article class="prose" set:html={html} />
+
+      <aside class="inline-cta" aria-label="Get a free estimate">
+        <div>
+          <h2>Want a real number for your roof?</h2>
+          <p>Free inspection and written estimate from a family-owned Staten Island roofer. No pressure.</p>
+        </div>
+        <a class="btn btn-gold" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </aside>
+
+      <section class="author-box" aria-label="About the author">
+        <span class="avatar" aria-hidden="true">M</span>
+        <div>
+          <h2>Marke, Owner of Alter Phase Roofing</h2>
+          <p>Marke runs Alter Phase Roofing, a family-owned roofing contractor in Staten Island with more than {business.yearsInRoofing} years in roofing. Marke is part of every job the company does across Staten Island, Brooklyn, Manhattan and Queens. NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+        </div>
+      </section>
+    </div>
+    <aside class="sidebar" aria-label="Contents and contact">
+      <div class="side-card side-call">
+        <h2>Questions about your roof?</h2>
+        <p style="margin:0;font-size:0.92rem">Talk to the people who'll actually do the work.</p>
+        <a class="phone-big" href={telHref}>{business.phone}</a>
+        <a class="btn btn-gold btn-block" href="/free-estimate/">Get a free estimate</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-sand" aria-labelledby="related-title">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Keep reading</span><h2 id="related-title">More homeowner guides</h2></div>
+    <div class="post-grid">
+      {related.map((p) => (
+        <a class="post-card" href={p.data.path}>
+          {p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="600" height="375" loading="lazy" decoding="async" />}
+          <div class="post-card-body">
+            <time datetime={p.data.published}>{fmt(p.data.published)}</time>
+            <h3>{p.data.h1}</h3>
+            <p>{excerpt(p.body || '', 20)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<CtaBand />
+{hasCalculator && <CostCalculator />}

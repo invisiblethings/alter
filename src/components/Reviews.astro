@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro';
+import { reviews } from '../data/reviews';
+import { business } from '../data/business';
+interface Props { limit?: number; title?: string; eyebrow?: string }
+const { limit = 6, title = 'Your neighbors already called us. Here’s what they said.', eyebrow = 'Google reviews' } = Astro.props;
+const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
+---
+<section class="section" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">{eyebrow}</span>
+        <h2 id="reviews-title">{title}</h2>
+      </div>
+      <a class="rating-badge" href={business.googleReviewUrl} rel="noopener" target="_blank">
+        <span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
+        <div><strong>{business.rating.label}</strong><span>{business.rating.count} reviews on Google</span></div>
+      </a>
+    </div>
+    <div class="reviews">
+      {reviews.slice(0, limit).map((r) => (
+        <figure class="review">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
+          <blockquote><p>{r.text}</p></blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">{initials(r.name)}</span><span><strong>{r.name}</strong>Google review{r.tag && ` · ${r.tag}`}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

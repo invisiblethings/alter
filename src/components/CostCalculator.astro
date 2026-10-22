@@ -1,0 +1,20 @@
+---
+// Rebuild of the calculator on /roof-replacement-cost-in-nyc/ with the same
+// per-square-foot ranges the post publishes (Alter Phase job averages).
+// Markup: src/lib/calculator.ts
+---
+<script is:inline>
+  document.querySelectorAll('[data-calc]').forEach(function (box) {
+    var form = box.querySelector('form'), out = box.querySelector('.calc-result');
+    var fmt = function (n) { return '$' + Math.round(n).toLocaleString('en-US'); };
+    form.addEventListener('submit', function () {
+      var range = box.querySelector('#calc-material').value, area = parseFloat(box.querySelector('#calc-area').value);
+      out.hidden = false;
+      if (!range || !(area > 0)) { out.textContent = 'Please choose a material and enter your roof area.'; return; }
+      var r = range.split(',').map(Number), label = box.querySelector('#calc-material').selectedOptions[0].text.split(' (')[0];
+      out.innerHTML = '<span>Estimated cost for ' + area.toLocaleString('en-US') + ' sq ft of ' + label + '</span><strong>' + fmt(r[0] * area) + ' – ' + fmt(r[1] * area) + '</strong>' +
+        '<span>For a precise, written price, call <a href="tel:+19293701552">(929) 370-1552</a> or <a href="/free-estimate/">request a free estimate</a>.</span>';
+      if (window.dataLayer) window.dataLayer.push({ event: 'calculator_used', material: label, area: area });
+    });
+  });
+</script>

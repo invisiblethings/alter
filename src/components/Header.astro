@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import Icon from './Icon.astro';
+import { business, telHref } from '../data/business';
+import { services, areas, company } from '../data/nav';
+interface Props { path: string }
+const { path } = Astro.props;
+const current = (url: string) => (path === url ? 'page' : undefined);
+---
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span><span class="topbar-dot" aria-hidden="true"></span>Family-owned · Staten Island<span class="topbar-hide-sm"> · {business.yearsInRoofing}+ years</span></span>
+      <span class="topbar-hide-sm">Licensed #{business.license.number}</span>
+      <span class="topbar-hide-sm">Mon–Fri 8–8 · Sat 8–5 · Emergencies 24/7</span>
+    </div>
+    <div class="textsize" role="group" aria-label="Text size">
+      <span class="topbar-hide-sm">Text size</span>
+      <button type="button" data-size="" aria-pressed="true" aria-label="Normal text">A</button>
+      <button type="button" data-size="lg" aria-pressed="false" aria-label="Larger text">A</button>
+      <button type="button" data-size="xl" aria-pressed="false" aria-label="Largest text">A</button>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Alter Phase Roofing, home">
+      <Image src={logo} alt="Alter Phase Roofing Contractor" width={128} loading="eager" fetchpriority="high" />
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/services/" aria-current={current('/services/')}>Services <Icon name="chevron" /></a>
+          <div class="dropdown wide">
+            {services.map((s) => (
+              <div class="dropdown-group">
+                <a href={s.url}><strong>{s.title}</strong><small>{s.blurb}</small></a>
+                {s.children.map((c) => <a href={c.url}>{c.title}</a>)}
+              </div>
+            ))}
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/service-area/" aria-current={current('/service-area/')}>Areas <Icon name="chevron" /></a>
+          <div class="dropdown">
+            {areas.map((a) => (
+              <>
+                <a href={a.url}><strong>{a.title}</strong><small>{a.blurb}</small></a>
+                {(a.children || []).map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}
+              </>
+            ))}
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/commercial-roofing/" aria-current={current('/commercial-roofing/')}>Property Managers</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/" aria-current={current('/about/')}>About <Icon name="chevron" /></a>
+          <div class="dropdown">
+            {company.map((c) => <a href={c.url}>{c.title}</a>)}
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/reviews/" aria-current={current('/reviews/')}>Reviews</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="header-phone" href={telHref}><small>Call or text</small><span>{business.phone}</span></a>
+      <a class="btn btn-gold" href="/free-estimate/">Free Estimate</a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><Icon name="menu" /></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <div class="mobile-menu-head">
+    <a href="/" aria-label="Home"><Image src={logo} alt="Alter Phase Roofing" width={110} /></a>
+    <button class="icon-btn menu-close" type="button" aria-label="Close menu"><Icon name="close" /></button>
+  </div>
+  <a class="btn btn-gold btn-block btn-lg" href={telHref}><Icon name="phone" /> Call {business.phone}</a>
+  <nav aria-label="Mobile" style="margin-top:1rem">
+    <details>
+      <summary>Services</summary>
+      <a href="/services/">All services</a>
+      {services.map((s) => (<><a href={s.url}><strong>{s.title}</strong></a>{s.children.map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}</>))}
+    </details>
+    <details>
+      <summary>Service Areas</summary>
+      <a href="/service-area/">All service areas</a>
+      {areas.map((a) => (<><a href={a.url}><strong>{a.title}</strong></a>{(a.children || []).map((c) => <a href={c.url} style="padding-left:1.5rem">{c.title}</a>)}</>))}
+    </details>
+    <a href="/commercial-roofing/">Property Managers &amp; HOAs</a>
+    <details>
+      <summary>Company</summary>
+      {company.map((c) => <a href={c.url}>{c.title}</a>)}
+    </details>
+    <a href="/free-estimate/">Free Estimate</a>
+  </nav>
+</div>
+
+<script>
+  const menu = document.getElementById('mobile-menu')!;
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')!;
+  const close = () => { menu.hidden = true; toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; toggle.focus(); };
+  toggle.addEventListener('click', () => { menu.hidden = false; toggle.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; menu.querySelector<HTMLElement>('.menu-close')?.focus(); });
+  menu.querySelector('.menu-close')!.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) close(); });
+
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.textsize button');
+  const sync = () => buttons.forEach((b) => b.setAttribute('aria-pressed', String((document.documentElement.dataset.text || '') === b.dataset.size)));
+  buttons.forEach((b) => b.addEventListener('click', () => {
+    const size = b.dataset.size || '';
+    if (size) document.documentElement.dataset.text = size; else delete document.documentElement.dataset.text;
+    try { localStorage.setItem('aprTextSize', size); } catch {}
+    sync();
+  }));
+  sync();
+</script>

@@ -1,0 +1,63 @@
+---
+// Every migrated WordPress URL (pages + posts) is served at its original path.
+import Base from '../layouts/Base.astro';
+import PageView from '../components/PageView.astro';
+import PostView from '../components/PostView.astro';
+import { allEntries, crumbsFor, extractFaq, areaFor, type Entry } from '../lib/content';
+import { pageGraph } from '../lib/schema';
+import { calculatorHtml } from '../lib/calculator';
+
+export async function getStaticPaths() {
+  const entries = await allEntries();
+  return entries
+    .filter((e) => !['home', 'archive'].includes(e.data.template))
+    .map((e) => ({ params: { slug: e.data.path.replace(/^\/|\/$/g, '') }, props: { entry: e } }));
+}
+
+const { entry } = Astro.props as { entry: Entry };
+const d = entry.data;
+const crumbs = await crumbsFor(d.path, d.h1);
+const body = entry.body || '';
+const faq = extractFaq(body);
+let html = entry.rendered?.html || '';
+const hasCalculator = html.includes('data-widget="cost-calculator"');
+html = html.replace(/<div data-widget="cost-calculator"><\/div>/, calculatorHtml);
+const headings = (entry.rendered?.metadata?.headings as { depth: number; slug: string; text: string }[] | undefined) || [];
+
+const kind = d.template === 'post' ? 'post'
+  : ['service', 'location'].includes(d.template) ? 'service'
+  : d.template === 'contact' ? 'contact'
+  : d.path === '/about/' ? 'about'
+  : 'page';
+
+const schema = pageGraph({
+  url: d.canonical || d.path,
+  title: d.seoTitle,
+  description: d.description,
+  image: d.image,
+  published: d.published,
+  modified: d.modified,
+  crumbs,
+  kind,
+  h1: d.h1,
+  serviceArea: areaFor(d.path, d.h1),
+  faq: d.template === 'legal' ? [] : faq,
+});
+---
+<Base
+  title={d.seoTitle}
+  description={d.description}
+  path={d.path}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  noindex={d.noindex}
+  canonical={d.canonical}
+  ogType={d.template === 'post' ? 'article' : 'website'}
+  published={d.published}
+  modified={d.modified}
+  schema={schema}
+>
+  {d.template === 'post'
+    ? <PostView entry={entry} html={html} crumbs={crumbs} headings={headings} hasCalculator={hasCalculator} />
+    : <PageView entry={entry} html={html} crumbs={crumbs} hasCalculator={hasCalculator} />}
+</Base>

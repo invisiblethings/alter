@@ -1,0 +1,81 @@
+---
+// The site's signature graphic: a silhouette of NYC rooftops (brownstone
+// cornices, water towers, chimneys, Staten Island pitched roofs, the
+// Verrazzano tower). Built from a building list so it stays crisp at any width.
+interface Props { class?: string; flip?: boolean }
+const { class: cls, flip = false } = Astro.props;
+
+const W = 1440;
+const H = 120;
+type B = [kind: string, w: number, h: number];
+const buildings: B[] = [
+  ['house', 70, 52], ['flat', 46, 38], ['cornice', 64, 62], ['tower', 58, 70], ['cornice', 52, 56],
+  ['house', 84, 58], ['flat', 30, 30], ['stepped', 70, 96], ['cornice', 60, 64], ['house', 66, 48],
+  ['bridge', 70, 112], ['flat', 40, 34], ['cornice', 72, 60], ['tower', 52, 74], ['house', 78, 54],
+  ['cornice', 56, 66], ['spire', 44, 104], ['flat', 50, 40], ['house', 72, 50], ['cornice', 62, 58],
+  ['tower', 54, 66], ['house', 80, 56], ['flat', 70, 36],
+];
+
+const r = (x: number, y: number, w: number, h: number) => `M${x},${y}h${w}v${h}h${-w}z`;
+const parts: string[] = [];
+let x = 0;
+const total = buildings.reduce((s, b) => s + b[1], 0);
+const scale = W / total;
+for (const [kind, w0, h] of buildings) {
+  const w = w0 * scale;
+  const top = H - h;
+  switch (kind) {
+    case 'house': {
+      const wall = h * 0.55;
+      parts.push(r(x + 4, H - wall, w - 8, wall));
+      parts.push(`M${x},${H - wall + 2}L${x + w / 2},${top}L${x + w},${H - wall + 2}z`);
+      parts.push(r(x + w * 0.68, top + h * 0.12, 7, h * 0.3)); // chimney
+      break;
+    }
+    case 'cornice': {
+      parts.push(r(x + 2, top + 6, w - 4, h - 6));
+      parts.push(r(x, top, w, 7)); // cornice lip
+      break;
+    }
+    case 'tower': {
+      // building with a rooftop water tower on legs
+      const bh = h * 0.62;
+      parts.push(r(x, H - bh, w, bh));
+      const tx = x + w * 0.3;
+      const tw = Math.min(26, w * 0.45);
+      parts.push(r(tx + 2, H - bh - 10, 2.5, 10), r(tx + tw - 4.5, H - bh - 10, 2.5, 10));
+      parts.push(r(tx, H - bh - 30, tw, 20));
+      parts.push(`M${tx - 2},${H - bh - 30}L${tx + tw / 2},${H - bh - 42}L${tx + tw + 2},${H - bh - 30}z`);
+      break;
+    }
+    case 'stepped': {
+      parts.push(r(x, H - h * 0.55, w, h * 0.55));
+      parts.push(r(x + w * 0.15, H - h * 0.8, w * 0.7, h * 0.3));
+      parts.push(r(x + w * 0.32, top, w * 0.36, h * 0.25));
+      break;
+    }
+    case 'spire': {
+      parts.push(r(x + w * 0.2, H - h * 0.7, w * 0.6, h * 0.7));
+      parts.push(`M${x + w * 0.2},${H - h * 0.7}L${x + w / 2},${top}L${x + w * 0.8},${H - h * 0.7}z`);
+      break;
+    }
+    case 'bridge': {
+      // Verrazzano-style tower with cables sweeping down both sides
+      const tw = 10;
+      const cx = x + w / 2;
+      parts.push(r(cx - tw, top, 6, h), r(cx + tw - 6, top, 6, h), r(cx - tw, top + 8, tw * 2, 4), r(cx - tw, top + h * 0.45, tw * 2, 4));
+      parts.push(`M${x - 30},${H - 14}Q${cx - 30},${H - 20} ${cx - tw},${top + 2}L${cx - tw},${top + 5}Q${cx - 30},${H - 17} ${x - 30},${H - 11}z`);
+      parts.push(`M${x + w + 30},${H - 14}Q${cx + 30},${H - 20} ${cx + tw},${top + 2}L${cx + tw},${top + 5}Q${cx + 30},${H - 17} ${x + w + 30},${H - 11}z`);
+      break;
+    }
+    default:
+      parts.push(r(x, top, w, h));
+  }
+  x += w;
+}
+parts.push(r(0, H - 6, W, 6));
+const d = parts.join('');
+---
+<svg class:list={['skyline', cls]} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true" focusable="false" style={flip ? 'transform:scaleX(-1)' : undefined}>
+  <path fill="currentColor" d={d} />
+</svg>

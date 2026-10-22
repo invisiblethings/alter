@@ -112,8 +112,7 @@ Expert installs and repairs to bring natural light into your space—leak-free a
 
 One call, one team, all your roofing & exterior needs.
 
-## Roof Replacement in Staten Island
-Starting at Just $5,500
+## Roof Replacement in Staten Island Starting at Just $5,500
 
 Every roof is unique.
 Get a personal price estimate within 24 hours—**no pushy sales, no surprise fees.**

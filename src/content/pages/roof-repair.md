@@ -3,16 +3,13 @@ path: "/roof-repair/"
 template: service
 seoTitle: "Roof Repair Staten Island, NY | Alter Phase Roofing"
 description: "From minor leaks to storm damage, Alter Phase Roofing provides expert roof repairs for residential and commercial properties. Get your free repair estimate today."
-h1: "Expert Roof Repairin Staten Island, NY"
+h1: "Expert Roof Repair in Staten Island, NY"
 intro: "A small leak left untreated can cause tens of thousands in structural damage. Alter Phase Roofing fixes roof leaks, storm damage, and all types of roof problems across Staten Island. Fast, thorough, and with a written warranty on every job."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg"
 imageAlt: "alterphaseroofing.com OpenGraph"
 published: "2024-04-14"
 modified: "2026-03-14"
 ---
-## Expert Roof Repair
-in Staten Island, NY
-
 ## Our Roof Repair Services in Staten Island
 
 From a single missing shingle to widespread storm damage, Alter Phase Roofing diagnoses the root cause and fixes it right the first time. We handle residential and commercial properties across all of Staten Island, with same-day emergency availability when you need us most.
