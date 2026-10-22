@@ -1,11 +1,20 @@
 ---
+// Sticky mobile contact bar. On Ads landing pages (quoteHref set) it is just
+// two big buttons: call, or jump to the form.
 interface Props { quoteHref?: string }
-const { quoteHref = '/free-estimate/' } = Astro.props;
+const { quoteHref } = Astro.props;
 import Icon from './Icon.astro';
 import { telHref, smsHref } from '../data/business';
 ---
-<nav class="callbar" aria-label="Quick contact">
-  <a class="call" href={telHref}><Icon name="phone" />Call now</a>
-  <a href={smsHref}><Icon name="sms" />Text us</a>
-  <a href={quoteHref}><Icon name="clipboard" />Free quote</a>
-</nav>
+{quoteHref ? (
+  <nav class="callbar callbar-lp" aria-label="Quick contact">
+    <a class="call" href={telHref}><Icon name="phone" />Call now · free estimate</a>
+    <a href={quoteHref}><Icon name="clipboard" />Get a quote</a>
+  </nav>
+) : (
+  <nav class="callbar" aria-label="Quick contact">
+    <a class="call" href={telHref}><Icon name="phone" />Call now</a>
+    <a href={smsHref}><Icon name="sms" />Text us</a>
+    <a href="/free-estimate/"><Icon name="clipboard" />Free quote</a>
+  </nav>
+)}

@@ -91,7 +91,22 @@ WordPress system URLs (`/sitemap_index.xml`, Yoast sub-sitemaps, `/feed/`, `/aut
   - Staten Island house types and neighborhoods grouped by shore
   - a mega menu with service photos, prices, an emergency path and an inspection CTA
 - **Trust everywhere:** Google rating, GAF and BBB badges, license number, warranty, owner promise, real reviews.
-- **Google Ads landing pages** (`/roofing-lp/`, `/brooklyn-roofing-solutions/`, `/roof-replacement-si/`, `/vinyl-siding-estimate/`): `noindex`, no site header, menu or footer links (logo, rating and call button only), form above the fold, trust bar, review proof, prices, process, FAQ and a closing form. Every phone link and display number swaps to the tracking number (929) 800-8572.
+- **Google Ads landing pages:** `/roofing-lp/`, `/brooklyn-roofing-solutions/`, `/roof-replacement-si/` and `/vinyl-siding-estimate/`. Template in `src/components/LandingView.astro`; copy per page in `src/data/landing.ts`.
+  - **No exits.** `noindex`; no site menu, footer links or "read more" links. The top bar holds the logo, a live "Open now" status in NY time and a call button.
+  - **Message match.** The headline, subhead and preselected form option follow the ad's search term (`utm_term`, `keyword` or `kw` URL parameter). Only whitelisted variants are shown: repair/leak, replacement/cost, flat roof, emergency, and siding variants.
+  - **Above the fold.** The offer, benefits, a big tap-to-call button, review proof and the form.
+  - **Below the fold:**
+    - credential bar
+    - pain points next to a free-inspection offer stack
+    - a comparison with other roofers
+    - 6 real reviews
+    - gallery of the crew's own work
+    - 3-step process
+    - prices
+    - a 50-year warranty promise from the owner
+    - objection FAQ
+    - a closing form
+  - **Phone and mobile.** The mobile call bar has two big buttons. Every number shows the tracking number (929) 800-8572.
 - **Service, area and company pages:** a photo hero with the form, a short-answer band with quick facts, the content split into numbered sections with alternating layouts (lists become feature tiles or checklists), call-to-action strips, price cards, related-page tiles, tagged reviews and a split FAQ. Not article-style.
 
 ---

@@ -1,121 +1,218 @@
 ---
-// Google Ads landing pages: no site menu, no footer links, no exits. One goal:
-// a call or a form. Every phone number shows the campaign tracking number.
+// Google Ads landing pages, built the way performance agencies build them:
+// one goal (a call or a form), no navigation or exits, the headline matched
+// to the ad's search term, the offer stacked above the fold, proof at every
+// scroll depth, objections answered, and the same CTA repeated.
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 import Icon from './Icon.astro';
 import QuoteWizard from './QuoteWizard.astro';
 import PriceTables from './PriceTables.astro';
-import ContentSections from './ContentSections.astro';
-import Process from './Process.astro';
-import Reviews from './Reviews.astro';
 import Faq from './Faq.astro';
-import FinalCta from './FinalCta.astro';
-import Estimator from './Estimator.astro';
 import { business, telHref } from '../data/business';
-import { reviews, reviewStats, type ReviewTag } from '../data/reviews';
+import { reviews, reviewsTagged, reviewStats } from '../data/reviews';
+import { landing } from '../data/landing';
 import type { PageEntry } from '../lib/content';
 
 interface Props { entry: PageEntry; html: string }
-const { entry, html } = Astro.props;
+const { entry } = Astro.props;
 const d = entry.data;
-const p = d.path;
-const tags: ReviewTag[] = p.includes('siding') ? ['gutters', 'clean'] : p.includes('replacement') ? ['replacement', 'oneday'] : ['repair', 'honest', 'replacement'];
-const heroReview = reviews.find((r) => r.name === (p.includes('replacement') || p.includes('siding') ? 'Denise L.' : 'KT'))!;
-const heroQuote = heroReview.name === 'KT'
-  ? 'Called them up thinking I needed a new roof… it turns out the roof was repairable. They didn\'t try to pressure me into any unnecessary work.'
-  : 'My entire new roof was done in one day! They left the property spotless.';
+const L = landing[d.path];
+if (!L) throw new Error(`No landing copy for ${d.path} in src/data/landing.ts`);
 const year = new Date().getFullYear();
+const stars = [1, 2, 3, 4, 5];
+const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
+const picked = [...reviewsTagged(...L.reviewTags), ...reviews].filter((r, i, a) => a.indexOf(r) === i && r.text.length > 110 && r.text.length < 520).slice(0, 6);
+const avatars = picked.slice(0, 5).map((r) => initials(r.name));
+const variants = L.variants.map(({ match, h1, sub, service }) => ({ match, h1, sub, service }));
+const faq = [
+  ...d.faq,
+  ...[
+    { q: 'Is the inspection really free?', a: 'Yes. The inspection, the photos and the written estimate are free, with no obligation. We make our money doing the work, not by charging you to look.' },
+    { q: 'Will you pressure me to sign on the spot?', a: 'No. You get a written, itemized price and time to decide. Many of our customers called about a new roof and ended up with a repair, because that is what their roof needed.' },
+    { q: 'Can you help with my insurance claim?', a: 'Yes. We document storm damage with photos and a written report you can send to your insurance company.' },
+  ].filter((x) => !d.faq.some((f) => f.q.toLowerCase().includes(x.q.toLowerCase().slice(0, 18)))),
+].slice(0, 7);
+const steps = [
+  { t: 'Call or book online', s: 'Takes 30 seconds. A real person from our team answers or calls you back, usually within the hour.' },
+  { t: 'Free inspection with photos', s: 'We climb up, find the real problem and send you photos of everything we see.' },
+  { t: 'Written price in 24 hours', s: 'Itemized, with your options. You decide, no pressure.' },
+];
 ---
 <header class="lp-top">
   <div class="wrap">
     <span class="lp-logo"><Image src={logo} alt={business.name} width={124} loading="eager" /></span>
-    <span class="lp-rating hide-sm"><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><strong>{reviewStats.average}</strong> from {reviewStats.total} reviews</span>
-    <a class="btn btn-gold lp-call" href={telHref}><Icon name="phone" /><span data-call-ref><small>Free estimate · call now</small>{business.phone}</span></a>
+    <span class="lp-open" data-open hidden><span class="dot"></span><span data-open-text>Open now</span></span>
+    <a class="lp-call" href={telHref}>
+      <span class="lp-call-ico"><Icon name="phone" /></span>
+      <span data-call-ref><small>Free estimate · tap to call</small>{business.phone}</span>
+    </a>
   </div>
 </header>
 
-<section class="hero lp-hero">
-  <div class="hero-bg"><img src={d.image || '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg'} alt={d.imageAlt || ''} width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>
+<section class="lp-hero">
+  <div class="lp-hero-bg"><img src={d.image || '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg'} alt="" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>
   <div class="wrap">
-    <div>
-      {d.kicker && <span class="kicker">{d.kicker}</span>}
-      <h1>{d.h1}</h1>
-      {d.intro && <p class="lead">{d.intro}</p>}
-      {d.highlights.length > 0 && <ul class="ticks" style="margin-top:1.5rem">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
-      <div class="cta-row">
-        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
+    <div class="lp-copy">
+      <span class="lp-badge"><Icon name="pin" /> {L.badge}</span>
+      <h1 id="lp-h1">{d.h1}</h1>
+      <p class="lp-sub" id="lp-sub">{d.intro}</p>
+      <ul class="lp-checks">{d.highlights.map((h) => <li><Icon name="check" /><span set:html={h} /></li>)}</ul>
+      <a class="call-big" href={telHref}>
+        <span class="call-ring" aria-hidden="true"><Icon name="phone" /></span>
+        <span class="call-txt"><small>Tap to call · free estimate</small><strong>{business.phone}</strong></span>
+        <Icon name="arrow" class="call-arrow" />
+      </a>
+      <div class="lp-proof">
+        <span class="lp-avatars" aria-hidden="true">{avatars.map((a) => <span>{a}</span>)}</span>
+        <span><span class="stars" aria-hidden="true">{stars.map(() => <Icon name="star" />)}</span><strong>{reviewStats.average}</strong> from {reviewStats.total} reviews<br /><small>{reviewStats.bySource.Google} on Google · Yelp · HomeAdvisor · Angi · BBB</small></span>
       </div>
-      <figure class="hero-quote">
-        <blockquote>“{heroQuote}”</blockquote>
-        <figcaption><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span> {heroReview.name}, {heroReview.source} review</figcaption>
-      </figure>
     </div>
-    <QuoteWizard id="lp" title="Get your free estimate" sub="Takes 30 seconds. A real person calls you back, usually within the hour." service={d.wizard} />
+    <div class="lp-form">
+      <QuoteWizard id="lp" title={L.formTitle} sub="Takes 30 seconds. No obligation, no pressure." service={d.wizard} />
+    </div>
   </div>
 </section>
 
-<section class="lp-trust" aria-label="Credentials">
+<section class="lp-logos" aria-label="Credentials">
   <div class="wrap">
     <div class="lp-t"><img src="/wp-content/uploads/2024/04/GAF-Masterelite-AlterPhaseRoofing-300x110.png" alt="GAF Master Elite certified contractor" width="120" height="44" loading="lazy" /><span><strong>GAF Master Elite®</strong>Certified installer</span></div>
     <div class="lp-t"><img src="/wp-content/uploads/2024/04/AB-seal-horz.svg.svg" alt="BBB Accredited Business" width="94" height="33" loading="lazy" /><span><strong>BBB Accredited</strong>Business</span></div>
-    <div class="lp-t"><span class="lp-ico"><Icon name="star" /></span><span><strong>{reviewStats.average} stars</strong>{reviewStats.total} reviews</span></div>
+    <div class="lp-t"><span class="lp-ico lp-ico-w"><Icon name="google" /></span><span><strong>{reviewStats.average} ★ rating</strong>{reviewStats.total} reviews</span></div>
     <div class="lp-t"><span class="lp-ico"><Icon name="shield" /></span><span><strong>Up to {business.warranty.manufacturerYears}-yr warranty</strong>+ {business.warranty.workmanshipYears} yrs workmanship</span></div>
     <div class="lp-t"><span class="lp-ico"><Icon name="license" /></span><span><strong>Licensed &amp; insured</strong>NYC #{business.license.number}</span></div>
   </div>
 </section>
 
-{d.answer && (
-  <section class="answer-band lp-answer" aria-label="Prices at a glance">
-    <div class="wrap">
-      <div class="ab-answer"><span class="ab-k"><Icon name="dollar" /> Prices at a glance</span><p set:html={d.answer} /></div>
-      <ul class="ab-facts">
-        <li><span class="ab-ico"><Icon name="camera" /></span><span><strong>Free inspection</strong>With photos of what we find</span></li>
-        <li><span class="ab-ico"><Icon name="file" /></span><span><strong>Written price in 24h</strong>Itemized, no pressure</span></li>
-        {p.includes('siding')
-          ? <li><span class="ab-ico"><Icon name="shield" /></span><span><strong>Written warranty</strong>On materials and labor</span></li>
-          : <li><span class="ab-ico"><Icon name="calendar" /></span><span><strong>Most roofs in 1 day</strong>Tear-off to cleanup</span></li>}
-        <li><span class="ab-ico"><Icon name="users" /></span><span><strong>Owner on every job</strong>Our own crew</span></li>
-      </ul>
+<section class="lp-sec lp-pain" aria-labelledby="pain-h">
+  <div class="wrap lp-pain-grid">
+    <div data-reveal>
+      <span class="kicker">{L.painTitle}</span>
+      <h2 id="pain-h">You need an honest answer, not a sales pitch.</h2>
+      <ul class="lp-x">{L.pains.map((p) => <li><span class="x" aria-hidden="true">✕</span>{p}</li>)}</ul>
     </div>
-  </section>
-)}
-
-<ContentSections html={html} formHref="#lp-wizard" />
-
-<Reviews limit={4} tags={tags} title="Real reviews from real homeowners" noLinks />
-
-{(d.prices.length > 0 || d.estimator) && (
-  <section class="sec dark price-sec" aria-labelledby="prices-h">
-    <div class="wrap">
-      <div class="head-split">
-        <div><span class="kicker">Honest, upfront pricing</span><h2 id="prices-h">What it typically costs</h2></div>
-        <p class="lead">Averages from our own jobs. Your exact price comes in writing after a free inspection.</p>
-      </div>
-      {d.prices.length > 0 && <PriceTables kinds={d.prices} area={d.area} />}
-      {d.estimator && <div style="margin-top:2.5rem"><Estimator heading="h3" /></div>}
-      <p class="cta-row" style="margin-top:2rem"><a class="btn btn-lg btn-gold" href="#lp-wizard">Get my exact price, free <Icon name="arrow" /></a></p>
+    <div class="lp-offer" data-reveal data-reveal-d="1">
+      <span class="lp-offer-tag">Free · no obligation</span>
+      <h3>{L.includesTitle}</h3>
+      <ul>{L.includes.map((i) => <li><Icon name="check" />{i}</li>)}</ul>
+      <a class="btn btn-gold btn-lg btn-block" href="#lp-wizard">{L.cta || 'Claim my free inspection'} <Icon name="arrow" /></a>
+      <a class="lp-offer-call" href={telHref}><Icon name="phone" /> or call {business.phone}</a>
     </div>
-  </section>
-)}
+  </div>
+</section>
 
-<Process />
+<section class="lp-sec lp-dark" aria-labelledby="cmp-h">
+  <div class="wrap">
+    <div class="lp-head" data-reveal>
+      <span class="kicker">Why homeowners switch to us</span>
+      <h2 id="cmp-h">{L.compareTitle || 'Not all roofers work the same way.'}</h2>
+    </div>
+    <div class="lp-compare" data-reveal role="table" aria-label={`${business.name} compared with ${(L.them || 'many other roofers').toLowerCase()}`}>
+      <div class="lp-cmp-row lp-cmp-head" role="row"><span role="columnheader">{business.name}</span><span role="columnheader">{L.them || 'Many other roofers'}</span></div>
+      {L.compare.map((c) => (
+        <div class="lp-cmp-row" role="row">
+          <span class="us" role="cell"><Icon name="check" />{c.us}</span>
+          <span class="them" role="cell"><span class="x" aria-hidden="true">✕</span>{c.them}</span>
+        </div>
+      ))}
+    </div>
+    <p class="lp-center"><a class="btn btn-gold btn-lg" href="#lp-wizard">Get my free estimate <Icon name="arrow" /></a></p>
+  </div>
+</section>
 
-{d.faq.length > 0 && (
-  <section class="sec">
-    <div class="wrap faq-split">
+<section class="lp-sec" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="lp-rev-head" data-reveal>
       <div>
-        <span class="kicker">Questions</span>
-        <h2>Before you call</h2>
-        <p class="lead">Or skip the reading and ask us directly. You'll talk to someone who works on roofs.</p>
-        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+        <span class="kicker">Real reviews, word for word</span>
+        <h2 id="rev-h">{reviewStats.total} reviews. {reviewStats.average} stars.</h2>
       </div>
-      <Faq items={d.faq} title="Questions and answers" bare />
+      <div class="lp-score"><span class="lp-ico lp-ico-w"><Icon name="google" /></span><b>{reviewStats.average}</b><span><span class="stars" aria-hidden="true">{stars.map(() => <Icon name="star" />)}</span><small>{reviewStats.fiveStar} five-star reviews</small></span></div>
+    </div>
+    <div class="lp-rev-grid">
+      {picked.map((r, i) => (
+        <figure class="lp-rev" data-reveal data-reveal-d={String(i % 3)}>
+          <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
+          <blockquote>“{r.text}”</blockquote>
+          <figcaption><span class="avatar-s" aria-hidden="true">{initials(r.name)}</span><span><strong>{r.name}</strong>{r.source} review</span></figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="lp-sec lp-bone" aria-labelledby="gal-h">
+  <div class="wrap">
+    <div class="lp-head" data-reveal><span class="kicker">See the work</span><h2 id="gal-h">{L.galleryTitle}</h2></div>
+    <div class="lp-gallery">
+      {L.gallery.map((g) => <figure data-reveal><img src={g.img} alt={g.t} width="600" height="600" loading="lazy" decoding="async" /><figcaption>{g.t}</figcaption></figure>)}
+    </div>
+  </div>
+</section>
+
+<section class="lp-sec" aria-labelledby="steps-h">
+  <div class="wrap">
+    <div class="lp-head" data-reveal><span class="kicker">How it works</span><h2 id="steps-h">Three steps. No surprises.</h2></div>
+    <ol class="lp-steps">
+      {steps.map((s, i) => <li data-reveal data-reveal-d={String(i)}><span class="n">{i + 1}</span><h3>{s.t}</h3><p>{s.s}</p></li>)}
+    </ol>
+    <p class="lp-center"><a class="btn btn-lg" href="#lp-wizard">Start step 1 now <Icon name="arrow" /></a></p>
+  </div>
+</section>
+
+{d.prices.length > 0 && (
+  <section class="lp-sec lp-dark price-sec" aria-labelledby="prices-h">
+    <div class="wrap">
+      <div class="lp-head" data-reveal><span class="kicker">Honest, upfront pricing</span><h2 id="prices-h">What it typically costs</h2><p class="lead">Averages from our own jobs. Your exact price comes in writing after the free inspection.</p></div>
+      <div data-reveal><PriceTables kinds={d.prices} area={L.area} /></div>
+      <p class="lp-center"><a class="btn btn-gold btn-lg" href="#lp-wizard">Get my exact price, free <Icon name="arrow" /></a></p>
     </div>
   </section>
 )}
 
-<FinalCta service={d.wizard} title="Get your free estimate today." />
+<section class="lp-sec lp-guarantee" aria-labelledby="g-h">
+  <div class="wrap lp-g-grid">
+    <div class="lp-seal" aria-hidden="true"><b>{business.warranty.manufacturerYears}</b><span>year<br />warranty</span></div>
+    <div data-reveal>
+      <span class="kicker">Our promise</span>
+      <h2 id="g-h">If a repair will do, we'll tell you. And our warranty is in writing.</h2>
+      <p>Up to {business.warranty.manufacturerYears} years from the manufacturer on materials and up to {business.warranty.workmanshipYears} years on our workmanship. “I'm part of every job, to make sure the highest quality work is done on every property.”</p>
+      <p class="lp-sig"><span class="avatar-s">M</span><span><strong>Marke</strong>Owner, {business.name}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="lp-sec lp-bone" aria-labelledby="faq-h">
+  <div class="wrap faq-split">
+    <div>
+      <span class="kicker">Questions</span>
+      <h2 id="faq-h">Before you call</h2>
+      <p class="lead">Or skip the reading and ask us. You'll talk to someone who actually works on roofs.</p>
+      <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+    </div>
+    <Faq items={faq} title="Questions and answers" bare />
+  </div>
+</section>
+
+<section class="lp-final" aria-labelledby="final-h">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Free · no obligation</span>
+      <h2 id="final-h">Get your free estimate today.</h2>
+      <ul class="lp-checks">
+        <li><Icon name="check" />Free inspection with photos</li>
+        <li><Icon name="check" />Written, itemized price in 24 hours</li>
+        <li><Icon name="check" />Up to {business.warranty.manufacturerYears}-year warranty in writing</li>
+      </ul>
+      <a class="call-big" href={telHref}>
+        <span class="call-ring" aria-hidden="true"><Icon name="phone" /></span>
+        <span class="call-txt"><small>Prefer to talk? Tap to call</small><strong>{business.phone}</strong></span>
+        <Icon name="arrow" class="call-arrow" />
+      </a>
+    </div>
+    <QuoteWizard id="lpf" heading="h3" title={L.formTitle} sub="Takes 30 seconds. No obligation." service={d.wizard} />
+  </div>
+</section>
 
 <footer class="lp-foot">
   <div class="wrap">
@@ -124,6 +221,33 @@ const year = new Date().getFullYear();
   </div>
 </footer>
 
+<script is:inline define:vars={{ variants }}>
+  // Message match: pick the headline that fits the ad's search term.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var term = (q.get('utm_term') || q.get('keyword') || q.get('kw') || '').toLowerCase();
+    if (!term) return;
+    for (var i = 0; i < variants.length; i++) {
+      if (new RegExp(variants[i].match).test(term)) {
+        var v = variants[i];
+        document.getElementById('lp-h1').textContent = v.h1;
+        document.getElementById('lp-sub').textContent = v.sub;
+        document.querySelectorAll('input[name="service"][value="' + v.service + '"]').forEach(function (r) { r.checked = true; });
+        break;
+      }
+    }
+  })();
+  // "Open now" uses New York time and the real business hours.
+  (function () {
+    var el = document.querySelector('[data-open]'); if (!el) return;
+    var p = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', hour12: false }).formatToParts(new Date());
+    var day = p.find(function (x) { return x.type === 'weekday'; }).value, h = +p.find(function (x) { return x.type === 'hour'; }).value % 24;
+    var open = day === 'Sun' ? false : day === 'Sat' ? h >= 8 && h < 17 : h >= 8 && h < 20;
+    el.querySelector('[data-open-text]').textContent = open ? 'Open now · we answer fast' : 'Emergency line open 24/7';
+    el.classList.toggle('closed', !open);
+    el.hidden = false;
+  })();
+</script>
 {d.trackingPhone && (
   <script is:inline define:vars={{ shown: d.trackingPhone, digits: d.trackingPhone.replace(/\D/g, '') }}>
     // Ads landing page: show the campaign's tracking number everywhere.
