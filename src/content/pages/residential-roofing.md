@@ -2,7 +2,7 @@
 path: "/residential-roofing/"
 template: hub
 seoTitle: "Residential Roofing Staten Island | Repairs & New Roofs"
-description: "Residential roofing for Staten Island homes: roof repair, replacement, inspections, skylights and gutters from a family-owned GAF Certified roofer."
+description: "Residential roofing for Staten Island homes: roof repair, replacement, inspections, skylights and gutters from a family-owned GAF Certified® roofer."
 kicker: "Residential roofing · Staten Island"
 h1: "Residential roofing on Staten Island, from one leak to a whole new roof"
 intro: "Colonials, capes, high-ranches, two-families and attached townhouses: we take care of Staten Island homes the way we'd want our own taken care of. Honest advice, careful work by our own crew, and warranties in writing."
@@ -72,7 +72,7 @@ That's why we inspect the whole roof, not just the stain on your ceiling, and wh
 
 **We tell you when you don't need a new roof.** Plenty of our customers call expecting a replacement and end up with a repair. That honesty is why they send their neighbors.
 
-**We do it properly.** We're GAF Certified, so we install complete GAF roofing systems the way GAF specifies and register the manufacturer warranty in your name. We're also BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
+**We do it properly.** We're a GAF Certified® contractor, so we install complete GAF roofing systems and can offer GAF system warranties of up to 50 years. We're also BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 **We're licensed and insured.** NYC DCWP Home Improvement Contractor #2129904-DCWP. Ask for proof of insurance and we'll send it.
 

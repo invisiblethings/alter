@@ -32,12 +32,12 @@ const skyLeak = repairs.find((r) => /skylight/i.test(r.name)) || skylights[0];
 const faq = [
   { q: 'How much does a new roof cost on Staten Island?', a: `Most Staten Island roof replacements cost ${range(typicalReplacement.low, typicalReplacement.high)}. Asphalt shingles run about $${asphalt.low}–$${asphalt.high} per square foot installed, so a typical detached house with about 1,800 sq ft of roof lands around ${range(asphalt.low * 1800, asphalt.high * 1800)}. A 1,000 sq ft flat roof is about ${range(si.low, si.high)}. You get an exact, written price after a free inspection.` },
   { q: 'How much does roof repair cost on Staten Island?', a: `Most roof repairs on Staten Island cost ${range(repairs[0].low, 1200)}. A small leak patch is ${range(leak.low, leak.high)}, a shingle repair ${range(shingle.low, shingle.high)} and new flashing ${range(flash.low, flash.high)}. Larger storm or deck repairs can run $1,500–$3,500. The inspection and written estimate are free.` },
-  { q: 'How do I choose a roofing company on Staten Island?', a: `Check five things before you sign. Ask for the NYC DCWP Home Improvement Contractor license number and a certificate of insurance. Make sure someone actually climbs your roof and shows you photos, not just drone shots. Get an itemized, written estimate and the warranty terms in writing. Then read the reviews: ${business.name} is license #${business.license.number}, GAF Certified and rated ${business.rating.value} stars from ${business.rating.count} reviews.` },
+  { q: 'How do I choose a roofing company on Staten Island?', a: `Check five things before you sign. Ask for the NYC DCWP Home Improvement Contractor license number and a certificate of insurance. Make sure someone actually climbs your roof and shows you photos, not just drone shots. Get an itemized, written estimate and the warranty terms in writing. Then read the reviews: ${business.name} is license #${business.license.number}, GAF Certified® and rated ${business.rating.value} stars from ${business.rating.count} reviews.` },
   { q: 'Do I need a new roof, or can it be repaired?', a: 'If your roof is under about 15 years old and the damage is in one area, a repair usually makes sense. If it leaks in several places, the shingles are curling or brittle all over, or it is over 20 years old, replacement is usually cheaper in the long run. We show you photos and tell you honestly. Many homeowners who call us about a new roof end up with a repair.' },
   { q: 'How long does a roof replacement take?', a: 'Most Staten Island homes are done in a single day. We tear off the old roof, inspect and repair the deck, install the new system and clean up before we leave.' },
   { q: 'Do I need a permit to replace my roof on Staten Island?', a: 'Not always. Replacing shingles like-for-like usually does not need a NYC DOB permit, but replacing the deck, changing the roof type and some full replacements do. We check this for every job and file the permit for you when it is needed.' },
   { q: 'Will you help with my insurance claim after storm damage?', a: 'Yes. We document the damage with photos and a written report you can send to your insurance company, make emergency repairs to stop further damage, and explain what the permanent repair involves.' },
-  { q: 'Are you licensed and insured?', a: `Yes. ${business.name} is a licensed NYC Home Improvement Contractor (DCWP license #${business.license.number}), fully insured, GAF Certified and BBB accredited.` },
+  { q: 'Are you licensed and insured?', a: `Yes. ${business.name} is a licensed NYC Home Improvement Contractor (DCWP license #${business.license.number}), fully insured, GAF Certified® and BBB accredited.` },
   { q: 'What warranty do I get on a new roof?', a: `Up to ${business.warranty.manufacturerYears} years from the manufacturer on materials and up to ${business.warranty.workmanshipYears} years on our workmanship, in writing.` },
 ];
 
@@ -113,7 +113,7 @@ const shores = [
           <figcaption><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span> {kt.name}, Google review</figcaption>
         </figure>
         <ul class="hero-proof">
-          <li><Icon name="award" /><span><strong>GAF Certified</strong></span></li>
+          <li><img class="gaf-badge gaf-xs" src="/images/gaf-certified.webp" alt="GAF Certified® Residential Roofing Contractor" width="400" height="409" loading="eager" decoding="async" /><span><strong>GAF Certified®</strong> contractor</span></li>
           <li><Icon name="shield" /><span><strong>{business.warranty.manufacturerYears}-yr</strong> warranty</span></li>
           <li><Icon name="license" /><span>Lic. <strong>#{business.license.number}</strong></span></li>
         </ul>

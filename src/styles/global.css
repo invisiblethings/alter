@@ -1068,3 +1068,13 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .legal-prose > p:first-child { display: inline-block; padding: 0.35rem 0.8rem; border-radius: 99px; background: var(--bone); font-size: 0.88rem; }
 .legal-prose h2 { font-size: clamp(1.4rem, 1.15rem + 0.9vw, 1.9rem); padding-top: 1.5rem; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .legal-grid { grid-template-columns: minmax(0, 1fr); } .legal-aside { position: static; order: 2; } }
+
+/* GAF Certified® badge */
+.gaf-badge { height: auto; flex: none; }
+.gaf-xs { width: 30px; }
+.gaf-sm { width: 42px; }
+.gaf-md { width: 84px; margin-top: 1rem; }
+.hero-proof .gaf-xs { width: 30px; height: auto; }
+.lp-t .gaf-sm { height: auto; width: 44px; max-width: none; }
+.footer-brand .gaf-badge { width: 88px; background: none; padding: 0; border-radius: 0; margin: 0.5rem 0 0; }
+.hero-proof .gaf-xs { width: 36px; }

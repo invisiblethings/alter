@@ -2,13 +2,13 @@
 path: "/about/"
 template: company
 seoTitle: "About Us | Family-Owned Staten Island Roofers | Alter Phase"
-description: "Family-owned Staten Island roofing contractor with 13+ years in roofing. Owner Marke is on every job. GAF Certified, BBB accredited, NYC licensed."
+description: "Family-owned Staten Island roofing contractor with 13+ years in roofing. Owner Marke is on every job. GAF Certified®, BBB accredited, NYC licensed."
 kicker: "About us"
 h1: "A family-owned roofing company where the owner is on every job"
 intro: "Alter Phase Roofing Contracting is a local, family-owned roofing contractor based on Staten Island. We've been in roofing for more than 13 years, and we still run the business the way we started it: honest advice, careful work, and our name on every roof."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg"
 imageAlt: "The Alter Phase Roofing Contracting crew on a roof in Staten Island"
-answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY, serving Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is part of every job. The company is a GAF Certified contractor, BBB accredited, and licensed by NYC DCWP (#2129904-DCWP)."
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY, serving Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is part of every job. The company is a GAF Certified® contractor, BBB accredited, and licensed by NYC DCWP (#2129904-DCWP)."
 faq:
   - q: "Who owns Alter Phase Roofing Contracting?"
     a: "The company is family-owned and run by Marke, who is part of every job it does."
@@ -17,7 +17,7 @@ faq:
   - q: "Do you use subcontractors?"
     a: "Your roof is installed by our own crew, with the owner involved from the first inspection to the final walkthrough."
   - q: "What certifications do you have?"
-    a: "We are GAF Certified and BBB accredited, and we hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
+    a: "We are GAF Certified® and BBB accredited, and we hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
 modified: "2026-10-22"
 ---
 ## How we're different
@@ -46,7 +46,7 @@ Property protected, neighbors considered, and the site left cleaner than we foun
 
 ## Credentials
 
-- **GAF Certified** certified roofing contractor
+- **GAF Certified®** certified roofing contractor
 - **BBB Accredited** business
 - **NYC DCWP Home Improvement Contractor** license #2129904-DCWP
 - **Fully insured**, with certificates of insurance available on request

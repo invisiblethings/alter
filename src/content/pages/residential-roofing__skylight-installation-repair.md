@@ -95,7 +95,7 @@ If your roof is due for [replacement](/residential-roofing/roof-replacement/) in
 
 ## Who you're hiring
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're GAF Certified, BBB Accredited, licensed by NYC DCWP (#2129904-DCWP), fully insured, and rated 5.0 stars across 154 reviews, 109 of them on Google. Repairs come with a written workmanship warranty.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're GAF Certified®, BBB Accredited, licensed by NYC DCWP (#2129904-DCWP), fully insured, and rated 5.0 stars across 154 reviews, 109 of them on Google. Repairs come with a written workmanship warranty.
 
 For full cost detail on leak repairs, see our [roof leak repair cost guide](/cost-to-repair-roof-leak/).
 

@@ -79,6 +79,6 @@ For almost every pitched-roof home on Staten Island, in Queens or in southern Br
 
 ## It's not just the shingles
 
-A shingle roof is a system. What's under the shingles decides how long it lasts: solid [roof sheathing](/roof-sheathing-explained/), synthetic underlayment, ice and water protection at eaves and valleys, proper ventilation, and new flashing. As a GAF Certified contractor, we install complete GAF systems, which is what qualifies a roof for GAF's enhanced warranties.
+A shingle roof is a system. What's under the shingles decides how long it lasts: solid [roof sheathing](/roof-sheathing-explained/), synthetic underlayment, ice and water protection at eaves and valleys, proper ventilation, and new flashing. As a GAF Certified® contractor, we install complete GAF systems, which is what qualifies a roof for GAF's enhanced warranties.
 
 Compare shingles with metal, slate and flat roof options in our [best roofing materials guide](/top-roofing-materials-for-homes-in-new-york/), or see prices in the [NYC roof cost guide](/roof-replacement-cost-in-nyc/).

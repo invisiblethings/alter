@@ -91,7 +91,7 @@ If your roof is over 20 years old, leaks in several places, has a soft or saggin
 
 ## Who you're hiring
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're a GAF Certified contractor.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're a GAF Certified® contractor.
 
 **Next step:** call or text (929) 370-1552 for a free inspection with photos. You'll usually have a written estimate within 24 hours. Leaking right now? Use our [24/7 emergency line](/roof-repair/emergency-service/).
 

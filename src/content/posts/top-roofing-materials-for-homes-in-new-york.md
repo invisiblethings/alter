@@ -24,7 +24,7 @@ faq:
   - q: "What is the best roofing material for New York weather?"
     a: "For pitched roofs, wind-rated architectural asphalt shingles offer the best balance of cost and durability against nor'easters and freeze-thaw cycles; metal and slate last longer. For flat roofs, EPDM and TPO both perform well in NYC's climate."
   - q: "What are the best roofing shingle brands?"
-    a: "GAF, Owens Corning and CertainTeed are the leading asphalt shingle manufacturers in the US. We install GAF shingles as a GAF Certified contractor, and we install complete GAF systems backed by GAF's manufacturer warranty."
+    a: "GAF, Owens Corning and CertainTeed are the leading asphalt shingle manufacturers in the US. We install GAF shingles as a GAF Certified® contractor, which lets us offer GAF system warranties of up to 50 years."
   - q: "What are the best flat roofing brands?"
     a: "Leading commercial and flat roof membrane manufacturers include GAF, Firestone (Holcim), Carlisle and Johns Manville. We source from these manufacturers."
   - q: "What is the longest-lasting roof?"
@@ -71,7 +71,7 @@ Most Brooklyn, Manhattan and Queens row homes have flat roofs. The main options 
 
 Material brand matters, but **how it's installed matters more**. A great shingle installed badly will fail early. That said, these are the manufacturers most trusted by roofers:
 
-- **Shingles:** GAF, Owens Corning and CertainTeed are the leading US shingle makers. We install GAF as a **GAF Certified** contractor, so we install complete GAF systems backed by GAF's manufacturer warranty.
+- **Shingles:** GAF, Owens Corning and CertainTeed are the leading US shingle makers. We install GAF as a **GAF Certified®** contractor, which lets us offer GAF system warranties of up to 50 years.
 - **Flat roof membranes:** GAF, Firestone (Holcim), Carlisle and Johns Manville. We source TPO, EPDM and modified bitumen systems from these manufacturers.
 - **Skylights:** Velux and Fakro are the most common brands we install and service.
 
