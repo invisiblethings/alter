@@ -11,7 +11,7 @@ imageAlt: "Roof replacement in New York City, cost guide by Alter Phase Roofing 
 published: "2024-10-12"
 modified: "2026-10-22"
 estimator: true
-answer: "Most NYC roof replacements cost <strong>$10,000–$30,000+</strong>. Installed prices run about <strong>$6–$10 per sq ft</strong> for asphalt shingles, <strong>$8–$12</strong> for EPDM, <strong>$9–$14</strong> for TPO, <strong>$12–$18</strong> for metal and <strong>$20–$40</strong> for slate. A 1,000 sq ft flat roof costs about $8,000–$13,000 on Staten Island and $13,000–$22,000+ in Manhattan. Most roof repairs cost $300–$1,200."
+answer: "Most NYC roof replacements cost <strong>$10,000–$30,000+</strong>. Installed prices run about <strong>$5–$10 per sq ft</strong> for asphalt shingles, <strong>$8–$12</strong> for EPDM, <strong>$9–$14</strong> for TPO, <strong>$12–$18</strong> for metal and <strong>$20–$40</strong> for slate. A 1,000 sq ft flat roof costs about $8,000–$13,000 on Staten Island and $13,000–$22,000+ in Manhattan. Most roof repairs cost $300–$1,200."
 takeaways:
   - "Typical NYC home: <strong>$10,000–$30,000+</strong> for a full replacement."
   - "Borough matters: the same flat roof costs <strong>60%+ more</strong> in Manhattan than on Staten Island."
@@ -23,9 +23,9 @@ related:
   - "/cost-to-repair-roof-leak/"
 faq:
   - q: "How much does a new roof cost in NYC?"
-    a: "Most NYC roof replacements cost $10,000–$30,000+. A 1,200 sq ft asphalt shingle roof is roughly $7,200–$12,000, and a 1,000 sq ft flat roof $8,000–$22,000+ depending on the borough."
+    a: "Most NYC roof replacements cost $10,000–$30,000+. A 1,200 sq ft asphalt shingle roof is roughly $6,000–$12,000, and a 1,000 sq ft flat roof $8,000–$22,000+ depending on the borough."
   - q: "How much does a roof cost per square foot in New York?"
-    a: "Installed: asphalt shingles $6–$10, EPDM $8–$12, modified bitumen $9–$13, TPO $9–$14, PVC $10–$16, metal $12–$18, tile $15–$25 and slate $20–$40 per square foot."
+    a: "Installed: asphalt shingles $5–$10, EPDM $8–$12, modified bitumen $9–$13, TPO $9–$14, PVC $10–$16, metal $12–$18, tile $15–$25 and slate $20–$40 per square foot."
   - q: "Why is roofing more expensive in Manhattan and Brooklyn?"
     a: "Access and logistics. Attached buildings, no driveways, sidewalk protection, hoisting materials, building height, co-op board requirements and more complex permits all add labor."
   - q: "How much does it cost to repair a roof in NYC?"
@@ -41,7 +41,7 @@ Installed prices from our own NYC jobs, including tear-off, materials and labor.
 
 | Material | Per sq ft | 1,200 sq ft roof | Lifespan |
 | --- | --- | --- | --- |
-| Asphalt shingles | $6–$10 | $7,200–$12,000 | 20–30 yrs |
+| Asphalt shingles | $5–$10 | $6,000–$12,000 | 20–30 yrs |
 | EPDM (rubber) | $8–$12 | $9,600–$14,400 | 20–30 yrs |
 | Modified bitumen | $9–$13 | $10,800–$15,600 | 20–30 yrs |
 | TPO | $9–$14 | $10,800–$16,800 | 20–30 yrs |

@@ -15,7 +15,7 @@ area: "Queens"
 prices: ["pitched", "flat"]
 image: "/wp-content/uploads/2024/11/Roofing-NYC-AlterPhaseRoofing.jpg"
 imageAlt: "Roofing services in New York City by Alter Phase Roofing Contracting"
-answer: "Alter Phase Roofing Contracting repairs and replaces roofs across Queens, including shingle roofs on detached homes and flat roofs on attached rows and two-families. A 1,000 sq ft flat roof replacement in Queens typically costs $9,000–$15,000, and architectural shingles run $6–$10 per sq ft installed."
+answer: "Alter Phase Roofing Contracting repairs and replaces roofs across Queens, including shingle roofs on detached homes and flat roofs on attached rows and two-families. A 1,000 sq ft flat roof replacement in Queens typically costs $9,000–$15,000, and architectural shingles run $5–$10 per sq ft installed."
 related:
   - "/roof-repair/"
   - "/residential-roofing/roof-replacement/"
@@ -24,7 +24,7 @@ related:
   - "/roof-replacement-cost-in-nyc/"
 faq:
   - q: "How much does a new roof cost in Queens?"
-    a: "A 1,000 sq ft flat roof typically runs $9,000–$15,000 in Queens. Shingle roofs on detached homes cost about $6–$10 per sq ft installed, so a 1,500 sq ft roof is roughly $9,000–$15,000. Wider streets make Queens a little less expensive than Brooklyn or Manhattan."
+    a: "A 1,000 sq ft flat roof typically runs $9,000–$15,000 in Queens. Shingle roofs on detached homes cost about $5–$10 per sq ft installed, so a 1,500 sq ft roof is roughly $7,500–$15,000. Wider streets make Queens a little less expensive than Brooklyn or Manhattan."
   - q: "Do you work on attached homes in Queens?"
     a: "Yes. Attached rows in Ridgewood, Middle Village, Astoria, Woodside and Jackson Heights are mostly flat roofs with shared walls, the same kind of roof we work on all over Brooklyn."
   - q: "Do you offer emergency roof repair in Queens?"

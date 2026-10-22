@@ -1,0 +1,21 @@
+---
+// One review as a colored card. `tone` cycles through the brand colors so a
+// grid of reviews reads like a wall of real people, not a block of text.
+import Icon from './Icon.astro';
+import { emphasize } from '../lib/reviewText';
+import type { Review } from '../data/reviews';
+interface Props { r: Review; tone?: 'navy' | 'gold' | 'white' | 'ink'; max?: number; big?: boolean; date?: boolean }
+const { r, tone = 'white', max = 0, big = false, date = false } = Astro.props;
+const initials = r.name.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
+const hue = [...r.name].reduce((a, c) => a + c.charCodeAt(0), 0) % 5;
+const month = new Date(r.date + '-15').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+<figure class:list={['rv', `rv-${tone}`, big && 'rv-big']} data-tags={r.tags.join(' ')}>
+  <span class="rv-stars" role="img" aria-label="5 out of 5 stars">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span>
+  <blockquote set:html={`“${emphasize(r.text, max)}”`} />
+  <figcaption class="rv-foot">
+    <span class={`rv-av rv-av-${hue}`} aria-hidden="true">{initials}</span>
+    <span class="rv-who"><strong>{r.name}</strong><small>{r.source} review{date && ` · ${month}`}</small></span>
+    {r.source === 'Google' && <span class="rv-src" aria-hidden="true"><Icon name="google" /></span>}
+  </figcaption>
+</figure>

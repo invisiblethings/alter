@@ -48,7 +48,7 @@ const roofGallery = [
   { img: '/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY-768x768.jpg', t: 'New shingle roof · Staten Island 10314' },
   { img: '/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304-768x768.jpg', t: 'Full replacement · Staten Island 10305' },
   { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9-768x772.jpg', t: 'Tear-off down to the deck' },
-  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1-768x758.jpg', t: 'TPO flat roof · Brooklyn' },
+  { img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-11-768x758.jpg', t: 'Flat roof installation · Staten Island' },
 ];
 
 const roofVariants = (area: string): Variant[] => [
@@ -96,7 +96,7 @@ export const landing: Record<string, LandingCopy> = {
     includesTitle: 'Your free roof inspection includes',
     includes: roofIncludes,
     compare: roofCompare,
-    gallery: [roofGallery[3], { img: '/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn-768x768.webp', t: 'Flat roof install · Brooklyn' }, { img: '/wp-content/uploads/2025/04/MB-Flat-Roof-Brooklyn-768x768.webp', t: 'Modified bitumen · Brooklyn' }, roofGallery[0]],
+    gallery: [{ img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1-768x758.jpg', t: 'TPO flat roof · Brooklyn' }, { img: '/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn-768x768.webp', t: 'Flat roof install · Brooklyn' }, { img: '/wp-content/uploads/2025/04/MB-Flat-Roof-Brooklyn-768x768.webp', t: 'Modified bitumen · Brooklyn' }, roofGallery[0]],
     galleryTitle: 'Recent roofs by our own crew',
     reviewTags: ['repair', 'leak', 'honest'],
     formTitle: 'Get your free roof inspection',

@@ -15,7 +15,7 @@ area: "Staten Island"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2025/04/AlterPhaseRoofing-BG-Home.webp"
 imageAlt: "New roof replaced by Alter Phase Roofing Contracting in 10314 Staten Island, NY"
-answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY 10305. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $6–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based at 61 Appleby Ave, Staten Island, NY 10305. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $5–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
 projects:
   - title: "Full shingle roof replacement"
     location: "Staten Island, NY 10314"
@@ -42,7 +42,7 @@ faq:
   - q: "Which Staten Island neighborhoods do you serve?"
     a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
   - q: "How much does a new roof cost on Staten Island?"
-    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $6–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $8,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
+    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $5–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $8,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
   - q: "Do Staten Island roofs need permits?"
     a: "A like-for-like reroof on a one- or two-family home usually doesn't need a DOB permit. Replacing the deck, changing the roof type or commercial work generally does. We check for every job and file when needed."
 modified: "2026-10-22"

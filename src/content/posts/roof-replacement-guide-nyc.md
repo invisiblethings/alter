@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/10/Flat-Roof-in-NYC-by-AlterPhaseRoofingContrac
 imageAlt: "Flat roof replacement in New York City by Alter Phase Roofing Contracting"
 published: "2025-05-12"
 modified: "2026-10-22"
-answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $6–$10 per sq ft for asphalt shingles and $8–$14 for flat roofs, more in Manhattan and Brooklyn than in Staten Island or Queens. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do."
+answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $5–$10 per sq ft for asphalt shingles and $8–$14 for flat roofs, more in Manhattan and Brooklyn than in Staten Island or Queens. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do."
 takeaways:
   - "Budget <strong>$10,000–$30,000+</strong> for most homes; a 1,000 sq ft flat roof runs $8,000–$13,000 on Staten Island and $13,000–$22,000+ in Manhattan."
   - "A <strong>DOB permit</strong> is needed when you replace the deck, change the roof type, work on a commercial building or trigger Local Laws 92/94."
@@ -42,7 +42,7 @@ Most New York City roof replacements land between **$10,000 and $30,000**, with 
 
 | Material | Per sq ft | 1,200 sq ft roof | Lifespan | Common on |
 | --- | --- | --- | --- | --- |
-| Asphalt shingles | $6–$10 | $7,200–$12,000 | 20–30 yrs | Staten Island, Queens houses |
+| Asphalt shingles | $5–$10 | $7,200–$12,000 | 20–30 yrs | Staten Island, Queens houses |
 | EPDM (rubber) | $8–$12 | $9,600–$14,400 | 20–30 yrs | Brooklyn & Queens row homes |
 | TPO | $9–$14 | $10,800–$16,800 | 20–30 yrs | Larger flat roofs, commercial |
 | Modified bitumen | $9–$13 | $10,800–$15,600 | 20–30 yrs | Roofs with foot traffic |

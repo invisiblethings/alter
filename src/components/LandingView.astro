@@ -9,6 +9,7 @@ import Icon from './Icon.astro';
 import QuoteWizard from './QuoteWizard.astro';
 import PriceTables from './PriceTables.astro';
 import Faq from './Faq.astro';
+import Reviews from './Reviews.astro';
 import { business, telHref } from '../data/business';
 import { reviews, reviewsTagged, reviewStats } from '../data/reviews';
 import { landing } from '../data/landing';
@@ -120,26 +121,7 @@ const steps = [
   </div>
 </section>
 
-<section class="lp-sec" aria-labelledby="rev-h">
-  <div class="wrap">
-    <div class="lp-rev-head" data-reveal>
-      <div>
-        <span class="kicker">Real reviews, word for word</span>
-        <h2 id="rev-h">{reviewStats.total} reviews. {reviewStats.average} stars.</h2>
-      </div>
-      <div class="lp-score"><span class="lp-ico lp-ico-w"><Icon name="google" /></span><b>{reviewStats.average}</b><span><span class="stars" aria-hidden="true">{stars.map(() => <Icon name="star" />)}</span><small>{reviewStats.fiveStar} five-star reviews</small></span></div>
-    </div>
-    <div class="lp-rev-grid">
-      {picked.map((r, i) => (
-        <figure class="lp-rev" data-reveal data-reveal-d={String(i % 3)}>
-          <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
-          <blockquote>“{r.text}”</blockquote>
-          <figcaption><span class="avatar-s" aria-hidden="true">{initials(r.name)}</span><span><strong>{r.name}</strong>{r.source} review</span></figcaption>
-        </figure>
-      ))}
-    </div>
-  </div>
-</section>
+<Reviews limit={6} tags={L.reviewTags} title={`${reviewStats.total} reviews. ${reviewStats.average} stars. Here's why.`} kicker="Real reviews, word for word" noLinks />
 
 <section class="lp-sec lp-bone" aria-labelledby="gal-h">
   <div class="wrap">

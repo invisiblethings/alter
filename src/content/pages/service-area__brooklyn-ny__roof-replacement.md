@@ -25,7 +25,7 @@ related:
   - "/residential-roofing/roof-replacement/"
 faq:
   - q: "How much does a new roof cost in Brooklyn?"
-    a: "About $10,000–$17,000 for a typical 1,000 sq ft flat roof. Shingle roofs on detached homes in southern Brooklyn run about $6–$10 per sq ft installed. The number of old layers, deck repairs, parapet work and access make the biggest difference."
+    a: "About $10,000–$17,000 for a typical 1,000 sq ft flat roof. Shingle roofs on detached homes in southern Brooklyn run about $5–$10 per sq ft installed. The number of old layers, deck repairs, parapet work and access make the biggest difference."
   - q: "Do co-op and condo buildings need board approval?"
     a: "Yes, regardless of whether a DOB permit is needed. Boards usually ask for a scope of work, insurance certificates and a contractor application. We prepare those documents; allow a few weeks for approval."
   - q: "How long does a roof replacement take on a Brooklyn row home?"

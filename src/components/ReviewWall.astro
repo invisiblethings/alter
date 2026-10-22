@@ -2,6 +2,7 @@
 // Every published review, filterable by job type. Plain HTML first: all
 // cards render server-side (indexable), the filter only hides cards.
 import Icon from './Icon.astro';
+import ReviewCard from './ReviewCard.astro';
 import { reviews, reviewStats, type ReviewTag } from '../data/reviews';
 const filters: { t: ReviewTag | 'all'; label: string }[] = [
   { t: 'all', label: 'All reviews' },
@@ -15,10 +16,8 @@ const filters: { t: ReviewTag | 'all'; label: string }[] = [
   { t: 'oneday', label: 'Done in one day' },
 ];
 const count = (t: string) => (t === 'all' ? reviews.length : reviews.filter((r) => r.tags.includes(t as ReviewTag)).length);
-const month = (d: string) => new Date(d + '-15').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-const stars = [1, 2, 3, 4, 5];
 ---
-<section class="sec bone" aria-labelledby="wall-h" data-wall>
+<section class="sec rv-sec" aria-labelledby="wall-h" data-wall>
   <div class="wrap">
     <div class="head-split">
       <div><span class="kicker">{reviewStats.total} reviews · {reviewStats.average} stars</span><h2 id="wall-h">{reviews.length} written reviews, in our customers' own words</h2></div>
@@ -29,13 +28,7 @@ const stars = [1, 2, 3, 4, 5];
     </div>
     <p class="sr-only" aria-live="polite" data-wall-status></p>
     <div class="reviews-cols">
-      {reviews.map((r) => (
-        <figure class="mini" data-tags={r.tags.join(' ')}>
-          <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
-          <blockquote><p>“{r.text}”</p></blockquote>
-          <figcaption><strong>{r.name}</strong> · {r.source} · {month(r.date)}</figcaption>
-        </figure>
-      ))}
+      {reviews.map((r, i) => <ReviewCard r={r} tone={(['white', 'navy', 'white', 'gold', 'white', 'ink'] as const)[i % 6]} date />)}
     </div>
   </div>
 </section>

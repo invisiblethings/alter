@@ -1,47 +1,30 @@
 ---
+// Review wall on a dark band: colored cards, key sentence highlighted.
+// `tags` shows reviews about the page's service first.
 import Icon from './Icon.astro';
+import ReviewCard from './ReviewCard.astro';
 import { reviews as all, reviewsTagged, reviewStats, type ReviewTag } from '../data/reviews';
 import { business } from '../data/business';
-// Featured review + a short stack. `tags` picks reviews about the page's
-// service (falls back to the general list when too few match).
 interface Props { limit?: number; title?: string; kicker?: string; bg?: string; offset?: number; tags?: ReviewTag[]; noLinks?: boolean }
-const { limit = 4, title = 'What Staten Island homeowners say', kicker = `${reviewStats.average} stars · ${reviewStats.total} reviews`, bg = '', offset = 0, tags, noLinks = false } = Astro.props;
+const { limit = 6, title = 'What Staten Island homeowners say', kicker = `${reviewStats.average} stars · ${reviewStats.total} reviews`, offset = 0, tags, noLinks = false } = Astro.props;
+const good = (r: (typeof all)[number]) => r.text.length > 90;
+const pool = (tags ? [...reviewsTagged(...tags).filter(good), ...all.filter(good)] : all.slice(offset).filter(good)).filter((r, i, a) => a.indexOf(r) === i);
+const shown = pool.slice(0, Math.max(limit, 3));
+const tones = ['gold', 'white', 'navy', 'white', 'ink', 'white'] as const;
 const Score = noLinks ? 'div' : 'a';
-const pool = tags && reviewsTagged(...tags).filter((r) => r.text.length > 90).length >= 2
-  ? [...reviewsTagged(...tags).filter((r) => r.text.length > 90), ...all.filter((r) => !tags.some((t) => r.tags.includes(t)))]
-  : all.slice(offset);
-const [first, ...rest] = pool;
-const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
-const stars = [1, 2, 3, 4, 5];
-const short = (t: string) => (t.length > 200 ? t.slice(0, t.lastIndexOf(' ', 195)) + '…' : t);
 ---
-<section class:list={['sec', bg]} aria-labelledby="rev-h">
+<section class="sec rv-sec" aria-labelledby="rev-h">
   <div class="wrap">
-    <div class="head-split" data-reveal>
+    <div class="rv-head" data-reveal>
       <div><span class="kicker">{kicker}</span><h2 id="rev-h">{title}</h2></div>
-      {!noLinks && <p><a class="btn btn-line" href="/reviews/">Read all reviews <Icon name="arrow" /></a></p>}
+      <Score class="rv-score" href={noLinks ? undefined : '/reviews/'}>
+        <span class="rv-score-g"><Icon name="google" /></span>
+        <b>{reviewStats.average}</b>
+        <span><span class="rv-stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><small>{reviewStats.total} reviews · {reviewStats.bySource.Google} on Google{!noLinks && ' · read all →'}</small></span>
+      </Score>
     </div>
-    <div class="reviews-wrap">
-      <figure class="bigquote" data-reveal>
-        <span class="qmark" aria-hidden="true">“</span>
-        <blockquote><p>{first.text}</p></blockquote>
-        <figcaption><span class="avatar-s" aria-hidden="true">{initials(first.name)}</span><span><strong>{first.name}</strong><span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span> {first.source} review</span></figcaption>
-      </figure>
-      <div data-reveal data-reveal-d="1">
-        <Score class="score" href={noLinks ? undefined : business.googleReviewUrl} target={noLinks ? undefined : '_blank'} rel={noLinks ? undefined : 'noopener'}>
-          <span class="g"><Icon name="google" /></span>
-          <span><b>{reviewStats.average}</b><small>{reviewStats.total} reviews · {reviewStats.bySource.Google} on Google{!noLinks && ' →'}</small></span>
-        </Score>
-        <div class="mini-reviews">
-          {rest.slice(0, Math.max(limit - 1, 0)).map((r) => (
-            <figure class="mini">
-              <span class="stars" role="img" aria-label="5 out of 5 stars">{stars.map(() => <Icon name="star" />)}</span>
-              <blockquote><p>“{short(r.text)}”</p></blockquote>
-              <figcaption><strong>{r.name}</strong> · {r.source} review</figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
+    <div class="rv-grid">
+      {shown.map((r, i) => <div data-reveal data-reveal-d={String(i % 3)}><ReviewCard r={r} tone={tones[i % tones.length]} max={i === 0 ? 0 : 340} big={i === 0} /></div>)}
     </div>
   </div>
 </section>

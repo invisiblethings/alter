@@ -15,7 +15,7 @@ area: "Staten Island"
 prices: ["pitched"]
 image: "/wp-content/uploads/2024/11/Residential-Roofing-AlterPhaseRoofing.jpg"
 imageAlt: "Residential roof completed by Alter Phase Roofing Contracting on Staten Island"
-answer: "Alter Phase Roofing Contracting repairs and replaces roofs on Staten Island houses, two-families and attached homes. Most home repairs cost <strong>$300–$1,200</strong>, and full replacements <strong>$10,000–$30,000</strong>. Asphalt shingles run $6–$10 per sq ft installed. Every job starts with a free inspection and a written quote."
+answer: "Alter Phase Roofing Contracting repairs and replaces roofs on Staten Island houses, two-families and attached homes. Most home repairs cost <strong>$300–$1,200</strong>, and full replacements <strong>$10,000–$30,000</strong>. Asphalt shingles run $5–$10 per sq ft installed. Every job starts with a free inspection and a written quote."
 related:
   - "/residential-roofing/roof-replacement/"
   - "/roof-repair/residential/"

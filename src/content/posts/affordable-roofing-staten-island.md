@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/11/Affordable-Roofing-Staten-Island-AlterPhaseR
 imageAlt: "Affordable roofing on Staten Island"
 published: "2024-11-02"
 modified: "2026-10-22"
-answer: "Staten Island is the most affordable NYC borough for roofing: a 1,000 sq ft flat roof runs about <strong>$8,000–$13,000</strong> and shingles <strong>$6–$10 per sq ft</strong>. The best ways to save are repairing instead of replacing when the roof allows it, acting before damage spreads, choosing value materials like architectural shingles or EPDM, and comparing itemized estimates."
+answer: "Staten Island is the most affordable NYC borough for roofing: a 1,000 sq ft flat roof runs about <strong>$8,000–$13,000</strong> and shingles <strong>$5–$10 per sq ft</strong>. The best ways to save are repairing instead of replacing when the roof allows it, acting before damage spreads, choosing value materials like architectural shingles or EPDM, and comparing itemized estimates."
 takeaways:
   - "Staten Island is the <strong>least expensive borough</strong> for roofing because homes are easy to access."
   - "The biggest saving: <strong>don't replace a roof that only needs a repair</strong>."
@@ -22,7 +22,7 @@ related:
   - "/all-seasons-roofing-staten-island/"
 faq:
   - q: "How much does a new roof cost on Staten Island?"
-    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run about $6–$10 per sq ft installed, and a typical 1,000 sq ft flat roof is $8,000–$13,000."
+    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run about $5–$10 per sq ft installed, and a typical 1,000 sq ft flat roof is $8,000–$13,000."
   - q: "Why is roofing cheaper on Staten Island than in Manhattan?"
     a: "Access. Detached homes with driveways make it easier to stage materials and remove debris, and there's less street protection and hoisting involved."
   - q: "Is it cheaper to repair or replace my roof?"
@@ -38,7 +38,7 @@ faq:
 | Flashing replacement | $450–$900 |
 | Flat roof leak repair | $400–$1,200 |
 | New flat roof (~1,000 sq ft) | $8,000–$13,000 |
-| New shingle roof | $6–$10 per sq ft installed |
+| New shingle roof | $5–$10 per sq ft installed |
 | Full replacement, typical home | $10,000–$30,000+ |
 
 ## 9 ways to save on your roof (the smart way)

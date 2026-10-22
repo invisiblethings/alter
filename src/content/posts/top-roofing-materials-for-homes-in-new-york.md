@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/11/Top-Roofing-Materials-New-York-AlterPhaseRoo
 imageAlt: "Roofing materials for homes in New York"
 published: "2024-11-14"
 modified: "2026-10-22"
-answer: "For most pitched-roof homes in New York, <strong>architectural asphalt shingles</strong> ($6–$10/sq ft, 20–30 years) are the best value. <strong>Metal</strong> ($12–$18, 40–70 years) and <strong>slate</strong> ($20–$40, 75–100+ years) last far longer for more money. For flat roofs, <strong>EPDM</strong> ($8–$12) is the budget choice and <strong>TPO</strong> ($9–$14) the energy-efficient one."
+answer: "For most pitched-roof homes in New York, <strong>architectural asphalt shingles</strong> ($5–$10/sq ft, 20–30 years) are the best value. <strong>Metal</strong> ($12–$18, 40–70 years) and <strong>slate</strong> ($20–$40, 75–100+ years) last far longer for more money. For flat roofs, <strong>EPDM</strong> ($8–$12) is the budget choice and <strong>TPO</strong> ($9–$14) the energy-efficient one."
 takeaways:
   - "Best value for pitched roofs: <strong>architectural asphalt shingles</strong>."
   - "Longest-lasting: <strong>slate</strong> (75–100+ years) and <strong>metal</strong> (40–70 years)."
@@ -36,7 +36,7 @@ faq:
 
 | Material | Installed cost | Lifespan | Best for | Watch out for |
 | --- | --- | --- | --- | --- |
-| Asphalt shingles | $6–$10/sq ft | 20–30 yrs | Most pitched-roof homes | Choose wind-rated shingles near the coast |
+| Asphalt shingles | $5–$10/sq ft | 20–30 yrs | Most pitched-roof homes | Choose wind-rated shingles near the coast |
 | Metal | $12–$18/sq ft | 40–70 yrs | Long-term owners | Higher upfront cost |
 | Slate | $20–$40/sq ft | 75–100+ yrs | Historic and high-end homes | Weight; needs a specialist |
 | Tile | $15–$25/sq ft | 50+ yrs | Specific architectural styles | Heavy; structure must be checked |
