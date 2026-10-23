@@ -1,0 +1,175 @@
+---
+// Roof price calculator for Ads landing pages, built for lead capture:
+// the visitor builds their job in a few taps, sees an honest range right
+// away (trust), then gets the exact written price by leaving name + phone.
+// The calculator choices travel with the lead, so the first call starts with
+// the job already described. Prices come from src/data/costs.ts.
+import Icon from './Icon.astro';
+import { materials, repairs, boroughs, money } from '../data/costs';
+import { business, telHref } from '../data/business';
+
+interface Props { area: string; start?: 'flat' | 'shingle' | 'repair'; id?: string }
+const { area, start = 'shingle', id = 'calc' } = Astro.props;
+const b = boroughs.find((x) => x.name === area) || boroughs[0];
+const si = boroughs[0];
+const factor = (b.low + b.high) / (si.low + si.high);
+const flat = materials.filter((m) => m.type === 'flat');
+const shingle = materials.find((m) => m.id === 'asphalt')!;
+const sizes = {
+  shingle: [
+    { label: 'Detached house', size: 1800 },
+    { label: 'Semi-attached', size: 1200 },
+    { label: 'Townhouse', size: 900 },
+  ],
+  flat: [
+    { label: 'Row home', size: 800 },
+    { label: 'Large row / mixed-use', size: 1200 },
+    { label: 'Garage or extension', size: 400 },
+  ],
+};
+const data = { factor, flat: flat.map(({ id, name, low, high, life }) => ({ id, name, low, high, life })), shingle: { name: shingle.name, low: shingle.low, high: shingle.high, life: shingle.life }, repairs };
+const round = (n: number) => Math.round((n * factor) / 100) * 100;
+const startSize = start === 'flat' ? sizes.flat[0].size : sizes.shingle[0].size;
+const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(repairs[0].high)}`
+  : start === 'flat' ? `${money(round(flat[0].low * startSize))} – ${money(round(flat[0].high * startSize))}`
+  : `${money(round(shingle.low * startSize))} – ${money(round(shingle.high * startSize))}`;
+---
+<div class="calc" data-calc={JSON.stringify(data)} data-start={start} id={id}>
+  <form class="calc-form" name="calculator" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" data-calc-form>
+    <input type="hidden" name="form-name" value="calculator" />
+    <input type="hidden" name="page" value={Astro.url.pathname} />
+    <input type="hidden" name="area" value={area} />
+    <input type="hidden" name="job" data-out="job" value="" />
+    <input type="hidden" name="details" data-out="details" value="" />
+    <input type="hidden" name="estimated_range" data-out="range" value={startRange} />
+    <p class="hp"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+    <div class="calc-in">
+      <fieldset class="calc-step">
+        <legend><span class="n">1</span> What do you need?</legend>
+        <div class="calc-pick calc-pick-3">
+          <label><input type="radio" name="calc_job" value="shingle" checked={start === 'shingle'} /><span><Icon name="roof" />New shingle roof</span></label>
+          <label><input type="radio" name="calc_job" value="flat" checked={start === 'flat'} /><span><Icon name="layers" />New flat roof</span></label>
+          <label><input type="radio" name="calc_job" value="repair" checked={start === 'repair'} /><span><Icon name="wrench" />Roof repair</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="calc-step" data-when="shingle flat">
+        <legend><span class="n">2</span> What kind of building?</legend>
+        <div class="calc-pick" data-sizes="shingle">
+          {sizes.shingle.map((s, i) => <label><input type="radio" name="calc_size_shingle" value={s.size} data-label={s.label} checked={i === 0} /><span>{s.label}<small>~{s.size.toLocaleString('en-US')} sq ft</small></span></label>)}
+        </div>
+        <div class="calc-pick" data-sizes="flat">
+          {sizes.flat.map((s, i) => <label><input type="radio" name="calc_size_flat" value={s.size} data-label={s.label} checked={i === 0} /><span>{s.label}<small>~{s.size.toLocaleString('en-US')} sq ft</small></span></label>)}
+        </div>
+        <div class="calc-range">
+          <label for={`${id}-size`}>Fine-tune the roof size</label>
+          <div class="range-row"><input id={`${id}-size`} type="range" name="calc_sqft" min="200" max="4000" step="50" value={startSize} /><output data-size-out>{startSize.toLocaleString('en-US')} sq ft</output></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="calc-step" data-when="flat">
+        <legend><span class="n">3</span> Flat roof system</legend>
+        <div class="calc-pick calc-pick-2">
+          {flat.map((m, i) => <label><input type="radio" name="calc_material" value={m.id} checked={i === 0} /><span>{m.name}<small>${m.low}–${m.high}/sq ft</small></span></label>)}
+        </div>
+      </fieldset>
+
+      <fieldset class="calc-step" data-when="repair">
+        <legend><span class="n">2</span> What's the problem?</legend>
+        <div class="calc-pick calc-pick-2">
+          {repairs.map((r, i) => <label><input type="radio" name="calc_repair" value={i} checked={i === 0} /><span>{r.name.replace(/\s*\(.*\)/, '')}</span></label>)}
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="calc-out">
+      <div class="calc-result" aria-live="polite">
+        <span class="calc-k">Your estimated price in {area}</span>
+        <span class="calc-val" data-val>{startRange}</span>
+        <span class="calc-meta" data-meta></span>
+      </div>
+      <div class="calc-lead">
+        <p class="calc-lead-h"><Icon name="lock" /><span>Get your <strong>exact price in writing</strong>, free</span></p>
+        <div class="row-2">
+          <div class="field"><label for={`${id}-name`}>Your name</label><input id={`${id}-name`} name="name" autocomplete="name" required /></div>
+          <div class="field"><label for={`${id}-phone`}>Phone</label><input id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+        </div>
+        <div class="field"><label for={`${id}-addr`}>Property address or ZIP</label><input id={`${id}-addr`} name="address" autocomplete="street-address" required /></div>
+        <button class="btn btn-gold btn-lg btn-block" type="submit" data-submit>Send me my exact price <Icon name="arrow" /></button>
+        <p class="form-status" role="alert"></p>
+        <p class="calc-fine"><Icon name="check" /> Free inspection with photos · written, itemized price in 24 hours · no obligation</p>
+        <a class="calc-call" href={telHref}><Icon name="phone" /> Rather talk? {business.phone}</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-calc]').forEach((root) => {
+    const d = JSON.parse(root.dataset.calc!);
+    const f = root.querySelector<HTMLFormElement>('[data-calc-form]')!;
+    const val = root.querySelector('[data-val]')!;
+    const meta = root.querySelector('[data-meta]')!;
+    const sizeOut = root.querySelector('[data-size-out]')!;
+    const slider = f.querySelector<HTMLInputElement>('input[name=calc_sqft]')!;
+    const out = (k: string) => f.querySelector<HTMLInputElement>(`[data-out=${k}]`)!;
+    const money = (n: number) => '$' + (Math.round(n / 100) * 100).toLocaleString('en-US');
+    const checked = (n: string) => f.querySelector<HTMLInputElement>(`input[name=${n}]:checked`);
+    let used = false;
+
+    const update = () => {
+      const job = checked('calc_job')!.value;
+      root.querySelectorAll<HTMLElement>('[data-when]').forEach((el) => (el.hidden = !el.dataset.when!.split(' ').includes(job)));
+      root.querySelectorAll<HTMLElement>('[data-sizes]').forEach((el) => (el.hidden = el.dataset.sizes !== job));
+      const size = +slider.value;
+      sizeOut.textContent = size.toLocaleString('en-US') + ' sq ft';
+      let range = '', job_label = '', details = '';
+      if (job === 'repair') {
+        const r = d.repairs[+checked('calc_repair')!.value];
+        range = `$${r.low.toLocaleString('en-US')} – $${r.high.toLocaleString('en-US')}`;
+        job_label = 'Roof repair';
+        details = r.name;
+        meta.textContent = `${r.name} · found and fixed at the source, with photos`;
+      } else {
+        const m = job === 'flat' ? d.flat.find((x: any) => x.id === checked('calc_material')!.value) : d.shingle;
+        range = `${money(m.low * size * d.factor)} – ${money(m.high * size * d.factor)}`;
+        const bldg = checked(job === 'flat' ? 'calc_size_flat' : 'calc_size_shingle')!.dataset.label;
+        job_label = job === 'flat' ? 'New flat roof' : 'New shingle roof';
+        details = `${m.name} · ${bldg} · ${size.toLocaleString('en-US')} sq ft`;
+        meta.textContent = `${details} · lasts ${m.life} · tear-off, cleanup and warranty included`;
+      }
+      val.textContent = range;
+      out('job').value = job_label;
+      out('details').value = details;
+      out('range').value = range;
+    };
+
+    f.addEventListener('change', (e) => {
+      const t = e.target as HTMLInputElement;
+      if (t.name === 'calc_size_shingle' || t.name === 'calc_size_flat') slider.value = t.value;
+      if (t.name === 'calc_job') { const s = checked(t.value === 'flat' ? 'calc_size_flat' : 'calc_size_shingle'); if (s) slider.value = s.value; }
+      update();
+      if (!used) { used = true; (window as any).dataLayer?.push({ event: 'calculator_used' }); }
+    });
+    slider.addEventListener('input', update);
+    update();
+
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (![...f.querySelectorAll<HTMLInputElement>('input[required]')].every((el) => el.reportValidity())) return;
+      const status = f.querySelector('.form-status')!;
+      const btn = f.querySelector<HTMLButtonElement>('[data-submit]')!;
+      btn.disabled = true; status.textContent = '';
+      try {
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f) as any).toString() });
+        if (!res.ok) throw new Error(String(res.status));
+        (window as any).dataLayer?.push({ event: 'generate_lead', form_name: 'calculator', job: out('job').value, estimated_range: out('range').value, page_path: location.pathname });
+        location.href = '/thank-you/';
+      } catch {
+        btn.disabled = false;
+        status.textContent = 'Sorry, that didn’t go through. Please call us and we’ll help right away.';
+      }
+    });
+  });
+</script>

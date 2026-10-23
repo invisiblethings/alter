@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 import Icon from './Icon.astro';
 import QuoteWizard from './QuoteWizard.astro';
-import PriceTables from './PriceTables.astro';
+import LeadCalculator from './LeadCalculator.astro';
 import Faq from './Faq.astro';
 import Reviews from './Reviews.astro';
 import { business, telHref } from '../data/business';
@@ -145,11 +145,10 @@ const steps = [
 </section>
 
 {d.prices.length > 0 && (
-  <section class="lp-sec lp-dark price-sec" aria-labelledby="prices-h">
+  <section class="lp-sec lp-dark price-sec" aria-labelledby="prices-h" id="price">
     <div class="wrap">
-      <div class="lp-head" data-reveal><span class="kicker">Honest, upfront pricing</span><h2 id="prices-h">What it typically costs</h2><p class="lead">Averages from our own jobs. Your exact price comes in writing after the free inspection.</p></div>
-      <div data-reveal><PriceTables kinds={d.prices} area={L.area} only={L.area} /></div>
-      <p class="lp-center"><a class="btn btn-gold btn-lg" href="#lp-wizard">Get my exact price, free <Icon name="arrow" /></a></p>
+      <div class="lp-head" data-reveal><span class="kicker">Roof price calculator</span><h2 id="prices-h">What will your roof cost in {L.area}?</h2><p class="lead">Pick your job and see a real range from our own {L.area} jobs in seconds. Then get your exact price in writing, free.</p></div>
+      <div data-reveal><LeadCalculator area={L.area} start={L.area === 'Brooklyn' ? 'flat' : 'shingle'} /></div>
     </div>
   </section>
 )}
@@ -217,6 +216,9 @@ const steps = [
         document.getElementById('lp-h1').textContent = v.h1;
         document.getElementById('lp-sub').textContent = v.sub;
         document.querySelectorAll('input[name="service"][value="' + v.service + '"]').forEach(function (r) { r.checked = true; });
+        var job = { 'Roof leak / repair': 'repair', 'EMERGENCY': 'repair', 'Flat roof': 'flat', 'Roof replacement': 'shingle' }[v.service];
+        var c = job && document.querySelector('input[name="calc_job"][value="' + job + '"]');
+        if (c) { c.checked = true; c.dispatchEvent(new Event('change', { bubbles: true })); }
         break;
       }
     }
