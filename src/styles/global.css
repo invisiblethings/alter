@@ -1078,3 +1078,11 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .lp-t .gaf-sm { height: auto; width: 44px; max-width: none; }
 .footer-brand .gaf-badge { width: 88px; background: none; padding: 0; border-radius: 0; margin: 0.5rem 0 0; }
 .hero-proof .gaf-xs { width: 36px; }
+@media (max-width: 600px) {
+  .call-big { gap: 0.75rem; padding: 0.55rem 1rem 0.55rem 0.55rem; }
+  .call-ring { width: 48px; height: 48px; }
+  .call-ring .icon { width: 21px; height: 21px; }
+  .call-txt small { font-size: 0.66rem; }
+  .call-txt strong { font-size: 1.4rem; }
+  .call-arrow { width: 20px; height: 20px; }
+}
