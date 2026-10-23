@@ -23,7 +23,9 @@ if (!L) throw new Error(`No landing copy for ${d.path} in src/data/landing.ts`);
 const year = new Date().getFullYear();
 const stars = [1, 2, 3, 4, 5];
 const initials = (n: string) => n.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase();
-const picked = [...reviewsTagged(...L.reviewTags), ...reviews].filter((r, i, a) => a.indexOf(r) === i && r.text.length > 110 && r.text.length < 520).slice(0, 6);
+// Single-area ad pages: never show reviews that name another borough.
+const otherAreas = new RegExp(['Staten Island', 'Brooklyn', 'Queens', 'Manhattan', 'Bronx'].filter((a) => a !== L.area).join('|'), 'i');
+const picked = [...reviewsTagged(...L.reviewTags), ...reviews].filter((r, i, a) => a.indexOf(r) === i && r.text.length > 110 && r.text.length < 520 && !otherAreas.test(r.text)).slice(0, 6);
 const avatars = picked.slice(0, 5).map((r) => initials(r.name));
 const variants = L.variants.map(({ match, h1, sub, service }) => ({ match, h1, sub, service }));
 const faq = [
@@ -121,7 +123,7 @@ const steps = [
   </div>
 </section>
 
-<Reviews limit={6} tags={L.reviewTags} title={`${reviewStats.total} reviews. ${reviewStats.average} stars. Here's why.`} kicker="Real reviews, word for word" noLinks />
+<Reviews limit={6} tags={L.reviewTags} exclude={otherAreas} title={`${reviewStats.total} reviews. ${reviewStats.average} stars. Here's why.`} kicker="Real reviews, word for word" noLinks />
 
 <section class="lp-sec lp-bone" aria-labelledby="gal-h">
   <div class="wrap">
@@ -146,7 +148,7 @@ const steps = [
   <section class="lp-sec lp-dark price-sec" aria-labelledby="prices-h">
     <div class="wrap">
       <div class="lp-head" data-reveal><span class="kicker">Honest, upfront pricing</span><h2 id="prices-h">What it typically costs</h2><p class="lead">Averages from our own jobs. Your exact price comes in writing after the free inspection.</p></div>
-      <div data-reveal><PriceTables kinds={d.prices} area={L.area} /></div>
+      <div data-reveal><PriceTables kinds={d.prices} area={L.area} only={L.area} /></div>
       <p class="lp-center"><a class="btn btn-gold btn-lg" href="#lp-wizard">Get my exact price, free <Icon name="arrow" /></a></p>
     </div>
   </section>

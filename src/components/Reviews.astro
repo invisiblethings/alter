@@ -5,9 +5,9 @@ import Icon from './Icon.astro';
 import ReviewCard from './ReviewCard.astro';
 import { reviews as all, reviewsTagged, reviewStats, type ReviewTag } from '../data/reviews';
 import { business } from '../data/business';
-interface Props { limit?: number; title?: string; kicker?: string; bg?: string; offset?: number; tags?: ReviewTag[]; noLinks?: boolean }
-const { limit = 6, title = 'What Staten Island homeowners say', kicker = `${reviewStats.average} stars · ${reviewStats.total} reviews`, offset = 0, tags, noLinks = false } = Astro.props;
-const good = (r: (typeof all)[number]) => r.text.length > 90;
+interface Props { limit?: number; title?: string; kicker?: string; bg?: string; offset?: number; tags?: ReviewTag[]; noLinks?: boolean; exclude?: RegExp }
+const { limit = 6, title = 'What Staten Island homeowners say', kicker = `${reviewStats.average} stars · ${reviewStats.total} reviews`, offset = 0, tags, noLinks = false, exclude } = Astro.props;
+const good = (r: (typeof all)[number]) => r.text.length > 90 && !(exclude && exclude.test(r.text));
 const pool = (tags ? [...reviewsTagged(...tags).filter(good), ...all.filter(good)] : all.slice(offset).filter(good)).filter((r, i, a) => a.indexOf(r) === i);
 const shown = pool.slice(0, Math.max(limit, 3));
 const tones = ['gold', 'white', 'navy', 'white', 'ink', 'white'] as const;

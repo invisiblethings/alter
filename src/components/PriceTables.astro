@@ -4,8 +4,10 @@
 import { materials, repairs, repairTiers, skylights, boroughs, money, range, COSTS_UPDATED } from '../data/costs';
 import { fmtDate } from '../lib/content';
 type Kind = 'repairs' | 'tiers' | 'flat' | 'pitched' | 'boroughs' | 'skylights';
-interface Props { kinds: Kind[]; area?: string }
-const { kinds, area } = Astro.props;
+// `only` limits the borough cards to one borough (single-borough ad landing pages).
+interface Props { kinds: Kind[]; area?: string; only?: string }
+const { kinds, area, only } = Astro.props;
+const shownBoroughs = only ? boroughs.filter((b) => b.name === only) : boroughs;
 const flat = materials.filter((m) => m.type === 'flat');
 const pitched = materials.filter((m) => m.type === 'pitched');
 const titles: Record<Kind, string> = {
@@ -20,7 +22,7 @@ const titles: Record<Kind, string> = {
 <div class="price-groups">
   {kinds.map((k) => (
     <div class="price-group">
-      <h3>{titles[k]}{area && k !== 'boroughs' && area !== 'New York City' ? ` · ${area}` : ''}</h3>
+      <h3>{k === 'boroughs' && only ? `New flat roof in ${only} (≈1,000 sq ft)` : titles[k]}{area && k !== 'boroughs' && area !== 'New York City' ? ` · ${area}` : ''}</h3>
       <div class="price-cards">
         {k === 'repairs' && repairs.map((r) => (
           <div class="pc"><span class="pc-name">{r.name}</span><span class="pc-val">{range(r.low, r.high)}</span></div>
@@ -31,7 +33,7 @@ const titles: Record<Kind, string> = {
         {(k === 'flat' || k === 'pitched') && (k === 'flat' ? flat : pitched).map((m) => (
           <div class="pc"><span class="pc-name">{m.name}</span><span class="pc-val">${m.low}–${m.high}<small>/sq ft</small></span><span class="pc-note">1,000 sq ft: {range(m.low * 1000, m.high * 1000)} · lasts {m.life}</span><span class="pc-tag">{m.bestFor}</span></div>
         ))}
-        {k === 'boroughs' && boroughs.map((b, i) => (
+        {k === 'boroughs' && shownBoroughs.map((b, i) => (
           <div class:list={['pc', i === 0 && 'pc-hl']}><span class="pc-name">{b.name}</span><span class="pc-val">{money(b.low)}–{money(b.high)}+</span><span class="pc-note">{b.drivers}</span></div>
         ))}
       </div>

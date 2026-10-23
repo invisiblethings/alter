@@ -96,7 +96,7 @@ export const landing: Record<string, LandingCopy> = {
     includesTitle: 'Your free roof inspection includes',
     includes: roofIncludes,
     compare: roofCompare,
-    gallery: [{ img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1-768x758.jpg', t: 'TPO flat roof · Brooklyn' }, { img: '/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn-768x768.webp', t: 'Flat roof install · Brooklyn' }, { img: '/wp-content/uploads/2025/04/MB-Flat-Roof-Brooklyn-768x768.webp', t: 'Modified bitumen · Brooklyn' }, roofGallery[0]],
+    gallery: [{ img: '/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1-768x758.jpg', t: 'TPO flat roof · Brooklyn' }, { img: '/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn-768x768.webp', t: 'Flat roof install · Brooklyn' }, { img: '/wp-content/uploads/2025/04/MB-Flat-Roof-Brooklyn-768x768.webp', t: 'Modified bitumen · Brooklyn' }, { img: '/wp-content/uploads/2025/04/flat-roof-on-a-typical-Brooklyn-building-768x768.webp', t: 'Flat roof · Brooklyn row home' }],
     galleryTitle: 'Recent roofs by our own crew',
     reviewTags: ['repair', 'leak', 'honest'],
     formTitle: 'Get your free roof inspection',
