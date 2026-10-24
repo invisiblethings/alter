@@ -1,13 +1,10 @@
 ---
 // Address suggestions for every input marked data-places.
-// Default: NYC Planning Labs GeoSearch (free, no key, official NYC address
+// Source: NYC Planning Labs GeoSearch (free, no key, official NYC address
 // data for all five boroughs): https://geosearch.planninglabs.nyc
-// Optional: set PUBLIC_GOOGLE_PLACES_KEY in Netlify to use Google Places
-// (New) instead, e.g. if many leads come from outside NYC.
 // Addresses outside the suggestions can always be typed freely.
-const key = import.meta.env.PUBLIC_GOOGLE_PLACES_KEY || '';
 ---
-<script is:inline define:vars={{ key }}>
+<script is:inline>
   (function () {
     var inputs = document.querySelectorAll('input[data-places]');
     if (!inputs.length) return;
@@ -27,36 +24,16 @@ const key = import.meta.env.PUBLIC_GOOGLE_PLACES_KEY || '';
         });
     }
 
-    var lib = null, token = null;
-    function google(q) {
-      if (!lib) lib = new Promise(function (ok, fail) {
-        window.__aprPlaces = function () { window.google.maps.importLibrary('places').then(ok, fail); };
-        var s = document.createElement('script');
-        s.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&loading=async&libraries=places&callback=__aprPlaces';
-        s.async = true; s.onerror = fail; document.head.appendChild(s);
-      });
-      return lib.then(function (places) {
-        token = token || new places.AutocompleteSessionToken();
-        return places.AutocompleteSuggestion.fetchAutocompleteSuggestions({
-          input: q, sessionToken: token, includedRegionCodes: ['us'],
-          locationBias: { center: { lat: 40.5795, lng: -74.1502 }, radius: 30000 },
-        });
-      }).then(function (r) {
-        return (r.suggestions || []).map(function (s) { return s.placePrediction && s.placePrediction.text.toString(); }).filter(Boolean).slice(0, 5);
-      });
-    }
-    var suggest = key ? google : nyc;
-
     var n = 0;
     inputs.forEach(function (input) {
       var id = 'apr-addr-' + (++n), list = document.createElement('ul'), items = [], active = -1, timer, seq = 0;
-      list.id = id; list.className = 'addr-list' + (key ? ' addr-google' : ''); list.setAttribute('role', 'listbox'); list.hidden = true;
+      list.id = id; list.className = 'addr-list'; list.setAttribute('role', 'listbox'); list.hidden = true;
       input.parentNode.style.position = 'relative';
       input.parentNode.appendChild(list);
       input.setAttribute('role', 'combobox'); input.setAttribute('aria-autocomplete', 'list'); input.setAttribute('aria-expanded', 'false'); input.setAttribute('aria-controls', id);
       input.setAttribute('autocomplete', 'off');
       function close() { list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); active = -1; }
-      function pick(i) { if (!items[i]) return; input.value = items[i]; close(); token = null; input.dispatchEvent(new Event('change', { bubbles: true })); }
+      function pick(i) { if (!items[i]) return; input.value = items[i]; close(); input.dispatchEvent(new Event('change', { bubbles: true })); }
       function mark(i) {
         active = i;
         [].forEach.call(list.children, function (li, k) { li.setAttribute('aria-selected', String(k === i)); });
@@ -68,7 +45,7 @@ const key = import.meta.env.PUBLIC_GOOGLE_PLACES_KEY || '';
         if (q.length < 3 || /^\d{1,5}$/.test(q)) { close(); return; }
         var mine = ++seq;
         timer = setTimeout(function () {
-          suggest(q).then(function (res) {
+          nyc(q).then(function (res) {
             if (mine !== seq) return; // a newer keystroke is already on its way
             items = res;
             list.innerHTML = '';

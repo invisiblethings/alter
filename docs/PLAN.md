@@ -185,8 +185,6 @@ To edit content, change the Markdown file and Netlify redeploys on push. A visua
 
 The estimate and calculator forms suggest real street addresses as visitors type. By default they use **NYC Planning Labs GeoSearch** (geosearch.planninglabs.nyc): free, no API key, official NYC address data for all five boroughs. Addresses outside NYC can still be typed in full.
 
-Optional: to switch to Google Places (New), for example if many leads come from outside NYC, add a key restricted to `alterphaseroofing.com/*` in Netlify as `PUBLIC_GOOGLE_PLACES_KEY` and redeploy.
-
 ## 8. Measurement
 
 - **Primary KPI:** calls + form leads per month (GA4 / Ads conversions).
