@@ -106,6 +106,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
 </div>
 
 <script>
+  import { trackThen } from '../lib/track';
   document.querySelectorAll<HTMLElement>('[data-calc]').forEach((root) => {
     const d = JSON.parse(root.dataset.calc!);
     const f = root.querySelector<HTMLFormElement>('[data-calc-form]')!;
@@ -164,8 +165,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
       try {
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f) as any).toString() });
         if (!res.ok) throw new Error(String(res.status));
-        (window as any).dataLayer?.push({ event: 'generate_lead', form_name: 'calculator', job: out('job').value, estimated_range: out('range').value, page_path: location.pathname });
-        location.href = '/thank-you/';
+        trackThen({ event: 'generate_lead', form_name: 'calculator', job: out('job').value, estimated_range: out('range').value, page_path: location.pathname }, () => { location.href = '/thank-you/'; });
       } catch {
         btn.disabled = false;
         status.textContent = 'Sorry, that didn’t go through. Please call us and we’ll help right away.';
