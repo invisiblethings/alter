@@ -1127,3 +1127,6 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .calc [hidden] { display: none !important; }
 @media (max-width: 900px) { .calc-form { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 480px) { .calc-pick { grid-template-columns: minmax(0, 1fr); } .calc-pick-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .calc-pick-3 span { min-height: 84px; font-size: 0.8rem; } .calc-pick-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.svc-all { justify-content: space-between; border: 1.5px dashed var(--line); }
+.svc-all .icon { width: 20px; height: 20px; color: var(--gold-2); flex: none; }
+.svc-all:hover { border-color: var(--navy-2); }
