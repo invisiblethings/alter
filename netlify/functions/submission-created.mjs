@@ -1,12 +1,14 @@
 // Netlify runs this automatically for every verified (non-spam) form
 // submission, because of its file name. It emails the lead as a clean,
-// easy-to-act-on card through Resend (https://resend.com).
+// easy-to-act-on card through the company mailbox (Spacemail SMTP).
 //
 // Netlify environment variables (Site configuration → Environment variables):
-//   RESEND_API_KEY   API key from Resend (required; without it nothing is sent)
-//   LEAD_EMAIL_TO    where leads go; several addresses separated by commas
-//   LEAD_EMAIL_FROM  sender on a domain verified in Resend,
-//                    default "Alter Phase Website <leads@alterphaseroofing.com>"
+//   SMTP_USER       full mailbox address that sends the email, e.g. leads@alterphaseroofing.com
+//   SMTP_PASS       that mailbox's password
+//   LEAD_EMAIL_TO   where leads go; several addresses separated by commas
+//   SMTP_HOST       optional, default mail.spacemail.com
+//   SMTP_PORT       optional, default 465 (SSL/TLS)
+import nodemailer from 'nodemailer';
 
 const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const SITE = 'https://alterphaseroofing.com';
@@ -103,21 +105,20 @@ export function buildEmail(p) {
 }
 
 export const handler = async (event) => {
-  const { RESEND_API_KEY: key, LEAD_EMAIL_TO: to, LEAD_EMAIL_FROM: from = 'Alter Phase Website <leads@alterphaseroofing.com>' } = process.env;
+  const { SMTP_USER: user, SMTP_PASS: pass, LEAD_EMAIL_TO: to, SMTP_HOST: host = 'mail.spacemail.com', SMTP_PORT: port = '465' } = process.env;
   let payload;
   try { payload = JSON.parse(event.body).payload; } catch { return { statusCode: 400, body: 'Bad payload' }; }
-  if (!key || !to) {
-    console.log('Lead email skipped: set RESEND_API_KEY and LEAD_EMAIL_TO in Netlify.');
+  if (!user || !pass || !to) {
+    console.log('Lead email skipped: set SMTP_USER, SMTP_PASS and LEAD_EMAIL_TO in Netlify.');
     return { statusCode: 200, body: 'Not configured' };
   }
   const { subject, html, text } = buildEmail(payload);
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from, to: to.split(',').map((s) => s.trim()).filter(Boolean), subject, html, text }),
-  });
-  if (!res.ok) {
-    console.error('Lead email failed', res.status, await res.text());
+  try {
+    const mail = nodemailer.createTransport({ host, port: +port, secure: +port === 465, auth: { user, pass } });
+    // Sent from the mailbox itself (Spacemail only allows its own address as sender).
+    await mail.sendMail({ from: { name: 'Alter Phase Website', address: user }, to, subject, html, text });
+  } catch (err) {
+    console.error('Lead email failed:', err.message);
     return { statusCode: 502, body: 'Email failed' };
   }
   return { statusCode: 200, body: 'Sent' };

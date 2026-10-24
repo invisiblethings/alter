@@ -198,7 +198,7 @@ The estimate and calculator forms suggest real street addresses as visitors type
 - **Address-based "Roof Check"** using NYC Open Data (building age, footprint, permits) to give instant ranges.
 - **Owner video** on the homepage and About page.
 
-## Lead emails (Netlify Forms → Resend)
+## Lead emails (Netlify Forms → Spacemail SMTP)
 
 Every verified submission of the `estimate` and `calculator` forms runs
 `netlify/functions/submission-created.mjs`, which emails a formatted lead card
@@ -207,7 +207,7 @@ The forms add hidden fields on submit (`src/lib/leadContext.ts`): source, campai
 keyword, gclid, landing_page, first_referrer, device, screen, pages_viewed, time_on_site.
 Netlify adds ip, user_agent and referrer itself.
 
-Setup: Resend account → verify alterphaseroofing.com (DNS records) → API key.
-Netlify env vars: `RESEND_API_KEY`, `LEAD_EMAIL_TO` (comma-separated),
-optional `LEAD_EMAIL_FROM`. Then turn off Netlify's own form email notification
+Setup: Netlify env vars `SMTP_USER` (full Spacemail address), `SMTP_PASS`,
+`LEAD_EMAIL_TO` (comma-separated); optional `SMTP_HOST` (mail.spacemail.com)
+and `SMTP_PORT` (465). Then turn off Netlify's own form email notification
 so leads don't arrive twice. Function logs: Netlify → Logs → Functions.
