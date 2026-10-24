@@ -181,14 +181,11 @@ To edit content, change the Markdown file and Netlify redeploys on push. A visua
 8. Keep WordPress on a password-protected, `noindex` subdomain for 90 days as a rollback.
 9. Update Google Business Profile and the main directories with the same NAP.
 
-### Address suggestions (optional)
+### Address suggestions
 
-The estimate and calculator forms can suggest real street addresses as visitors type, using the Google Places API (New). To turn it on:
-1. In Google Cloud (the same account as Google Ads is fine), enable **Places API (New)** and **Maps JavaScript API**.
-2. Create an API key restricted to `alterphaseroofing.com/*` and to those two APIs.
-3. Add it in Netlify → Site configuration → Environment variables as `PUBLIC_GOOGLE_PLACES_KEY`, then redeploy.
+The estimate and calculator forms suggest real street addresses as visitors type. By default they use **NYC Planning Labs GeoSearch** (geosearch.planninglabs.nyc): free, no API key, official NYC address data for all five boroughs. Addresses outside NYC can still be typed in full.
 
-Google's script only loads when someone taps an address field. Without the key, the fields keep normal browser autofill.
+Optional: to switch to Google Places (New), for example if many leads come from outside NYC, add a key restricted to `alterphaseroofing.com/*` in Netlify as `PUBLIC_GOOGLE_PLACES_KEY` and redeploy.
 
 ## 8. Measurement
 
