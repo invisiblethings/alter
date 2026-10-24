@@ -5,6 +5,7 @@
 // The calculator choices travel with the lead, so the first call starts with
 // the job already described. Prices come from src/data/costs.ts.
 import Icon from './Icon.astro';
+import LeadContextFields from './LeadContextFields.astro';
 import { materials, repairs, boroughs, money } from '../data/costs';
 import { business, telHref } from '../data/business';
 
@@ -38,6 +39,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
   <form class="calc-form" name="calculator" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" data-calc-form>
     <input type="hidden" name="form-name" value="calculator" />
     <input type="hidden" name="page" value={Astro.url.pathname} />
+    <LeadContextFields />
     <input type="hidden" name="area" value={area} />
     <input type="hidden" name="job" data-out="job" value="" />
     <input type="hidden" name="details" data-out="details" value="" />
@@ -107,6 +109,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
 
 <script>
   import { leadThen } from '../lib/track';
+  import { fillContext } from '../lib/leadContext';
   document.querySelectorAll<HTMLElement>('[data-calc]').forEach((root) => {
     const d = JSON.parse(root.dataset.calc!);
     const f = root.querySelector<HTMLFormElement>('[data-calc-form]')!;
@@ -163,6 +166,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
       const btn = f.querySelector<HTMLButtonElement>('[data-submit]')!;
       btn.disabled = true; status.textContent = '';
       try {
+        fillContext(f);
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f) as any).toString() });
         if (!res.ok) throw new Error(String(res.status));
         leadThen({ event: 'generate_lead', form_name: 'calculator', job: out('job').value, estimated_range: out('range').value, page_path: location.pathname });

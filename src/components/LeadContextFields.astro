@@ -1,0 +1,7 @@
+---
+// Hidden lead-source and device fields, filled by fillContext() in
+// src/lib/leadContext.ts on submit. They have to be in the HTML so Netlify
+// Forms registers them at deploy time (it drops fields it hasn't seen).
+const names = ['source', 'campaign', 'keyword', 'gclid', 'landing_page', 'first_referrer', 'device', 'screen', 'pages_viewed', 'time_on_site'];
+---
+{names.map((n) => <input type="hidden" name={n} value="" />)}

@@ -31,12 +31,13 @@ When you fill out an estimate form, we receive:
 - Your name and phone number
 - Anything you choose to write in the message box
 - The page you sent the form from
+- Technical details sent along with the form: your IP address, your type of device and browser, and how you found our website (for example, the Google ad or search that brought you here)
 
 When you call, text or email us, we receive your phone number or email address and whatever you tell us. If you hire us, we also keep the information we need to do the job: your contract, the photos we take of your roof, invoices, payments and warranty records.
 
 ### Information collected automatically
 
-Like most websites, ours records basic technical information when you visit, such as your browser type, device, approximate location (city level), the pages you view, and the website or ad that brought you here. This comes from the tools described below, not from forms.
+Like most websites, ours records basic technical information when you visit, such as your browser type, device, approximate location (city level), the pages you view, and the website or ad that brought you here. Most of this comes from the tools described below; the few details we attach to an estimate request are listed above.
 
 ## How we use your information
 

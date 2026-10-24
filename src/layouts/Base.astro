@@ -68,6 +68,25 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
     {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 
     <script is:inline>document.documentElement.classList.replace('no-js', 'js');</script>
+    <!-- Lead source for the estimate forms (src/lib/leadContext.ts): keeps the latest
+         ad/campaign visit for 30 days, and counts pages and time in this visit. -->
+    <script is:inline>
+      try {
+        (function () {
+          var q = new URLSearchParams(location.search), k = 'apr_src', s = JSON.parse(localStorage.getItem(k) || 'null');
+          var click = q.get('gclid') || q.get('gbraid') || q.get('wbraid') || '';
+          var ref = document.referrer && new URL(document.referrer).hostname !== location.hostname ? document.referrer : '';
+          if (!s || Date.now() - s.t > 2592e6 || click || q.get('utm_source')) {
+            s = { t: Date.now(), landing: location.pathname + location.search, ref: ref, gclid: click,
+              utm_source: q.get('utm_source') || '', utm_medium: q.get('utm_medium') || '', utm_campaign: q.get('utm_campaign') || '',
+              utm_term: q.get('utm_term') || q.get('keyword') || '' };
+            localStorage.setItem(k, JSON.stringify(s));
+          }
+          sessionStorage.setItem('apr_pv', String(+(sessionStorage.getItem('apr_pv') || 0) + 1));
+          if (!sessionStorage.getItem('apr_st')) sessionStorage.setItem('apr_st', String(Date.now()));
+        })();
+      } catch (e) {}
+    </script>
 
     <!-- Google Tag Manager: GA4 G-KKQEPJ782W + Google Ads AW-397936435 (call & click conversions).
          Loaded after the page is interactive (first tap/scroll/key, or 3 s after load) so the

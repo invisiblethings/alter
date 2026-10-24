@@ -197,3 +197,17 @@ The estimate and calculator forms suggest real street addresses as visitors type
 - **Project pages** for real jobs (neighborhood, roof type, before/after photos), which then feed neighborhood pages.
 - **Address-based "Roof Check"** using NYC Open Data (building age, footprint, permits) to give instant ranges.
 - **Owner video** on the homepage and About page.
+
+## Lead emails (Netlify Forms → Resend)
+
+Every verified submission of the `estimate` and `calculator` forms runs
+`netlify/functions/submission-created.mjs`, which emails a formatted lead card
+(tap-to-call, map link, job, lead source, device, IP). Preview: `docs/lead-email-preview.png`.
+The forms add hidden fields on submit (`src/lib/leadContext.ts`): source, campaign,
+keyword, gclid, landing_page, first_referrer, device, screen, pages_viewed, time_on_site.
+Netlify adds ip, user_agent and referrer itself.
+
+Setup: Resend account → verify alterphaseroofing.com (DNS records) → API key.
+Netlify env vars: `RESEND_API_KEY`, `LEAD_EMAIL_TO` (comma-separated),
+optional `LEAD_EMAIL_FROM`. Then turn off Netlify's own form email notification
+so leads don't arrive twice. Function logs: Netlify → Logs → Functions.

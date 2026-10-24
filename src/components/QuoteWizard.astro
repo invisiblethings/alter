@@ -3,6 +3,7 @@
 // convert better than one long form, and suit older visitors on phones.
 // Without JavaScript every step shows at once and the form still posts.
 import Icon from './Icon.astro';
+import LeadContextFields from './LeadContextFields.astro';
 import { business, telHref } from '../data/business';
 
 interface Props { id?: string; title?: string; sub?: string; heading?: 'h2' | 'h3'; service?: string }
@@ -27,6 +28,7 @@ const needs = [
   <form name="estimate" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" data-estimate>
     <input type="hidden" name="form-name" value="estimate" />
     <input type="hidden" name="page" value={Astro.url.pathname} />
+    <LeadContextFields />
     <p class="hp"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
 
     <fieldset data-step="1" class="active">
@@ -77,6 +79,7 @@ const needs = [
 
 <script>
   import { leadThen } from '../lib/track';
+  import { fillContext } from '../lib/leadContext';
   document.querySelectorAll<HTMLElement>('[data-wizard]').forEach((w) => {
     const form = w.querySelector('form')!;
     const steps = [...w.querySelectorAll<HTMLFieldSetElement>('[data-step]')];
@@ -114,6 +117,7 @@ const needs = [
       submit.disabled = true;
       status.textContent = '';
       try {
+        fillContext(form);
         const body = new URLSearchParams(new FormData(form) as any).toString();
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
         if (!res.ok) throw new Error(String(res.status));
