@@ -76,7 +76,7 @@ const needs = [
 
 
 <script>
-  import { trackThen } from '../lib/track';
+  import { leadThen } from '../lib/track';
   document.querySelectorAll<HTMLElement>('[data-wizard]').forEach((w) => {
     const form = w.querySelector('form')!;
     const steps = [...w.querySelectorAll<HTMLFieldSetElement>('[data-step]')];
@@ -117,7 +117,7 @@ const needs = [
         const body = new URLSearchParams(new FormData(form) as any).toString();
         const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
         if (!res.ok) throw new Error(String(res.status));
-        trackThen({ event: 'generate_lead', form_name: 'estimate', page_path: location.pathname }, () => { location.href = '/thank-you/'; });
+        leadThen({ event: 'generate_lead', form_name: 'estimate', page_path: location.pathname });
       } catch {
         submit.disabled = false;
         status.textContent = 'Sorry, that didn’t go through. Please call (929) 370-1552 and we’ll help right away.';

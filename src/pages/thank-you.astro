@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import { business, telHref } from '../data/business';
 ---
-<Base title="Thank you | Alter Phase Roofing Contracting" description="We received your estimate request and will call you shortly." path="/thank-you/" noindex>
+<Base title="Thank you | Alter Phase Roofing Contracting" description="We received your estimate request and will call you shortly." path="/thank-you/" noindex eagerTags>
   <section class="ghero">
     <div class="wrap"><div>
       <span class="kicker">Request received</span>
@@ -20,5 +20,14 @@ import { business, telHref } from '../data/business';
     </ol>
     <p class="center" style="margin-top:2rem">While you wait: <a href="/roof-replacement-cost-in-nyc/">what a roof costs in NYC</a> · <a href="/reviews/">read our reviews</a></p>
   </div></section>
-  <script is:inline>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'thank_you_view' });</script>
+  <script is:inline>
+    // The lead form saved the lead details before coming here (src/lib/track.ts):
+    // report it once, then clear it so reloads don't count again.
+    window.dataLayer = window.dataLayer || [];
+    try {
+      var lead = sessionStorage.getItem('apr_lead');
+      if (lead) { sessionStorage.removeItem('apr_lead'); window.dataLayer.push(JSON.parse(lead)); }
+    } catch (e) {}
+    window.dataLayer.push({ event: 'thank_you_view' });
+  </script>
 </Base>

@@ -22,8 +22,10 @@ interface Props {
   preloadImage?: string;
   /** Ads landing pages: no site header, menu or footer. */
   bare?: boolean;
+  /** Load GTM right away instead of on first interaction (thank-you page). */
+  eagerTags?: boolean;
 }
-const { title, description = '', path, image, imageAlt, noindex = false, canonical, ogType = 'website', published, modified, schema, preloadImage, bare = false } = Astro.props;
+const { title, description = '', path, image, imageAlt, noindex = false, canonical, ogType = 'website', published, modified, schema, preloadImage, bare = false, eagerTags = false } = Astro.props;
 const canonicalUrl = SITE + (canonical || path);
 const ogImage = SITE + (image || '/wp-content/uploads/2024/04/AlterPhaseRoofingOpenGraph.jpg');
 // Same robots policy the old site sent (Rank Math defaults), minus WordPress noise.
@@ -71,7 +73,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
          Loaded after the page is interactive (first tap/scroll/key, or 3 s after load) so the
          tags don't slow phones down. Events pushed before that (phone clicks, form leads) wait
          in dataLayer and GTM processes them when it starts. -->
-    <script is:inline define:vars={{ gtmId: business.gtmId }}>
+    <script is:inline define:vars={{ gtmId: business.gtmId, eager: eagerTags }}>
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
       (function () {
@@ -84,7 +86,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
           document.head.appendChild(j);
         }
         evs.forEach(function (e) { addEventListener(e, load, { capture: true, passive: true, once: true }); });
-        addEventListener('load', function () { setTimeout(load, 3000); });
+        if (eager) load(); else addEventListener('load', function () { setTimeout(load, 3000); });
         // Every call button reports a phone_click event (GTM trigger: Custom Event "phone_click"),
         // which still counts when the tap happens before GTM has loaded.
         document.addEventListener('click', function (e) {
