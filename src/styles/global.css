@@ -1130,3 +1130,4 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .svc-all { justify-content: space-between; border: 1.5px dashed var(--line); }
 .svc-all .icon { width: 20px; height: 20px; color: var(--gold-2); flex: none; }
 .svc-all:hover { border-color: var(--navy-2); }
+.icon.flip { transform: scaleX(-1); }

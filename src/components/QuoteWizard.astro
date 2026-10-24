@@ -45,7 +45,7 @@ const needs = [
     <fieldset data-step="2">
       <legend>Tell us about the property</legend>
       <div class="opts" style="margin-bottom:1rem">
-        <label class="opt"><input type="radio" name="customer_type" value="Homeowner" /><span><Icon name="home" />My home</span></label>
+        <label class="opt"><input type="radio" name="customer_type" value="Homeowner" checked /><span><Icon name="home" />My home</span></label>
         <label class="opt"><input type="radio" name="customer_type" value="Business owner" /><span><Icon name="store" />My business</span></label>
         <label class="opt" style="grid-column:1 / -1"><input type="radio" name="customer_type" value="Property manager / HOA / board" /><span><Icon name="building" />A building I manage (HOA, co-op, condo)</span></label>
       </div>
@@ -74,9 +74,6 @@ const needs = [
   </form>
 </div>
 
-<style>
-  .flip { transform: scaleX(-1); }
-</style>
 
 <script>
   document.querySelectorAll<HTMLElement>('[data-wizard]').forEach((w) => {
