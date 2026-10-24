@@ -31,11 +31,12 @@ export const services: NavLink[] = [
     ],
   },
   {
-    title: 'Siding & Gutters', url: '/siding-gutter/', blurb: 'Vinyl siding, seamless gutters', icon: 'gutter',
-    children: [
-      { title: 'Gutter Installation & Repair', url: '/siding-gutter/gutter-installation-repair/' },
-      { title: 'Siding Installation & Repair', url: '/siding-gutter/siding-installation-repair/' },
-    ],
+    title: 'Gutters', url: '/siding-gutter/gutter-installation-repair/', blurb: 'Seamless gutters, guards, repairs', icon: 'gutter',
+    children: [],
+  },
+  {
+    title: 'Siding', url: '/siding-gutter/siding-installation-repair/', blurb: 'Vinyl & insulated vinyl siding', icon: 'home',
+    children: [],
   },
 ];
 

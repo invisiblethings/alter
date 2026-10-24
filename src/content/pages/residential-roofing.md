@@ -21,7 +21,8 @@ related:
   - "/roof-repair/residential/"
   - "/residential-roofing/roof-inspections/"
   - "/residential-roofing/skylight-installation-repair/"
-  - "/siding-gutter/"
+  - "/siding-gutter/gutter-installation-repair/"
+  - "/siding-gutter/siding-installation-repair/"
   - "/roof-replacement-cost-in-nyc/"
 faq:
   - q: "What types of home roofs do you work on?"
@@ -52,9 +53,13 @@ A photo report of your roof's condition before you buy, sell, or after a big sto
 
 Leak repair, reflashing and replacement for Velux, Fakro and other brands.
 
-### [Gutters & siding](/siding-gutter/)
+### [Gutters](/siding-gutter/gutter-installation-repair/)
 
-Seamless gutters and vinyl siding that keep water off your roof edge and out of your walls.
+Seamless gutters, guards and downspouts that carry roof water away from your walls and foundation.
+
+### [Siding](/siding-gutter/siding-installation-repair/)
+
+Vinyl and insulated vinyl siding that keeps rain out of your walls and makes the house look new again.
 
 ### [Emergency repair](/roof-repair/emergency-service/)
 

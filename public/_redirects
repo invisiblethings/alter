@@ -22,6 +22,8 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 /free-roofing-estimates-brooklyn-ny                          /free-estimate/ 301
 /service-area/nyc/commercial-roofing/                        /commercial-roofing/ 301
 /service-area/nyc/commercial-roofing                         /commercial-roofing/ 301
+/siding-gutter/                                              /siding-gutter/gutter-installation-repair/ 301
+/siding-gutter                                               /siding-gutter/gutter-installation-repair/ 301
 /category/roofing/                                           /blog/ 301
 /category/roofing                                            /blog/ 301
 /category/roofing/roofing-101/                               /blog/ 301
@@ -99,7 +101,7 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 / page_id=837 /residential-roofing/roof-inspections/ 301
 / page_id=830 /residential-roofing/roof-replacement/ 301
 / page_id=738 /service-area/brooklyn-ny/ 301
-/ page_id=718 /siding-gutter/ 301
+/ page_id=718 /siding-gutter/gutter-installation-repair/ 301
 / page_id=706 /roof-repair/ 301
 / page_id=700 /commercial-roofing/ 301
 / page_id=690 /residential-roofing/ 301

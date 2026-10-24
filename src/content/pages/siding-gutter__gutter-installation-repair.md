@@ -18,7 +18,6 @@ image: "/wp-content/uploads/2024/04/Gutter-Services-AlterPhase.jpg"
 imageAlt: "Gutter installation by Alter Phase Roofing Contracting on a Staten Island home"
 answer: "Gutter and downspout repairs on Staten Island typically cost <strong>$150–$500</strong>. Replace your gutters if they sag, pull away from the house, leak at many seams or overflow even when clean. Seamless gutters have joints only at corners and downspouts, so they leak far less than sectional ones."
 related:
-  - "/siding-gutter/"
   - "/siding-gutter/siding-installation-repair/"
   - "/roof-repair/"
   - "/residential-roofing/roof-replacement/"

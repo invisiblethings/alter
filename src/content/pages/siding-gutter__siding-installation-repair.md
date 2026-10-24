@@ -17,7 +17,6 @@ image: "/wp-content/uploads/2024/10/Siding-Replacement-Repair-Staten-Island.webp
 imageAlt: "Siding replacement on a Staten Island home by Alter Phase Roofing Contracting"
 answer: "We install, replace and repair vinyl and insulated vinyl siding on Staten Island homes. Repair damaged panels when the rest of the siding is sound; replace it when it's faded, cracked, warped or letting water in. Insulated vinyl adds a foam backing that improves comfort and cuts outside noise. Every job starts with a free estimate."
 related:
-  - "/siding-gutter/"
   - "/siding-gutter/gutter-installation-repair/"
   - "/residential-roofing/roof-replacement/"
   - "/vinyl-siding-estimate/"

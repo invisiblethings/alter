@@ -28,7 +28,6 @@ labels.set('/services/', 'Services');
 labels.set('/blog/', 'Roofing Guides');
 labels.set('/residential-roofing/', 'Residential Roofing');
 labels.set('/commercial-roofing/', 'Commercial Roofing');
-labels.set('/siding-gutter/', 'Siding & Gutters');
 labels.set('/roof-repair/', 'Roof Repair');
 
 export async function crumbsFor(path: string, ownTitle: string) {
