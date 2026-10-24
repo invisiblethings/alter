@@ -1,0 +1,75 @@
+---
+// Address suggestions for every input marked data-places, using the Google
+// Places API (New) Autocomplete. Only active when PUBLIC_GOOGLE_PLACES_KEY is
+// set in Netlify; without it the fields keep normal browser autofill.
+// Google's script loads on first focus of an address field, so it costs
+// nothing for visitors who never reach the form. Suggestions only fill the
+// text; no Place Details call is made (keeps it inside the free tier).
+const key = import.meta.env.PUBLIC_GOOGLE_PLACES_KEY || '';
+---
+{key && (
+  <script is:inline define:vars={{ key }}>
+    (function () {
+      var inputs = document.querySelectorAll('input[data-places]');
+      if (!inputs.length) return;
+      var lib = null, n = 0;
+      function load() {
+        if (lib) return lib;
+        lib = new Promise(function (ok, fail) {
+          window.__aprPlaces = function () { google.maps.importLibrary('places').then(ok, fail); };
+          var s = document.createElement('script');
+          s.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&loading=async&libraries=places&callback=__aprPlaces';
+          s.async = true; s.onerror = fail; document.head.appendChild(s);
+        });
+        return lib;
+      }
+      inputs.forEach(function (input) {
+        var id = 'apr-addr-' + (++n), list = document.createElement('ul'), items = [], active = -1, token = null, timer;
+        list.id = id; list.className = 'addr-list'; list.setAttribute('role', 'listbox'); list.hidden = true;
+        input.parentNode.style.position = 'relative';
+        input.parentNode.appendChild(list);
+        input.setAttribute('role', 'combobox'); input.setAttribute('aria-autocomplete', 'list'); input.setAttribute('aria-expanded', 'false'); input.setAttribute('aria-controls', id);
+        input.setAttribute('autocomplete', 'off');
+        function close() { list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); active = -1; }
+        function pick(i) { if (!items[i]) return; input.value = items[i]; close(); token = null; input.dispatchEvent(new Event('change', { bubbles: true })); }
+        function mark(i) {
+          active = i;
+          [].forEach.call(list.children, function (li, k) { li.setAttribute('aria-selected', String(k === i)); });
+          if (i >= 0) input.setAttribute('aria-activedescendant', id + '-' + i);
+        }
+        input.addEventListener('focus', function () { load().catch(function () {}); }, { once: true });
+        input.addEventListener('input', function () {
+          clearTimeout(timer);
+          var q = input.value.trim();
+          if (q.length < 3) { close(); return; }
+          timer = setTimeout(function () {
+            load().then(function (places) {
+              token = token || new places.AutocompleteSessionToken();
+              return places.AutocompleteSuggestion.fetchAutocompleteSuggestions({
+                input: q, sessionToken: token, includedRegionCodes: ['us'],
+                locationBias: { center: { lat: 40.5795, lng: -74.1502 }, radius: 30000 },
+              });
+            }).then(function (r) {
+              items = (r.suggestions || []).map(function (s) { return s.placePrediction && s.placePrediction.text.toString(); }).filter(Boolean).slice(0, 5);
+              list.innerHTML = '';
+              items.forEach(function (t, i) {
+                var li = document.createElement('li'); li.id = id + '-' + i; li.setAttribute('role', 'option'); li.textContent = t;
+                li.addEventListener('mousedown', function (e) { e.preventDefault(); pick(i); });
+                list.appendChild(li);
+              });
+              if (items.length) { list.hidden = false; input.setAttribute('aria-expanded', 'true'); mark(-1); } else close();
+            }).catch(close);
+          }, 220);
+        });
+        input.addEventListener('keydown', function (e) {
+          if (list.hidden) return;
+          if (e.key === 'ArrowDown') { e.preventDefault(); mark(Math.min(active + 1, items.length - 1)); }
+          else if (e.key === 'ArrowUp') { e.preventDefault(); mark(Math.max(active - 1, 0)); }
+          else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); pick(active); }
+          else if (e.key === 'Escape') close();
+        });
+        input.addEventListener('blur', function () { setTimeout(close, 120); });
+      });
+    })();
+  </script>
+)}

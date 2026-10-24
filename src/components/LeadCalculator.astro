@@ -95,7 +95,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
           <div class="field"><label for={`${id}-name`}>Your name</label><input id={`${id}-name`} name="name" autocomplete="name" required /></div>
           <div class="field"><label for={`${id}-phone`}>Phone</label><input id={`${id}-phone`} name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
         </div>
-        <div class="field"><label for={`${id}-addr`}>Property address or ZIP</label><input id={`${id}-addr`} name="address" autocomplete="street-address" required /></div>
+        <div class="field"><label for={`${id}-addr`}>Property address or ZIP</label><input id={`${id}-addr`} name="address" data-places autocomplete="street-address" required /></div>
         <button class="btn btn-gold btn-lg btn-block" type="submit" data-submit>Send me my exact price <Icon name="arrow" /></button>
         <p class="form-status" role="alert"></p>
         <p class="calc-fine"><Icon name="check" /> Free inspection with photos · written, itemized price in 24 hours · no obligation</p>
