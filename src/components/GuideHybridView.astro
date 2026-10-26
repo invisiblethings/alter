@@ -40,10 +40,10 @@ const jump = [
 const entries = await allEntries();
 const related = d.related.map((u) => entries.find((e) => e.data.path === u)).filter(Boolean) as typeof entries;
 const services = [
-  { i: 'roof', t: 'Residential roof replacement', s: 'Full roof replacement for houses, including shingle roof replacement: tear-off to the deck, new underlayment, flashing and GAF shingles, most done in one day.', url: '/residential-roofing/roof-replacement/', cta: 'Residential roof replacement' },
-  { i: 'layers', t: 'Flat roof replacement', s: 'New EPDM, TPO and modified bitumen roofs for row houses, brownstones, extensions and garages, built for NYC cool-roof rules.', url: '/flat-roofing/', cta: 'Flat roofing' },
-  { i: 'building', t: 'Co-op, condo and commercial roofs', s: 'New roof installation on multi-family and commercial buildings, with DOB permits and board paperwork handled.', url: '/commercial-roofing/roof-replacement/', cta: 'Commercial roof replacement' },
-  { i: 'wrench', t: 'Roof repair in NYC', s: 'Not ready for a new roof? We find and fix leaks at the source and tell you honestly if a repair will do.', url: '/roof-repair/', cta: 'Roof repair' },
+  { i: 'roof', t: 'Residential roof replacement', s: 'Full roof replacement for houses, including shingle roof replacement: tear-off to the deck, new underlayment, flashing and GAF shingles, most done in one day.' },
+  { i: 'layers', t: 'Flat roof replacement', s: 'New EPDM, TPO and modified bitumen roofs for row houses, brownstones, extensions and garages, built for NYC cool-roof rules.' },
+  { i: 'building', t: 'Co-op, condo and commercial roofs', s: 'New roof installation on multi-family and commercial buildings, with DOB permits and board paperwork handled.' },
+  { i: 'wrench', t: 'Roof repair in NYC', s: 'Not ready for a new roof? We find and fix leaks at the source and tell you honestly if a repair will do.' },
 ];
 const facts = [
   { i: 'camera', t: 'Free inspection with photos', s: 'You see exactly what we see' },
@@ -104,12 +104,11 @@ const facts = [
     </div>
     <div class="gh-svc">
       {services.map((sv) => (
-        <a class="gh-svc-card" href={sv.url} data-reveal>
+        <div class="gh-svc-card" data-reveal>
           <span class="ab-ico"><Icon name={sv.i as any} /></span>
           <h3>{sv.t}</h3>
           <p>{sv.s}</p>
-          <span class="link-arrow">{sv.cta} <Icon name="arrow" /></span>
-        </a>
+        </div>
       ))}
     </div>
   </div>
@@ -144,7 +143,7 @@ const facts = [
   <div class="wrap">
     <div class="head-split" data-reveal>
       <div><span class="kicker">Before you spend $10,000+</span><h2 id="rr-h">Do you need to replace your roof, or just repair it?</h2></div>
-      <p class="lead">Many NYC roofs that look bad just need a <a href="/roof-repair/">roof repair</a>, for a fraction of the cost of a new roof. Tick what you see for an honest first read.</p>
+      <p class="lead">Many NYC roofs that look bad just need a roof repair, for a fraction of the cost of a new roof. Tick what you see for an honest first read.</p>
     </div>
     <ReplaceCheck formHref={form} />
   </div>
@@ -249,8 +248,7 @@ const facts = [
   #services, #costs, #boroughs, #repair-or-replace, #permits, #faq, :global(.csec) { scroll-margin-top: calc(var(--head) + 3rem); }
   .gh-svc-sec { padding-top: clamp(4rem, 8vw, 6rem); }
   .gh-svc { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-  .gh-svc-card { display: grid; gap: 0.6rem; align-content: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--r); background: #fff; color: var(--ink); text-decoration: none; transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
-  .gh-svc-card:hover { border-color: var(--navy-2); transform: translateY(-2px); box-shadow: var(--sh); }
+  .gh-svc-card { display: grid; gap: 0.6rem; align-content: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--r); background: #fff; color: var(--ink); text-decoration: none; }
   .gh-svc-card .ab-ico { background: var(--navy); }
   .gh-svc-card h3 { margin: 0.3rem 0 0; font-size: 1.12rem; }
   .gh-svc-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
