@@ -79,7 +79,7 @@ Wind-driven rain from nor'easters pushes water into any gap in the flashing. Fre
 
 ### Is it the skylight or the roof?
 
-That's the first thing we find out. Sometimes the leak is in the roof above the skylight, and water runs down to the frame. The photos will show you where it starts.
+That's the first thing we find out. Sometimes the leak is in the roof above the skylight, and water runs down to the frame. An infrared (thermal imaging) camera shows where the moisture is spreading, and the photos will show you where it starts.
 
 ### Will you just caulk it?
 

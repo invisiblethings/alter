@@ -59,7 +59,7 @@ const climb = quote('Chi C.', 'climbed up the roof to investigate the condition 
 
 // "What's going on with your roof?" Each symptom maps to a likely cause, a real price and a next step.
 const symptoms = [
-  { id: 'stain', icon: 'drop', t: 'Water stain on a ceiling', cause: 'Usually a leak at the flashing around a chimney, vent pipe or skylight, or a worn spot in the shingles. Water travels, so the stain is often several feet from the actual hole.', price: `${range(leak.low, leak.high)} for most small leaks · flashing ${range(flash.low, flash.high)}`, link: '/roof-repair/', cta: 'Roof leak repair' },
+  { id: 'stain', icon: 'drop', t: 'Water stain on a ceiling', cause: 'Usually a leak at the flashing around a chimney, vent pipe or skylight, or a worn spot in the shingles. Water travels, so the stain is often several feet from the actual hole; our infrared camera shows where it really gets in.', price: `${range(leak.low, leak.high)} for most small leaks · flashing ${range(flash.low, flash.high)}`, link: '/roof-repair/', cta: 'Roof leak repair' },
   { id: 'shingles', icon: 'roof', t: 'Missing or curling shingles', cause: 'A few missing shingles after a nor\'easter is a quick repair. Shingles curling or cracking all over the roof mean it is near the end of its life, and patching will not hold for long.', price: `${range(shingle.low, shingle.high)} for a shingle repair`, link: '/roof-repair/residential/', cta: 'Shingle repair' },
   { id: 'old', icon: 'calendar', t: 'Roof is 20+ years old', cause: `Asphalt roofs last ${asphalt.life}. A free inspection tells you how many good years are left, so you can plan a replacement instead of reacting to a leak.`, price: `${range(typicalReplacement.low, typicalReplacement.high)} for most Staten Island homes`, link: '/residential-roofing/roof-replacement/', cta: 'Roof replacement' },
   { id: 'flat', icon: 'layers', t: 'Leak on a flat roof or extension', cause: 'Flat roofs over rear extensions, garages and attached homes leak at seams, at the wall flashing and where water ponds. We fix the leak and the drainage that caused it.', price: `${range(flatLeak.low, flatLeak.high)} to repair · new 1,000 sq ft flat roof ${range(si.low, si.high)}`, link: '/flat-roofing/', cta: 'Flat roofing' },
@@ -169,6 +169,7 @@ const shores = [
       </div>
       <ol class="promise-list" data-reveal data-reveal-d="1">
         <li><Icon name="camera" /><span><strong>Photos of everything we find</strong>You see your roof the way we see it, not a sales pitch.</span></li>
+        <li><Icon name="drop" /><span><strong>Infrared leak detection</strong>Thermal imaging cameras show hidden moisture, so we find the real leak, not just the stain.</span></li>
         <li><Icon name="file" /><span><strong>Repair and replacement options, in writing</strong>Itemized prices, usually within 24 hours.</span></li>
         <li><Icon name="roof" /><span><strong>We climb up and look. No drone guesses.</strong>“{climb.q}” <em>{climb.who}</em></span></li>
         <li><Icon name="clock" /><span><strong>No pressure, no "sign today" pricing</strong>Take your time to decide.</span></li>

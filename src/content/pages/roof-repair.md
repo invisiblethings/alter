@@ -8,6 +8,7 @@ h1: "Roof repair on Staten Island: we find the real leak and fix it right"
 intro: "Most leaks don't need a new roof. They need someone who climbs up, finds where the water actually gets in, and fixes that. We do it with photos, so you see the problem and the repair for yourself."
 highlights:
   - "Same-day help for active leaks, <strong>24/7</strong>"
+  - "<strong>Infrared camera leak detection</strong> finds hidden water other roofers miss"
   - "Photos of the problem before and after the fix"
   - "Honest advice: if a repair will do, we won't sell you a roof"
 service: "Roof repair"
@@ -25,6 +26,8 @@ related:
   - "/flat-roofing/"
   - "/service-area/staten-island-ny/"
 faq:
+  - q: "How do you find where a roof leak is coming from?"
+    a: "We start with an infrared (thermal imaging) camera. Wet insulation, decking and drywall hold heat differently from dry material, so hidden moisture shows up on the screen even when nothing is visible yet. That shows us where water is spreading inside the roof, often several feet from the stain on your ceiling. Then we confirm the entry point on the roof, photograph it and fix the source, not the symptom."
   - q: "How much does roof repair cost on Staten Island?"
     a: "Minor repairs such as a few shingles or a pipe boot cost $150 to $400. Moderate repairs such as flashing replacement or leak tracing cost $400 to $1,500. Extensive storm or deck repairs cost $1,500 to $3,500. You get an exact written price after a free inspection."
   - q: "How do I know if I need a repair or a new roof?"
@@ -56,7 +59,7 @@ If water is coming in right now, skip the rest of this page and [call our emerge
 
 ### Leaks
 
-We trace water back to where it actually enters, often several feet from the stain on your ceiling, and fix the source instead of smearing sealant on the symptom.
+We scan the roof with the latest infrared (thermal imaging) cameras, which show hidden moisture you can't see with your eyes, and trace water back to where it actually enters, often several feet from the stain on your ceiling. Then we fix the source instead of smearing sealant on the symptom.
 
 ### Shingles
 
@@ -102,7 +105,7 @@ Yes. NYC DCWP license #2129904-DCWP, fully insured, a GAF Master Elite® contrac
 
 ## How a repair visit works
 
-1. **We inspect the whole roof**, not just the spot you called about, and photograph everything we find.
+1. **We inspect the whole roof**, not just the spot you called about, scan for hidden moisture with an infrared camera, and photograph everything we find.
 2. **You get a written quote**, usually within 24 hours, that explains the cause and the fix in plain English.
 3. **We do the repair** with materials that match your roof.
 4. **We show you the finished work** with photos and give you a written workmanship warranty.

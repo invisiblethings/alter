@@ -7,6 +7,7 @@ kicker: "Commercial roof inspections · Staten Island"
 h1: "Commercial roof inspections on Staten Island, with photo reports you can budget from"
 intro: "Know what's on top of your building before it turns into a leak over a register or a tenant's bedroom. Our inspections give Staten Island owners, managers and boards a clear picture of condition, remaining life and what to budget for."
 highlights:
+  - "Infrared moisture scan that maps wet insulation"
   - "Photo report of every issue, with locations"
   - "Prioritized list: fix now, plan for, monitor"
   - "Best done twice a year on flat roofs"
@@ -53,7 +54,7 @@ HVAC curbs, vents, pipes and anything bolted through the roof.
 
 ### Insulation moisture
 
-Soft spots and blisters that point to wet insulation under the membrane.
+An infrared (thermal imaging) moisture scan that maps wet insulation under the membrane, plus the soft spots and blisters that point to it. Wet areas are marked on the photo report, so you know exactly how much roof is affected.
 
 ### Safety & access
 

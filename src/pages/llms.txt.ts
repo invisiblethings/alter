@@ -73,6 +73,7 @@ Rated ${reviewStats.average} stars from ${reviewStats.total} reviews. GAF Master
 - Certifications: GAF Master Elite® Residential Roofing Contractor (${business.profiles.gaf}); BBB Accredited Business (${business.profiles.bbb})
 - Warranties: up to ${business.warranty.manufacturerYears} years manufacturer coverage on GAF roofing systems and up to ${business.warranty.workmanshipYears} years on workmanship, in writing
 - Reviews: ${reviewStats.average} out of 5 from ${reviewStats.total} reviews (${sources}); ${reviewStats.fiveStar} are five-star. All reviews: ${SITE}/reviews/
+- Leak detection: the latest infrared (thermal imaging) cameras to find hidden leaks and wet insulation
 - Free estimates: free roof inspection with photos and a written, itemized price, usually within 24 hours: ${SITE}/free-estimate/
 - Permits: DOB permits and co-op/condo board paperwork handled as part of the job
 

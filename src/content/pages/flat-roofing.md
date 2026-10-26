@@ -8,6 +8,7 @@ h1: "Flat roof repair and replacement on Staten Island, fixed at the cause"
 intro: "Most Staten Island flat roofs sit over a rear extension, a garage or an attached townhouse, and most of them leak for the same few reasons. We find yours, fix it properly, and tell you straight whether a repair will hold or the roof is done."
 highlights:
   - "EPDM, TPO, PVC and modified bitumen, repaired or replaced"
+  - "Hidden leaks and wet insulation found with infrared cameras"
   - "Drainage fixed so water stops sitting on the roof"
   - "Written estimate, usually within 24 hours"
 service: "Flat roofing"
@@ -26,6 +27,8 @@ related:
   - "/roof-replacement-cost-in-nyc/"
   - "/service-area/staten-island-ny/"
 faq:
+  - q: "How do you find a leak in a flat roof?"
+    a: "With an infrared (thermal imaging) camera. Water trapped under a flat roof membrane soaks the insulation, and wet insulation holds heat differently from dry, so it shows up clearly on the camera, usually best in the evening after a sunny day. That shows us where the water is spreading and how far, so we repair the real entry point and replace only the wet section, not more roof than you need."
   - q: "What is the best flat roof material for a Staten Island home?"
     a: "For most rear extensions, garages and attached homes, EPDM rubber is the best value and handles freeze-thaw winters well. TPO costs a little more, and its white surface keeps the room below cooler in summer. Modified bitumen is the toughest choice if you walk on the roof or keep equipment up there. We recommend based on your roof, not on what we have in the truck."
   - q: "How much does it cost to fix a leak in a flat roof?"
@@ -48,7 +51,7 @@ Flat roofs don't fail at random. On Staten Island homes, almost every leak we tr
 - **Penetrations** like vent pipes, exhaust fans and AC lines
 - **Blisters and splits** in older modified bitumen or tar roofs
 
-Salt air and wind near the water in South Beach, Midland Beach and Great Kills, and freeze-thaw cycles all winter, speed all of this up. We find the real entry point, which is often several feet from the stain on your ceiling, and repair it with materials that match your existing roof. Most of these repairs cost $400–$1,200. See our full [roof leak repair cost guide](/cost-to-repair-roof-leak/) for more detail.
+Salt air and wind near the water in South Beach, Midland Beach and Great Kills, and freeze-thaw cycles all winter, speed all of this up. Water can travel a long way under a flat roof before it shows up inside, so we scan the roof with an infrared (thermal imaging) camera to see where wet insulation is hiding. We find the real entry point, which is often several feet from the stain on your ceiling, and repair it with materials that match your existing roof. Most of these repairs cost $400–$1,200. See our full [roof leak repair cost guide](/cost-to-repair-roof-leak/) for more detail.
 
 Water coming in right now? Call our [24/7 emergency line](/roof-repair/emergency-service/) at (929) 370-1552.
 

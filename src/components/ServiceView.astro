@@ -39,8 +39,12 @@ const reviewTags: ReviewTag[] | undefined =
   : p.includes('inspection') ? ['honest', 'repair']
   : undefined;
 const isRepair = /repair|emergency/.test(p);
+// Leak and inspection pages lead with infrared leak detection.
+const irPage = /repair|emergency|inspection|flat-roof|skylight/.test(p);
 const facts = [
-  { i: 'camera', t: 'Free inspection with photos', s: 'You see exactly what we see' },
+  irPage
+    ? { i: 'camera', t: 'Infrared leak detection', s: 'Hidden moisture found, no guesswork' }
+    : { i: 'camera', t: 'Free inspection with photos', s: 'You see exactly what we see' },
   { i: 'file', t: 'Written price in 24 hours', s: 'Itemized, no pressure' },
   isRepair
     ? { i: 'bolt', t: 'Emergency calls 24/7', s: 'We stop the water first' }

@@ -7,7 +7,7 @@ kicker: "Roof repair · Brooklyn"
 h1: "Roof repair in Brooklyn: leaks traced and fixed at the source"
 intro: "On a Brooklyn row home, the stain on your ceiling is often feet away from where the water gets in. We find the real entry point, whether that's a seam, a parapet, a drain or your neighbor's flashing, and fix it properly."
 highlights:
-  - "Flat roof, parapet and party-wall leaks"
+  - "Flat roof, parapet and party-wall leaks, found with infrared cameras"
   - "Same-day emergency response, 24/7"
   - "Photos before and after, written warranty"
 service: "Roof repair"
@@ -60,7 +60,7 @@ Peeled membrane and torn edge metal after high winds. [Emergency repair](/roof-r
 
 ## How we repair Brooklyn roofs
 
-1. **Inspect and trace** the leak, including the parapets and the neighbor's side where we can see it.
+1. **Inspect and trace** the leak with an infrared (thermal imaging) camera, including the parapets and the neighbor's side where we can see it.
 2. **Photograph** the cause and explain it in plain English.
 3. **Written quote**, usually within 24 hours.
 4. **Repair** with compatible materials and fix the drainage or flashing problem behind it.

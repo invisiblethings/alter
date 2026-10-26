@@ -8,6 +8,7 @@ h1: "Commercial roof repair on Staten Island that keeps your doors open"
 intro: "A leak over a register, a stockroom or a tenant's apartment is a business problem. We find the source, make the roof watertight and schedule the work around your hours, so you lose as little as possible."
 highlights:
   - "TPO, EPDM, PVC and modified bitumen roofs"
+  - "Infrared moisture scan to find hidden leaks and wet insulation"
   - "Photo report of the whole roof with every repair"
   - "24/7 emergency response for active leaks"
 service: "Commercial roof repair"
@@ -36,6 +37,8 @@ faq:
 modified: "2026-10-22"
 ---
 ## Commercial roof problems we fix
+
+We start every commercial leak call with an infrared (thermal imaging) scan. Wet insulation under a flat roof membrane holds heat differently from dry insulation, so the camera shows exactly where water is spreading, and how far, before anything is cut open. That keeps repairs targeted and tells you whether the problem is one leak or a roof that needs replacing.
 
 ### Seam failures
 

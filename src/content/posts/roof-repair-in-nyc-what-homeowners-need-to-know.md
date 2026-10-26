@@ -84,6 +84,8 @@ Repair when the roof is **under about 15 years old**, the damage is **localized*
 
 ## How to hire a roofer in NYC
 
+Ask how they find leaks. A roofer who uses an infrared (thermal imaging) camera can see hidden moisture in the roof and ceilings, which means fewer guesses and fewer repeat visits. We use one on every leak call.
+
 - **Licensed:** an active NYC DCWP Home Improvement Contractor license
 - **Insured:** liability and workers' compensation; ask for certificates
 - **Written contract:** required in NYC for home improvement work over $200

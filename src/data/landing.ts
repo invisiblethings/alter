@@ -38,6 +38,7 @@ const roofCompare = [
 
 const roofIncludes = [
   'A roofer climbs up and checks the whole roof, not just the leak',
+  'An infrared (thermal imaging) scan for hidden leaks and moisture',
   'Photos of every problem we find',
   'Honest repair and replacement options',
   'A written, itemized price, usually within 24 hours',

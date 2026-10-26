@@ -26,7 +26,7 @@ faq:
   - q: "Can you patch a flat roof?"
     a: "Yes. Seams, punctures and small damaged areas can be patched with compatible material. Patches last when the surrounding membrane is still healthy; on an old, brittle roof they often just move the leak."
   - q: "How do I know if the insulation under my flat roof is wet?"
-    a: "Soft or spongy spots underfoot, blisters, and leaks that appear far from any visible damage are signs. A roofer can confirm by opening a small test area during an inspection."
+    a: "Soft or spongy spots underfoot, blisters, and leaks that appear far from any visible damage are signs. A roofer can confirm it with an infrared (thermal imaging) scan, which shows wet insulation without cutting the roof open, and then a small test cut where needed. We include an infrared scan in our flat roof inspections."
   - q: "Is it cheaper to recover a flat roof instead of tearing it off?"
     a: "A recover over a single dry layer can save on tear-off costs, but if the insulation is wet or there are already multiple layers, a tear-off is required and is the better long-term investment."
 ---

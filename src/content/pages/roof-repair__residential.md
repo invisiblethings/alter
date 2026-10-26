@@ -7,6 +7,7 @@ kicker: "Shingle & house roof repair · Staten Island"
 h1: "Shingle roof repair for Staten Island houses: shingles, flashing and chimneys"
 intro: "Whether it's a cape in Eltingville, a high-ranch in Bulls Head or a flat-roofed extension behind a two-family in Port Richmond, we find what's actually wrong, fix it properly and back the work with a written warranty."
 highlights:
+  - "Hidden leaks found with infrared (thermal imaging) cameras"
   - "Shingle and flat roofs repaired"
   - "Repairs matched to your existing roof"
   - "Written workmanship warranty on every repair"
@@ -25,6 +26,8 @@ related:
   - "/cost-to-repair-roof-leak/"
   - "/roof-repair-in-nyc-what-homeowners-need-to-know/"
 faq:
+  - q: "How do you find where a roof leak is coming from?"
+    a: "We start with an infrared (thermal imaging) camera. Wet insulation, decking and drywall hold heat differently from dry material, so hidden moisture shows up on the screen even when nothing is visible yet. That shows us where water is spreading inside the roof, often several feet from the stain on your ceiling. Then we confirm the entry point on the roof, photograph it and fix the source, not the symptom."
   - q: "How much does a home roof repair cost on Staten Island?"
     a: "Most repairs cost $300 to $1,200. A minor leak patch is $300 to $650, shingle repairs $350 to $800 and flashing replacement $450 to $900. You get an exact written price after a free inspection."
   - q: "Can you match my existing shingles?"
@@ -65,7 +68,7 @@ Overflowing gutters can push water under the roof edge. We fix the [gutters](/si
 
 ## What makes a repair last
 
-A repair is only as good as the diagnosis. Water often runs along rafters before it shows up on a ceiling, so the stain is rarely right under the hole. We inspect the whole roof, check the attic when we can, and photograph what we find. Then we fix the cause with proper materials: new flashing, matched shingles, sealed seams. No caulk-and-go patches.
+A repair is only as good as the diagnosis. Water often runs along rafters before it shows up on a ceiling, so the stain is rarely right under the hole. We inspect the whole roof, scan it with an infrared (thermal imaging) camera to see where hidden moisture is spreading, check the attic when we can, and photograph what we find. Then we fix the cause with proper materials: new flashing, matched shingles, sealed seams. No caulk-and-go patches.
 
 ## Your questions before you call
 

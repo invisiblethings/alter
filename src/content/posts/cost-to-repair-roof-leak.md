@@ -90,4 +90,4 @@ Repair when the roof is **under about 15 years old** and the leak is **in one ar
 2. If the ceiling bulges with water, a small hole at the lowest point lets it drain safely.
 3. Take photos for your records and insurer.
 4. Stay off the roof.
-5. Call a licensed roofer. Ours is [(929) 370-1552](tel:+19293701552), with [24/7 emergency service](/roof-repair/emergency-service/).
+5. Call a licensed roofer who can find the source, not just the stain. We use infrared (thermal imaging) cameras to trace hidden leaks. Call [(929) 370-1552](tel:+19293701552), with [24/7 emergency service](/roof-repair/emergency-service/).

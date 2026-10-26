@@ -8,6 +8,7 @@ h1: "Free roof inspection on Staten Island, with photos and a straight answer"
 intro: "Find out exactly what shape your roof is in before you buy, sell, file an insurance claim or spend money on repairs. We climb up, photograph everything and explain it in plain English. If your roof is fine, we'll tell you."
 highlights:
   - "Free with every repair or replacement estimate"
+  - "Infrared (thermal imaging) scan for hidden moisture"
   - "Photos of every problem area, and of what's fine"
   - "Clear advice on what needs attention now and what can wait"
 service: "Roof inspection"
@@ -24,6 +25,8 @@ related:
   - "/roof-replacement-cost-in-nyc/"
   - "/commercial-roofing/roof-inspection/"
 faq:
+  - q: "Do you use infrared cameras in your roof inspections?"
+    a: "Yes. We use the latest infrared (thermal imaging) cameras to scan for hidden moisture in the roof and ceilings. Wet materials hold heat differently from dry ones, so the camera shows leaks and wet insulation that you can't see from inside or out, and you get the images with your inspection photos."
   - q: "Is the roof inspection really free?"
     a: "Yes. It comes free with every repair or replacement estimate, with photos and a written summary, and there's no obligation to hire us."
   - q: "How often should I have my roof inspected?"
@@ -61,6 +64,10 @@ Daylight, stains, damp insulation and mold, which reveal leaks you can't see fro
 ### Deck
 
 Soft or sagging spots that point to rotted wood underneath.
+
+### Hidden moisture
+
+An infrared (thermal imaging) scan of the roof and ceilings, which shows wet insulation and decking long before a stain appears.
 
 ## When to get an inspection
 

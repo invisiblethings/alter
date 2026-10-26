@@ -54,7 +54,7 @@ We tarp the damaged area or apply a temporary seal so no more water gets in, eve
 
 ### Find the cause
 
-We trace the leak to its source: torn shingles, lifted flashing, a punctured flat roof, a failed skylight or a blocked drain.
+We trace the leak to its source with an infrared (thermal imaging) camera, which shows where water has spread inside ceilings and the roof, then confirm the cause on the roof: torn shingles, lifted flashing, a punctured flat roof, a failed skylight or a blocked drain.
 
 ### Document it
 

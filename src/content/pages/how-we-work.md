@@ -22,7 +22,7 @@ modified: "2026-10-22"
 ---
 ## Step 1: Free inspection
 
-You call or fill in the [estimate form](/free-estimate/). We set a time that works for you and come out to look at the roof. Not from the driveway, but up on the roof. We check the surface, flashing, vents, gutters and, when we can, the attic. Then we show you photos of what we found.
+You call or fill in the [estimate form](/free-estimate/). We set a time that works for you and come out to look at the roof. Not from the driveway, but up on the roof. We check the surface, flashing, vents, gutters and, when we can, the attic, and scan for hidden moisture with an infrared (thermal imaging) camera. Then we show you photos of what we found.
 
 ## Step 2: Written estimate
 

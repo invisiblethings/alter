@@ -59,7 +59,7 @@ Full tear-off of old layers, deck repairs, tapered insulation where drainage is 
 
 ### Flat roof repair
 
-Open seams, blisters, punctures and failed flashing repaired with materials compatible with your existing roof.
+Open seams, blisters, punctures and failed flashing repaired with materials compatible with your existing roof. We find hidden leaks and wet insulation with an infrared (thermal imaging) camera, so we repair the real entry point.
 
 ### Parapet & coping repair
 
