@@ -1,0 +1,256 @@
+---
+// Guide pages that should also sell the service (layout: hybrid), built for
+// /roof-replacement-guide-nyc/: landing-page hero with the quote form, then
+// the guide as interactive tools (calculator, borough prices, repair-or-
+// replace check, permit check) and designed sections, with proof and a
+// form at the end. Keeps the guide's author, dates and FAQ for search.
+import Icon from './Icon.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import QuoteWizard from './QuoteWizard.astro';
+import PriceTables from './PriceTables.astro';
+import LeadCalculator from './LeadCalculator.astro';
+import BoroughExplorer from './BoroughExplorer.astro';
+import ReplaceCheck from './ReplaceCheck.astro';
+import PermitCheck from './PermitCheck.astro';
+import ContentSections from './ContentSections.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import { business, telHref } from '../data/business';
+import { typicalReplacement, money } from '../data/costs';
+import { allEntries, readTime, fmtDate, type PostEntry } from '../lib/content';
+
+interface Props { entry: PostEntry; html: string; crumbs: { name: string; url: string }[]; headings: { depth: number; slug: string; text: string }[] }
+const { entry, html, crumbs, headings } = Astro.props;
+const d = entry.data;
+const mins = readTime(entry);
+const form = '#pg-wizard';
+// Short chip labels for the article's own sections.
+const short = (t: string) => /estimate/i.test(t) ? 'What to expect in a quote' : /rules/i.test(t) ? 'NYC rules' : /step by step|process/i.test(t) ? 'The process'
+  : /choose a roofing/i.test(t) ? 'Hiring a roofer' : /why/i.test(t) ? 'Why us' : t;
+const jump = [
+  { id: 'costs', t: 'Costs' },
+  { id: 'boroughs', t: 'By borough' },
+  { id: 'repair-or-replace', t: 'Repair or replace?' },
+  { id: 'permits', t: 'Permits' },
+  ...headings.filter((h) => h.depth === 2).map((h) => ({ id: h.slug, t: short(h.text) })),
+  ...(d.faq.length ? [{ id: 'faq', t: 'FAQ' }] : []),
+];
+const entries = await allEntries();
+const related = d.related.map((u) => entries.find((e) => e.data.path === u)).filter(Boolean) as typeof entries;
+const facts = [
+  { i: 'camera', t: 'Free inspection with photos', s: 'You see exactly what we see' },
+  { i: 'file', t: 'Written price in 24 hours', s: 'Itemized, permits included' },
+  { i: 'calendar', t: 'Most roofs done in 1 day', s: 'Tear-off to cleanup' },
+  { i: 'shield', t: `Up to ${business.warranty.manufacturerYears}-yr warranty`, s: `Plus ${business.warranty.workmanshipYears} yrs on workmanship` },
+];
+---
+<section class="hero gh-hero">
+  <div class="hero-bg"><img src={d.image} alt={d.imageAlt || ''} width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /></div>
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      <span class="kicker">{d.kicker}</span>
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      <ul class="ticks" style="margin-top:1.25rem">
+        <li><Icon name="check" /> <span>Serving <strong>Staten Island, Brooklyn, Queens, the Bronx and Manhattan</strong></span></li>
+        <li><Icon name="check" /> <span>Most roofs <strong>done in one day</strong>, priced in writing before we start</span></li>
+        <li><Icon name="check" /> <span>DOB permits and co-op board paperwork handled for you</span></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
+      </div>
+      <ul class="hero-proof">
+        <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><span><strong>{business.rating.value}</strong> from {business.rating.count} reviews</span></li>
+        <li><img class="gaf-badge gaf-xs" src="/images/gaf-master-elite.webp" alt="GAF Master Elite® Residential Roofing Contractor" width="256" height="256" loading="eager" decoding="async" /><span><strong>GAF Master Elite®</strong></span></li>
+        <li><Icon name="license" /><span>Lic. <strong>#{business.license.number}</strong></span></li>
+      </ul>
+      <p class="gh-by">
+        <span class="avatar-s" aria-hidden="true">M</span>
+        <span>By <a href="/about/"><strong>Marke</strong></a>, owner · Updated <time datetime={d.modified || d.published}>{fmtDate(d.modified || d.published)}</time> · {mins} min read</span>
+      </p>
+    </div>
+    <QuoteWizard id="pg" service="Roof replacement" title="Get your free roof replacement estimate" />
+  </div>
+</section>
+
+<section class="answer-band" aria-label="The short answer">
+  <div class="wrap">
+    {d.answer && (
+      <div class="ab-answer" data-reveal>
+        <span class="ab-k"><Icon name="bolt" /> The short answer</span>
+        <p set:html={d.answer} />
+      </div>
+    )}
+    <ul class="ab-facts" data-reveal data-reveal-d="1">
+      {facts.map((f) => <li><span class="ab-ico"><Icon name={f.i as any} /></span><span><strong>{f.t}</strong>{f.s}</span></li>)}
+    </ul>
+  </div>
+</section>
+
+<nav class="gh-jump" aria-label="On this page">
+  <div class="wrap"><span>Jump to</span><ul>{jump.map((j) => <li><a href={`#${j.id}`}>{j.t}</a></li>)}</ul></div>
+</nav>
+
+<section class="sec dark price-sec" id="costs" aria-labelledby="costs-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">2026 prices from our own jobs</span><h2 id="costs-h">How much does a roof replacement cost in NYC?</h2></div>
+      <p class="lead">Most NYC roof replacements cost <strong>{money(typicalReplacement.low)}–{money(typicalReplacement.high)}+</strong>. The material and the borough move the price most. Build your roof below to see your range.</p>
+    </div>
+    <div data-reveal><LeadCalculator area="Staten Island" pickArea id="gcalc" /></div>
+    <div style="margin-top:2.5rem" data-reveal><PriceTables kinds={['pitched', 'flat']} /></div>
+  </div>
+</section>
+
+<section class="sec" id="boroughs" aria-labelledby="boroughs-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">Staten Island · Brooklyn · Queens · Bronx · Manhattan</span><h2 id="boroughs-h">Roof replacement prices by borough</h2></div>
+      <p class="lead">Same roof, different borough, different price: access, attached walls and building rules change the job. Pick yours.</p>
+    </div>
+    <BoroughExplorer formHref={form} />
+  </div>
+</section>
+
+<section class="sec bone" id="repair-or-replace" aria-labelledby="rr-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">Before you spend $10,000+</span><h2 id="rr-h">Do you need a new roof, or just a repair?</h2></div>
+      <p class="lead">Many NYC roofs that look bad can be <a href="/roof-repair/">repaired</a> for a fraction of the cost. Tick what you see for an honest first read.</p>
+    </div>
+    <ReplaceCheck formHref={form} />
+  </div>
+</section>
+
+<section class="sec" id="permits" aria-labelledby="permits-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">The most-asked NYC roofing question</span><h2 id="permits-h">Do you need a permit to replace a roof in NYC?</h2></div>
+      <p class="lead">It depends on the scope. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do.</p>
+    </div>
+    <PermitCheck />
+    <div class="gh-rules">
+      <div class="gh-rule">
+        <h3><Icon name="check" /> Usually no permit required</h3>
+        <ul>
+          <li>Like-for-like replacement of the roof <strong>covering</strong>, above the deck</li>
+          <li><strong>No structural changes</strong> to the roof deck or framing</li>
+          <li>One- or two-family residential buildings</li>
+          <li>The work already meets the NYC Energy Conservation Code</li>
+        </ul>
+      </div>
+      <div class="gh-rule gh-rule-y">
+        <h3><Icon name="clipboard" /> A permit is required when</h3>
+        <ul>
+          <li>The <strong>structural deck</strong> is replaced or modified</li>
+          <li>You're <strong>changing the roof type</strong> (for example, shingles to flat)</li>
+          <li>The building is <strong>commercial</strong> (virtually all replacement work)</li>
+          <li>The job triggers <strong>Local Laws 92/94</strong> sustainable roofing rules</li>
+          <li>The building is <strong>landmarked</strong> or in a historic district</li>
+          <li><strong>Insulation</strong> is being upgraded to meet current energy code</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="gh-h3">How the NYC roofing permit process works</h3>
+    <ol class="gh-steps">
+      <li><strong>The contractor files.</strong> Your licensed roofer (not you) files through DOB NOW Build. This takes an active DCWP license and DOB registration.</li>
+      <li><strong>DOB review.</strong> Simple projects can be approved the same day; complex ones, or those needing an architect or engineer, take two to six weeks.</li>
+      <li><strong>Inspections.</strong> DOB may inspect at certain stages; your contractor coordinates them.</li>
+      <li><strong>Sign-off.</strong> A final inspection closes the permit and leaves a clean record for when you sell.</li>
+    </ol>
+    <p class="gh-warn"><Icon name="bolt" /> <span><strong>Skipping a required permit</strong> risks DOB violations, fines and trouble at sale or refinance. A reputable roofer tells you up front whether you need one and includes the cost in the estimate.</span></p>
+  </div>
+</section>
+
+<ContentSections html={html} startBone formHref={form} />
+
+<Reviews limit={6} tags={['replacement', 'oneday']} title="What homeowners say about their new roof" />
+
+{d.faq.length > 0 && (
+  <section class="sec bone" id="faq">
+    <div class="wrap faq-split">
+      <div data-reveal>
+        <span class="kicker">FAQ</span>
+        <h2>NYC roof replacement: your questions, answered</h2>
+        <p class="lead">Don't see yours? Call or text and you'll talk to someone who actually works on roofs.</p>
+        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </div>
+      <div data-reveal data-reveal-d="1"><Faq items={d.faq} title="NYC roof replacement: common questions" bare /></div>
+    </div>
+  </section>
+)}
+
+<section class="sec" aria-label="About the author">
+  <div class="wrap">
+    <div class="author gh-author">
+      <span class="avatar-s" aria-hidden="true">M</span>
+      <div>
+        <h2>Written by Marke, owner of {business.name}</h2>
+        <p>Marke runs {business.name}, a family-owned roofing contractor based on Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Queens, the Bronx and Manhattan. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+      </div>
+    </div>
+    {related.length > 0 && (
+      <div class="gh-related">
+        <h2>Keep reading</h2>
+        <div class="rel-grid">
+          {related.map((r) => (
+            <a class="rel" href={r.data.path}>
+              {r.data.image ? <img src={r.data.image} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
+              <span class="rel-b"><em>Guide</em><strong>{('cardTitle' in r.data && r.data.cardTitle) || r.data.h1}</strong><span class="link-arrow">Read the guide <Icon name="arrow" /></span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<FinalCta title="Ready for a roof you won't think about for 30 years?" text="Free inspection with photos and a written, itemized price. If a repair will do, we'll tell you." service="Roof replacement" />
+
+<style>
+  .gh-by { display: flex; align-items: center; gap: 0.6rem; margin: 1.25rem 0 0; font-size: 0.86rem; color: #c8d3e8; }
+  .gh-by a { color: #fff; }
+  .gh-by .avatar-s { background: var(--gold); color: var(--ink); }
+  .gh-jump { position: sticky; top: var(--head); z-index: 20; background: rgb(255 255 255 / 0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); margin-top: clamp(2rem, 5vw, 3.5rem); }
+  .gh-jump .wrap { display: flex; align-items: center; gap: 0.9rem; overflow-x: auto; scrollbar-width: none; padding-block: 0.6rem; }
+  .gh-jump .wrap::-webkit-scrollbar { display: none; }
+  .gh-jump span { flex: none; font-size: 0.72rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .gh-jump ul { display: flex; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+  .gh-jump a { display: block; white-space: nowrap; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--bone); color: var(--ink); font-weight: 700; font-size: 0.86rem; text-decoration: none; }
+  .gh-jump a:hover, .gh-jump a.on { background: var(--navy); color: #fff; }
+  #costs, #boroughs, #repair-or-replace, #permits, #faq, :global(.csec) { scroll-margin-top: calc(var(--head) + 3rem); }
+  .gh-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
+  .gh-rule { border: 1px solid var(--line); border-radius: var(--r); padding: 1.3rem 1.4rem; background: #f3faf6; }
+  .gh-rule-y { background: #fff8ea; }
+  .gh-rule h3 { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.75rem; font-size: 1.1rem; }
+  .gh-rule h3 :global(.icon) { width: 22px; height: 22px; color: var(--green); }
+  .gh-rule-y h3 :global(.icon) { color: var(--gold-ink); }
+  .gh-rule ul { margin: 0; padding-left: 1.15rem; display: grid; gap: 0.4rem; }
+  .gh-h3 { margin: clamp(2rem, 4vw, 3rem) 0 1rem; font-size: 1.25rem; }
+  .gh-steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
+  .gh-steps li { counter-increment: s; background: var(--bone); border-radius: var(--r); padding: 1.1rem; font-size: 0.93rem; line-height: 1.5; }
+  .gh-steps li::before { content: counter(s, decimal-leading-zero); display: block; font-weight: 900; color: var(--gold-ink); font-size: 0.85rem; margin-bottom: 0.4rem; }
+  .gh-steps strong { display: block; color: var(--navy); }
+  .gh-warn { display: flex; gap: 0.6rem; margin: 1.25rem 0 0; padding: 1rem 1.2rem; border-left: 4px solid var(--red); background: #fdf2f1; border-radius: 0 12px 12px 0; font-size: 0.95rem; }
+  .gh-warn :global(.icon) { width: 20px; height: 20px; color: var(--red); flex: none; margin-top: 0.15rem; }
+  .gh-author { margin: 0; }
+  .gh-related { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+  .gh-related h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); margin: 0 0 1.25rem; }
+  @media (max-width: 900px) { .gh-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .gh-rules, .gh-steps { grid-template-columns: minmax(0, 1fr); } }
+</style>
+
+<script>
+  // Highlight the jump-nav chip for the section in view.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.gh-jump a')];
+  const map = new Map(links.map((a) => [a.hash.slice(1), a]));
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    links.forEach((a) => a.classList.remove('on'));
+    const a = map.get(e.target.id) || map.get(e.target.getAttribute('aria-labelledby') || '');
+    if (a) { a.classList.add('on'); const bar = a.closest('.wrap')!; bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+  }), { rootMargin: '-40% 0px -55% 0px' });
+  map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el.closest('section') || el); });
+</script>

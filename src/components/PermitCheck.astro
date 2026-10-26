@@ -1,0 +1,88 @@
+---
+// Four yes/no questions that tell an NYC owner whether their roof
+// replacement likely needs a DOB permit or board approval.
+import Icon from './Icon.astro';
+import { permitQuestions } from '../data/replacementGuide';
+---
+<div class="pk" data-pk data-q={JSON.stringify(permitQuestions)}>
+  <ol class="pk-qs">
+    {permitQuestions.map((q, i) => (
+      <li class="pk-q">
+        <span class="pk-n" aria-hidden="true">{i + 1}</span>
+        <fieldset>
+          <legend>{q.t}</legend>
+          <div class="pk-yn">
+            <label><input type="radio" name={`pk-${q.id}`} value="yes" /><span>Yes</span></label>
+            <label><input type="radio" name={`pk-${q.id}`} value="no" /><span>No</span></label>
+          </div>
+        </fieldset>
+      </li>
+    ))}
+  </ol>
+  <div class="pk-out" aria-live="polite" data-state="start">
+    <span class="pk-ico" aria-hidden="true"><Icon name="clipboard" /></span>
+    <div>
+      <p class="pk-t" data-t>Answer the questions to see what your job needs.</p>
+      <p class="pk-s" data-s>Either way, a licensed contractor files any permit through DOB NOW, not you. We check this at the inspection and include it in your estimate.</p>
+      <ul class="pk-notes" data-notes></ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-pk]').forEach((root) => {
+    const qs = JSON.parse(root.dataset.q!) as { id: string; permit: boolean; note?: string }[];
+    const out = root.querySelector<HTMLElement>('.pk-out')!;
+    const t = root.querySelector('[data-t]')!;
+    const s = root.querySelector('[data-s]')!;
+    const notes = root.querySelector('[data-notes]')!;
+    let used = false;
+    root.addEventListener('change', () => {
+      const a = (id: string) => root.querySelector<HTMLInputElement>(`input[name=pk-${id}]:checked`)?.value;
+      const permitQs = qs.filter((q) => q.permit);
+      const yes = permitQs.some((q) => a(q.id) === 'yes');
+      const allNo = permitQs.every((q) => a(q.id) === 'no');
+      notes.innerHTML = '';
+      qs.filter((q) => q.note && a(q.id) === 'yes').forEach((q) => { const li = document.createElement('li'); li.textContent = q.note!; notes.appendChild(li); });
+      if (yes) {
+        out.dataset.state = 'permit';
+        t.textContent = 'A DOB permit is likely needed.';
+        s.textContent = 'That’s normal for this kind of job. We file it through DOB NOW, schedule the inspections and include the fee in your written estimate.';
+      } else if (allNo) {
+        out.dataset.state = 'clear';
+        t.textContent = 'Probably no DOB permit needed.';
+        s.textContent = 'Like-for-like roofing above the deck on a one- or two-family home usually doesn’t need one. We confirm it at your free inspection.';
+      } else {
+        out.dataset.state = 'start';
+        t.textContent = 'Keep going…';
+        s.textContent = 'Answer the remaining questions to see the result.';
+      }
+      if (!used) { used = true; (window as any).dataLayer?.push({ event: 'permit_check_used' }); }
+    });
+  });
+</script>
+
+<style>
+  .pk { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2rem); align-items: start; }
+  .pk-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+  .pk-q { display: flex; gap: 0.8rem; align-items: flex-start; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem 1rem; }
+  .pk-n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 850; font-size: 0.82rem; }
+  .pk-q fieldset { border: 0; margin: 0; padding: 0; min-width: 0; flex: 1; display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; justify-content: space-between; }
+  .pk-q legend { float: left; max-width: 34rem; font-weight: 650; line-height: 1.4; padding: 0; }
+  .pk-yn { display: flex; gap: 0.4rem; }
+  .pk-yn input { position: absolute; opacity: 0; pointer-events: none; }
+  .pk-yn span { display: inline-block; min-width: 3.6rem; text-align: center; padding: 0.45rem 0.8rem; border-radius: 999px; border: 1.5px solid var(--line); font-weight: 750; font-size: 0.9rem; cursor: pointer; transition: all 0.15s; }
+  .pk-yn label:hover span { border-color: var(--navy-2); }
+  .pk-yn input:checked + span { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .pk-yn input:focus-visible + span { outline: 3px solid var(--gold-2); outline-offset: 2px; }
+  .pk-out { position: sticky; top: calc(var(--head) + 4.5rem); display: flex; gap: 1rem; border-radius: var(--r-lg); padding: clamp(1.2rem, 3vw, 1.75rem); background: #fff; border: 2px solid var(--line); box-shadow: var(--sh); transition: border-color 0.2s, background 0.2s; }
+  .pk-out[data-state='permit'] { border-color: var(--gold-2); background: #fff8ea; }
+  .pk-out[data-state='clear'] { border-color: #6cc79b; background: #f0faf5; }
+  .pk-ico { flex: none; width: 46px; height: 46px; border-radius: 14px; background: var(--navy); color: var(--gold); display: grid; place-items: center; }
+  .pk-ico :global(.icon) { width: 22px; height: 22px; }
+  .pk-t { margin: 0 0 0.35rem; font-weight: 900; font-size: 1.2rem; line-height: 1.25; }
+  .pk-s { margin: 0; color: var(--muted); font-size: 0.94rem; }
+  .pk-notes { margin: 0.6rem 0 0; padding-left: 1.1rem; font-size: 0.9rem; font-weight: 650; }
+  .pk-notes:empty { display: none; }
+  @media (max-width: 860px) { .pk { grid-template-columns: minmax(0, 1fr); } .pk-out { position: static; } }
+</style>

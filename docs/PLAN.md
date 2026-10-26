@@ -211,3 +211,15 @@ Setup: Netlify env vars `SMTP_USER` (full Spacemail address), `SMTP_PASS`,
 `LEAD_EMAIL_TO` (comma-separated); optional `SMTP_HOST` (mail.spacemail.com)
 and `SMTP_PORT` (465). Then turn off Netlify's own form email notification
 so leads don't arrive twice. Function logs: Netlify → Logs → Functions.
+
+## Hybrid guide: /roof-replacement-guide-nyc/
+
+`layout: "hybrid"` in a guide's frontmatter renders it with GuideHybridView:
+landing-page hero with the quote form, calculator with borough picker, borough
+price explorer (BoroughExplorer, deep links #staten-island #brooklyn #queens
+#bronx #manhattan), repair-or-replace check, permit check, then the markdown as
+designed sections, reviews, FAQ and author box. Borough copy and the checks'
+questions live in src/data/replacementGuide.ts; prices come from costs.ts.
+New dataLayer events (optional GA4 tags): borough_select, replace_check_used,
+permit_check_used. Bronx flat-roof range ($6,000–$16,000) is an estimate
+pending owner confirmation.

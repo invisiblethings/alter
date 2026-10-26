@@ -49,6 +49,7 @@ export const boroughs = [
   { name: 'Staten Island', low: 5000, high: 13000, drivers: 'Least congested; detached homes; easy staging and debris removal' },
   { name: 'Queens', low: 5500, high: 15000, drivers: 'Wider streets; a mix of flat and pitched residential roofs' },
   { name: 'Brooklyn', low: 6500, high: 17000, drivers: 'Row-home access, brownstone details, attached buildings, co-op boards' },
+  { name: 'Bronx', low: 6000, high: 16000, drivers: 'Attached row houses and two- and three-family homes; street staging and shared walls' },
   { name: 'Manhattan', low: 8000, high: 22000, drivers: 'Sidewalk protection, cranes or lifts, building height, permit complexity' },
 ];
 

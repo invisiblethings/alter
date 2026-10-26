@@ -9,8 +9,10 @@ import LeadContextFields from './LeadContextFields.astro';
 import { materials, repairs, boroughs, money } from '../data/costs';
 import { business, telHref } from '../data/business';
 
-interface Props { area: string; start?: 'flat' | 'shingle' | 'repair'; id?: string }
-const { area, start = 'shingle', id = 'calc' } = Astro.props;
+// pickArea adds a borough picker to the result (city-wide pages); otherwise
+// the price is fixed to `area`.
+interface Props { area: string; start?: 'flat' | 'shingle' | 'repair'; id?: string; pickArea?: boolean }
+const { area, start = 'shingle', id = 'calc', pickArea = false } = Astro.props;
 const b = boroughs.find((x) => x.name === area) || boroughs[0];
 const si = boroughs[0];
 const factor = (b.low + b.high) / (si.low + si.high);
@@ -28,7 +30,8 @@ const sizes = {
     { label: 'Garage or extension', size: 400 },
   ],
 };
-const data = { factor, flat: flat.map(({ id, name, low, high, life }) => ({ id, name, low, high, life })), shingle: { name: shingle.name, low: shingle.low, high: shingle.high, life: shingle.life }, repairs };
+const factors = Object.fromEntries(boroughs.map((x) => [x.name, (x.low + x.high) / (si.low + si.high)]));
+const data = { factor, factors, flat: flat.map(({ id, name, low, high, life }) => ({ id, name, low, high, life })), shingle: { name: shingle.name, low: shingle.low, high: shingle.high, life: shingle.life }, repairs };
 const round = (n: number) => Math.round((n * factor) / 100) * 100;
 const startSize = start === 'flat' ? sizes.flat[0].size : sizes.shingle[0].size;
 const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(repairs[0].high)}`
@@ -87,7 +90,9 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
 
     <div class="calc-out">
       <div class="calc-result" aria-live="polite">
-        <span class="calc-k">Your estimated price in {area}</span>
+        {pickArea
+          ? <label class="calc-k calc-area" for={`${id}-area`}>Your estimated price in <select id={`${id}-area`} name="calc_area">{boroughs.map((x) => <option value={x.name} selected={x.name === b.name}>{x.name === 'Bronx' ? 'the Bronx' : x.name}</option>)}</select></label>
+          : <span class="calc-k">Your estimated price in {area}</span>}
         <span class="calc-val" data-val>{startRange}</span>
         <span class="calc-meta" data-meta></span>
       </div>
@@ -120,6 +125,8 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
     const out = (k: string) => f.querySelector<HTMLInputElement>(`[data-out=${k}]`)!;
     const money = (n: number) => '$' + (Math.round(n / 100) * 100).toLocaleString('en-US');
     const checked = (n: string) => f.querySelector<HTMLInputElement>(`input[name=${n}]:checked`);
+    const areaPick = f.querySelector<HTMLSelectElement>('select[name=calc_area]');
+    const areaOut = f.querySelector<HTMLInputElement>('input[name=area]')!;
     let used = false;
 
     const update = () => {
@@ -127,6 +134,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
       root.querySelectorAll<HTMLElement>('[data-when]').forEach((el) => (el.hidden = !el.dataset.when!.split(' ').includes(job)));
       root.querySelectorAll<HTMLElement>('[data-sizes]').forEach((el) => (el.hidden = el.dataset.sizes !== job));
       const size = +slider.value;
+      if (areaPick) { d.factor = d.factors[areaPick.value]; areaOut.value = areaPick.value; }
       sizeOut.textContent = size.toLocaleString('en-US') + ' sq ft';
       let range = '', job_label = '', details = '';
       if (job === 'repair') {

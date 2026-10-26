@@ -3,6 +3,7 @@
 import Base from '../layouts/Base.astro';
 import ServiceView from '../components/ServiceView.astro';
 import PostView from '../components/PostView.astro';
+import GuideHybridView from '../components/GuideHybridView.astro';
 import SimpleView from '../components/SimpleView.astro';
 import LandingView from '../components/LandingView.astro';
 import { allEntries, crumbsFor, type Entry, type PageEntry, type PostEntry } from '../lib/content';
@@ -48,7 +49,8 @@ const schema = pageGraph({
 ---
 <Base title={d.seoTitle} description={d.description} path={d.path} image={d.image} imageAlt={d.imageAlt} noindex={d.noindex}
   ogType={t === 'post' ? 'article' : 'website'} published={d.published} modified={d.modified} schema={schema} bare={t === 'landing'}>
-  {t === 'post' ? <PostView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
+  {t === 'post' && 'layout' in d && d.layout === 'hybrid' ? <GuideHybridView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
+    : t === 'post' ? <PostView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
     : t === 'landing' ? <LandingView entry={entry as PageEntry} html={html} />
     : ['company', 'legal', 'reviews'].includes(t) ? <SimpleView entry={entry as PageEntry} html={html} crumbs={crumbs} />
     : <ServiceView entry={entry as PageEntry} html={html} crumbs={crumbs} />}

@@ -1,0 +1,80 @@
+---
+// "Repair or replace?" self-check: tick the signs you see, get an honest
+// verdict and the matching next step. Works as a plain checklist without JS.
+import Icon from './Icon.astro';
+import { signs, verdicts } from '../data/replacementGuide';
+import { repairs, range } from '../data/costs';
+import { business, telHref } from '../data/business';
+
+interface Props { formHref?: string }
+const { formHref = '#pg-wizard' } = Astro.props;
+const repairRange = range(repairs[0].low, 1200);
+---
+<div class="rc" data-rc data-verdicts={JSON.stringify(verdicts)}>
+  <fieldset class="rc-list">
+    <legend>Tick what you've noticed</legend>
+    {signs.map((s) => (
+      <label class="rc-item"><input type="checkbox" value={s.id} data-w={s.w} /><span class="rc-box" aria-hidden="true"><Icon name="tick" /></span><span>{s.t}</span></label>
+    ))}
+  </fieldset>
+  <div class="rc-out" aria-live="polite" data-tone="ok">
+    <span class="rc-k">Our honest read</span>
+    <div class="rc-meter" aria-hidden="true"><span data-meter></span></div>
+    <div class="rc-scale" aria-hidden="true"><span>Repair</span><span>Inspect</span><span>Replace</span></div>
+    <p class="rc-t" data-t>{verdicts[0].t}</p>
+    <p class="rc-s" data-s>{verdicts[0].s}</p>
+    <a class="btn btn-gold btn-block" href={formHref} data-rc-cta>Book my free inspection <Icon name="arrow" /></a>
+    <a class="rc-call" href={telHref}><Icon name="phone" /> or call {business.phone}</a>
+    <p class="rc-fine">Most roof repairs cost {repairRange}. If a repair will do, we'll say so.</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-rc]').forEach((root) => {
+    const verdicts = JSON.parse(root.dataset.verdicts!) as { min: number; tone: string; t: string; s: string }[];
+    const out = root.querySelector<HTMLElement>('.rc-out')!;
+    const meter = root.querySelector<HTMLElement>('[data-meter]')!;
+    const boxes = [...root.querySelectorAll<HTMLInputElement>('input[type=checkbox]')];
+    const total = boxes.reduce((n, b) => n + +b.dataset.w!, 0);
+    let used = false;
+    const update = () => {
+      const score = boxes.filter((b) => b.checked).reduce((n, b) => n + +b.dataset.w!, 0);
+      const v = [...verdicts].reverse().find((x) => score >= x.min)!;
+      out.dataset.tone = v.tone;
+      root.querySelector('[data-t]')!.textContent = v.t;
+      root.querySelector('[data-s]')!.textContent = v.s;
+      meter.style.width = `${Math.max(4, Math.min(100, (score / (total * 0.7)) * 100))}%`;
+    };
+    boxes.forEach((b) => b.addEventListener('change', () => {
+      update();
+      if (!used) { used = true; (window as any).dataLayer?.push({ event: 'replace_check_used' }); }
+    }));
+    update();
+  });
+</script>
+
+<style>
+  .rc { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2rem); align-items: start; }
+  .rc-list { border: 0; margin: 0; padding: 0; display: grid; gap: 0.6rem; min-width: 0; }
+  .rc-list legend { font-weight: 850; margin-bottom: 0.75rem; padding: 0; }
+  .rc-item { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.9rem 1rem; background: #fff; border: 1.5px solid var(--line); border-radius: 14px; cursor: pointer; transition: border-color 0.15s, background 0.15s; line-height: 1.4; }
+  .rc-item:hover { border-color: var(--navy-2); }
+  .rc-item input { position: absolute; opacity: 0; pointer-events: none; }
+  .rc-box { flex: none; width: 24px; height: 24px; border-radius: 7px; border: 2px solid #b9c3d3; display: grid; place-items: center; color: transparent; transition: all 0.15s; margin-top: -0.05rem; }
+  .rc-box :global(.icon) { width: 15px; height: 15px; stroke-width: 3; }
+  .rc-item:has(input:checked) { border-color: var(--navy); background: #f2f6fc; }
+  .rc-item input:checked + .rc-box { background: var(--navy); border-color: var(--navy); color: var(--gold); }
+  .rc-item input:focus-visible + .rc-box { outline: 3px solid var(--gold-2); outline-offset: 2px; }
+  .rc-out { position: sticky; top: calc(var(--head) + 4.5rem); background: var(--night); color: #c8d3e8; border-radius: var(--r-lg); padding: clamp(1.3rem, 3vw, 2rem); display: grid; gap: 0.7rem; box-shadow: var(--sh-lg); }
+  .rc-k { font-size: 0.74rem; font-weight: 850; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); }
+  .rc-meter { height: 10px; border-radius: 99px; background: rgb(255 255 255 / 0.1); overflow: hidden; }
+  .rc-meter span { display: block; height: 100%; width: 4%; border-radius: 99px; background: linear-gradient(90deg, #4cc38a, var(--gold-2) 55%, #ff7a59); background-size: 300px 100%; transition: width 0.35s ease; }
+  .rc-scale { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--muted-d); margin-top: -0.3rem; }
+  .rc-t { margin: 0.2rem 0 0; color: #fff; font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-weight: 900; line-height: 1.15; }
+  .rc-out[data-tone='replace'] .rc-t { color: var(--gold); }
+  .rc-s { margin: 0; font-size: 0.95rem; }
+  .rc-call { display: inline-flex; justify-content: center; align-items: center; gap: 0.4rem; color: #fff; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+  .rc-call :global(.icon) { width: 16px; height: 16px; color: var(--gold); }
+  .rc-fine { margin: 0; font-size: 0.8rem; color: var(--muted-d); }
+  @media (max-width: 860px) { .rc { grid-template-columns: minmax(0, 1fr); } .rc-out { position: static; } }
+</style>

@@ -1,0 +1,141 @@
+---
+// Roof replacement prices and local know-how per borough, as tabs. Without
+// JavaScript every borough shows one after another (all text is in the HTML
+// for search engines either way). #bronx, #queens... open a borough directly.
+import Icon from './Icon.astro';
+import { boroughGuides } from '../data/replacementGuide';
+import { money } from '../data/costs';
+import { business, telHref } from '../data/business';
+
+interface Props { formHref?: string }
+const { formHref = '#pg-wizard' } = Astro.props;
+const max = Math.max(...boroughGuides.map((b) => b.flat.high));
+---
+<div class="bx" data-bx>
+  <div class="bx-tabs" role="tablist" aria-label="Choose your borough">
+    {boroughGuides.map((b, i) => (
+      <button type="button" role="tab" id={`bx-t-${b.slug}`} aria-controls={`bx-${b.slug}`} aria-selected={String(i === 0)} tabindex={i === 0 ? 0 : -1} data-slug={b.slug}>
+        <Icon name="pin" />{b.name === 'Bronx' ? 'The Bronx' : b.name}
+      </button>
+    ))}
+  </div>
+
+  {boroughGuides.map((b) => (
+    <section class="bx-panel" id={`bx-${b.slug}`} role="tabpanel" aria-labelledby={`bx-t-${b.slug}`} data-panel={b.slug}>
+      <div class="bx-main">
+        <h3 id={b.slug}>Roof replacement {b.in}</h3>
+        <div class="bx-stats">
+          <div class="bx-stat"><span class="k"><Icon name="roof" /> New shingle roof</span><strong>{money(b.shingle.low)}–{money(b.shingle.high)}</strong><small>typical 1,500 sq ft house</small></div>
+          <div class="bx-stat"><span class="k"><Icon name="layers" /> New flat roof</span><strong>{money(b.flat.low)}–{money(b.flat.high)}</strong><small>about 1,000 sq ft</small></div>
+        </div>
+        <dl class="bx-facts">
+          <div><dt><Icon name="home" /> Typical homes</dt><dd>{b.homes}</dd></div>
+          <div><dt><Icon name="layers" /> Typical roofs</dt><dd>{b.roofs}</dd></div>
+        </dl>
+        <h4>What changes the price {b.in}</h4>
+        <ul class="bx-points">{b.points.map((p) => <li><Icon name="tick" /><span>{p}</span></li>)}</ul>
+      </div>
+      <aside class="bx-side">
+        <p class="bx-side-h">Your {b.name === 'Bronx' ? 'Bronx' : b.name} roof, priced in writing</p>
+        <p>Free inspection with photos and an itemized price, usually within 24 hours.</p>
+        <a class="btn btn-gold btn-block" href={formHref} data-bx-cta>Get my free estimate <Icon name="arrow" /></a>
+        <a class="btn btn-line btn-block" href={telHref}><Icon name="phone" /> {business.phone}</a>
+        {b.link && <a class="bx-more" href={b.link.url}>{b.link.label} <Icon name="arrow" /></a>}
+      </aside>
+    </section>
+  ))}
+
+  <figure class="bx-chart" aria-labelledby="bx-chart-cap">
+    <figcaption id="bx-chart-cap">New flat roof (≈1,000 sq ft) by borough</figcaption>
+    <ul>
+      {boroughGuides.map((b) => (
+        <li data-bar={b.slug}>
+          <span class="bx-name">{b.name}</span>
+          <span class="bx-track"><span class="bx-bar" style={`left:${(b.flat.low / max) * 100}%;width:${((b.flat.high - b.flat.low) / max) * 100}%`}></span></span>
+          <span class="bx-range">{money(b.flat.low)}–{money(b.flat.high)}</span>
+        </li>
+      ))}
+    </ul>
+  </figure>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-bx]').forEach((root) => {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+    const panels = [...root.querySelectorAll<HTMLElement>('[data-panel]')];
+    const bars = [...root.querySelectorAll<HTMLElement>('[data-bar]')];
+    let picked = false;
+    const show = (slug: string, focus = false, track = true) => {
+      tabs.forEach((t) => { const on = t.dataset.slug === slug; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); if (on) t.parentElement!.scrollTo({ left: t.offsetLeft - t.parentElement!.offsetLeft - 16, behavior: 'smooth' }); });
+      panels.forEach((p) => (p.hidden = p.dataset.panel !== slug));
+      bars.forEach((b) => b.classList.toggle('on', b.dataset.bar === slug));
+      if (track && !picked) { picked = true; (window as any).dataLayer?.push({ event: 'borough_select', borough: slug }); }
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t.dataset.slug!));
+      t.addEventListener('keydown', (e) => {
+        const k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (k) { e.preventDefault(); show(tabs[(i + k + tabs.length) % tabs.length].dataset.slug!, true); }
+      });
+    });
+    bars.forEach((b) => b.addEventListener('click', () => show(b.dataset.bar!)));
+    // Height of the sticky header plus any sticky bar under it (jump nav).
+    const stickyH = () => [...document.querySelectorAll<HTMLElement>('.header, .gh-jump')].reduce((h, el) => h + el.offsetHeight, 0);
+    const fromHash = () => { const s = location.hash.slice(1).replace(/^bx-/, ''); if (tabs.some((t) => t.dataset.slug === s)) { show(s, false, false); scrollTo({ top: root.getBoundingClientRect().top + scrollY - stickyH() - 16 }); } };
+    show(tabs[0].dataset.slug!, false, false);
+    fromHash();
+    addEventListener('hashchange', fromHash);
+  });
+</script>
+
+<style>
+  .bx { display: grid; gap: 1.25rem; }
+  .bx-tabs { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.25rem; scrollbar-width: none; }
+  .bx-tabs::-webkit-scrollbar { display: none; }
+  .bx-tabs button { flex: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.7rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); font: inherit; font-weight: 750; font-size: 0.95rem; cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+  .bx-tabs button :global(.icon) { width: 16px; height: 16px; color: var(--navy-2); }
+  .bx-tabs button:hover { border-color: var(--navy-2); }
+  .bx-tabs button[aria-selected='true'] { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .bx-tabs button[aria-selected='true'] :global(.icon) { color: var(--gold); }
+  .bx-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: clamp(1rem, 3vw, 2rem); background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.25rem, 3vw, 2.25rem); box-shadow: var(--sh); scroll-margin-top: calc(var(--head) + 4rem); }
+  .bx-panel[hidden] { display: none; }
+  .bx-panel h3 { margin: 0 0 1rem; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem); }
+  .bx-panel h4 { margin: 1.4rem 0 0.6rem; font-size: 1.02rem; }
+  .bx-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .bx-stat { background: var(--bone); border-radius: var(--r); padding: 1rem 1.1rem; display: grid; gap: 0.15rem; }
+  .bx-stat .k { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .bx-stat .k :global(.icon) { width: 15px; height: 15px; color: var(--navy-2); }
+  .bx-stat strong { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-weight: 900; color: var(--navy); letter-spacing: -0.01em; }
+  .bx-stat small { color: var(--muted); font-size: 0.82rem; }
+  .bx-facts { margin: 1.1rem 0 0; display: grid; gap: 0.7rem; }
+  .bx-facts div { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0.75rem; }
+  .bx-facts dt { display: inline-flex; align-items: flex-start; gap: 0.4rem; font-weight: 800; font-size: 0.9rem; }
+  .bx-facts dt :global(.icon) { width: 16px; height: 16px; color: var(--navy-2); margin-top: 0.15rem; }
+  .bx-facts dd { margin: 0; color: var(--muted); }
+  .bx-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+  .bx-points li { display: flex; gap: 0.55rem; }
+  .bx-points :global(.icon) { width: 18px; height: 18px; flex: none; color: var(--green); margin-top: 0.2rem; }
+  .bx-side { align-self: start; background: var(--night); color: #c8d3e8; border-radius: var(--r); padding: 1.3rem; display: grid; gap: 0.7rem; align-content: start; }
+  .bx-side p { margin: 0; font-size: 0.92rem; }
+  .bx-side .bx-side-h { color: #fff; font-weight: 850; font-size: 1.1rem; line-height: 1.25; }
+  .bx-side :global(.btn-line) { --c: #fff; --bd: rgb(255 255 255 / 0.3); }
+  .bx-side :global(.btn-line:hover) { --bd: #fff; }
+  .bx-more { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--gold); font-weight: 750; font-size: 0.9rem; text-decoration: none; }
+  .bx-more :global(.icon) { width: 16px; height: 16px; }
+  .bx-chart { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 1.1rem 1.25rem; }
+  .bx-chart figcaption { font-weight: 800; font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .bx-chart ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+  .bx-chart li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) 8.5rem; gap: 0.75rem; align-items: center; font-size: 0.88rem; cursor: pointer; }
+  .bx-track { position: relative; height: 12px; background: var(--bone); border-radius: 99px; }
+  .bx-bar { position: absolute; top: 0; bottom: 0; border-radius: 99px; background: #b9c6dc; transition: background 0.2s; }
+  .bx-chart li.on .bx-bar { background: linear-gradient(90deg, var(--navy-2), var(--gold-2)); }
+  .bx-chart li.on .bx-name, .bx-chart li.on .bx-range { font-weight: 850; color: var(--navy); }
+  .bx-range { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  @media (max-width: 860px) { .bx-panel { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 560px) {
+    .bx-stats { grid-template-columns: minmax(0, 1fr); }
+    .bx-facts div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+    .bx-chart li { grid-template-columns: 5.6rem minmax(0, 1fr); }
+    .bx-range { grid-column: 2; text-align: left; margin-top: -0.35rem; font-size: 0.8rem; }
+  }
+</style>

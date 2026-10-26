@@ -54,6 +54,7 @@ export function businessNode() {
       { '@type': 'City', name: 'Brooklyn', sameAs: 'https://en.wikipedia.org/wiki/Brooklyn' },
       { '@type': 'City', name: 'Manhattan', sameAs: 'https://en.wikipedia.org/wiki/Manhattan' },
       { '@type': 'City', name: 'Queens', sameAs: 'https://en.wikipedia.org/wiki/Queens' },
+      { '@type': 'City', name: 'Bronx', sameAs: 'https://en.wikipedia.org/wiki/The_Bronx' },
       { '@type': 'City', name: 'New York City', sameAs: 'https://en.wikipedia.org/wiki/New_York_City' },
     ],
     founder: { '@id': b.owner.id },
