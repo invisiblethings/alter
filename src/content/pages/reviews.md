@@ -38,6 +38,6 @@ Nearly 20 customers mention honesty, often because we told them a repair would d
 
 ## Read the reviews on the platforms
 
-All of our reviews, including the two that aren't five stars, are public on our [Google Business Profile](https://www.google.com/maps?cid=15794678866958250729), [Yelp](https://www.yelp.com/biz/alter-phase-roofing-contracting-staten-island), [Angi](https://www.angi.com/companylist/us/ny/staten-island/alter-phase-contracting-inc-reviews-10071986.htm) and the [Better Business Bureau](https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-contracting-inc-0121-87150134), and together on [Trustindex](https://www.trustindex.io/reviews/alterphaseroofing.com).
+All of our reviews, including the two that aren't five stars, are public on our [Google Business Profile](https://www.google.com/maps?cid=15794678866958250729), [Yelp](https://www.yelp.com/biz/alter-phase-roofing-contracting-staten-island) and the [Better Business Bureau](https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-roofing-contracting-0121-87150134), and together on [Trustindex](https://www.trustindex.io/reviews/alterphaseroofing.com).
 
 Had work done by us? We'd be grateful if you'd [share your experience on Google](https://www.google.com/maps?cid=15794678866958250729).

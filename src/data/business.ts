@@ -55,11 +55,9 @@ export const business = {
     'https://www.linkedin.com/company/alterphaseroofing/',
     'https://www.yelp.com/biz/alter-phase-roofing-contracting-staten-island',
     'https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-roofing-contracting-0121-87150134',
-    'https://www.angi.com/companylist/us/ny/staten-island/alter-phase-contracting-inc-reviews-10071986.htm',
     'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ny/staten-island/alter-phase-contracting-inc-1132980',
     'https://www.buildzoom.com/contractor/alter-phase-roofing-inc',
     'https://reviews.birdeye.com/alter-phase-roofing-contracting-residental-commercial-165926761009567',
-    'https://www.thebluebook.com/iProView/1756134',
   ],
   social: {
     facebook: 'https://www.facebook.com/AlterPhaseRoofing/',
