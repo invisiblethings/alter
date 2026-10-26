@@ -23,7 +23,7 @@ const max = Math.max(...boroughGuides.map((b) => b.flat.high));
   {boroughGuides.map((b) => (
     <section class="bx-panel" id={`bx-${b.slug}`} role="tabpanel" aria-labelledby={`bx-t-${b.slug}`} data-panel={b.slug}>
       <div class="bx-main">
-        <h3 id={b.slug}>Roof replacement {b.in}</h3>
+        <h3 id={b.slug}>Roof replacement {b.in}, NY</h3>
         <div class="bx-stats">
           <div class="bx-stat"><span class="k"><Icon name="roof" /> New shingle roof</span><strong>{money(b.shingle.low)}–{money(b.shingle.high)}</strong><small>typical 1,500 sq ft house</small></div>
           <div class="bx-stat"><span class="k"><Icon name="layers" /> New flat roof</span><strong>{money(b.flat.low)}–{money(b.flat.high)}</strong><small>about 1,000 sq ft</small></div>

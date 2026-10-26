@@ -1,3 +1,4 @@
+// Boroughs are listed Manhattan first, then by population.
 // Content for the interactive parts of /roof-replacement-guide-nyc/
 // (GuideHybridView): borough profiles, the repair-or-replace check and the
 // permit check. Prices come from src/data/costs.ts, so they never drift from
@@ -20,15 +21,15 @@ export interface BoroughGuide {
 
 const guides: BoroughGuide[] = [
   {
-    name: 'Staten Island', slug: 'staten-island', in: 'on Staten Island',
-    homes: 'Detached and semi-attached houses: colonials, capes, high-ranches and two-families.',
-    roofs: 'Mostly asphalt shingles, with flat roofs over extensions, porches and garages.',
+    name: 'Manhattan', slug: 'manhattan', in: 'in Manhattan',
+    homes: 'Walk-ups, brownstones, co-ops, condos and mixed-use buildings.',
+    roofs: 'Flat roofs: TPO, modified bitumen and PVC, often with bulkheads, skylights and equipment.',
     points: [
-      'Driveways make staging and debris removal easy, which keeps Staten Island the least expensive borough.',
-      'South and East Shore homes take the most wind: we use wind-rated architectural shingles and ice-and-water shield at the edges and valleys.',
-      'Our crew is based here, and most Staten Island roofs are finished in a single day.',
+      'Materials go up through the building or by hoist, and sidewalks may need protection, which is why Manhattan costs the most.',
+      'Co-op and condo boards need a scope of work, insurance certificates and a contractor application: we prepare them for you.',
+      'Full roof deck replacements can trigger Local Laws 92/94 (solar or green roof requirements); we check before you sign.',
     ],
-    link: { url: '/service-area/staten-island-ny/', label: 'Roofing on Staten Island' },
+    link: { url: '/service-area/manhattan-ny/', label: 'Roofing in Manhattan' },
   },
   {
     name: 'Brooklyn', slug: 'brooklyn', in: 'in Brooklyn',
@@ -46,7 +47,7 @@ const guides: BoroughGuide[] = [
     homes: 'Attached row houses and two-families, alongside detached and semi-attached homes.',
     roofs: 'Flat roofs on attached homes; asphalt shingles on most detached and semi-attached houses.',
     points: [
-      'Wider streets and more driveways make staging easier than in Brooklyn or Manhattan, so prices sit closer to Staten Island.',
+      'Wider streets and more driveways make staging easier than in Manhattan or Brooklyn, so prices sit closer to Staten Island.',
       'Many attached homes have a flat main roof plus small shingle sections at the front: we price both in one visit.',
       'Older roofs often have two or more layers that must come off before the new roof goes on.',
     ],
@@ -63,15 +64,15 @@ const guides: BoroughGuide[] = [
     ],
   },
   {
-    name: 'Manhattan', slug: 'manhattan', in: 'in Manhattan',
-    homes: 'Walk-ups, brownstones, co-ops, condos and mixed-use buildings.',
-    roofs: 'Flat roofs: TPO, modified bitumen and PVC, often with bulkheads, skylights and equipment.',
+    name: 'Staten Island', slug: 'staten-island', in: 'on Staten Island',
+    homes: 'Detached and semi-attached houses: colonials, capes, high-ranches and two-families.',
+    roofs: 'Mostly asphalt shingles, with flat roofs over extensions, porches and garages.',
     points: [
-      'Materials go up through the building or by hoist, and sidewalks may need protection, which is why Manhattan costs the most.',
-      'Co-op and condo boards need a scope of work, insurance certificates and a contractor application: we prepare them for you.',
-      'Full roof deck replacements can trigger Local Laws 92/94 (solar or green roof requirements); we check before you sign.',
+      'Driveways make staging and debris removal easy, which keeps Staten Island the least expensive borough.',
+      'South and East Shore homes take the most wind: we use wind-rated architectural shingles and ice-and-water shield at the edges and valleys.',
+      'Our crew is based here, and most Staten Island roofs are finished in a single day.',
     ],
-    link: { url: '/service-area/manhattan-ny/', label: 'Roofing in Manhattan' },
+    link: { url: '/service-area/staten-island-ny/', label: 'Roofing on Staten Island' },
   },
 ];
 

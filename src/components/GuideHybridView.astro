@@ -29,6 +29,7 @@ const form = '#pg-wizard';
 const short = (t: string) => /estimate/i.test(t) ? 'What to expect in a quote' : /rules/i.test(t) ? 'NYC rules' : /step by step|process/i.test(t) ? 'The process'
   : /choose a roofing/i.test(t) ? 'Hiring a roofer' : /why/i.test(t) ? 'Why us' : t;
 const jump = [
+  { id: 'services', t: 'Services' },
   { id: 'costs', t: 'Costs' },
   { id: 'boroughs', t: 'By borough' },
   { id: 'repair-or-replace', t: 'Repair or replace?' },
@@ -38,6 +39,12 @@ const jump = [
 ];
 const entries = await allEntries();
 const related = d.related.map((u) => entries.find((e) => e.data.path === u)).filter(Boolean) as typeof entries;
+const services = [
+  { i: 'roof', t: 'Residential roof replacement', s: 'Full roof replacement for houses, including shingle roof replacement: tear-off to the deck, new underlayment, flashing and GAF shingles, most done in one day.', url: '/residential-roofing/roof-replacement/', cta: 'Residential roof replacement' },
+  { i: 'layers', t: 'Flat roof replacement', s: 'New EPDM, TPO and modified bitumen roofs for row houses, brownstones, extensions and garages, built for NYC cool-roof rules.', url: '/flat-roofing/', cta: 'Flat roofing' },
+  { i: 'building', t: 'Co-op, condo and commercial roofs', s: 'New roof installation on multi-family and commercial buildings, with DOB permits and board paperwork handled.', url: '/commercial-roofing/roof-replacement/', cta: 'Commercial roof replacement' },
+  { i: 'wrench', t: 'Roof repair in NYC', s: 'Not ready for a new roof? We find and fix leaks at the source and tell you honestly if a repair will do.', url: '/roof-repair/', cta: 'Roof repair' },
+];
 const facts = [
   { i: 'camera', t: 'Free inspection with photos', s: 'You see exactly what we see' },
   { i: 'file', t: 'Written price in 24 hours', s: 'Itemized, permits included' },
@@ -54,7 +61,7 @@ const facts = [
       <h1>{d.h1}</h1>
       {d.intro && <p class="lead">{d.intro}</p>}
       <ul class="ticks" style="margin-top:1.25rem">
-        <li><Icon name="check" /> <span>Serving <strong>Staten Island, Brooklyn, Queens, the Bronx and Manhattan</strong></span></li>
+        <li><Icon name="check" /> <span>Serving <strong>Manhattan, Brooklyn, Queens, the Bronx and Staten Island</strong></span></li>
         <li><Icon name="check" /> <span>Most roofs <strong>done in one day</strong>, priced in writing before we start</span></li>
         <li><Icon name="check" /> <span>DOB permits and co-op board paperwork handled for you</span></li>
       </ul>
@@ -89,6 +96,25 @@ const facts = [
   </div>
 </section>
 
+<section class="sec gh-svc-sec" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">What we do</span><h2 id="svc-h">Roof replacement services in NYC</h2></div>
+      <p class="lead">Full roof replacement and new roof installation for homes and buildings in Manhattan, Brooklyn, Queens, the Bronx and Staten Island, done by our own crew.</p>
+    </div>
+    <div class="gh-svc">
+      {services.map((sv) => (
+        <a class="gh-svc-card" href={sv.url} data-reveal>
+          <span class="ab-ico"><Icon name={sv.i as any} /></span>
+          <h3>{sv.t}</h3>
+          <p>{sv.s}</p>
+          <span class="link-arrow">{sv.cta} <Icon name="arrow" /></span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
 <nav class="gh-jump" aria-label="On this page">
   <div class="wrap"><span>Jump to</span><ul>{jump.map((j) => <li><a href={`#${j.id}`}>{j.t}</a></li>)}</ul></div>
 </nav>
@@ -97,9 +123,9 @@ const facts = [
   <div class="wrap">
     <div class="head-split" data-reveal>
       <div><span class="kicker">2026 prices from our own jobs</span><h2 id="costs-h">How much does a roof replacement cost in NYC?</h2></div>
-      <p class="lead">Most NYC roof replacements cost <strong>{money(typicalReplacement.low)}–{money(typicalReplacement.high)}+</strong>. The material and the borough move the price most. Build your roof below to see your range.</p>
+      <p class="lead">Most NYC roof replacements cost <strong>{money(typicalReplacement.low)}–{money(typicalReplacement.high)}+</strong>. A shingle roof replacement runs $3–$10 per sq ft installed and a flat roof replacement $5–$16. Build your roof below to see your range.</p>
     </div>
-    <div data-reveal><LeadCalculator area="Staten Island" pickArea id="gcalc" /></div>
+    <div data-reveal><LeadCalculator area="Manhattan" start="flat" pickArea areaOrder={["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]} id="gcalc" /></div>
     <div style="margin-top:2.5rem" data-reveal><PriceTables kinds={['pitched', 'flat']} /></div>
   </div>
 </section>
@@ -107,7 +133,7 @@ const facts = [
 <section class="sec" id="boroughs" aria-labelledby="boroughs-h">
   <div class="wrap">
     <div class="head-split" data-reveal>
-      <div><span class="kicker">Staten Island · Brooklyn · Queens · Bronx · Manhattan</span><h2 id="boroughs-h">Roof replacement prices by borough</h2></div>
+      <div><span class="kicker">Manhattan · Brooklyn · Queens · Bronx · Staten Island</span><h2 id="boroughs-h">Roof replacement in New York City, borough by borough</h2></div>
       <p class="lead">Same roof, different borough, different price: access, attached walls and building rules change the job. Pick yours.</p>
     </div>
     <BoroughExplorer formHref={form} />
@@ -117,8 +143,8 @@ const facts = [
 <section class="sec bone" id="repair-or-replace" aria-labelledby="rr-h">
   <div class="wrap">
     <div class="head-split" data-reveal>
-      <div><span class="kicker">Before you spend $10,000+</span><h2 id="rr-h">Do you need a new roof, or just a repair?</h2></div>
-      <p class="lead">Many NYC roofs that look bad can be <a href="/roof-repair/">repaired</a> for a fraction of the cost. Tick what you see for an honest first read.</p>
+      <div><span class="kicker">Before you spend $10,000+</span><h2 id="rr-h">Do you need to replace your roof, or just repair it?</h2></div>
+      <p class="lead">Many NYC roofs that look bad just need a <a href="/roof-repair/">roof repair</a>, for a fraction of the cost of a new roof. Tick what you see for an honest first read.</p>
     </div>
     <ReplaceCheck formHref={form} />
   </div>
@@ -127,7 +153,7 @@ const facts = [
 <section class="sec" id="permits" aria-labelledby="permits-h">
   <div class="wrap">
     <div class="head-split" data-reveal>
-      <div><span class="kicker">The most-asked NYC roofing question</span><h2 id="permits-h">Do you need a permit to replace a roof in NYC?</h2></div>
+      <div><span class="kicker">The most-asked NYC roofing question</span><h2 id="permits-h">Do you need a permit to replace a roof in New York City?</h2></div>
       <p class="lead">It depends on the scope. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do.</p>
     </div>
     <PermitCheck />
@@ -188,7 +214,7 @@ const facts = [
       <span class="avatar-s" aria-hidden="true">M</span>
       <div>
         <h2>Written by Marke, owner of {business.name}</h2>
-        <p>Marke runs {business.name}, a family-owned roofing contractor based on Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Queens, the Bronx and Manhattan. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+        <p>Marke runs {business.name}, a family-owned roofing contractor based on Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Manhattan, Brooklyn, Queens, the Bronx and Staten Island. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
       </div>
     </div>
     {related.length > 0 && (
@@ -213,14 +239,23 @@ const facts = [
   .gh-by { display: flex; align-items: center; gap: 0.6rem; margin: 1.25rem 0 0; font-size: 0.86rem; color: #c8d3e8; }
   .gh-by a { color: #fff; }
   .gh-by .avatar-s { background: var(--gold); color: var(--ink); }
-  .gh-jump { position: sticky; top: var(--head); z-index: 20; background: rgb(255 255 255 / 0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); margin-top: clamp(2rem, 5vw, 3.5rem); }
+  .gh-jump { position: sticky; top: var(--head); z-index: 20; background: rgb(255 255 255 / 0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
   .gh-jump .wrap { display: flex; align-items: center; gap: 0.9rem; overflow-x: auto; scrollbar-width: none; padding-block: 0.6rem; }
   .gh-jump .wrap::-webkit-scrollbar { display: none; }
   .gh-jump span { flex: none; font-size: 0.72rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
   .gh-jump ul { display: flex; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
   .gh-jump a { display: block; white-space: nowrap; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--bone); color: var(--ink); font-weight: 700; font-size: 0.86rem; text-decoration: none; }
   .gh-jump a:hover, .gh-jump a.on { background: var(--navy); color: #fff; }
-  #costs, #boroughs, #repair-or-replace, #permits, #faq, :global(.csec) { scroll-margin-top: calc(var(--head) + 3rem); }
+  #services, #costs, #boroughs, #repair-or-replace, #permits, #faq, :global(.csec) { scroll-margin-top: calc(var(--head) + 3rem); }
+  .gh-svc-sec { padding-top: clamp(4rem, 8vw, 6rem); }
+  .gh-svc { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .gh-svc-card { display: grid; gap: 0.6rem; align-content: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--r); background: #fff; color: var(--ink); text-decoration: none; transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
+  .gh-svc-card:hover { border-color: var(--navy-2); transform: translateY(-2px); box-shadow: var(--sh); }
+  .gh-svc-card .ab-ico { background: var(--navy); }
+  .gh-svc-card h3 { margin: 0.3rem 0 0; font-size: 1.12rem; }
+  .gh-svc-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
+  @media (max-width: 1000px) { .gh-svc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .gh-svc { grid-template-columns: minmax(0, 1fr); } }
   .gh-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
   .gh-rule { border: 1px solid var(--line); border-radius: var(--r); padding: 1.3rem 1.4rem; background: #f3faf6; }
   .gh-rule-y { background: #fff8ea; }

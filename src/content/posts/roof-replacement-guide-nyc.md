@@ -1,33 +1,35 @@
 ---
 path: "/roof-replacement-guide-nyc/"
-seoTitle: "Roof Replacement NYC: 2026 Costs by Borough & Free Estimates"
-description: "Roof replacement in NYC costs $10K–$30K+. See 2026 prices for Staten Island, Brooklyn, Queens, the Bronx and Manhattan, permit rules, and get a free estimate."
-kicker: "NYC roof replacement · 2026 guide"
-h1: "Roof replacement in NYC: 2026 costs by borough, permits and a free estimate"
-cardTitle: "Roof Replacement NYC: 2026 Costs by Borough & Permits"
+seoTitle: "Roof Replacement NYC (2026): Costs, Permits & Hiring Guide"
+description: "Roof replacement in NYC: 2026 costs in Manhattan, Brooklyn, Queens, the Bronx & Staten Island, when you need a permit and how to hire a roofer. Free estimates."
+kicker: "Roof replacement in New York City · 2026"
+h1: "Roof replacement in NYC: costs, permits and how to hire the right roofer (2026)"
+cardTitle: "Roof Replacement NYC: Costs, Permits & Hiring Guide"
 layout: "hybrid"
-intro: "Planning a new roof on Staten Island or in Brooklyn, Queens, the Bronx or Manhattan? See what it costs in your borough, find out if you need a permit, and get a written price from a family-owned crew that finishes most roofs in one day."
+intro: "Planning a roof replacement in New York City? See 2026 costs for Manhattan, Brooklyn, Queens, the Bronx and Staten Island, find out if you need a permit to replace a roof in NY, and get a written price for a full roof replacement from a family-owned crew that finishes most roofs in one day."
 image: "/wp-content/uploads/2024/10/Flat-Roof-in-NYC-by-AlterPhaseRoofingContracting.webp"
 imageAlt: "Flat roof replacement in New York City by Alter Phase Roofing Contracting"
 published: "2025-05-12"
 modified: "2026-10-26"
-answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $3–$10 per sq ft for asphalt shingles and $5–$14 for flat roofs. A 1,000 sq ft flat roof runs about $5,000–$13,000 on Staten Island, $5,500–$15,000 in Queens, $6,000–$16,000 in the Bronx, $6,500–$17,000 in Brooklyn and $8,000–$22,000+ in Manhattan. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit."
+answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $3–$10 per sq ft for a shingle roof replacement and $5–$14 for a flat roof replacement. A 1,000 sq ft flat roof runs about $8,000–$22,000+ in Manhattan, $6,500–$17,000 in Brooklyn, $5,500–$15,000 in Queens, $6,000–$16,000 in the Bronx and $5,000–$13,000 on Staten Island. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit."
 related:
   - "/roof-replacement-cost-in-nyc/"
   - "/roof-replacement-cost-in-brooklyn-ny/"
   - "/top-roofing-materials-for-homes-in-new-york/"
 faq:
-  - q: "How much does a roof replacement cost in Queens?"
-    a: "A new flat roof on a typical Queens attached home (about 1,000 sq ft) costs roughly $5,500–$15,000, and a shingle roof on a detached or semi-attached house usually costs about $5,100–$17,100 (1,500 sq ft), depending on size, layers to remove and the deck. Wider streets and driveways keep Queens closer to Staten Island prices than Brooklyn or Manhattan."
+  - q: "What's included in a full roof replacement?"
+    a: "A full roof replacement removes the old roofing down to the deck, replaces any rotted decking, and installs new underlayment, ice-and-water shield at the edges and valleys, flashing, vents and the new shingles or flat-roof membrane, followed by cleanup and a written warranty. Most NYC homes are finished in one day."
   - q: "How much does a roof replacement cost in Manhattan?"
     a: "Manhattan is the most expensive borough: a 1,000 sq ft flat roof typically runs $8,000–$22,000+. Hoisting materials, sidewalk protection, building height, co-op or condo board requirements and permits add time and cost. We price all of it in writing before work starts."
   - q: "How much does a roof replacement cost in Brooklyn?"
-    a: "Most Brooklyn row houses and brownstones have flat roofs; a 1,000 sq ft flat roof replacement typically costs $6,500–$17,000. Attached walls, parapet flashing, street-only access and landmark rules in some neighborhoods are what push Brooklyn above Staten Island and Queens."
+    a: "Most Brooklyn row houses and brownstones have flat roofs; a 1,000 sq ft flat roof replacement typically costs $6,500–$17,000. Attached walls, parapet flashing, street-only access and landmark rules in some neighborhoods are what push Brooklyn above Queens and Staten Island."
+  - q: "How much does a roof replacement cost in Queens?"
+    a: "A new flat roof on a typical Queens attached home (about 1,000 sq ft) costs roughly $5,500–$15,000, and a shingle roof on a detached or semi-attached house usually costs about $5,100–$17,100 (1,500 sq ft), depending on size, layers to remove and the deck. Wider streets and driveways keep Queens below Manhattan and Brooklyn, closer to Staten Island prices."
   - q: "How much does a roof replacement cost in the Bronx?"
     a: "A 1,000 sq ft flat roof on a Bronx row house or two-family home typically costs about $6,000–$16,000. Detached homes with asphalt shingles usually run about $5,500–$18,300 for a 1,500 sq ft roof. Shared walls and street staging are the main price drivers."
   - q: "How much does a roof replacement cost on Staten Island?"
     a: "Staten Island is the least expensive borough: a new asphalt shingle roof on a typical 1,500 sq ft house costs about $4,500–$15,000, and a 1,000 sq ft flat roof $5,000–$13,000. Most Staten Island roofs are finished in a single day."
-  - q: "Do you need a permit to replace a roof in NYC?"
+  - q: "Do you need a permit to replace a roof in NY?"
     a: "Not always. Replacing the roof covering like-for-like, above the deck, with no structural changes, generally doesn't need a DOB permit on a one- or two-family home. You do need one to replace or alter the structural deck, change the roof type, work on most commercial buildings, or when the job triggers Local Laws 92/94. Landmarked buildings may also need Landmarks Preservation Commission approval."
   - q: "Who pulls the roofing permit in NYC?"
     a: "The licensed contractor files it through DOB NOW, not the property owner. That's one reason to hire a properly licensed roofer."
@@ -65,7 +67,7 @@ NYC's energy code requires most new and replacement low-slope roofs to have a re
 
 Even when DOB doesn't require a permit, co-op and condo boards require approval. Expect to submit a scope of work, proof of insurance and a contractor application, and allow **2–8 weeks**. We prepare this paperwork for you. See our page for [property managers and boards](/property-managers/).
 
-## How a roof replacement works, step by step
+## New roof installation in NYC, step by step
 
 1. **Free inspection and written estimate.** We document the whole roof with photos and send an itemized price, usually within 24 hours.
 2. **Material selection.** Choose the system that fits your building, borough, budget and plans (for example, solar later). Compare options in our guide to the [best roofing materials for New York homes](/top-roofing-materials-for-homes-in-new-york/).
@@ -87,4 +89,4 @@ Even when DOB doesn't require a permit, co-op and condo boards require approval.
 
 ## Why NYC homeowners choose Alter Phase Roofing Contracting
 
-We're a family-owned roofing contractor based on Staten Island, replacing roofs across [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Queens](/service-area/queens-ny/), the Bronx and [Manhattan](/service-area/manhattan-ny/). Our owner, Marke, is part of every job, and our own crew does the work. We're a GAF Master Elite® contractor, licensed by NYC DCWP and fully insured, and we handle permits and board paperwork as part of the job. Every new roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.
+We're a family-owned roofing contractor based on Staten Island, replacing roofs across [Manhattan](/service-area/manhattan-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Queens](/service-area/queens-ny/), the Bronx and [Staten Island](/service-area/staten-island-ny/). Our owner, Marke, is part of every job, and our own crew does the work. We're a GAF Master Elite® contractor, licensed by NYC DCWP and fully insured, and we handle permits and board paperwork as part of the job. Every new roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.

@@ -11,8 +11,9 @@ import { business, telHref } from '../data/business';
 
 // pickArea adds a borough picker to the result (city-wide pages); otherwise
 // the price is fixed to `area`.
-interface Props { area: string; start?: 'flat' | 'shingle' | 'repair'; id?: string; pickArea?: boolean }
-const { area, start = 'shingle', id = 'calc', pickArea = false } = Astro.props;
+interface Props { area: string; start?: 'flat' | 'shingle' | 'repair'; id?: string; pickArea?: boolean; areaOrder?: string[] }
+const { area, start = 'shingle', id = 'calc', pickArea = false, areaOrder } = Astro.props;
+const areaOptions = areaOrder ? areaOrder.map((n) => boroughs.find((x) => x.name === n)!).filter(Boolean) : boroughs;
 const b = boroughs.find((x) => x.name === area) || boroughs[0];
 const si = boroughs[0];
 const factor = (b.low + b.high) / (si.low + si.high);
@@ -91,7 +92,7 @@ const startRange = start === 'repair' ? `${money(repairs[0].low)} – ${money(re
     <div class="calc-out">
       <div class="calc-result" aria-live="polite">
         {pickArea
-          ? <label class="calc-k calc-area" for={`${id}-area`}>Your estimated price in <select id={`${id}-area`} name="calc_area">{boroughs.map((x) => <option value={x.name} selected={x.name === b.name}>{x.name === 'Bronx' ? 'the Bronx' : x.name}</option>)}</select></label>
+          ? <label class="calc-k calc-area" for={`${id}-area`}>Your estimated price in <select id={`${id}-area`} name="calc_area">{areaOptions.map((x) => <option value={x.name} selected={x.name === b.name}>{x.name === 'Bronx' ? 'the Bronx' : x.name}</option>)}</select></label>
           : <span class="calc-k">Your estimated price in {area}</span>}
         <span class="calc-val" data-val>{startRange}</span>
         <span class="calc-meta" data-meta></span>

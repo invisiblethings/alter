@@ -221,5 +221,7 @@ price explorer (BoroughExplorer, deep links #staten-island #brooklyn #queens
 designed sections, reviews, FAQ and author box. Borough copy and the checks'
 questions live in src/data/replacementGuide.ts; prices come from costs.ts.
 New dataLayer events (optional GA4 tags): borough_select, replace_check_used,
-permit_check_used. Bronx flat-roof range ($6,000–$16,000) is an estimate
+permit_check_used. Boroughs on this page are ordered Manhattan, Brooklyn,
+Queens, the Bronx, Staten Island (owner request). Keep the original
+seoTitle and H1: they are what ranks. Bronx flat-roof range ($6,000–$16,000) is an estimate
 pending owner confirmation.
