@@ -15,7 +15,7 @@ area: "New York City"
 prices: ["boroughs"]
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "Aerial view of New York City roofs"
-answer: "Alter Phase Roofing Contracting is based on Staten Island and serves Staten Island, Brooklyn, Manhattan and Queens. Roof prices vary by borough: a 1,000 sq ft flat roof runs about $8,000–$13,000 on Staten Island, $9,000–$15,000 in Queens, $10,000–$17,000 in Brooklyn and $13,000–$22,000+ in Manhattan."
+answer: "Alter Phase Roofing Contracting is based on Staten Island and serves Staten Island, Brooklyn, Manhattan and Queens. Roof prices vary by borough: a 1,000 sq ft flat roof runs about $5,000–$13,000 on Staten Island, $5,500–$15,000 in Queens, $6,500–$17,000 in Brooklyn and $8,000–$22,000+ in Manhattan."
 related:
   - "/service-area/staten-island-ny/"
   - "/service-area/brooklyn-ny/"

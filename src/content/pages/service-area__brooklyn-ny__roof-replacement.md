@@ -16,7 +16,7 @@ wizard: "Roof replacement"
 prices: ["boroughs", "flat", "pitched"]
 image: "/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn.webp"
 imageAlt: "Alter Phase Roofing Contracting crew replacing a flat roof in Brooklyn"
-answer: "A roof replacement in Brooklyn typically costs <strong>$10,000–$17,000</strong> for a 1,000 sq ft flat roof and more for larger or pitched roofs. Brooklyn costs more than Staten Island or Queens because of row-home access, attached walls, brownstone details and board requirements. Most replacements take a few days."
+answer: "A roof replacement in Brooklyn typically costs <strong>$6,500–$17,000</strong> for a 1,000 sq ft flat roof and more for larger or pitched roofs. Brooklyn costs more than Staten Island or Queens because of row-home access, attached walls, brownstone details and board requirements. Most replacements take a few days."
 related:
   - "/service-area/brooklyn-ny/"
   - "/roof-replacement-cost-in-brooklyn-ny/"
@@ -25,7 +25,7 @@ related:
   - "/residential-roofing/roof-replacement/"
 faq:
   - q: "How much does a new roof cost in Brooklyn?"
-    a: "About $10,000–$17,000 for a typical 1,000 sq ft flat roof. Shingle roofs on detached homes in southern Brooklyn run about $5–$10 per sq ft installed. The number of old layers, deck repairs, parapet work and access make the biggest difference."
+    a: "About $6,500–$17,000 for a typical 1,000 sq ft flat roof. Shingle roofs on detached homes in southern Brooklyn run about $3–$10 per sq ft installed. The number of old layers, deck repairs, parapet work and access make the biggest difference."
   - q: "Do co-op and condo buildings need board approval?"
     a: "Yes, regardless of whether a DOB permit is needed. Boards usually ask for a scope of work, insurance certificates and a contractor application. We prepare those documents; allow a few weeks for approval."
   - q: "How long does a roof replacement take on a Brooklyn row home?"

@@ -81,7 +81,7 @@ Compare them all on our [flat roofing](/flat-roofing/) page.
 
 ## Why Staten Island owners hire us
 
-Alter Phase Roofing Contracting is family-owned, based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're GAF Certified®, BBB Accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured. Certificates of insurance are available before work starts.
+Alter Phase Roofing Contracting is family-owned, based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, and our own crew does the work. We're a GAF Master Elite® contractor, BBB Accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured. Certificates of insurance are available before work starts.
 
 **Next step:** call (929) 370-1552 to book an inspection. You'll usually have a written scope and price within 24 hours.
 

@@ -24,7 +24,7 @@ faq:
   - q: "Do you really tell people when they only need a repair?"
     a: "Yes. Many of our customers called about a new roof and ended up with a repair. We'd rather keep a customer for life."
   - q: "Are you licensed and insured?"
-    a: "Yes. NYC DCWP license #2129904-DCWP, fully insured, GAF Certified® and BBB accredited."
+    a: "Yes. NYC DCWP license #2129904-DCWP, fully insured, a GAF Master Elite® contractor and BBB accredited."
 modified: "2026-10-22"
 ---
 ## Still dealing with these?

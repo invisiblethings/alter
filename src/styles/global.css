@@ -649,7 +649,10 @@ table.t td.num { font-weight: 820; white-space: nowrap; }
 .footer-brand img { width: 150px; background: #fff; border-radius: 14px; padding: 10px 14px; margin-bottom: 1.1rem; }
 .footer .phone { display: block; font-size: 1.7rem; font-weight: 900; font-stretch: 116%; letter-spacing: -0.02em; color: var(--gold); margin: 0.5rem 0; }
 .footer-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-.footer-badges span { border: 1px solid var(--line-d); border-radius: 99px; padding: 0.25rem 0.75rem; font-size: 0.76rem; color: #e3eaf6; }
+.footer-badges span, .footer-badges a { border: 1px solid var(--line-d); border-radius: 99px; padding: 0.25rem 0.75rem; font-size: 0.76rem; color: #e3eaf6; }
+.footer-badges a { text-decoration: none; transition: border-color 0.15s, color 0.15s; }
+.footer-badges a:hover, .footer-badges a:focus-visible { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+.footer-gaf { display: inline-block; }
 .footer-bottom { border-top: 1px solid var(--line-d); padding-block: 1.3rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; font-size: 0.8rem; }
 .footer-bottom ul { display: flex; flex-wrap: wrap; gap: 1.1rem; }
 .hours { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1rem; }
@@ -1069,7 +1072,7 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .legal-prose h2 { font-size: clamp(1.4rem, 1.15rem + 0.9vw, 1.9rem); padding-top: 1.5rem; border-top: 1px solid var(--line); }
 @media (max-width: 900px) { .legal-grid { grid-template-columns: minmax(0, 1fr); } .legal-aside { position: static; order: 2; } }
 
-/* GAF Certified® badge */
+/* GAF Master Elite® badge */
 .gaf-badge { height: auto; flex: none; }
 .gaf-xs { width: 30px; }
 .gaf-sm { width: 42px; }

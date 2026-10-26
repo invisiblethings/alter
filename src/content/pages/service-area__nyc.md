@@ -27,7 +27,7 @@ faq:
   - q: "Which parts of NYC do you serve?"
     a: "We're based on Staten Island and work across Staten Island, Brooklyn, Manhattan and Queens."
   - q: "How much does a new roof cost in NYC?"
-    a: "Most NYC roof replacements cost $10,000–$30,000+. A 1,000 sq ft flat roof ranges from about $8,000–$13,000 on Staten Island to $13,000–$22,000+ in Manhattan. Our NYC cost guide breaks it down by material and borough."
+    a: "Most NYC roof replacements cost $10,000–$30,000+. A 1,000 sq ft flat roof ranges from about $5,000–$13,000 on Staten Island to $8,000–$22,000+ in Manhattan. Our NYC cost guide breaks it down by material and borough."
   - q: "Are you licensed to work in New York City?"
     a: "Yes. We hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP) and are fully insured."
   - q: "Do you handle NYC roofing permits?"

@@ -18,7 +18,7 @@ wizard: "Roof leak / repair"
 prices: ["boroughs", "repairs"]
 image: "/wp-content/uploads/2025/04/Alter-Phase-Roofing-Contracting-Crew-Installing-Flat-Roof-in-Brooklyn.webp"
 imageAlt: "Alter Phase Roofing Contracting crew installing a flat roof in Brooklyn"
-answer: "A new flat roof on a typical Brooklyn row home (about 1,000 sq ft) costs <strong>$10,000–$17,000</strong>. Most roof leak repairs cost <strong>$300–$1,200</strong>. Book a free inspection and you'll have a written, itemized price within about 24 hours."
+answer: "A new flat roof on a typical Brooklyn row home (about 1,000 sq ft) costs <strong>$6,500–$17,000</strong>. Most roof leak repairs cost <strong>$300–$1,200</strong>. Book a free inspection and you'll have a written, itemized price within about 24 hours."
 faq:
   - q: "Do you work in my part of Brooklyn?"
     a: "Yes. We work across Brooklyn, from Bay Ridge, Dyker Heights and Bensonhurst to Park Slope, Bed-Stuy, Flatbush and Williamsburg."
@@ -27,7 +27,7 @@ faq:
   - q: "Do I need to replace my whole flat roof?"
     a: "Not always. If the roof is under about 15 years old and the problem is at a seam, drain or the wall flashing, a repair usually fixes it. We show you photos and give you both options when it's close."
   - q: "Are you licensed and insured?"
-    a: "Yes. NYC DCWP Home Improvement Contractor license #2129904-DCWP, fully insured, GAF Certified® and BBB accredited."
+    a: "Yes. NYC DCWP Home Improvement Contractor license #2129904-DCWP, fully insured, a GAF Master Elite® contractor and BBB accredited."
 modified: "2026-10-22"
 ---
 ## Sound familiar?
@@ -49,6 +49,6 @@ modified: "2026-10-22"
 
 ## Flat roofs we install and repair
 
-- **EPDM (rubber).** The most cost-effective flat roof, $8–$12 per sq ft.
+- **EPDM (rubber).** The most cost-effective flat roof, $5–$12 per sq ft.
 - **TPO.** White, reflective and heat-welded, $9–$14 per sq ft. Helps meet NYC cool-roof rules.
 - **Modified bitumen.** Tough multi-ply roofing for roofs with foot traffic, $9–$13 per sq ft.

@@ -92,7 +92,7 @@ We know how salt air on the South Shore, wind on the East Shore and freeze-thaw 
 
 ### Credentials you can check
 
-Licensed by NYC DCWP (#2129904-DCWP), insured, GAF Certified® and BBB Accredited.
+Licensed by NYC DCWP (#2129904-DCWP), insured, a GAF Master Elite® contractor and BBB Accredited.
 
 ## Book your free inspection
 

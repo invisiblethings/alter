@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/11/Top-Roofing-Materials-New-York-AlterPhaseRoo
 imageAlt: "Roofing materials for homes in New York"
 published: "2024-11-14"
 modified: "2026-10-22"
-answer: "For most pitched-roof homes in New York, <strong>architectural asphalt shingles</strong> ($5–$10/sq ft, 20–30 years) are the best value. <strong>Metal</strong> ($12–$18, 40–70 years) and <strong>slate</strong> ($20–$40, 75–100+ years) last far longer for more money. For flat roofs, <strong>EPDM</strong> ($8–$12) is the budget choice and <strong>TPO</strong> ($9–$14) the energy-efficient one."
+answer: "For most pitched-roof homes in New York, <strong>architectural asphalt shingles</strong> ($3–$10/sq ft, 20–30 years) are the best value. <strong>Metal</strong> ($12–$18, 40–70 years) and <strong>slate</strong> ($20–$40, 75–100+ years) last far longer for more money. For flat roofs, <strong>EPDM</strong> ($5–$12) is the budget choice and <strong>TPO</strong> ($9–$14) the energy-efficient one."
 takeaways:
   - "Best value for pitched roofs: <strong>architectural asphalt shingles</strong>."
   - "Longest-lasting: <strong>slate</strong> (75–100+ years) and <strong>metal</strong> (40–70 years)."
@@ -24,7 +24,7 @@ faq:
   - q: "What is the best roofing material for New York weather?"
     a: "For pitched roofs, wind-rated architectural asphalt shingles offer the best balance of cost and durability against nor'easters and freeze-thaw cycles; metal and slate last longer. For flat roofs, EPDM and TPO both perform well in NYC's climate."
   - q: "What are the best roofing shingle brands?"
-    a: "GAF, Owens Corning and CertainTeed are the leading asphalt shingle manufacturers in the US. We install GAF shingles as a GAF Certified® contractor, which lets us offer GAF system warranties of up to 50 years."
+    a: "GAF, Owens Corning and CertainTeed are the leading asphalt shingle manufacturers in the US. We install GAF shingles as a GAF Master Elite® contractor, which lets us offer GAF system warranties of up to 50 years."
   - q: "What are the best flat roofing brands?"
     a: "Leading commercial and flat roof membrane manufacturers include GAF, Firestone (Holcim), Carlisle and Johns Manville. We source from these manufacturers."
   - q: "What is the longest-lasting roof?"
@@ -36,11 +36,11 @@ faq:
 
 | Material | Installed cost | Lifespan | Best for | Watch out for |
 | --- | --- | --- | --- | --- |
-| Asphalt shingles | $5–$10/sq ft | 20–30 yrs | Most pitched-roof homes | Choose wind-rated shingles near the coast |
+| Asphalt shingles | $3–$10/sq ft | 20–30 yrs | Most pitched-roof homes | Choose wind-rated shingles near the coast |
 | Metal | $12–$18/sq ft | 40–70 yrs | Long-term owners | Higher upfront cost |
 | Slate | $20–$40/sq ft | 75–100+ yrs | Historic and high-end homes | Weight; needs a specialist |
 | Tile | $15–$25/sq ft | 50+ yrs | Specific architectural styles | Heavy; structure must be checked |
-| EPDM (flat) | $8–$12/sq ft | 20–30 yrs | Row homes, budgets | Dark surface absorbs heat |
+| EPDM (flat) | $5–$12/sq ft | 20–30 yrs | Row homes, budgets | Dark surface absorbs heat |
 | TPO (flat) | $9–$14/sq ft | 20–30 yrs | Energy savings, larger roofs | Install quality is critical |
 | Modified bitumen (flat) | $9–$13/sq ft | 20–30 yrs | Roofs with foot traffic | Heavier; needs coating to be reflective |
 | PVC (flat) | $10–$16/sq ft | 25–35 yrs | Restaurants, chemicals | Highest flat-roof cost |
@@ -71,7 +71,7 @@ Most Brooklyn, Manhattan and Queens row homes have flat roofs. The main options 
 
 Material brand matters, but **how it's installed matters more**. A great shingle installed badly will fail early. That said, these are the manufacturers most trusted by roofers:
 
-- **Shingles:** GAF, Owens Corning and CertainTeed are the leading US shingle makers. We install GAF as a **GAF Certified®** contractor, which lets us offer GAF system warranties of up to 50 years.
+- **Shingles:** GAF, Owens Corning and CertainTeed are the leading US shingle makers. We install GAF as a **GAF Master Elite®** contractor, which lets us offer GAF system warranties of up to 50 years.
 - **Flat roof membranes:** GAF, Firestone (Holcim), Carlisle and Johns Manville. We source TPO, EPDM and modified bitumen systems from these manufacturers.
 - **Skylights:** Velux and Fakro are the most common brands we install and service.
 

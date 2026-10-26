@@ -12,9 +12,12 @@ const year = new Date().getFullYear();
       <p>Family-owned roofing contractor in Staten Island, NY. Roof repair, replacement and flat roofing across Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is part of every job.</p>
       <a class="phone" href={telHref}>{business.phone}</a>
       <a href={`mailto:${business.email}`}>{business.email}</a>
-      <div class="footer-gaf"><img class="gaf-badge gaf-md" src="/images/gaf-certified.webp" alt="GAF Certified® Residential Roofing Contractor" width="400" height="409" loading="lazy" decoding="async" /></div>
+      <a class="footer-gaf" href={business.profiles.gaf} target="_blank" rel="noopener" aria-label="GAF Master Elite® profile on gaf.com"><img class="gaf-badge gaf-md" src="/images/gaf-master-elite.webp" alt="GAF Master Elite® Residential Roofing Contractor" width="256" height="256" loading="lazy" decoding="async" /></a>
       <div class="footer-badges">
-        <span>GAF Certified®</span><span>BBB Accredited</span><span>Lic. #{business.license.number}</span>
+        <a href={business.profiles.gaf} target="_blank" rel="noopener">GAF Master Elite®</a>
+        <a href={business.profiles.bbb} target="_blank" rel="noopener">BBB Accredited</a>
+        <a href={business.profiles.buildzoom} target="_blank" rel="noopener">BuildZoom</a>
+        <span>Lic. #{business.license.number}</span>
       </div>
     </div>
     <div>

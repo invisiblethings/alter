@@ -15,7 +15,7 @@ area: "Staten Island"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2025/04/AlterPhaseRoofing-BG-Home.webp"
 imageAlt: "New roof replaced by Alter Phase Roofing Contracting in 10314 Staten Island, NY"
-answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $5–$10 per sq ft, and a 1,000 sq ft flat roof $8,000–$13,000."
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY. We repair and replace shingle and flat roofs in every Staten Island neighborhood. Most repairs cost $300–$1,200; a new shingle roof runs $3–$10 per sq ft, and a 1,000 sq ft flat roof $5,000–$13,000."
 projects:
   - title: "Full shingle roof replacement"
     location: "Staten Island, NY 10314"
@@ -42,7 +42,7 @@ faq:
   - q: "Which Staten Island neighborhoods do you serve?"
     a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
   - q: "How much does a new roof cost on Staten Island?"
-    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $5–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $8,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
+    a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $3–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $5,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
   - q: "Do Staten Island roofs need permits?"
     a: "A like-for-like reroof on a one- or two-family home usually doesn't need a DOB permit. Replacing the deck, changing the roof type or commercial work generally does. We check for every job and file when needed."
 modified: "2026-10-22"
@@ -88,7 +88,7 @@ South and East Shore homes take the brunt of nor'easters. Wind-rated shingles an
 - **We're local.** We're based on the Island. When there's a storm, we're already here.
 - **The owner shows up.** Marke is part of every job, from the first inspection to the final walkthrough.
 - **Honest advice.** Many calls about a "new roof" end in a [repair](/roof-repair/). We'd rather keep a customer for life.
-- **Proper credentials.** GAF Certified®, BBB accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured.
+- **Proper credentials.** GAF Master Elite®, BBB accredited, licensed by NYC DCWP (#2129904-DCWP) and fully insured.
 - **Warranties in writing.** Up to 50 years on materials and up to 25 years on workmanship.
 
 ## Popular services on Staten Island

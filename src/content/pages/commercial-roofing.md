@@ -90,7 +90,7 @@ Manufacturer system warranties plus our own workmanship warranty, in writing.
 
 ## Why Staten Island businesses call us
 
-Alter Phase Roofing Contracting is family-owned, with more than 13 years in roofing. Owner Marke is part of every job, and the work is done by our own crew, not subcontractors. We're a GAF Certified® contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google.
+Alter Phase Roofing Contracting is family-owned, with more than 13 years in roofing. Owner Marke is part of every job, and the work is done by our own crew, not subcontractors. We're a GAF Master Elite® contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 We work in St. George, Port Richmond, New Springville, Travis, Dongan Hills, New Dorp, Great Kills and everywhere in between.
 

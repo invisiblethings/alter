@@ -16,7 +16,7 @@ takeaways:
   - "<strong>Architectural shingles</strong> are the standard choice for NYC homes today."
   - "3-tab shingles are cheaper upfront but don't last as long or handle wind as well."
   - "Luxury shingles give a slate or shake look at a fraction of the price."
-  - "Installed asphalt shingle roofs cost about <strong>$5–$10 per sq ft</strong> in NYC."
+  - "Installed asphalt shingle roofs cost about <strong>$3–$10 per sq ft</strong> in NYC."
 related:
   - "/top-roofing-materials-for-homes-in-new-york/"
   - "/roof-sheathing-explained/"
@@ -29,7 +29,7 @@ faq:
   - q: "Are 3-tab shingles still made?"
     a: "They're still available but far less common; most manufacturers and roofers now steer homeowners toward architectural shingles for their better performance and warranties."
   - q: "How much does a new asphalt shingle roof cost in NYC?"
-    a: "About $5–$10 per square foot installed, so roughly $6,000–$12,000 for a 1,200 sq ft roof, depending on the shingle line, tear-off, deck repairs and access."
+    a: "About $3–$10 per square foot installed, so roughly $3,600–$12,000 for a 1,200 sq ft roof, depending on the shingle line, tear-off, deck repairs and access."
 ---
 ![Different shingle colors and styles](/wp-content/uploads/2024/06/Different-Shingle-Colors-and-Styles-GAF-Alterphaseroofing.webp)
 
@@ -79,6 +79,6 @@ For almost every pitched-roof home on Staten Island, in Queens or in southern Br
 
 ## It's not just the shingles
 
-A shingle roof is a system. What's under the shingles decides how long it lasts: solid [roof sheathing](/roof-sheathing-explained/), synthetic underlayment, ice and water protection at eaves and valleys, proper ventilation, and new flashing. As a GAF Certified® contractor, we install complete GAF systems, which is what qualifies a roof for GAF's enhanced warranties.
+A shingle roof is a system. What's under the shingles decides how long it lasts: solid [roof sheathing](/roof-sheathing-explained/), synthetic underlayment, ice and water protection at eaves and valleys, proper ventilation, and new flashing. As a GAF Master Elite® contractor, we install complete GAF systems, which is what qualifies a roof for GAF's enhanced warranties.
 
 Compare shingles with metal, slate and flat roof options in our [best roofing materials guide](/top-roofing-materials-for-homes-in-new-york/), or see prices in the [NYC roof cost guide](/roof-replacement-cost-in-nyc/).

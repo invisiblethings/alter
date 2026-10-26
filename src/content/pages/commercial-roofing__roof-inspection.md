@@ -80,6 +80,6 @@ An inspection also gives you something you can't get from a ground-level look: a
 
 ## Why Staten Island owners trust our reports
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, GAF Certified® and BBB Accredited. Our crew walks the whole roof, so the report shows what is actually up there.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job. We're licensed by NYC DCWP (#2129904-DCWP), fully insured, a GAF Master Elite® contractor and BBB Accredited. Our crew walks the whole roof, so the report shows what is actually up there.
 
 We also serve [Brooklyn](/service-area/brooklyn-ny/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/).

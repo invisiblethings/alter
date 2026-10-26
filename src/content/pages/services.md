@@ -90,13 +90,13 @@ Board-ready proposals, multi-building bids and inspection programs.
 
 ## What it costs
 
-Prices depend on your roof, but you shouldn't have to guess. Most repairs on Staten Island run $300–$1,200. Asphalt shingle roofs cost $5–$10 per sq ft installed, and a typical 1,000 sq ft flat roof runs $8,000–$13,000. See the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) and the [roof leak repair cost guide](/cost-to-repair-roof-leak/) for the details.
+Prices depend on your roof, but you shouldn't have to guess. Most repairs on Staten Island run $300–$1,200. Asphalt shingle roofs cost $3–$10 per sq ft installed, and a typical 1,000 sq ft flat roof runs $5,000–$13,000. See the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) and the [roof leak repair cost guide](/cost-to-repair-roof-leak/) for the details.
 
 ## Why Staten Island homeowners pick us
 
 - **Family-owned, with more than 13 years in roofing.** Based right here on Staten Island.
 - **The owner shows up.** Marke is part of every job, and our own crew does the work.
-- **Credentials you can check.** GAF Certified®, BBB Accredited, NYC DCWP license #2129904-DCWP, fully insured.
+- **Credentials you can check.** GAF Master Elite®, BBB Accredited, NYC DCWP license #2129904-DCWP, fully insured.
 - **Reviews you can read.** Rated 5.0 stars across 154 reviews, 109 of them on Google.
 - **Warranties in writing.** Up to 50 years from the manufacturer and up to 25 years on our workmanship.
 

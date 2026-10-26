@@ -38,7 +38,13 @@ export const business = {
     verifyUrl: 'https://www.nyc.gov/site/dca/businesses/license-checklist-home-improvement-contractor.page',
   },
   warranty: { manufacturerYears: 50, workmanshipYears: 25 },
-  certifications: ['GAF Certified®', 'BBB Accredited Business'],
+  certifications: ['GAF Master Elite®', 'BBB Accredited Business'],
+  // Third-party profiles linked from the footer (also listed in sameAs).
+  profiles: {
+    gaf: 'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ny/staten-island/alter-phase-contracting-inc-1132980',
+    bbb: 'https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-roofing-contracting-0121-87150134',
+    buildzoom: 'https://www.buildzoom.com/contractor/alter-phase-roofing-inc',
+  },
   // From the public review profile (Google, Yelp, HomeAdvisor, Angi, BBB); see src/data/reviews.ts.
   rating: { value: '5.0', count: 154, googleCount: 109, label: '5.0 stars' },
   googleMapsUrl: 'https://www.google.com/maps?cid=15794678866958250729',
@@ -48,7 +54,7 @@ export const business = {
     'https://www.facebook.com/AlterPhaseRoofing/',
     'https://www.linkedin.com/company/alterphaseroofing/',
     'https://www.yelp.com/biz/alter-phase-roofing-contracting-staten-island',
-    'https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-contracting-inc-0121-87150134',
+    'https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-roofing-contracting-0121-87150134',
     'https://www.angi.com/companylist/us/ny/staten-island/alter-phase-contracting-inc-reviews-10071986.htm',
     'https://www.gaf.com/en-us/roofing-contractors/residential/usa/ny/staten-island/alter-phase-contracting-inc-1132980',
     'https://www.buildzoom.com/contractor/alter-phase-roofing-inc',

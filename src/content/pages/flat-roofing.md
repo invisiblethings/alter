@@ -17,7 +17,7 @@ prices: ["flat", "boroughs"]
 estimator: true
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg"
 imageAlt: "White TPO flat roof installed by Alter Phase Roofing Contracting"
-answer: "A new flat roof on Staten Island costs about <strong>$8,000–$13,000</strong> for a typical 1,000 sq ft roof. By system: EPDM $8–$12 per sq ft, TPO $9–$14, modified bitumen $9–$13 and PVC $10–$16. Most flat roof leak repairs cost <strong>$400–$1,200</strong>. Repair if the roof is under about 15 years old and the problem is in one spot."
+answer: "A new flat roof on Staten Island costs about <strong>$5,000–$13,000</strong> for a typical 1,000 sq ft roof. By system: EPDM $5–$12 per sq ft, TPO $9–$14, modified bitumen $9–$13 and PVC $10–$16. Most flat roof leak repairs cost <strong>$400–$1,200</strong>. Repair if the roof is under about 15 years old and the problem is in one spot."
 related:
   - "/roof-repair/"
   - "/flat-roof-repair-and-replacement-in-nyc/"
@@ -56,7 +56,7 @@ Water coming in right now? Call our [24/7 emergency line](/roof-repair/emergency
 
 ### EPDM (rubber)
 
-$8–$12 per sq ft. The best value for most home extensions and garages. Stays flexible through cold winters.
+$5–$12 per sq ft. The best value for most home extensions and garages. Stays flexible through cold winters.
 
 ### TPO
 
@@ -98,7 +98,7 @@ Our own crew, not subcontractors. Owner Marke is part of every job.
 
 ## Why Staten Island homeowners choose us
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. We're a GAF Certified® contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google. New flat roofs come with up to 50-year manufacturer and up to 25-year workmanship warranties, in writing.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. We're a GAF Master Elite® contractor, BBB Accredited, and rated 5.0 stars across 154 reviews, 109 of them on Google. New flat roofs come with up to 50-year manufacturer and up to 25-year workmanship warranties, in writing.
 
 We work on flat roofs in every neighborhood, from St. George and Rosebank to New Dorp, Eltingville and Tottenville. For stores and larger buildings, see [commercial roofing](/commercial-roofing/).
 

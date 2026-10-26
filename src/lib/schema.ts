@@ -58,12 +58,21 @@ export function businessNode() {
     ],
     founder: { '@id': b.owner.id },
     employee: { '@id': b.owner.id },
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'license',
-      name: `${b.license.type} License #${b.license.number}`,
-      recognizedBy: { '@type': 'GovernmentOrganization', name: b.license.issuer },
-    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'license',
+        name: `${b.license.type} License #${b.license.number}`,
+        recognizedBy: { '@type': 'GovernmentOrganization', name: b.license.issuer },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'certification',
+        name: 'GAF Master Elite® Residential Roofing Contractor',
+        url: b.profiles.gaf,
+        recognizedBy: { '@type': 'Organization', name: 'GAF', url: 'https://www.gaf.com/' },
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Roofing services',

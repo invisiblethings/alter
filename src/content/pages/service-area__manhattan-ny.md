@@ -16,7 +16,7 @@ wizard: "Flat roof"
 prices: ["flat", "boroughs"]
 image: "/wp-content/uploads/2024/11/Manhattan-Roofing-NY-AlterPhaseRoofing.jpg"
 imageAlt: "Manhattan roofing services by Alter Phase Roofing Contracting"
-answer: "Alter Phase Roofing Contracting repairs and replaces roofs on Manhattan co-ops, condos, townhouses and commercial buildings. A 1,000 sq ft flat roof replacement in Manhattan typically costs $13,000–$22,000+, higher than other boroughs because of sidewalk protection, hoisting, building height and permit complexity."
+answer: "Alter Phase Roofing Contracting repairs and replaces roofs on Manhattan co-ops, condos, townhouses and commercial buildings. A 1,000 sq ft flat roof replacement in Manhattan typically costs $8,000–$22,000+, higher than other boroughs because of sidewalk protection, hoisting, building height and permit complexity."
 related:
   - "/commercial-roofing/"
   - "/property-managers/"
@@ -25,7 +25,7 @@ related:
   - "/roof-replacement-guide-nyc/"
 faq:
   - q: "Why does roofing cost more in Manhattan?"
-    a: "Material hoisting, sidewalk protection, limited staging space, building height and more complex permits all add labor and time. A 1,000 sq ft flat roof that might cost $8,000–$13,000 on Staten Island typically runs $13,000–$22,000+ in Manhattan."
+    a: "Material hoisting, sidewalk protection, limited staging space, building height and more complex permits all add labor and time. A 1,000 sq ft flat roof that might cost $5,000–$13,000 on Staten Island typically runs $8,000–$22,000+ in Manhattan."
   - q: "Can you work with our co-op or condo board?"
     a: "Yes. Boards typically require a scope of work, certificates of insurance naming the building and managing agent, and a contractor application. We prepare those and plan the work around building rules and quiet hours."
   - q: "Do you repair parapets found during Local Law 11 inspections?"

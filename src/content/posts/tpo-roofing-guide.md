@@ -75,7 +75,7 @@ See how TPO compares on cost with other materials in our [NYC roof cost guide](/
 
 | | TPO | EPDM | PVC | Modified bitumen |
 | --- | --- | --- | --- | --- |
-| Installed cost (NYC) | $9–$14/sq ft | $8–$12/sq ft | $10–$16/sq ft | $9–$13/sq ft |
+| Installed cost (NYC) | $9–$14/sq ft | $5–$12/sq ft | $10–$16/sq ft | $9–$13/sq ft |
 | Lifespan | 20–30 yrs | 20–30 yrs | 25–35 yrs | 20–30 yrs |
 | Color | White (reflective) | Usually black | White | Granulated / coated |
 | Seams | Heat-welded | Adhesive / tape | Heat-welded | Torched / adhered |

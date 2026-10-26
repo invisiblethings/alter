@@ -35,7 +35,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 | License | NYC DCWP Home Improvement Contractor **#2129904-DCWP**, active to 2027-02-28 | NYC Open Data |
 | Hours | Mon–Fri 8–8, Sat 8–5, Sun closed, emergencies 24/7 | Current site |
 | Warranties | Up to 50 years manufacturer, up to 25 years workmanship | Current site |
-| Credentials | GAF GAF Certified, BBB Accredited | Current site |
+| Credentials | GAF Master Elite®, BBB Accredited | Current site |
 | Reviews | "Excellent", 108 Google reviews | Current site |
 | Prices | Client's published 2026 job averages, centralized in `src/data/costs.ts` | Current site/blog (client approved) |
 | Areas | Staten Island (priority), Brooklyn, Manhattan, Queens | Client |
@@ -46,7 +46,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 **Confirmed with the client (October 2026)**
 1. Author byline: "Marke" (no surname).
 2. Legal name: ALTER PHASE CONTRACTING INC is kept as `legalName` in schema; the public name is Alter Phase Roofing Contracting, matching the Google Business Profile.
-3. Certification: shown as "GAF Certified".
+3. Certification: shown as "GAF Master Elite®" (logo: public/images/gaf-master-elite.webp). Pricing from Oct 2026: asphalt shingles $3–$10/sq ft, flat roofs from $5/sq ft (EPDM).
 4. The "starting at $5,500" offer on `/roof-replacement-si/` is valid.
 5. Google Business Profile shows (929) 370-1552 and the same address.
 6. The owner quote is approved. Privacy and Terms pages accepted as written.

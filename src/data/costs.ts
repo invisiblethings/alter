@@ -2,7 +2,7 @@
 // Offer schema. Figures are Alter Phase's published job averages (2026 NYC
 // guide + repair cost tables). Update here and the whole site follows.
 
-export const COSTS_UPDATED = '2026-10-01';
+export const COSTS_UPDATED = '2026-10-26';
 
 export interface Material {
   id: string;
@@ -16,8 +16,8 @@ export interface Material {
 }
 
 export const materials: Material[] = [
-  { id: 'asphalt', name: 'Asphalt shingles', type: 'pitched', low: 5, high: 10, life: '20–30 yrs', bestFor: 'Most Staten Island homes', note: 'Best value for pitched roofs. Choose wind-rated architectural shingles for NYC coastal weather.' },
-  { id: 'epdm', name: 'EPDM (rubber)', type: 'flat', low: 8, high: 12, life: '20–30 yrs', bestFor: 'Row homes & brownstones', note: 'The most cost-effective flat roof; stays flexible through NYC freeze-thaw cycles.' },
+  { id: 'asphalt', name: 'Asphalt shingles', type: 'pitched', low: 3, high: 10, life: '20–30 yrs', bestFor: 'Most Staten Island homes', note: 'Best value for pitched roofs. Choose wind-rated architectural shingles for NYC coastal weather.' },
+  { id: 'epdm', name: 'EPDM (rubber)', type: 'flat', low: 5, high: 12, life: '20–30 yrs', bestFor: 'Row homes & brownstones', note: 'The most cost-effective flat roof; stays flexible through NYC freeze-thaw cycles.' },
   { id: 'tpo', name: 'TPO membrane', type: 'flat', low: 9, high: 14, life: '20–30 yrs', bestFor: 'Commercial & larger flat roofs', note: 'White, reflective surface keeps top floors cooler and helps meet NYC cool-roof rules.' },
   { id: 'modbit', name: 'Modified bitumen', type: 'flat', low: 9, high: 13, life: '20–30 yrs', bestFor: 'Roofs with foot traffic', note: 'Multi-ply and tough; good where equipment or people use the roof.' },
   { id: 'pvc', name: 'PVC membrane', type: 'flat', low: 10, high: 16, life: '25–35 yrs', bestFor: 'Restaurants & industrial roofs', note: 'Fire-resistant and resists grease and chemicals.' },
@@ -46,10 +46,10 @@ export const skylights = [
 
 // Typical full replacement for a ~1,000 sq ft flat roof, by borough.
 export const boroughs = [
-  { name: 'Staten Island', low: 8000, high: 13000, drivers: 'Least congested; detached homes; easy staging and debris removal' },
-  { name: 'Queens', low: 9000, high: 15000, drivers: 'Wider streets; a mix of flat and pitched residential roofs' },
-  { name: 'Brooklyn', low: 10000, high: 17000, drivers: 'Row-home access, brownstone details, attached buildings, co-op boards' },
-  { name: 'Manhattan', low: 13000, high: 22000, drivers: 'Sidewalk protection, cranes or lifts, building height, permit complexity' },
+  { name: 'Staten Island', low: 5000, high: 13000, drivers: 'Least congested; detached homes; easy staging and debris removal' },
+  { name: 'Queens', low: 5500, high: 15000, drivers: 'Wider streets; a mix of flat and pitched residential roofs' },
+  { name: 'Brooklyn', low: 6500, high: 17000, drivers: 'Row-home access, brownstone details, attached buildings, co-op boards' },
+  { name: 'Manhattan', low: 8000, high: 22000, drivers: 'Sidewalk protection, cranes or lifts, building height, permit complexity' },
 ];
 
 export const typicalReplacement = { low: 10000, high: 30000 };

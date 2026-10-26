@@ -10,9 +10,9 @@ image: "/wp-content/uploads/2024/10/Flat-Roof-in-NYC-by-AlterPhaseRoofingContrac
 imageAlt: "Flat roof replacement in New York City by Alter Phase Roofing Contracting"
 published: "2025-05-12"
 modified: "2026-10-22"
-answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $5–$10 per sq ft for asphalt shingles and $8–$14 for flat roofs, more in Manhattan and Brooklyn than in Staten Island or Queens. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do."
+answer: "A roof replacement in NYC typically costs <strong>$10,000–$30,000+</strong>: about $3–$10 per sq ft for asphalt shingles and $5–$14 for flat roofs, more in Manhattan and Brooklyn than in Staten Island or Queens. Like-for-like reroofing on a one- or two-family home usually doesn't need a DOB permit; deck replacement, roof-type changes and most commercial work do."
 takeaways:
-  - "Budget <strong>$10,000–$30,000+</strong> for most homes; a 1,000 sq ft flat roof runs $8,000–$13,000 on Staten Island and $13,000–$22,000+ in Manhattan."
+  - "Budget <strong>$10,000–$30,000+</strong> for most homes; a 1,000 sq ft flat roof runs $5,000–$13,000 on Staten Island and $8,000–$22,000+ in Manhattan."
   - "A <strong>DOB permit</strong> is needed when you replace the deck, change the roof type, work on a commercial building or trigger Local Laws 92/94."
   - "Co-ops and condos need <strong>board approval</strong> even when no permit is required; allow 2–8 weeks."
   - "Hire only a contractor with an active <strong>DCWP Home Improvement Contractor license</strong>, insurance and a written, itemized contract."
@@ -42,8 +42,8 @@ Most New York City roof replacements land between **$10,000 and $30,000**, with 
 
 | Material | Per sq ft | 1,200 sq ft roof | Lifespan | Common on |
 | --- | --- | --- | --- | --- |
-| Asphalt shingles | $5–$10 | $6,000–$12,000 | 20–30 yrs | Staten Island, Queens houses |
-| EPDM (rubber) | $8–$12 | $9,600–$14,400 | 20–30 yrs | Brooklyn & Queens row homes |
+| Asphalt shingles | $3–$10 | $3,600–$12,000 | 20–30 yrs | Staten Island, Queens houses |
+| EPDM (rubber) | $5–$12 | $6,000–$14,400 | 20–30 yrs | Brooklyn & Queens row homes |
 | TPO | $9–$14 | $10,800–$16,800 | 20–30 yrs | Larger flat roofs, commercial |
 | Modified bitumen | $9–$13 | $10,800–$15,600 | 20–30 yrs | Roofs with foot traffic |
 | PVC | $10–$16 | $12,000–$19,200 | 25–35 yrs | Restaurants, industrial |
@@ -55,10 +55,10 @@ Most New York City roof replacements land between **$10,000 and $30,000**, with 
 
 | Borough | Typical range | Why |
 | --- | --- | --- |
-| Staten Island | $8,000–$13,000 | Detached homes, driveways, easy staging and disposal |
-| Queens | $9,000–$15,000 | Wider streets; mix of flat and pitched roofs |
-| Brooklyn | $10,000–$17,000 | Row-home access, attached walls, brownstone details, boards |
-| Manhattan | $13,000–$22,000+ | Hoisting, sidewalk protection, building height, permits |
+| Staten Island | $5,000–$13,000 | Detached homes, driveways, easy staging and disposal |
+| Queens | $5,500–$15,000 | Wider streets; mix of flat and pitched roofs |
+| Brooklyn | $6,500–$17,000 | Row-home access, attached walls, brownstone details, boards |
+| Manhattan | $8,000–$22,000+ | Hoisting, sidewalk protection, building height, permits |
 
 Want a number for your own roof? Try our [roof cost estimator](/roof-replacement-cost-in-nyc/), or read the full [NYC roof replacement cost breakdown](/roof-replacement-cost-in-nyc/).
 
@@ -139,10 +139,10 @@ Use this checklist before you hire anyone:
 - **Workers' compensation and liability insurance.** Ask for the actual certificates, not a verbal yes.
 - **Permit authority.** Only licensed contractors can file DOB permits. If a roofer suggests you file it yourself, walk away.
 - **Written, itemized contract.** NYC requires written contracts for home improvement work over $200.
-- **Manufacturer certification.** Manufacturer-certified installers can offer stronger manufacturer warranties. As a GAF Certified® contractor, we offer GAF system warranties of up to 50 years.
+- **Manufacturer certification.** Manufacturer-certified installers can offer stronger manufacturer warranties. As a GAF Master Elite® contractor, we offer GAF system warranties of up to 50 years.
 - **Local references** on buildings like yours, in your borough.
 - **Be wary of bids far below the others.** They often mean uninsured labor, cheaper materials or "surprise" charges once the old roof is off.
 
 ## Why NYC owners choose Alter Phase Roofing Contracting
 
-We're a family-owned roofing contractor based on Staten Island, serving [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Our owner, Marke, is part of every job. We're GAF Certified®, licensed by NYC DCWP, fully insured, and we handle permits and board paperwork as part of the job. Every roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.
+We're a family-owned roofing contractor based on Staten Island, serving [Staten Island](/service-area/staten-island-ny/), [Brooklyn](/service-area/brooklyn-ny/roof-replacement/), [Manhattan](/service-area/manhattan-ny/) and [Queens](/service-area/queens-ny/). Our owner, Marke, is part of every job. We're a GAF Master Elite® contractor, licensed by NYC DCWP, fully insured, and we handle permits and board paperwork as part of the job. Every roof comes with up to 50 years of manufacturer coverage and up to 25 years on our workmanship, in writing.

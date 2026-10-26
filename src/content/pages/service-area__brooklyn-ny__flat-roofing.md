@@ -17,7 +17,7 @@ prices: ["flat", "boroughs"]
 estimator: true
 image: "/wp-content/uploads/2025/04/flat-roof-on-a-typical-Brooklyn-building.webp"
 imageAlt: "Flat roof on a typical Brooklyn brownstone"
-answer: "A flat roof replacement in Brooklyn typically costs <strong>$10,000–$17,000</strong> for about 1,000 sq ft, or roughly $8–$16 per sq ft depending on the system: EPDM $8–$12, TPO $9–$14, modified bitumen $9–$13. Flat roof leak repairs usually cost $400–$1,200. Most flat roofs last 20–30 years."
+answer: "A flat roof replacement in Brooklyn typically costs <strong>$6,500–$17,000</strong> for about 1,000 sq ft, or roughly $5–$16 per sq ft depending on the system: EPDM $5–$12, TPO $9–$14, modified bitumen $9–$13. Flat roof leak repairs usually cost $400–$1,200. Most flat roofs last 20–30 years."
 projects:
   - title: "TPO flat roof installation"
     location: "Bay Ridge, Brooklyn 11209"
@@ -79,7 +79,7 @@ Same-day tarping and temporary repairs for active leaks. Call (929) 370-1552.
 
 ## Which flat roof system is right for your building?
 
-**EPDM (rubber), $8–$12/sq ft.** The workhorse of Brooklyn row homes. Affordable, flexible in the cold, easy to repair.
+**EPDM (rubber), $5–$12/sq ft.** The workhorse of Brooklyn row homes. Affordable, flexible in the cold, easy to repair.
 
 **TPO, $9–$14/sq ft.** White and reflective, so top floors stay cooler. Heat-welded seams. Our most popular choice for larger roofs and mixed-use buildings. More in our [TPO roofing guide](/tpo-roofing-guide/).
 
