@@ -94,7 +94,7 @@ Prices depend on your roof, but you shouldn't have to guess. Most repairs on Sta
 
 ## Why Staten Island homeowners pick us
 
-- **Family-owned, with more than 13 years in roofing.** Based right here on Staten Island.
+- **Family-owned, with 19+ years in roofing.** Based right here on Staten Island.
 - **The owner shows up.** Marke is part of every job, and our own crew does the work.
 - **Credentials you can check.** GAF Master Elite®, BBB Accredited, NYC DCWP license #2129904-DCWP, fully insured.
 - **Reviews you can read.** Rated 5.0 stars across 154 reviews, 109 of them on Google.

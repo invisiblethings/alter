@@ -73,7 +73,7 @@ That's why we inspect the whole roof, not just the stain on your ceiling, and wh
 
 ## Why homeowners trust us with their roof
 
-**We're local and family-owned.** We're based on Staten Island, and we've been in roofing for more than 13 years. Owner Marke is part of every job, so you won't be handed off to a salesperson and a crew you never meet.
+**We're local and family-owned.** We're based on Staten Island, and we've been in roofing for 19+ years. Owner Marke is part of every job, so you won't be handed off to a salesperson and a crew you never meet.
 
 **We tell you when you don't need a new roof.** Plenty of our customers call expecting a replacement and end up with a repair. That honesty is why they send their neighbors.
 

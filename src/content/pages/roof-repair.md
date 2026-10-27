@@ -116,7 +116,7 @@ Repair is usually right when the roof is **under about 15 years old**, the damag
 
 ## Why Staten Island homeowners call us
 
-Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with more than 13 years in roofing. Owner Marke is part of every job, so the person who quotes your repair is accountable for it, and our own crew does the work. We're rated 5.0 stars across 154 reviews, 109 of them on Google.
+Alter Phase Roofing Contracting is a family-owned roofer based on Staten Island, with 19+ years in roofing. Owner Marke is part of every job, so the person who quotes your repair is accountable for it, and our own crew does the work. We're rated 5.0 stars across 154 reviews, 109 of them on Google.
 
 We repair roofs in every Staten Island neighborhood, from St. George and Stapleton to New Springville, Eltingville, Great Kills and Tottenville.
 
