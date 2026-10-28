@@ -8,6 +8,7 @@ Nine ready-to-publish posts for **Alter Phase Roofing Contracting**. Each has an
 - No phone numbers in the text or images. Use the **Call now** button instead.
 - No ALL CAPS and no gimmicky symbols.
 - Each post is under 1,500 characters.
+- Images are 1200×900 JPGs (well within 10 KB–5 MB), with all text inside the centered square, so nothing is cut off when Google crops a post to a square.
 
 **Tracking:** each link carries `utm_source=gbp`, so leads from these posts show "gbp / organic" as the source in your lead emails and in GA4.
 

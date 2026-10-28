@@ -30,44 +30,44 @@ body { width: 1200px; height: 900px; overflow: hidden; font-family: Archivo, san
 .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,21,48,.96) 0%, rgba(6,21,48,.88) 38%, rgba(6,21,48,.35) 68%, rgba(6,21,48,.05) 100%); }
 .shade2 { position: absolute; inset: auto 0 0 0; height: 220px; background: linear-gradient(0deg, rgba(6,21,48,.95), rgba(6,21,48,0)); }
-.logo { position: absolute; top: 44px; left: 56px; background: #fff; border-radius: 18px; padding: 12px 18px; }
+.logo { position: absolute; top: 44px; left: 160px; background: #fff; border-radius: 18px; padding: 12px 18px; }
 .logo img { display: block; height: 72px; }
-.txt { position: absolute; left: 56px; top: 196px; width: 760px; }
+.txt { position: absolute; left: 160px; top: 196px; width: 880px; }
 .tag { display: inline-flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #fbc45a; }
 .tag::before { content: ''; width: 36px; height: 3px; background: #fbc45a; }
-h1 { margin-top: 18px; font-size: 76px; line-height: .98; font-weight: 900; font-stretch: 116%; letter-spacing: -0.02em; }
+h1 { margin-top: 18px; font-size: 72px; line-height: .98; font-weight: 900; font-stretch: 116%; letter-spacing: -0.02em; }
 h1 em { font-style: normal; color: #fbc45a; }
 .sub { margin-top: 22px; font-size: 27px; line-height: 1.38; color: #dbe4f3; max-width: 620px; }
-.pills { position: absolute; left: 56px; bottom: 118px; display: flex; gap: 12px; }
-.pills span { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.28); font-size: 21px; font-weight: 700; backdrop-filter: blur(6px); }
+.pills { position: absolute; left: 160px; bottom: 118px; display: flex; gap: 12px; }
+.pills span { display: inline-flex; align-items: center; gap: 8px; padding: 10px 17px; border-radius: 999px; background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.28); font-size: 19px; font-weight: 700; backdrop-filter: blur(6px); }
 .pills span::before { content: '\\2713'; color: #fbc45a; font-weight: 900; }
-.bar { position: absolute; left: 0; right: 0; bottom: 0; height: 88px; background: #fbc45a; color: #0a1322; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; font-size: 24px; font-weight: 800; }
+.bar { position: absolute; left: 0; right: 0; bottom: 0; height: 88px; background: #fbc45a; color: #0a1322; display: flex; align-items: center; justify-content: space-between; padding: 0 160px; font-size: 20px; font-weight: 800; }
 .bar .stars { color: #0a1322; letter-spacing: 2px; margin-right: 10px; }
 .bar .gaf { display: flex; align-items: center; gap: 12px; }
-.bar .gaf img { height: 60px; }
-.bar .web { font-size: 27px; font-weight: 900; font-stretch: 112%; }
+.bar .gaf img { height: 52px; }
+.bar .web { font-size: 22px; font-weight: 900; font-stretch: 108%; }
 .urgent .bar { background: #fbc45a; }
 .urgent .tag { color: #ff8d7e; } .urgent .tag::before { background: #ff8d7e; }
-.bigbadge { position: absolute; right: 56px; bottom: 112px; width: 230px; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); }
+.bigbadge { position: absolute; right: 160px; bottom: 112px; width: 210px; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); }
 /* thermal layout: decorative heat-map field, not a real scan */
-.thermal { background: radial-gradient(circle at 78% 46%, #fff3a8 0%, #ffcf3f 9%, #ff7a1a 19%, #e2315b 30%, #8a1f8f 42%, #3a1f86 55%, #10216b 68%, #061530 82%); }
+.thermal { background: radial-gradient(circle at 70% 46%, #fff3a8 0%, #ffcf3f 9%, #ff7a1a 19%, #e2315b 30%, #8a1f8f 42%, #3a1f86 55%, #10216b 68%, #061530 82%); }
 .thermal .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 60px 60px; }
 .thermal .shade { background: linear-gradient(90deg, rgba(6,21,48,.97) 0%, rgba(6,21,48,.9) 45%, rgba(6,21,48,.2) 75%, rgba(6,21,48,0) 100%); }
-.reticle { position: absolute; left: calc(78% - 110px); top: calc(46% - 110px); width: 220px; height: 220px; border: 3px solid rgba(255,255,255,.85); border-radius: 50%; }
+.reticle { position: absolute; left: calc(70% - 110px); top: calc(46% - 110px); width: 220px; height: 220px; border: 3px solid rgba(255,255,255,.85); border-radius: 50%; }
 .reticle::before, .reticle::after { content: ''; position: absolute; background: rgba(255,255,255,.85); }
 .reticle::before { left: 50%; top: -40px; bottom: -40px; width: 3px; transform: translateX(-50%); }
 .reticle::after { top: 50%; left: -40px; right: -40px; height: 3px; transform: translateY(-50%); }
-.scale { position: absolute; right: 56px; top: 210px; width: 22px; height: 420px; border-radius: 11px; background: linear-gradient(#fff3a8, #ffcf3f, #ff7a1a, #e2315b, #8a1f8f, #3a1f86, #10216b); border: 2px solid rgba(255,255,255,.6); }
+.scale { position: absolute; right: 160px; top: 210px; width: 22px; height: 420px; border-radius: 11px; background: linear-gradient(#fff3a8, #ffcf3f, #ff7a1a, #e2315b, #8a1f8f, #3a1f86, #10216b); border: 2px solid rgba(255,255,255,.6); }
 /* review layout */
 .review .shade { background: rgba(6,21,48,.55); }
-.card { position: absolute; left: 56px; right: 56px; top: 250px; background: #fff; color: #0a1322; border-radius: 30px; padding: 46px 54px; box-shadow: 0 40px 90px rgba(0,0,0,.45); }
+.card { position: absolute; left: 160px; right: 160px; top: 250px; background: #fff; color: #0a1322; border-radius: 30px; padding: 46px 54px; box-shadow: 0 40px 90px rgba(0,0,0,.45); }
 .card .st { color: #f4ae2c; font-size: 44px; letter-spacing: 6px; }
-.card q { display: block; margin-top: 14px; font-size: 38px; line-height: 1.32; font-weight: 750; quotes: '\\201C' '\\201D'; }
+.card q { display: block; margin-top: 14px; font-size: 32px; line-height: 1.32; font-weight: 750; quotes: '\\201C' '\\201D'; }
 .card .who { margin-top: 22px; font-size: 24px; font-weight: 700; color: #4a5568; }
-.review .tag { position: absolute; left: 56px; top: 196px; }
+.review .tag { position: absolute; left: 160px; top: 196px; }
 `;
 
-const bar = (p) => `<div class="bar"><span><span class="stars">★★★★★</span>5.0 from 154 reviews</span>${p.badge ? '' : `<span class="gaf"><img src="${GAF}">GAF Master Elite®</span>`}<span class="web">alterphaseroofing.com</span></div>`;
+const bar = (p) => `<div class="bar"><span><span class="stars">★★★★★</span>5.0 · 154 reviews</span>${p.badge ? '' : `<span class="gaf"><img src="${GAF}">GAF Master Elite®</span>`}<span class="web">alterphaseroofing.com</span></div>`;
 const page = (p) => {
   const pills = p.pills ? `<div class="pills">${p.pills.map((x) => `<span>${x}</span>`).join('')}</div>` : '';
   let inner = '';
