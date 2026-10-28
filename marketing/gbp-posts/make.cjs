@@ -22,6 +22,15 @@ const posts = [
   { id: '09-repair-first-promise', layout: 'photo', img: 'public/wp-content/uploads/2024/04/AlterPhase-Roof-Repair-Service.jpg', tag: 'The repair-first promise', h: 'Just a repair?<br>We\u2019ll say so.', sub: 'Most roof repairs cost $300–$1,200. We show you photos and give you both prices when it’s close.', pills: ['Honest advice', 'Repairs from $300', 'Written warranty'] },
 ];
 
+// Offer images (Google Business Profile "Offer" posts) go to marketing/gbp-offers/.
+const offers = [
+  { id: 'offer-01-500-off-roof-replacement', layout: 'offer', img: 'src/assets/hero-new-roof.jpg', tag: 'Limited-time offer', big: '$500 off', h: 'your new roof.', sub: 'On any full roof replacement signed by December 31. Up to 50-year GAF warranties included.', ends: 'Ends Dec 31, 2026', code: 'ROOF500' },
+  { id: 'offer-02-seniors-veterans', layout: 'offer', img: 'public/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg', tag: 'Our thank-you', big: '10% off', h: 'for seniors & veterans.', sub: 'On roof repairs and replacements, for homeowners 65+ and US military veterans.', ends: 'Ends Dec 31, 2026', code: 'THANKYOU10' },
+  { id: 'offer-03-free-gutter-guards', layout: 'offer', img: 'public/wp-content/uploads/2024/04/Gutter-Services-AlterPhase.jpg', tag: 'New roof bonus', big: 'Free', h: 'gutter guards with your new roof.', sub: 'Keep leaves and ice out of your gutters. Installed free with any full roof replacement.', ends: 'Ends Dec 31, 2026', code: 'GUARDS' },
+  { id: 'offer-04-free-inspection-infrared', layout: 'offer', img: 'public/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-10.jpg', tag: 'No cost, no obligation', big: 'Free', h: 'roof inspection + infrared leak scan.', sub: 'Photos of everything we find and a written price, usually within 24 hours.', ends: 'Book this week' },
+  { id: 'offer-05-roof-replacement-from-5500', layout: 'offer', img: 'public/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg', tag: 'Staten Island roof replacement', big: 'From $5,500', h: 'for a brand-new roof.', sub: 'Small, simple roofs from $5,500. Most homes done in one day, with GAF warranties.', ends: 'Free estimate' },
+];
+
 const css = `
 @font-face { font-family: Archivo; src: url('${FONT}') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -65,6 +74,14 @@ h1 em { font-style: normal; color: #fbc45a; }
 .card q { display: block; margin-top: 14px; font-size: 32px; line-height: 1.32; font-weight: 750; quotes: '\\201C' '\\201D'; }
 .card .who { margin-top: 22px; font-size: 24px; font-weight: 700; color: #4a5568; }
 .review .tag { position: absolute; left: 160px; top: 196px; }
+/* offer layout */
+.offer .big { margin-top: 14px; font-size: 150px; line-height: .9; font-weight: 900; font-stretch: 118%; letter-spacing: -0.03em; color: #fbc45a; }
+.offer h1 { margin-top: 10px; font-size: 54px; max-width: 800px; }
+.offer .sub { max-width: 700px; }
+.offer .pills span.ends { background: #fff; color: #0a1322; border-color: #fff; }
+.offer .pills span.ends::before { content: ''; display: none; }
+.offer .pills span.code { background: transparent; border: 2px dashed #fbc45a; color: #fff; letter-spacing: .06em; }
+.offer .pills span.code::before { content: 'Code'; color: #fbc45a; font-weight: 800; letter-spacing: 0; }
 `;
 
 const bar = (p) => `<div class="bar"><span><span class="stars">★★★★★</span>5.0 · 154 reviews</span>${p.badge ? '' : `<span class="gaf"><img src="${GAF}">GAF Master Elite®</span>`}<span class="web">alterphaseroofing.com</span></div>`;
@@ -77,17 +94,22 @@ const page = (p) => {
     <div class="txt"><span class="tag">${p.tag}</span><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>${pills}`;
   if (p.layout === 'review') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><span class="tag">${p.tag}</span>
     <div class="card"><div class="st">★★★★★</div><q>${p.quote}</q><div class="who">${p.who}</div></div>`;
+  if (p.layout === 'offer') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><div class="shade2"></div>
+    <div class="txt"><span class="tag">${p.tag}</span><div class="big">${p.big}</div><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>
+    <div class="pills"><span class="ends">${p.ends}</span>${p.code ? `<span class="code">${p.code}</span>` : ''}</div>`;
   return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body><div class="c ${p.layout} ${p.urgent ? 'urgent' : ''}">${inner}<div class="logo"><img src="${LOGO}"></div>${bar(p)}</div></body></html>`;
 };
 
 (async () => {
   const b = await chromium.launch({ args: ['--allow-file-access-from-files'] });
   const pg = await b.newPage({ viewport: { width: 1200, height: 900 }, deviceScaleFactor: 1 });
-  for (const p of posts) {
+  const OFFERS = path.join(ROOT, 'marketing/gbp-offers');
+  fs.mkdirSync(OFFERS, { recursive: true });
+  for (const p of [...posts, ...offers]) {
     const file = path.join(require('os').tmpdir(), 'gbp-' + p.id + '.html');
     fs.writeFileSync(file, page(p));
     await pg.goto('file://' + file); await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(150);
-    await pg.screenshot({ path: path.join(OUT, p.id + '.jpg'), type: 'jpeg', quality: 88 });
+    await pg.screenshot({ path: path.join(p.layout === 'offer' ? OFFERS : OUT, p.id + '.jpg'), type: 'jpeg', quality: 88 });
     console.log('ok', p.id);
   }
   await b.close();
