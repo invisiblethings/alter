@@ -18,7 +18,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 | Brooklyn flat roofing: Google ranked `/service-area/brooklyn-ny/flat-roofing/` (85k impressions) although it canonicalized to `/flat-roofing-brooklyn/` | The ranking URL is now the only one; the other 301s to it |
 | Expired license #2098943-DCA printed on 8 pages; two phone numbers in use | Active license #2129904-DCWP everywhere; one NAP phone (929) 370-1552 sitewide |
 | Thin, templated service pages (~200 words of real content) | Rewritten as full pages: problems, process, prices, FAQs, related links |
-| Ad landing pages indexable | `noindex`; they keep the tracking number (929) 800-8572 |
+| Ad landing pages indexable | `noindex`; they show the main number, which Google swaps for a forwarding number on ad clicks |
 | Self-serving review markup on service pages | Removed. Real Google reviews are shown visibly, with no AggregateRating schema (not eligible under Google's guidelines) |
 | Visibility already falling Sep–Oct 2026 | Benchmark before launch (see §8) so the migration isn't blamed for it |
 
@@ -29,7 +29,7 @@ From the 16-month Search Console export (US, Jun 2025 to Oct 2026) and a crawl o
 | Topic | Value | Source |
 |---|---|---|
 | Main phone (NAP, schema, GBP) | **(929) 370-1552**, always in this exact format, because the Google Ads call-conversion tag swaps it | Client; GTM container |
-| Tracking number | (929) 800-8572, used only on the ads landing pages | Client |
+| Tracking number | (929) 800-8572 is the destination of Google Ads "Calls from website" (Google forwarding numbers replace (929) 370-1552 for ad visitors and forward to it). Not shown on the site. | Client |
 | Owner | Marke, owner, part of every job; family-owned, 13+ years in roofing | Client |
 | Address / geo | 61 Appleby Ave, Staten Island, NY 10305 · 40.591462, -74.079555 | NYC DCWP record |
 | License | NYC DCWP Home Improvement Contractor **#2129904-DCWP**, active to 2027-02-28 | NYC Open Data |
@@ -107,7 +107,7 @@ WordPress system URLs (`/sitemap_index.xml`, Yoast sub-sitemaps, `/feed/`, `/aut
     - a 50-year warranty promise from the owner
     - objection FAQ
     - a closing form
-  - **Phone and mobile.** The mobile call bar has two big buttons. Every number shows the tracking number (929) 800-8572.
+  - **Phone and mobile.** The mobile call bar has two big buttons. Numbers show (929) 370-1552; Google replaces it with a forwarding number for ad visitors (forwarding to (929) 800-8572).
 - **Service, area and company pages:** a photo hero with the form, a short-answer band with quick facts, the content split into numbered sections with alternating layouts (lists become feature tiles or checklists), call-to-action strips, price cards, related-page tiles, tagged reviews and a split FAQ. Not article-style.
 
 ---

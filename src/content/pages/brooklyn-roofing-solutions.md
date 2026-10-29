@@ -2,7 +2,6 @@
 path: "/brooklyn-roofing-solutions/"
 template: landing
 noindex: true
-trackingPhone: "(929) 800-8572"
 seoTitle: "Brooklyn Roofing | Repair & Replacement | Free Estimate"
 description: "Brooklyn roof repair and replacement from a family-owned crew: flat roofs, row homes and brownstones. Most roofs done in one day. Free written estimate."
 kicker: "Brooklyn roof repair & replacement"

@@ -59,7 +59,7 @@ Our website uses **Google Tag Manager** to load two Google tools:
 
 These tools use cookies and similar technology set by Google. Google processes this information under its own privacy policy, at [policies.google.com/privacy](https://policies.google.com/privacy).
 
-**Call tracking.** If you arrive from one of our Google Ads, the phone number on our website may be replaced with a Google forwarding number. Calls to it ring straight through to us. Google records the call's details, such as the time, length and your area code, so we can see that the ad worked. Some of our advertising pages also show a dedicated tracking number, (929) 800-8572. Calls to it also come straight to us, and the call details are logged by our phone provider.
+**Call tracking.** If you arrive from one of our Google Ads, the phone number on our website may be replaced with a Google forwarding number. Calls to it ring straight through to us. Google records the call's details, such as the time, length and your area code, so we can see that the ad worked. These calls are routed through our call-tracking line, (929) 800-8572, and the call details are also logged by our phone provider.
 
 **Your choices.**
 - Block or delete cookies in your browser settings.
