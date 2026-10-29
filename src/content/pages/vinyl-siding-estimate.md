@@ -2,6 +2,7 @@
 path: "/vinyl-siding-estimate/"
 template: landing
 noindex: true
+trackingPhone: "(929) 800-8572"
 seoTitle: "Vinyl Siding Staten Island | Free Estimate | Alter Phase"
 description: "Vinyl and insulated vinyl siding installation on Staten Island. Wide range of colors, expert installation, written warranty. Free estimate."
 kicker: "Vinyl siding · Staten Island"
