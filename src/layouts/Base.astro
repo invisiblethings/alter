@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CallBar from '../components/CallBar.astro';
 import AddressAutocomplete from '../components/AddressAutocomplete.astro';
+import QuoteModal from '../components/QuoteModal.astro';
 import fontUrl from '@fontsource-variable/archivo/files/archivo-latin-standard-normal.woff2?url';
 import { business, SITE } from '../data/business';
 
@@ -125,6 +126,7 @@ const robots = noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max
     </main>
     {!bare && <Footer />}
     <CallBar quoteHref={bare ? '#lp-wizard' : undefined} />
+    {!['/free-estimate/', '/thank-you/'].includes(path) && <QuoteModal />}
     <AddressAutocomplete />
     <script is:inline>
       // Google Ads call tracking: the Google tag (via GTM) swaps the visible

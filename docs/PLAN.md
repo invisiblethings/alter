@@ -225,3 +225,12 @@ permit_check_used. Boroughs on this page are ordered Manhattan, Brooklyn,
 Queens, the Bronx, Staten Island (owner request). Keep the original
 seoTitle and H1: they are what ranks. Bronx flat-roof range ($6,000–$16,000) is an estimate
 pending owner confirmation.
+
+## Popup quote form
+
+QuoteModal (in Base, every page except /free-estimate/ and /thank-you/) opens
+the 3-step estimate form in a dialog for any link to /free-estimate/ and any
+link that jumps to an on-page quote form (#pg-wizard, #hero-wizard,
+#lp-wizard…). Leads post as the normal `estimate` Netlify form, with `page`
+set to the page the visitor was on. dataLayer event: `quote_open`
+(link_text, page_path). Without JavaScript the links work as before.

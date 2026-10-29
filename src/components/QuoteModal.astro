@@ -1,0 +1,39 @@
+---
+// Popup quote form. Any link to /free-estimate/ ("Free quote", "Free
+// estimate", "Free inspection"...) and any link that jumps to an on-page
+// quote form opens this instead, so visitors never leave the page they're
+// reading. Without JavaScript the links still go to the page or form as before.
+import Icon from './Icon.astro';
+import QuoteWizard from './QuoteWizard.astro';
+---
+<dialog class="qm" id="quote-modal" aria-label="Get your free estimate">
+  <button class="qm-x" type="button" data-qm-close aria-label="Close"><Icon name="close" /></button>
+  <QuoteWizard id="modal" title="Get your free estimate" />
+</dialog>
+
+<script>
+  const dlg = document.getElementById('quote-modal') as HTMLDialogElement | null;
+  if (dlg) {
+    const isFormLink = (a: HTMLAnchorElement) => {
+      const u = new URL(a.href, location.href);
+      if (u.origin !== location.origin) return false;
+      if (u.pathname === '/free-estimate/') return true;
+      if (u.pathname !== location.pathname || !u.hash) return false;
+      try { return !!document.querySelector(u.hash)?.matches('[data-wizard]'); } catch { return false; }
+    };
+    document.addEventListener('click', (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = (e.target as Element).closest<HTMLAnchorElement>('a[href]');
+      if (!a || dlg.contains(a) || a.target === '_blank' || !isFormLink(a)) return;
+      e.preventDefault();
+      const drawer = document.getElementById('drawer');
+      if (drawer && !drawer.hidden) drawer.querySelector<HTMLButtonElement>('.drawer-close')?.click();
+      dlg.showModal();
+      dlg.querySelector<HTMLElement>('input[name=service]')?.focus({ preventScroll: true });
+      (window as any).dataLayer?.push({ event: 'quote_open', link_text: (a.textContent || '').trim().slice(0, 60), page_path: location.pathname });
+    });
+    dlg.querySelector('[data-qm-close]')!.addEventListener('click', () => dlg.close());
+    // A click on the dimmed backdrop (the dialog box itself, outside the form) closes it.
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  }
+</script>

@@ -63,7 +63,7 @@
         if (e.key === 'ArrowDown') { e.preventDefault(); mark(Math.min(active + 1, items.length - 1)); }
         else if (e.key === 'ArrowUp') { e.preventDefault(); mark(Math.max(active - 1, 0)); }
         else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); pick(active); }
-        else if (e.key === 'Escape') close();
+        else if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); close(); } // don't also close a popup form
       });
       input.addEventListener('blur', function () { setTimeout(close, 120); });
     });

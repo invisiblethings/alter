@@ -1141,3 +1141,22 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .addr-list { position: absolute; z-index: 30; left: 0; right: 0; top: 100%; margin: 4px 0 0; padding: 0.3rem; list-style: none; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--sh); color: var(--ink); }
 .addr-list li { padding: 0.65rem 0.8rem; border-radius: 10px; font-size: 0.94rem; cursor: pointer; }
 .addr-list li:hover, .addr-list li[aria-selected='true'] { background: var(--bone); color: var(--navy); }
+
+/* ---------- popup quote form (QuoteModal) ---------- */
+.qm { border: 0; padding: 0; margin: auto; background: transparent; width: min(560px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); overflow: visible; color: var(--ink); }
+.qm::backdrop { background: rgb(6 21 48 / 0.62); backdrop-filter: blur(4px); }
+.qm[open] { animation: qm-in 0.22s ease-out; }
+@keyframes qm-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
+.qm .wizard { max-height: calc(100dvh - 2rem); overflow-y: auto; overscroll-behavior: contain; }
+.qm-x { position: absolute; top: 14px; right: 14px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--bone); color: var(--ink); display: grid; place-items: center; cursor: pointer; }
+.qm-x:hover { background: var(--stone); }
+.qm-x .icon { width: 20px; height: 20px; }
+.qm .wizard-top { padding-right: 3rem; }
+html:has(.qm[open]) { overflow: hidden; }
+@media (max-width: 600px) {
+  .qm { width: 100%; max-width: 100%; margin: auto 0 0; max-height: 92dvh; }
+  .qm[open] { animation-name: qm-up; }
+  @keyframes qm-up { from { transform: translateY(40px); opacity: 0.4; } }
+  .qm .wizard { border-radius: 24px 24px 0 0; max-height: 92dvh; padding-bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) { .qm[open] { animation: none; } }
