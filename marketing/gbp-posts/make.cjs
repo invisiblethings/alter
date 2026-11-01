@@ -19,7 +19,7 @@ const posts = [
   { id: '06-customer-review', layout: 'review', img: 'public/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg', tag: '5.0 stars · 154 reviews', quote: 'My entire new roof was done in one day! They left the property spotless. The owner was courteous, professional and upfront from beginning to end.', who: 'Denise L., Google review' },
   { id: '07-flat-roofing', layout: 'photo', img: 'src/assets/flat-roof-brooklyn-crew.webp', tag: 'Flat roofing · EPDM · TPO', h: 'Flat roofs<br>built to stay dry.', sub: 'New flat roofs and leak repairs for extensions, garages, row houses and brownstones. Drainage fixed so water stops sitting.', pills: ['From $5 / sq ft', 'Free inspection', 'Written warranty'] },
   { id: '08-winter-roof-check', layout: 'photo', img: 'public/wp-content/uploads/2025/04/New-roof-replacement-in-Staten-Island.jpg', tag: 'Before winter hits', h: 'Get your roof<br>winter-ready.', sub: 'Loose shingles, tired flashing and clogged gutters turn into leaks once the snow and nor’easters come. Book a free check now.', pills: ['Free roof check', 'Gutters & flashing', 'Fixed before the snow'] },
-  { id: '10-halloween', layout: 'photo', halloween: true, img: 'public/wp-content/uploads/2024/04/Roofing-Home.jpg', tag: 'Happy Halloween, Staten Island', h: 'Keep the scares<br>for <em>Halloween</em>.', sub: 'Not your roof. Book a free roof check with an infrared leak scan before winter hits.', pills: ['Free roof check', 'Infrared leak scan', 'Ready before winter'] },
+  { id: '10-halloween', layout: 'haunted', halloween: true, img: 'marketing/gbp-posts/haunted-house.svg', tag: 'Happy Halloween, Staten Island', h: 'Keep the scares<br>for <em>Halloween</em>.', sub: 'Not your roof. Book a free roof check with an infrared leak scan before winter hits.', pills: ['Free roof check', 'Infrared leak scan', 'Ready before winter'] },
   { id: '09-repair-first-promise', layout: 'photo', img: 'public/wp-content/uploads/2024/04/AlterPhase-Roof-Repair-Service.jpg', tag: 'The repair-first promise', h: 'Just a repair?<br>We\u2019ll say so.', sub: 'Most roof repairs cost $300–$1,200. We show you photos and give you both prices when it’s close.', pills: ['Honest advice', 'Repairs from $300', 'Written warranty'] },
 ];
 
@@ -91,6 +91,10 @@ h1 em { font-style: normal; color: #fbc45a; }
 .halloween .pills span::before { color: #ff9a2e; }
 .halloween .bar { background: #ff9a2e; }
 .spooky { position: absolute; right: 160px; top: 48px; width: 300px; height: 230px; }
+.hshade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,4,20,.92) 0%, rgba(14,5,28,.78) 34%, rgba(20,8,40,.25) 55%, rgba(20,8,40,0) 66%); }
+.haunted .txt { width: 640px; }
+.haunted h1 { font-size: 62px; }
+.haunted .sub { max-width: 540px; }
 `;
 
 const SPOOKY = `<svg class="spooky" viewBox="0 0 300 230" aria-hidden="true"><defs><radialGradient id="moon" cx="40%" cy="40%"><stop offset="0" stop-color="#fff7d6"/><stop offset="1" stop-color="#ffcf6a"/></radialGradient></defs><circle cx="200" cy="95" r="70" fill="url(#moon)" opacity=".95"/><g fill="#14082a"><path d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/><path transform="translate(130 150) scale(.7)" d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/><path transform="translate(150 20) scale(.5)" d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/></g></svg>`;
@@ -104,6 +108,8 @@ const page = (p) => {
     <div class="txt"><span class="tag">${p.tag}</span><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>${pills}`;
   if (p.layout === 'review') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><span class="tag">${p.tag}</span>
     <div class="card"><div class="st">★★★★★</div><q>${p.quote}</q><div class="who">${p.who}</div></div>`;
+  if (p.layout === 'haunted') inner = `<img class="bg" src="${f(p.img)}"><div class="hshade"></div>
+    <div class="txt"><span class="tag">${p.tag}</span><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>${pills}`;
   if (p.layout === 'offer') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><div class="shade2"></div>
     <div class="txt"><span class="tag">${p.tag}</span><div class="big">${p.big}</div><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>
     <div class="pills"><span class="ends">${p.ends}</span>${p.code ? `<span class="code">${p.code}</span>` : ''}</div>`;
