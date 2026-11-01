@@ -169,3 +169,21 @@ Nine ready-to-publish posts for **Alter Phase Roofing Contracting**. Each has an
 
 `make.cjs` renders these images from HTML. Change the text in the `posts` list, then run from the repository root:
 `PW=$(npm root -g)/playwright node marketing/gbp-posts/make.cjs`
+
+---
+
+## 10 · Halloween (post Nov 1–3)
+**Image:** `10-halloween.jpg` · **Button:** Book
+**Link:** https://alterphaseroofing.com/free-estimate/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp_post&utm_content=halloween
+
+> 🎃 Hope you had a happy and safe Halloween, Staten Island!
+>
+> Now let's keep the scares where they belong: in the decorations, not in your attic. Before the cold, snow and nor'easters arrive, make sure your roof is ready.
+>
+> Book a free roof check and we'll look at:
+> ✔ Loose or missing shingles and flat roof seams
+> ✔ Flashing around chimneys, walls and vents
+> ✔ Gutters packed with fall leaves
+> ✔ Hidden moisture, with an infrared (thermal imaging) camera
+>
+> You get photos of everything we find and a written price within 24 hours. If a small repair will do, that's all we'll quote. Family-owned on Staten Island, rated 5.0 stars from 154 reviews.

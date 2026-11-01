@@ -19,6 +19,7 @@ const posts = [
   { id: '06-customer-review', layout: 'review', img: 'public/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg', tag: '5.0 stars · 154 reviews', quote: 'My entire new roof was done in one day! They left the property spotless. The owner was courteous, professional and upfront from beginning to end.', who: 'Denise L., Google review' },
   { id: '07-flat-roofing', layout: 'photo', img: 'src/assets/flat-roof-brooklyn-crew.webp', tag: 'Flat roofing · EPDM · TPO', h: 'Flat roofs<br>built to stay dry.', sub: 'New flat roofs and leak repairs for extensions, garages, row houses and brownstones. Drainage fixed so water stops sitting.', pills: ['From $5 / sq ft', 'Free inspection', 'Written warranty'] },
   { id: '08-winter-roof-check', layout: 'photo', img: 'public/wp-content/uploads/2025/04/New-roof-replacement-in-Staten-Island.jpg', tag: 'Before winter hits', h: 'Get your roof<br>winter-ready.', sub: 'Loose shingles, tired flashing and clogged gutters turn into leaks once the snow and nor’easters come. Book a free check now.', pills: ['Free roof check', 'Gutters & flashing', 'Fixed before the snow'] },
+  { id: '10-halloween', layout: 'photo', halloween: true, img: 'public/wp-content/uploads/2024/04/Roofing-Home.jpg', tag: 'Happy Halloween, Staten Island', h: 'Keep the scares<br>for <em>Halloween</em>.', sub: 'Not your roof. Book a free roof check with an infrared leak scan before winter hits.', pills: ['Free roof check', 'Infrared leak scan', 'Ready before winter'] },
   { id: '09-repair-first-promise', layout: 'photo', img: 'public/wp-content/uploads/2024/04/AlterPhase-Roof-Repair-Service.jpg', tag: 'The repair-first promise', h: 'Just a repair?<br>We\u2019ll say so.', sub: 'Most roof repairs cost $300–$1,200. We show you photos and give you both prices when it’s close.', pills: ['Honest advice', 'Repairs from $300', 'Written warranty'] },
 ];
 
@@ -82,13 +83,22 @@ h1 em { font-style: normal; color: #fbc45a; }
 .offer .pills span.ends::before { content: ''; display: none; }
 .offer .pills span.code { background: transparent; border: 2px dashed #fbc45a; color: #fff; letter-spacing: .06em; }
 .offer .pills span.code::before { content: 'Code'; color: #fbc45a; font-weight: 800; letter-spacing: 0; }
+/* halloween */
+.halloween .shade { background: linear-gradient(90deg, rgba(20,8,40,.97) 0%, rgba(30,10,55,.9) 40%, rgba(60,20,60,.45) 70%, rgba(120,45,10,.15) 100%); }
+.halloween .shade2 { background: linear-gradient(0deg, rgba(20,8,40,.95), rgba(20,8,40,0)); }
+.halloween .tag, .halloween h1 em { color: #ff9a2e; }
+.halloween .tag::before { background: #ff9a2e; }
+.halloween .pills span::before { color: #ff9a2e; }
+.halloween .bar { background: #ff9a2e; }
+.spooky { position: absolute; right: 160px; top: 48px; width: 300px; height: 230px; }
 `;
 
+const SPOOKY = `<svg class="spooky" viewBox="0 0 300 230" aria-hidden="true"><defs><radialGradient id="moon" cx="40%" cy="40%"><stop offset="0" stop-color="#fff7d6"/><stop offset="1" stop-color="#ffcf6a"/></radialGradient></defs><circle cx="200" cy="95" r="70" fill="url(#moon)" opacity=".95"/><g fill="#14082a"><path d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/><path transform="translate(130 150) scale(.7)" d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/><path transform="translate(150 20) scale(.5)" d="M60 60c8-10 18-12 26-6 4-8 12-10 16-4 4-6 12-4 16 4 8-6 18-4 26 6-10-2-18 2-22 10-6-6-12-6-16 2-4-8-10-8-16-2-4-8-12-12-30-10z"/></g></svg>`;
 const bar = (p) => `<div class="bar"><span><span class="stars">★★★★★</span>5.0 · 154 reviews</span>${p.badge ? '' : `<span class="gaf"><img src="${GAF}">GAF Master Elite®</span>`}<span class="web">alterphaseroofing.com</span></div>`;
 const page = (p) => {
   const pills = p.pills ? `<div class="pills">${p.pills.map((x) => `<span>${x}</span>`).join('')}</div>` : '';
   let inner = '';
-  if (p.layout === 'photo') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><div class="shade2"></div>${p.badge ? `<img class="bigbadge" src="${GAF}">` : ''}
+  if (p.layout === 'photo') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><div class="shade2"></div>${p.badge ? `<img class="bigbadge" src="${GAF}">` : ''}${p.halloween ? SPOOKY : ''}
     <div class="txt"><span class="tag">${p.tag}</span><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>${pills}`;
   if (p.layout === 'thermal') inner = `<div class="grid"></div><div class="reticle"></div><div class="scale"></div><div class="shade"></div>
     <div class="txt"><span class="tag">${p.tag}</span><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>${pills}`;
@@ -97,7 +107,7 @@ const page = (p) => {
   if (p.layout === 'offer') inner = `<img class="bg" src="${f(p.img)}"><div class="shade"></div><div class="shade2"></div>
     <div class="txt"><span class="tag">${p.tag}</span><div class="big">${p.big}</div><h1>${p.h}</h1><p class="sub">${p.sub}</p></div>
     <div class="pills"><span class="ends">${p.ends}</span>${p.code ? `<span class="code">${p.code}</span>` : ''}</div>`;
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body><div class="c ${p.layout} ${p.urgent ? 'urgent' : ''}">${inner}<div class="logo"><img src="${LOGO}"></div>${bar(p)}</div></body></html>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body><div class="c ${p.layout} ${p.urgent ? 'urgent' : ''} ${p.halloween ? 'halloween' : ''}">${inner}<div class="logo"><img src="${LOGO}"></div>${bar(p)}</div></body></html>`;
 };
 
 (async () => {
