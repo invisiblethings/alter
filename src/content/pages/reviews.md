@@ -40,4 +40,8 @@ Nearly 20 customers mention honesty, often because we told them a repair would d
 
 All of our reviews, including the two that aren't five stars, are public on our [Google Business Profile](https://www.google.com/maps?cid=15794678866958250729), [Yelp](https://www.yelp.com/biz/alter-phase-roofing-contracting-staten-island) and the [Better Business Bureau](https://www.bbb.org/us/ny/staten-island/profile/roofing-contractors/alter-phase-roofing-contracting-0121-87150134), and together on [Trustindex](https://www.trustindex.io/reviews/alterphaseroofing.com).
 
+See where we rank among roofers in Staten Island on ContractorsRanked:
+
+<a href="https://www.contractorsranked.com/roofers/staten-island-ny" target="_blank" rel="nofollow noopener"><img src="https://www.contractorsranked.com/api/badge/rank?business=6c2b6dcd-0aae-4f8c-b101-83829509d107&amp;theme=dark" alt="Our ranking among Roofers in Staten Island, NY on ContractorsRanked" width="240" height="80" loading="lazy" style="border:0;max-width:100%;height:auto" /></a>
+
 Had work done by us? We'd be grateful if you'd [share your experience on Google](https://www.google.com/maps?cid=15794678866958250729).
