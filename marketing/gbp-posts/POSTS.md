@@ -59,7 +59,7 @@ Nine ready-to-publish posts for **Alter Phase Roofing Contracting**. Each has an
 >
 > ✔ NYC DCWP licensed Home Improvement Contractor, fully insured
 > ✔ 19+ years in roofing, family-owned and based on Staten Island
-> ✔ 5.0 stars from 154 reviews
+> ✔ 5.0 stars from 157 reviews
 >
 > Serving Staten Island, Brooklyn, Queens, Manhattan and the Bronx.
 
@@ -106,7 +106,7 @@ Nine ready-to-publish posts for **Alter Phase Roofing Contracting**. Each has an
 
 > "My entire new roof was done in one day! They left the property spotless. The owner was courteous, professional and upfront about the project from beginning to end." (Denise L.)
 >
-> Thank you, Denise! Reviews like this are why we do what we do. We're proud to be rated 5.0 stars from 154 reviews across Google, Yelp, BBB and more.
+> Thank you, Denise! Reviews like this are why we do what we do. We're proud to be rated 5.0 stars from 157 reviews across Google, Yelp, BBB and more.
 >
 > Need a new roof or a roof repair on Staten Island? Get a free inspection and a written price, and see why your neighbors keep recommending us.
 
@@ -186,4 +186,4 @@ Nine ready-to-publish posts for **Alter Phase Roofing Contracting**. Each has an
 > ✔ Gutters packed with fall leaves
 > ✔ Hidden moisture, with an infrared (thermal imaging) camera
 >
-> You get photos of everything we find and a written price within 24 hours. If a small repair will do, that's all we'll quote. Family-owned on Staten Island, rated 5.0 stars from 154 reviews.
+> You get photos of everything we find and a written price within 24 hours. If a small repair will do, that's all we'll quote. Family-owned on Staten Island, rated 5.0 stars from 157 reviews.

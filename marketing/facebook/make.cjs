@@ -59,7 +59,7 @@ h1 { margin-top: 16px; font-size: 88px; line-height: .98; font-weight: 900; font
     </div>
   </div>
   <div class="cta"><small>Call or text</small><strong>${PHONE}</strong></div>
-  <div class="foot"><span><span class="stars">★★★★★</span> 5.0 · 154 reviews</span><span><img src="${GAF}"> GAF Master Elite®</span><span>alterphaseroofing.com</span></div>
+  <div class="foot"><span><span class="stars">★★★★★</span> 5.0 · 157 reviews</span><span><img src="${GAF}"> GAF Master Elite®</span><span>alterphaseroofing.com</span></div>
 </div></body></html>`;
 
 // Cover: phones crop the sides (keep content in the centre ~1100px) and the
@@ -83,7 +83,7 @@ h1 { margin-top: 16px; font-size: 76px; line-height: 1; font-weight: 900; font-s
     <h1>Roof repair &amp; new roofs,<br><span class="gold">done right.</span></h1>
     <p class="sub">Family-owned · Most roofs done in 1 day · Free inspections</p>
     <div class="row">
-      <span class="chip"><span class="stars">★★★★★</span> 5.0 · 154 reviews</span>
+      <span class="chip"><span class="stars">★★★★★</span> 5.0 · 157 reviews</span>
       <span class="chip"><img src="${GAF}"> GAF Master Elite®</span>
       <span class="chip phone">${PHONE}</span>
     </div>

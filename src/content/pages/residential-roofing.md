@@ -77,7 +77,7 @@ That's why we inspect the whole roof, not just the stain on your ceiling, and wh
 
 **We tell you when you don't need a new roof.** Plenty of our customers call expecting a replacement and end up with a repair. That honesty is why they send their neighbors.
 
-**We do it properly.** We're a GAF Master Elite® contractor, so we install complete GAF roofing systems and can offer GAF system warranties of up to 50 years. We're also BBB Accredited and rated 5.0 stars across 154 reviews, 109 of them on Google.
+**We do it properly.** We're a GAF Master Elite® contractor, so we install complete GAF roofing systems and can offer GAF system warranties of up to 50 years. We're also BBB Accredited and rated 5.0 stars across 157 reviews, 112 of them on Google.
 
 **We're licensed and insured.** NYC DCWP Home Improvement Contractor #2129904-DCWP. Ask for proof of insurance and we'll send it.
 

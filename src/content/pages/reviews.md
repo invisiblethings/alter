@@ -4,9 +4,9 @@ template: reviews
 seoTitle: "Alter Phase Roofing Reviews | 5.0 Stars, 154 Reviews"
 description: "154 real reviews, 5.0 stars: Staten Island homeowners on one-day roof replacements, honest repair advice, fair prices and spotless cleanup."
 kicker: "Customer reviews"
-h1: "5.0 stars from 154 reviews. Here's what our customers say."
+h1: "5.0 stars from 157 reviews. Here's what our customers say."
 intro: "Every review on this page was written by a real customer on Google, Yelp, HomeAdvisor, Angi or the BBB. Filter by the kind of job you need and read what it was like to hire us."
-answer: "Alter Phase Roofing Contracting is rated 5.0 stars across 154 reviews (109 on Google, 22 on Yelp, 16 on HomeAdvisor, 6 on Angi and 1 on the BBB), with 152 five-star ratings. Customers most often mention fair, upfront prices, fast replies, spotless cleanup, roofs replaced in a single day and honest advice, including being told a repair was enough."
+answer: "Alter Phase Roofing Contracting is rated 5.0 stars across 157 reviews (112 on Google, 22 on Yelp, 16 on HomeAdvisor, 6 on Angi and 1 on the BBB), with 155 five-star ratings. Customers most often mention fair, upfront prices, fast replies, spotless cleanup, roofs replaced in a single day and honest advice, including being told a repair was enough."
 faq:
   - q: "Are these reviews real?"
     a: "Yes. They were written by customers on Google, Yelp, HomeAdvisor, Angi and the BBB and are shown here word for word. You can read all of them, including the two that aren't five stars, on our public review profiles."
@@ -14,7 +14,7 @@ faq:
     a: "On our Google Business Profile. Search for Alter Phase Roofing Contracting on Google Maps, or use the link on this page. It helps other Staten Island homeowners find an honest roofer."
 modified: "2026-10-22"
 ---
-## What 154 reviews have in common
+## What 157 reviews have in common
 
 ### Fair, upfront prices
 

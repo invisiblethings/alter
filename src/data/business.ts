@@ -46,7 +46,7 @@ export const business = {
     buildzoom: 'https://www.buildzoom.com/contractor/alter-phase-roofing-inc',
   },
   // From the public review profile (Google, Yelp, HomeAdvisor, Angi, BBB); see src/data/reviews.ts.
-  rating: { value: '5.0', count: 154, googleCount: 109, label: '5.0 stars' },
+  rating: { value: '5.0', count: 157, googleCount: 112, label: '5.0 stars' },
   googleMapsUrl: 'https://www.google.com/maps?cid=15794678866958250729',
   googleReviewUrl: 'https://www.google.com/maps?cid=15794678866958250729',
   sameAs: [

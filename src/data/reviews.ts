@@ -1,7 +1,7 @@
 // Real customer reviews, copied unedited (apart from trimming platform
 // labels) from the public Trustindex profile, which aggregates Google, Yelp,
 // HomeAdvisor, Angi and BBB: https://www.trustindex.io/reviews/alterphaseroofing.com
-// Last pulled 2026-10-22. Shown as visible text only; no self-serving Review
+// Last pulled 2026-11-11. Shown as visible text only; no self-serving Review
 // or AggregateRating markup (Google doesn't allow it for a business's own site).
 // Left out: the two critical reviews (kept on the platforms, not hidden there),
 // a reviewer who shares the owner's surname, cross-posted duplicates, and one
@@ -11,14 +11,16 @@ export interface Review { name: string; source: 'Google' | 'Yelp' | 'HomeAdvisor
 
 export const reviewStats = {
   average: '5.0',
-  total: 154,
-  fiveStar: 152,
-  bySource: { Google: 109, Yelp: 22, HomeAdvisor: 16, Angi: 6, BBB: 1 },
+  total: 157,
+  fiveStar: 155,
+  bySource: { Google: 112, Yelp: 22, HomeAdvisor: 16, Angi: 6, BBB: 1 },
   profileUrl: 'https://www.trustindex.io/reviews/alterphaseroofing.com',
-  updated: '2026-10-22',
+  updated: '2026-11-11',
 };
 
 export const reviews: Review[] = [
+  {"name": "Roselita K.", "source": "Google", "date": "2026-10", "text": "I highly recommend Alterphase Roofing! From start to finish, the experience was excellent. Their team was professional, knowledgeable, reliable, and attentive to every detail. They took the time to explain everything, answered all my questions, and made sure I felt comfortable throughout the process. It's not easy to find a company that truly cares about its customers and takes pride in its work. I really appreciate their honesty, quality of service, and professionalism. I would definitely recommend Alterphase Roofing to anyone looking for a trustworthy roofing company!", "tags": ["honest"]},
+  {"name": "Bryan K.", "source": "Google", "date": "2026-10", "text": "Reasonable price, very quick and efficient 10/10 come here for a good roofing job.", "tags": ["price", "fast"]},
   {"name": "KT", "source": "Google", "date": "2026-10", "text": "Called them up thinking I needed a new roof and gutters. They stopped by the same day, gave me an assessment of everything and it turns out the roof was repairable. They didn't try to pressure me into any unnecessary work. Just simply he gave me a couple of prices depending on what I decided to do. They were able to schedule the job quickly for a few days later and by the middle of the afternoon everything was done and it looks great!", "tags": ["replacement", "repair", "gutters", "honest", "oneday", "fast"]},
   {"name": "Denise L.", "source": "Google", "date": "2026-09", "text": "I called for an estimate for a new roof. The price they quoted was way below two other estimates I received. I was also told that it would take 1-2 days to complete. Everything Alter Phase Contracting Inc promised was delivered. They gladly supplied me with their licensing and insurance information. The warranty is printed on my receipt. My entire new roof was done in one day! They left the property spotless. The owner was courteous, professional and upfront about the project from beginning to end. I would gladly recommend this company to anyone. I'm loving my new roof!", "tags": ["replacement", "honest", "oneday", "clean", "price"]},
   {"name": "Andrey K.", "source": "Google", "date": "2026-06", "text": "Just WOW! I expected that this would take several days, they got my new roof done in just 1 day. The guys did a thorough job, from set up to clean up. The price quoted was the price I paid, no gimmicks. True Staten Islanders. My roof looks great, couldn't be more happier. Would recommend to anyone who asks.", "tags": ["replacement", "honest", "oneday", "clean", "price"]},

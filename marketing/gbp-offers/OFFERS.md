@@ -23,7 +23,7 @@ Five offers for **Alter Phase Roofing Contracting**, each with an image in this 
 | Link to redeem offer | https://alterphaseroofing.com/residential-roofing/roof-replacement/?utm_source=gbp&utm_medium=organic&utm_campaign=gbp_offer&utm_content=roof500 |
 
 **Details:**
-> Get $500 off any full roof replacement signed by December 31. Our own crew finishes most Staten Island homes in one day: full tear-off, new underlayment and flashing, GAF architectural shingles and a spotless cleanup. Every new roof comes with up to 50-year GAF warranties and up to 25 years on our workmanship, in writing. Start with a free inspection and a written, itemized price within 24 hours. GAF Master Elite® contractor, rated 5.0 stars from 154 reviews.
+> Get $500 off any full roof replacement signed by December 31. Our own crew finishes most Staten Island homes in one day: full tear-off, new underlayment and flashing, GAF architectural shingles and a spotless cleanup. Every new roof comes with up to 50-year GAF warranties and up to 25 years on our workmanship, in writing. Start with a free inspection and a written, itemized price within 24 hours. GAF Master Elite® contractor, rated 5.0 stars from 157 reviews.
 
 **Terms and conditions:**
 > Valid on full roof replacement contracts signed between November 1 and December 31, 2026, for residential properties in Staten Island, Brooklyn, Queens, Manhattan and the Bronx. $500 is deducted from the written estimate. Mention code ROOF500 when booking. One discount per project; cannot be combined with other offers.
