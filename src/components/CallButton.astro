@@ -1,0 +1,12 @@
+---
+// The big "tap to call" button used in every page hero (styles: .call-big in global.css).
+import Icon from './Icon.astro';
+import { business, telHref } from '../data/business';
+interface Props { label?: string }
+const { label = 'Tap to call · free inspection' } = Astro.props;
+---
+<a class="call-big" href={telHref}>
+  <span class="call-ring" aria-hidden="true"><Icon name="phone" /></span>
+  <span class="call-txt"><small>{label}</small><strong>{business.phone}</strong></span>
+  <Icon name="arrow" class="call-arrow" />
+</a>

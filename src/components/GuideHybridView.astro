@@ -5,6 +5,7 @@
 // replace check, permit check) and designed sections, with proof and a
 // form at the end. Keeps the guide's author, dates and FAQ for search.
 import Icon from './Icon.astro';
+import CallButton from './CallButton.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import QuoteWizard from './QuoteWizard.astro';
 import PriceTables from './PriceTables.astro';
@@ -66,7 +67,7 @@ const facts = [
         <li><Icon name="check" /> <span>DOB permits and co-op board paperwork handled for you</span></li>
       </ul>
       <div class="cta-row">
-        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
+        <CallButton label="Tap to call · 24/7" />
       </div>
       <ul class="hero-proof">
         <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><span><strong>{business.rating.value}</strong> from {business.rating.count} reviews</span></li>

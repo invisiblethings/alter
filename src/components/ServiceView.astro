@@ -3,6 +3,7 @@
 // band, the page content as designed sections, real prices, proof and a
 // closing form. Built to read like a landing page, not an article.
 import Icon from './Icon.astro';
+import CallButton from './CallButton.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import QuoteWizard from './QuoteWizard.astro';
 import PriceTables from './PriceTables.astro';
@@ -63,7 +64,7 @@ const service = d.service || d.h1.split(':')[0];
       {d.intro && <p class="lead">{d.intro}</p>}
       {d.highlights.length > 0 && <ul class="ticks" style="margin-top:1.5rem">{d.highlights.map((h) => <li><Icon name="check" /> <span set:html={h} /></li>)}</ul>}
       <div class="cta-row">
-        <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text · 24/7</small>{business.phone}</span></a>
+        <CallButton label="Tap to call · 24/7" />
       </div>
       <ul class="hero-proof">
         <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><span><strong>{business.rating.value}</strong> from {business.rating.count} reviews</span></li>

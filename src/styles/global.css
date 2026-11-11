@@ -985,17 +985,27 @@ table.t td.num { font-weight: 820; white-space: nowrap; }
 .callbar-lp a { flex-direction: row; gap: 0.5rem; font-size: 0.92rem; }
 
 /* big hero call button */
-.call-big { display: inline-flex; align-items: center; gap: 1rem; padding: 0.75rem 1.5rem 0.75rem 0.75rem; border-radius: 999px; background: var(--gold); color: var(--ink); text-decoration: none; box-shadow: 0 14px 40px rgb(251 196 90 / 0.35), inset 0 -3px 0 rgb(0 0 0 / 0.12); transition: transform 0.2s var(--ease), box-shadow 0.2s, background 0.2s; }
-.call-big:hover { color: var(--ink); background: #ffd476; transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 50px rgb(251 196 90 / 0.45), inset 0 -3px 0 rgb(0 0 0 / 0.12); }
+.call-big { display: inline-flex; align-items: center; gap: 1.1rem; padding: 0.85rem 1.8rem 0.85rem 0.85rem; border-radius: 999px; color: var(--ink); text-decoration: none;
+  /* a soft light sweep across the gold and a slow glow pulse draw the eye */
+  background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 40%, #fff0c4 50%, var(--gold) 60%, var(--gold) 100%) var(--gold); background-size: 260% 100%; background-position: 100% 0;
+  box-shadow: 0 0 0 0 rgb(251 196 90 / 0.55), 0 16px 44px rgb(251 196 90 / 0.38), inset 0 -3px 0 rgb(0 0 0 / 0.12);
+  animation: call-shine 4.5s ease-in-out infinite, call-glow 2.6s ease-out infinite;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s; }
+.call-big:hover, .call-big:focus-visible { color: var(--ink); background-color: #ffd476; transform: translateY(-3px) scale(1.03); box-shadow: 0 0 0 6px rgb(251 196 90 / 0.25), 0 22px 54px rgb(251 196 90 / 0.5), inset 0 -3px 0 rgb(0 0 0 / 0.12); animation-play-state: paused; }
+.call-big:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .call-big:active { transform: translateY(0) scale(0.99); }
-.call-ring { position: relative; width: 60px; height: 60px; border-radius: 50%; background: var(--night); color: var(--gold); display: grid; place-items: center; flex: none; }
-.call-ring .icon { width: 26px; height: 26px; animation: ring 2.6s ease-in-out infinite; }
+.call-ring { position: relative; width: 66px; height: 66px; border-radius: 50%; background: var(--night); color: var(--gold); display: grid; place-items: center; flex: none; }
+.call-ring .icon { width: 28px; height: 28px; animation: ring 2.6s ease-in-out infinite; }
+.call-big:hover .call-ring .icon { animation-duration: 0.9s; }
 .call-ring::after { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--night); opacity: 0; animation: ripple 2.6s ease-out infinite; }
-.call-txt small { display: block; font-size: 0.74rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
-.call-txt strong { display: block; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); font-weight: 900; font-stretch: 112%; letter-spacing: -0.02em; line-height: 1.1; }
+.call-txt small { display: block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; }
+.call-txt strong { display: block; font-size: clamp(1.65rem, 1.3rem + 1.3vw, 2.25rem); font-weight: 900; font-stretch: 112%; letter-spacing: -0.02em; line-height: 1.1; }
 .call-arrow { width: 24px; height: 24px; transition: transform 0.2s var(--ease); }
 .call-big:hover .call-arrow { transform: translateX(4px); }
 @keyframes ring { 0%, 70%, 100% { transform: rotate(0); } 74% { transform: rotate(-14deg); } 78% { transform: rotate(12deg); } 82% { transform: rotate(-10deg); } 86% { transform: rotate(8deg); } 90% { transform: rotate(0); } }
+@keyframes call-shine { 0%, 55% { background-position: 100% 0; } 85%, 100% { background-position: 0 0; } }
+@keyframes call-glow { 0% { box-shadow: 0 0 0 0 rgb(251 196 90 / 0.55), 0 16px 44px rgb(251 196 90 / 0.38), inset 0 -3px 0 rgb(0 0 0 / 0.12); } 70%, 100% { box-shadow: 0 0 0 16px rgb(251 196 90 / 0), 0 16px 44px rgb(251 196 90 / 0.38), inset 0 -3px 0 rgb(0 0 0 / 0.12); } }
+@media (prefers-reduced-motion: reduce) { .call-big, .call-ring .icon, .call-ring::after { animation: none; } }
 @keyframes ripple { 0%, 60% { opacity: 0; transform: scale(1); } 65% { opacity: 0.5; } 100% { opacity: 0; transform: scale(1.35); } }
 @media (max-width: 480px) { .call-big { width: 100%; padding-right: 1.1rem; } .call-txt { flex: 1; } }
 .lp-t { min-width: 0; }
@@ -1082,11 +1092,11 @@ a.rv-score:hover { background: rgb(255 255 255 / 0.12); color: #fff; }
 .footer-brand .gaf-badge { width: 88px; background: none; padding: 0; border-radius: 0; margin: 0.5rem 0 0; }
 .hero-proof .gaf-xs { width: 36px; }
 @media (max-width: 600px) {
-  .call-big { gap: 0.75rem; padding: 0.55rem 1rem 0.55rem 0.55rem; }
-  .call-ring { width: 48px; height: 48px; }
-  .call-ring .icon { width: 21px; height: 21px; }
-  .call-txt small { font-size: 0.66rem; }
-  .call-txt strong { font-size: 1.4rem; }
+  .call-big { gap: 0.85rem; padding: 0.65rem 1.1rem 0.65rem 0.65rem; }
+  .call-ring { width: 54px; height: 54px; }
+  .call-ring .icon { width: 23px; height: 23px; }
+  .call-txt small { font-size: 0.7rem; }
+  .call-txt strong { font-size: 1.6rem; }
   .call-arrow { width: 20px; height: 20px; }
 }
 

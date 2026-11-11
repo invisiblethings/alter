@@ -88,6 +88,7 @@ const shores = [
   { n: 'East Shore', l: ['South Beach', 'Midland Beach', 'Oakwood', 'Bay Terrace'] },
   { n: 'South Shore', l: ['Great Kills', 'Eltingville', 'Annadale', 'Huguenot', "Prince's Bay", 'Rossville', 'Tottenville'] },
 ];
+import CallButton from '../components/CallButton.astro';
 ---
 <Base title={title} description={description} path="/" image="/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg" imageAlt={`The ${business.name} crew on a Staten Island roof`} schema={schema} preloadImage={hero.src}>
   <section class="hero home">
@@ -102,11 +103,7 @@ const shores = [
         <h1>Staten Island roofers who'll tell you <span class="gold">if a repair is enough.</span></h1>
         <p class="lead">Family-owned roofing contractor on Staten Island for {business.yearsInRoofing}+ years. Free inspection with photos, a written price usually within 24 hours, and the owner on every job. Most new roofs are done in a single day.</p>
         <div class="cta-row" style="margin-top:1.75rem">
-          <a class="call-big" href={telHref}>
-            <span class="call-ring" aria-hidden="true"><Icon name="phone" /></span>
-            <span class="call-txt"><small>Tap to call · free inspection</small><strong>{business.phone}</strong></span>
-            <Icon name="arrow" class="call-arrow" />
-          </a>
+          <CallButton />
         </div>
         <figure class="hero-quote">
           <blockquote>“Called them thinking I needed a new roof… <strong>turns out the roof was repairable.</strong> They didn't try to pressure me into any unnecessary work.”</blockquote>

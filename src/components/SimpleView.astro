@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import CallButton from './CallButton.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Reviews from './Reviews.astro';
 import ReviewWall from './ReviewWall.astro';
@@ -36,7 +37,7 @@ const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => 
             </>
           ) : (
             <>
-              <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a>
+              <CallButton />
               <a class="btn btn-lg btn-ghost" href="/free-estimate/">Get a free estimate <Icon name="arrow" /></a>
             </>
           )}
