@@ -7,12 +7,16 @@ import Process from './Process.astro';
 import Faq from './Faq.astro';
 import FinalCta from './FinalCta.astro';
 import ContentSections from './ContentSections.astro';
+import JobApplication from './JobApplication.astro';
 import { business, telHref } from '../data/business';
 import type { PageEntry } from '../lib/content';
 interface Props { entry: PageEntry; html: string; crumbs: { name: string; url: string }[] }
 const { entry, html, crumbs } = Astro.props;
 const d = entry.data;
 const legal = d.template === 'legal';
+// The careers page talks to job seekers: no customer estimate buttons, steps,
+// reviews or estimate form; it gets the job application form instead.
+const careers = d.path === '/careers/';
 const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => ({ id: m[1], t: m[2] }));
 ---
 <section class:list={[d.image && !legal ? 'hero' : 'ghero']}>
@@ -25,8 +29,17 @@ const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => 
       {d.intro && <p class="lead">{d.intro}</p>}
       {!legal && (
         <div class="cta-row" style="margin-top:1.75rem">
-          <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a>
-          <a class="btn btn-lg btn-ghost" href="/free-estimate/">Get a free estimate <Icon name="arrow" /></a>
+          {careers ? (
+            <>
+              <a class="btn btn-lg btn-gold" href="#apply">Apply now <Icon name="arrow" /></a>
+              <a class="btn btn-lg btn-ghost" href={telHref}><Icon name="phone" /> Call about a job</a>
+            </>
+          ) : (
+            <>
+              <a class="btn btn-lg btn-gold btn-call" href={telHref}><Icon name="phone" /><span><small>Call or text</small>{business.phone}</span></a>
+              <a class="btn btn-lg btn-ghost" href="/free-estimate/">Get a free estimate <Icon name="arrow" /></a>
+            </>
+          )}
         </div>
       )}
     </div>
@@ -57,16 +70,25 @@ const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => 
       <section class="answer-band" aria-label="The short answer">
         <div class="wrap">
           <div class="ab-answer" data-reveal><span class="ab-k"><Icon name="bolt" /> The short answer</span><p set:html={d.answer} /></div>
+          {careers ? (
+          <ul class="ab-facts" data-reveal data-reveal-d="1">
+            <li><span class="ab-ico"><Icon name="users" /></span><span><strong>Family-owned</strong>{business.yearsInRoofing}+ years in roofing</span></li>
+            <li><span class="ab-ico"><Icon name="hammer" /></span><span><strong>Training on the job</strong>Helper to installer to crew lead</span></li>
+            <li><span class="ab-ico"><Icon name="pin" /></span><span><strong>Work across NYC</strong>Staten Island-based crew</span></li>
+            <li><span class="ab-ico"><Icon name="shield" /></span><span><strong>Safety first</strong>The right gear on every job</span></li>
+          </ul>
+          ) : (
           <ul class="ab-facts" data-reveal data-reveal-d="1">
             <li><span class="ab-ico"><Icon name="users" /></span><span><strong>Family-owned</strong>{business.yearsInRoofing}+ years in roofing</span></li>
             <li><span class="ab-ico"><Icon name="star" /></span><span><strong>{business.rating.value} stars</strong>{business.rating.count} reviews</span></li>
             <li><img class="gaf-badge gaf-sm" src="/images/gaf-master-elite.webp" alt="GAF Master Elite® Residential Roofing Contractor" width="256" height="256" loading="lazy" decoding="async" /><span><strong>GAF Master Elite®</strong>BBB Accredited</span></li>
             <li><span class="ab-ico"><Icon name="license" /></span><span><strong>Licensed &amp; insured</strong>#{business.license.number}</span></li>
           </ul>
+          )}
         </div>
       </section>
     )}
-    <ContentSections html={html} formHref="/free-estimate/" cta={d.template !== 'reviews'} />
+    <ContentSections html={html} formHref="/free-estimate/" cta={d.template !== 'reviews' && !careers} />
     {d.faq.length > 0 && (
       <section class="sec">
         <div class="wrap faq-split">
@@ -78,6 +100,7 @@ const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => 
   </>
 )}
 {d.template === 'reviews' && <ReviewWall />}
-{d.template === 'company' && <Process bg="" />}
-{d.template === 'company' && <Reviews limit={6} />}
-{!legal && <FinalCta />}
+{careers && <JobApplication />}
+{d.template === 'company' && !careers && <Process bg="" />}
+{d.template === 'company' && !careers && <Reviews limit={6} />}
+{!legal && !careers && <FinalCta />}

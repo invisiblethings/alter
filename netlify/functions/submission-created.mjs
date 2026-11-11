@@ -104,6 +104,35 @@ export function buildEmail(p) {
   return { subject, html, text: lines.filter((l) => l !== undefined && l !== false && l !== null).join('\n') };
 }
 
+// Job applications from /careers/ get their own, simpler email (not a lead).
+export function buildJobEmail(p) {
+  const d = p.data || {};
+  const ph = phoneParts(d.phone);
+  const when = new Date(p.created_at || Date.now()).toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' });
+  const subject = `Job application: ${d.name || 'No name'} · ${d.position || 'Position not given'}`;
+  const html = `<!doctype html><html><body style="margin:0;padding:24px 12px;background:#f2f4f8;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden">
+<tr><td style="background:#10346f;padding:22px 28px;color:#fff">
+  <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8">Job application · ${esc(when)}</div>
+  <div style="font-size:24px;font-weight:800;margin-top:6px">${esc(d.name || 'Applicant')}</div>
+  <div style="font-size:16px;margin-top:4px;color:#f4c24d;font-weight:700">${esc(d.position || '')}${d.experience ? ' · ' + esc(d.experience) : ''}</div>
+</td></tr>
+<tr><td style="padding:22px 28px 30px">
+  <div style="font-size:24px;font-weight:800;color:#0f1a2e;margin-bottom:12px">${esc(ph.show)}</div>
+  ${ph.tel ? `<a href="tel:${esc(ph.tel)}" style="display:inline-block;margin:0 8px 8px 0;padding:12px 20px;border-radius:8px;background:#f4b400;color:#08214a;font-weight:700;text-decoration:none">Call</a><a href="sms:${esc(ph.tel)}" style="display:inline-block;margin:0 8px 8px 0;padding:12px 20px;border-radius:8px;background:#08214a;color:#fff;font-weight:700;text-decoration:none">Text</a>` : ''}
+  ${section('Applicant', [
+    row('Email', null, d.email ? link('mailto:' + d.email, d.email) : ''),
+    row('Position', d.position),
+    row('Experience', d.experience),
+    row('Skills', d.skills),
+    row('Message', null, d.message ? esc(d.message).replace(/\n/g, '<br>') : ''),
+  ])}
+  <p style="margin:26px 0 0;font-size:12px;color:#8a92a3">Sent from alterphaseroofing.com/careers/ · Netlify submission ${esc(p.id || '')}</p>
+</td></tr></table></body></html>`;
+  const text = [subject, '', `Name: ${d.name || ''}`, `Phone: ${ph.show}`, d.email && `Email: ${d.email}`, `Position: ${d.position || ''}`, `Experience: ${d.experience || ''}`, d.skills && `Skills: ${d.skills}`, d.message && `Message: ${d.message}`, `Received: ${when}`].filter(Boolean).join('\n');
+  return { subject, html, text };
+}
+
 export const handler = async (event) => {
   const { SMTP_USER: user, SMTP_PASS: pass, LEAD_EMAIL_TO: to, SMTP_HOST: host = 'mail.spacemail.com', SMTP_PORT: port = '465' } = process.env;
   let payload;
@@ -112,7 +141,7 @@ export const handler = async (event) => {
     console.log('Lead email skipped: set SMTP_USER, SMTP_PASS and LEAD_EMAIL_TO in Netlify.');
     return { statusCode: 200, body: 'Not configured' };
   }
-  const { subject, html, text } = buildEmail(payload);
+  const { subject, html, text } = payload.form_name === 'job-application' ? buildJobEmail(payload) : buildEmail(payload);
   try {
     const mail = nodemailer.createTransport({ host, port: +port, secure: +port === 465, auth: { user, pass } });
     // Sent from the mailbox itself (Spacemail only allows its own address as sender).

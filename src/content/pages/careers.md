@@ -8,14 +8,14 @@ h1: "Roofing jobs with a family-owned Staten Island company"
 intro: "Whether you're just starting out or you've been on roofs for years, there's a place for you on our crew. Steady work, real training, and an owner who works alongside the team."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-12-1.jpg"
 imageAlt: "Alter Phase Roofing Contracting crew installing an EPDM roof in Brooklyn"
-answer: "Alter Phase Roofing Contracting hires roofers, helpers and experienced crew members for residential and commercial work across Staten Island, Brooklyn, Manhattan and Queens. To apply, call (929) 370-1552 or email info@alterphaseroofing.com with your experience."
+answer: "Alter Phase Roofing Contracting hires roofers, helpers and experienced crew members for residential and commercial work across Staten Island, Brooklyn, Queens, Manhattan and the Bronx. To apply, fill in the short application form on this page, call (929) 370-1552 or email info@alterphaseroofing.com."
 modified: "2026-10-22"
 ---
 ## Why work with us
 
 ### Steady work
 
-Residential and commercial projects across Staten Island, Brooklyn, Manhattan and Queens.
+Residential and commercial projects across Staten Island, Brooklyn, Queens, Manhattan and the Bronx.
 
 ### Training
 
@@ -37,4 +37,4 @@ A crew that looks out for each other, with the right gear on every job.
 
 ## How to apply
 
-Call us at [(929) 370-1552](tel:+19293701552) or email [info@alterphaseroofing.com](mailto:info@alterphaseroofing.com) with your name, phone number and a few lines about your experience. We'll get back to you.
+Fill in the [short application form](#apply) below: it takes two minutes and no resume is needed. Prefer to talk? Call [(929) 370-1552](tel:+19293701552) or email [info@alterphaseroofing.com](mailto:info@alterphaseroofing.com) with your name, phone number and a few lines about your experience. We'll get back to you.
