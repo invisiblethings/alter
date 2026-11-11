@@ -34,7 +34,7 @@ const groups: { id: string; icon: string; title: string; items: Item[] }[] = [
   { id: 'services', icon: 'roof', title: 'Roofing services', items: services.map(fromNav) },
   { id: 'areas', icon: 'pin', title: 'Service areas', items: [{ title: 'All service areas', url: '/service-area/' }, ...areas.map(fromNav)] },
   { id: 'guides', icon: 'file', title: 'Roofing guides & costs', items: [{ title: 'All roofing guides', url: '/blog/' }, ...guideList] },
-  { id: 'company', icon: 'users', title: 'Company', items: company.map(fromNav) },
+  { id: 'company', icon: 'users', title: 'Company', items: [...company.map(fromNav), { title: 'Careers', url: '/careers/' }] },
   { id: 'legal', icon: 'shield', title: 'Legal', items: legal.filter((l) => l.url !== path).map(fromNav) },
 ];
 // Anything not reachable from the groups above still gets listed.

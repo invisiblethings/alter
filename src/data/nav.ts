@@ -60,7 +60,6 @@ export const company: NavLink[] = [
   { title: 'How We Work', url: '/how-we-work/' },
   { title: 'Reviews', url: '/reviews/' },
   { title: 'Property Managers & HOAs', url: '/property-managers/' },
-  { title: 'Careers', url: '/careers/' },
   { title: 'Contact', url: '/contact/' },
 ];
 

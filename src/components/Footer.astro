@@ -48,6 +48,7 @@ const year = new Date().getFullYear();
   <div class="wrap footer-bottom">
     <span>© {year} {business.name} · NYC DCWP Home Improvement Contractor #{business.license.number}</span>
     <ul>
+      <li><a href="/careers/">Careers</a></li>
       {legal.map((l) => <li><a href={l.url}>{l.title}</a></li>)}
       <li><a href={business.social.facebook}>Facebook</a></li>
       <li><a href={business.social.yelp}>Yelp</a></li>
