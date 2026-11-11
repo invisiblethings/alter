@@ -1,0 +1,114 @@
+---
+// HTML sitemap: every indexable page, grouped the way the navigation is.
+// Built from the nav data and the content collections, so new pages show up
+// here automatically (anything the groups below don't cover lands in
+// "More pages"). Ads landing pages and noindex pages are left out.
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { services, areas, company, legal, type NavLink } from '../data/nav';
+import { allEntries, posts } from '../lib/content';
+import { pageGraph } from '../lib/schema';
+import { business, telHref } from '../data/business';
+
+const path = '/sitemap/';
+const entries = (await allEntries()).filter((e) => !e.data.noindex && e.data.template !== 'landing');
+const title = (url: string) => {
+  const e = entries.find((x) => x.data.path === url);
+  return e ? ('cardTitle' in e.data && e.data.cardTitle) || e.data.h1 : '';
+};
+const exists = (url: string) => url === '/' || url === '/blog/' || entries.some((e) => e.data.path === url);
+
+type Item = { title: string; url: string; note?: string; children?: Item[] };
+const fromNav = (l: NavLink): Item => ({ title: l.title, url: l.url, note: l.blurb, children: (l.children || []).filter((c) => exists(c.url)).map((c) => ({ title: c.title, url: c.url })) });
+
+const guideList = (await posts()).map((p) => ({ title: p.data.cardTitle || p.data.h1, url: p.data.path }));
+const groups: { id: string; icon: string; title: string; items: Item[] }[] = [
+  { id: 'main', icon: 'home', title: 'Main pages', items: [
+    { title: 'Home', url: '/', note: 'Staten Island roofing company' },
+    { title: 'Free estimate', url: '/free-estimate/', note: 'Free inspection, written price in 24 hours' },
+    { title: 'Contact us', url: '/contact/' },
+    { title: 'Reviews', url: '/reviews/', note: `${business.rating.value} stars from ${business.rating.count} reviews` },
+    { title: 'All services', url: '/services/' },
+  ] },
+  { id: 'services', icon: 'roof', title: 'Roofing services', items: services.map(fromNav) },
+  { id: 'areas', icon: 'pin', title: 'Service areas', items: [{ title: 'All service areas', url: '/service-area/' }, ...areas.map(fromNav)] },
+  { id: 'guides', icon: 'file', title: 'Roofing guides & costs', items: [{ title: 'All roofing guides', url: '/blog/' }, ...guideList] },
+  { id: 'company', icon: 'users', title: 'Company', items: company.map(fromNav) },
+  { id: 'legal', icon: 'shield', title: 'Legal', items: legal.filter((l) => l.url !== path).map(fromNav) },
+];
+// Anything not reachable from the groups above still gets listed.
+const listed = new Set(groups.flatMap((g) => g.items.flatMap((i) => [i.url, ...(i.children || []).map((c) => c.url)])));
+const more = entries.filter((e) => !listed.has(e.data.path) && e.data.path !== path)
+  .map((e) => ({ title: ('cardTitle' in e.data && e.data.cardTitle) || e.data.h1, url: e.data.path }));
+if (more.length) groups.push({ id: 'more', icon: 'layers', title: 'More pages', items: more });
+for (const g of groups) g.items = g.items.filter((i) => exists(i.url)).map((i) => ({ ...i, title: i.title || title(i.url) }));
+const count = new Set(groups.flatMap((g) => g.items.flatMap((i) => [i.url, ...(i.children || []).map((c) => c.url)]))).size + 1; // + this page
+
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Sitemap', url: path }];
+const seoTitle = 'Sitemap | Alter Phase Roofing Contracting';
+const description = 'Every page on the Alter Phase Roofing Contracting website: roofing services, NYC service areas, cost guides, reviews and company information.';
+const schema = pageGraph({ url: path, title: seoTitle, description, crumbs, kind: 'page', h1: 'Sitemap' });
+---
+<Base title={seoTitle} description={description} path={path} schema={schema}>
+  <section class="ghero">
+    <div class="wrap"><div>
+      <Breadcrumbs crumbs={crumbs} />
+      <span class="kicker">All {count} pages</span>
+      <h1>Sitemap</h1>
+      <p class="lead">Everything on our website in one place: roofing services, the boroughs we serve, cost guides and company information.</p>
+      <nav class="sm-jump" aria-label="Sitemap sections">
+        {groups.map((g) => <a href={`#${g.id}`}><Icon name={g.icon as any} />{g.title}</a>)}
+      </nav>
+    </div></div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap sm-grid">
+      {groups.map((g) => (
+        <section class="sm-group" id={g.id} aria-labelledby={`${g.id}-h`}>
+          <h2 id={`${g.id}-h`}><span class="sm-ico"><Icon name={g.icon as any} /></span>{g.title}</h2>
+          <ul>
+            {g.items.map((i) => (
+              <li>
+                <a href={i.url}>{i.title}</a>
+                {i.note && <span class="sm-note">{i.note}</span>}
+                {i.children && i.children.length > 0 && (
+                  <ul>{i.children.map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+    <div class="wrap">
+      <aside class="sm-help">
+        <p><strong>Can't find what you need?</strong> Call or text and you'll talk to someone who works on roofs.</p>
+        <a class="btn btn-gold" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </aside>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .sm-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .sm-jump a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.95rem; border-radius: 999px; background: rgb(255 255 255 / 0.1); border: 1px solid var(--line-d); color: #fff; font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+  .sm-jump a:hover { background: rgb(255 255 255 / 0.18); }
+  .sm-jump :global(.icon) { width: 16px; height: 16px; color: var(--gold); }
+  .sm-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
+  .sm-group { background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 1.4rem 1.5rem 1.6rem; scroll-margin-top: calc(var(--head) + 1rem); }
+  .sm-group h2 { display: flex; align-items: center; gap: 0.6rem; font-size: 1.2rem; margin: 0 0 1rem; }
+  .sm-ico { width: 38px; height: 38px; border-radius: 11px; background: var(--navy); color: var(--gold); display: grid; place-items: center; flex: none; }
+  .sm-ico :global(.icon) { width: 19px; height: 19px; }
+  .sm-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+  .sm-group ul ul { margin: 0.5rem 0 0.2rem 0.35rem; padding-left: 0.9rem; border-left: 2px solid var(--line); gap: 0.4rem; }
+  .sm-group a { color: var(--navy); font-weight: 700; text-decoration: none; line-height: 1.35; }
+  .sm-group ul ul a { font-weight: 600; font-size: 0.94rem; }
+  .sm-group a:hover { text-decoration: underline; }
+  .sm-note { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 0.1rem; }
+  .sm-help { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.3rem 1.5rem; border-radius: var(--r); background: var(--bone); }
+  .sm-help p { margin: 0; }
+  @media (max-width: 1000px) { .sm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .sm-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

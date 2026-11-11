@@ -76,6 +76,7 @@ export const legal: NavLink[] = [
   { title: 'Terms', url: '/terms-and-conditions/' },
   { title: 'Privacy', url: '/privacy-policy-2/' },
   { title: 'Accessibility', url: '/accessibility-statement/' },
+  { title: 'Sitemap', url: '/sitemap/' },
 ];
 
 export const allLinks = (): NavLink[] => [
