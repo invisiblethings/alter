@@ -40,7 +40,7 @@ faq:
   - q: "Where are you based?"
     a: "Our address is 61 Appleby Ave, Staten Island, NY 10305, and we come to you for every inspection. Call or text (929) 370-1552 Monday to Friday 8am–8pm and Saturday 8am–5pm, and we answer emergency calls 24/7."
   - q: "Which Staten Island neighborhoods do you serve?"
-    a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
+    a: "All of them: the North Shore (St. George, Stapleton, Port Richmond, West Brighton), Mid-Island (Dongan Hills, New Dorp, Todt Hill, New Springville), the East Shore (South Beach, Arrochar, Midland Beach) and the South Shore (Great Kills, Eltingville, Annadale, Huguenot, Prince's Bay, Tottenville) and everything in between."
   - q: "How much does a new roof cost on Staten Island?"
     a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $3–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $5,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
   - q: "Do Staten Island roofs need permits?"
@@ -79,9 +79,11 @@ South and East Shore homes take the brunt of nor'easters. Wind-rated shingles an
 
 **North Shore:** St. George, Tompkinsville, Stapleton, Clifton, Rosebank, Port Richmond, West Brighton, Livingston, Mariners Harbor, Elm Park, Westerleigh, Castleton Corners.
 
-**Mid-Island:** Grymes Hill, Silver Lake, Todt Hill, Emerson Hill, Dongan Hills, Grant City, Midland Beach, South Beach, New Dorp, Oakwood, Bulls Head, New Springville, Willowbrook, Heartland Village.
+**Mid-Island:** Grymes Hill, Silver Lake, [Todt Hill](/service-area/staten-island-ny/todt-hill/), Emerson Hill, Dongan Hills, Grant City, Midland Beach, South Beach, [Arrochar](/service-area/staten-island-ny/arrochar/), New Dorp, Oakwood, Bulls Head, [New Springville](/service-area/staten-island-ny/new-springville/), Willowbrook, Heartland Village.
 
-**South Shore:** Great Kills, Bay Terrace, Eltingville, Arden Heights, Annadale, Huguenot, Prince's Bay, Woodrow, Rossville, Charleston, Pleasant Plains, Tottenville, Travis.
+**South Shore:** [Great Kills](/service-area/staten-island-ny/great-kills/), Bay Terrace, Eltingville, Arden Heights, Annadale, Huguenot, Prince's Bay, Woodrow, Rossville, Charleston, Pleasant Plains, [Tottenville](/service-area/staten-island-ny/tottenville/), Travis.
+
+See our neighborhood pages for [New Springville](/service-area/staten-island-ny/new-springville/), [Todt Hill](/service-area/staten-island-ny/todt-hill/), [Arrochar](/service-area/staten-island-ny/arrochar/), [Great Kills](/service-area/staten-island-ny/great-kills/) and [Tottenville](/service-area/staten-island-ny/tottenville/).
 
 ## Why Staten Island hires us
 

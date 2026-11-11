@@ -41,7 +41,16 @@ export const services: NavLink[] = [
 ];
 
 export const areas: NavLink[] = [
-  { title: 'Staten Island', url: '/service-area/staten-island-ny/', blurb: 'Home base. Fastest response.' },
+  {
+    title: 'Staten Island', url: '/service-area/staten-island-ny/', blurb: 'Home base. Fastest response.',
+    children: [
+      { title: 'New Springville', url: '/service-area/staten-island-ny/new-springville/' },
+      { title: 'Todt Hill', url: '/service-area/staten-island-ny/todt-hill/' },
+      { title: 'Arrochar', url: '/service-area/staten-island-ny/arrochar/' },
+      { title: 'Great Kills', url: '/service-area/staten-island-ny/great-kills/' },
+      { title: 'Tottenville', url: '/service-area/staten-island-ny/tottenville/' },
+    ],
+  },
   {
     title: 'Brooklyn', url: '/service-area/brooklyn-ny/', blurb: 'Brownstones, row homes, flat roofs',
     children: [

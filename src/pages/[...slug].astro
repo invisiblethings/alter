@@ -43,6 +43,7 @@ const schema = pageGraph({
   url: d.path, title: d.seoTitle, description: d.description, image: d.image,
   published: d.published, modified: d.modified, crumbs, kind, h1: d.h1,
   serviceArea: 'area' in d ? d.area : undefined,
+  neighborhood: 'neighborhood' in d ? d.neighborhood : undefined,
   serviceName: 'service' in d ? d.service : undefined,
   price, faq: d.faq,
 });

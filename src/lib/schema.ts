@@ -129,6 +129,7 @@ interface PageInput {
   kind: 'home' | 'page' | 'service' | 'post' | 'contact' | 'about' | 'collection';
   h1: string;
   serviceArea?: string;
+  neighborhood?: string;
   serviceName?: string;
   price?: { min: number; max: number; unit?: string };
   faq?: { q: string; a: string }[];
@@ -168,7 +169,9 @@ export function pageGraph(p: PageInput) {
       url,
       description: p.description || undefined,
       provider: { '@id': business.id },
-      areaServed: p.serviceArea ? { '@type': 'City', name: p.serviceArea } : { '@type': 'City', name: 'New York City' },
+      areaServed: p.neighborhood
+        ? { '@type': 'Place', name: `${p.neighborhood}, Staten Island, NY`, containedInPlace: { '@type': 'City', name: p.serviceArea || 'Staten Island' } }
+        : p.serviceArea ? { '@type': 'City', name: p.serviceArea } : { '@type': 'City', name: 'New York City' },
       offers: p.price ? {
         '@type': 'Offer',
         priceCurrency: 'USD',

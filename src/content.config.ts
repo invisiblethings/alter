@@ -29,6 +29,7 @@ const pages = defineCollection({
     highlights: z.array(z.string()).default([]),
     service: z.string().optional(), // Service schema name / wizard preset
     area: z.string().optional(),
+    neighborhood: z.string().optional(), // Staten Island neighborhood pages: schema areaServed
     prices: z.array(z.enum(['repairs', 'tiers', 'flat', 'pitched', 'boroughs', 'skylights'])).default([]),
     wizard: z.string().optional(),
     trackingPhone: z.string().regex(/^\(\d{3}\) \d{3}-\d{4}$/).optional(), // ads landing pages only

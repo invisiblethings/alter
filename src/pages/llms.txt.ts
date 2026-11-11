@@ -25,7 +25,7 @@ export const GET: APIRoute = async () => {
     const e = byPath(path);
     const body = (e as any)?.body || '';
     const m = body.match(/## [^\n]*neighborhoods we serve\s*\n+([\s\S]*?)(?=\n## |$)/i);
-    if (m) return m[1].trim().split(/\n\s*\n/).map((l: string) => l.replace(/\*\*/g, '').replace(/\.$/, '').split(/\s*·\s*/).join(', ')).join('; ');
+    if (m) return m[1].trim().split(/\n\s*\n/).map((l: string) => l.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\.$/, '').split(/\s*·\s*/).join(', ')).join('; ');
     const fq = e?.data.faq.find((f) => /neighborhoods/i.test(f.q));
     return fq ? plain(fq.a).replace(/^All of them: /, '') : '';
   };

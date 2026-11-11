@@ -35,6 +35,7 @@ const costLinks = [
   { t: 'Roof replacement guide', s: 'Permits, timing, what to ask', v: 'Step by step', u: '/roof-replacement-guide-nyc/' },
   { t: 'TPO flat roof guide', s: 'Cost, lifespan, pros & cons', v: 'Flat roofs', u: '/tpo-roofing-guide/' },
 ];
+const siKids = areas.find((a) => a.title === 'Staten Island')?.children || [];
 const si = ['St. George', 'New Dorp', 'Great Kills', 'Tottenville', 'Eltingville', 'Annadale', 'Dongan Hills', 'Westerleigh'];
 const imgUrls = homeServices.map((s) => s.img);
 ---
@@ -111,10 +112,13 @@ const imgUrls = homeServices.map((s) => s.img);
         <a class="nav-link" href="/service-area/" aria-current={cur('/service-area/')} aria-haspopup="true" aria-expanded="false">Areas <Icon name="chevron" /></a>
         <div class="panel">
           <div class="wrap panel-grid">
+            <div class="si-col">
             <a class="area-hero" href="/service-area/staten-island-ny/">
               <img src="/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304-300x300.jpg" alt="" width="300" height="300" loading="lazy" decoding="async" />
               <span><em>Home base</em><strong>Staten Island</strong><small>{si.join(' · ')} and every neighborhood on the island</small></span>
             </a>
+            {siKids.length > 0 && <p class="si-kids"><span>Neighborhoods:</span>{siKids.map((c) => <a href={c.url}>{c.title}</a>)}</p>}
+            </div>
             <div>
               <p class="panel-h">Also serving</p>
               <ul class="area-menu">
