@@ -39,7 +39,7 @@ faq:
     a: "Yes, if it's still there about two days after rain. Standing water wears out the membrane faster and adds weight. It usually means a clogged drain or a low spot. We fix it with drain repairs or tapered insulation that pitches water off the roof."
   - q: "Do I need a permit to replace a flat roof on Staten Island?"
     a: "A like-for-like replacement of the roof covering on a home often doesn't need one. Changing the roof system, replacing the deck or larger buildings usually do, and full replacements can trigger NYC cool-roof rules. We check what applies to your house and file when it's required."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Why Staten Island flat roofs leak
 

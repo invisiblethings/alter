@@ -18,7 +18,7 @@ wizard: "Gutters / siding / skylight"
 image: "/wp-content/uploads/2024/10/vinyl-siding-hero.jpg"
 imageAlt: "Vinyl siding on a Staten Island home"
 answer: "We install vinyl and insulated vinyl siding on Staten Island homes, with house wrap, flashed windows and doors, and new trim. Book a free estimate and we'll measure, help you choose a color and send a written price."
-modified: "2026-10-22"
+modified: "2026-10-29"
 ---
 ## Our siding services
 

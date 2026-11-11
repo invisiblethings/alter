@@ -9,7 +9,7 @@ intro: "Real numbers from a working NYC roofing contractor, not national average
 image: "/wp-content/uploads/2025/05/Roof-Replacement-Cost-NYC-Alter-Phase-Roofing.jpg"
 imageAlt: "Roof replacement in New York City, cost guide by Alter Phase Roofing Contracting"
 published: "2024-10-12"
-modified: "2026-10-22"
+modified: "2026-10-26"
 estimator: true
 answer: "Most NYC roof replacements cost <strong>$10,000–$30,000+</strong>. Installed prices run about <strong>$3–$10 per sq ft</strong> for asphalt shingles, <strong>$5–$12</strong> for EPDM, <strong>$9–$14</strong> for TPO, <strong>$12–$18</strong> for metal and <strong>$20–$40</strong> for slate. A 1,000 sq ft flat roof costs about $5,000–$13,000 on Staten Island and $8,000–$22,000+ in Manhattan. Most roof repairs cost $300–$1,200."
 takeaways:

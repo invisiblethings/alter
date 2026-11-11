@@ -30,7 +30,7 @@ faq:
     a: "We match profile and color as closely as possible. Older siding fades in the sun, so a repair on a sunny wall may look slightly different at first. We'll show you options before we start."
   - q: "Should I repair or replace my siding?"
     a: "Repair when a few panels are cracked or loose and the rest is in good shape. Replace when the siding is faded all over, warped, or there are signs of water behind it, like soft spots or stains on inside walls."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Siding services
 

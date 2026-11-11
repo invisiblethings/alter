@@ -18,7 +18,7 @@ faq:
     a: "No. We never pressure anyone to sign during the visit. Take the estimate, compare it, ask questions."
   - q: "What happens if something goes wrong after the job?"
     a: "Call us. Your workmanship warranty is in writing, and we come back to fix anything that's ours to fix."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Step 1: Free inspection
 

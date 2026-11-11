@@ -40,7 +40,7 @@ faq:
     a: "Insurance usually covers sudden damage from storms, wind or falling trees, not wear and age. We photograph and document the damage so you have what your insurer asks for."
   - q: "How fast can you come out?"
     a: "For active leaks we offer same-day emergency response, 24/7. For non-urgent repairs we usually schedule the inspection within a few days and send a written estimate within 24 hours."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Signs your roof needs a repair
 

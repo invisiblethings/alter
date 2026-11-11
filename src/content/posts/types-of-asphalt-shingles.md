@@ -9,7 +9,7 @@ intro: "Almost every pitched roof on Staten Island and in Queens is asphalt shin
 image: "/wp-content/uploads/2024/06/Types-of-Asphalt-Shingles-GAF-Alterphaseroofing.webp"
 imageAlt: "Types of asphalt shingles by GAF"
 published: "2024-05-16"
-modified: "2026-10-22"
+modified: "2026-10-26"
 categories: [13, 1]
 answer: "There are three types of asphalt shingles: <strong>3-tab</strong> (flat, single-layer, cheapest, shortest life), <strong>architectural</strong> or dimensional (two laminated layers, better wind resistance, the most popular choice) and <strong>luxury</strong> or designer (extra-thick, mimics slate or shake, highest cost). For most New York homes, architectural shingles are the best value."
 takeaways:

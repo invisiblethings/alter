@@ -32,7 +32,7 @@ faq:
     a: "Yes. A documented condition report is useful for insurance claims after storms, for due diligence when buying a building, and for capital planning."
   - q: "Will you push us to replace the roof?"
     a: "No. Most roofs we inspect need maintenance and a few repairs, not replacement. If a section is beyond repair, the photos will show you why."
-modified: "2026-10-22"
+modified: "2026-10-27"
 ---
 ## What a commercial inspection covers
 

@@ -35,7 +35,7 @@ faq:
     a: "Move furniture and electronics away from the leak and put a bucket under drips. If a ceiling is bulging with water, poke a small hole in the center so it drains into the bucket instead of collapsing. Turn off power to any wet light fixtures. Do not go up on the roof."
   - q: "Can you fix a roof leak in the rain?"
     a: "We can stop the water in almost any weather with a tarp or temporary seal. The permanent repair is done when the roof is dry and safe, usually within a few days."
-modified: "2026-10-22"
+modified: "2026-10-27"
 ---
 ## What to do right now
 

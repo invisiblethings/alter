@@ -35,7 +35,7 @@ faq:
     a: "Twice a year, in spring and fall, and after major storms. Regular inspections with photo reports let you budget for repairs instead of reacting to leaks."
   - q: "Do commercial roof replacements need a DOB permit?"
     a: "Almost always. Commercial replacements typically need a DOB permit, and many also trigger NYC cool-roof and sustainable roofing rules. We handle the filing and include permit costs in the estimate."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Commercial roofing services
 

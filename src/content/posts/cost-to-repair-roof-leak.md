@@ -9,7 +9,7 @@ intro: "A roof leak is stressful, and not knowing what it will cost makes it wor
 image: "/wp-content/uploads/2024/06/Damaged-Asphalt-Shingles-AlterPhaseRoofing.webp"
 imageAlt: "Damaged asphalt shingles causing a roof leak"
 published: "2024-10-14"
-modified: "2026-10-22"
+modified: "2026-10-26"
 answer: "Most roof leak repairs in NYC cost <strong>$300–$1,200</strong>. A small leak patch runs $300–$650, shingle repairs $350–$800, flat roof leak repairs $400–$1,200, flashing replacement $450–$900 and skylight leaks $500–$1,200. Storm damage or rotted decking can push a repair to $1,500–$3,500."
 takeaways:
   - "Typical leak repair: <strong>$300–$1,200</strong>."

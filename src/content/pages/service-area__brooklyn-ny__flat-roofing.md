@@ -49,7 +49,7 @@ faq:
     a: "Yes. Flat roofs are ideal for solar and roof decks, but the roof should be in good condition first. Replacing an aging roof before installing solar avoids paying to remove and reinstall panels later."
   - q: "Why does water pond on my flat roof?"
     a: "Clogged drains or scuppers, sagging decking, or layers of old roofing that created low spots. We fix it with drain repairs, tapered insulation or crickets that direct water off the roof."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Flat roof services in Brooklyn
 

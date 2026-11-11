@@ -6,7 +6,7 @@ description: "What personal information Alter Phase Roofing Contracting collects
 kicker: "Legal"
 h1: "Privacy policy"
 intro: "In plain English: what we collect when you visit our website, call us or ask for an estimate, why we collect it, who we share it with, and the choices you have."
-modified: "2026-10-22"
+modified: "2026-10-29"
 ---
 **Effective October 22, 2026.**
 

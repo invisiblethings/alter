@@ -45,7 +45,7 @@ faq:
     a: "Most Staten Island roof replacements cost $10,000–$30,000+. Architectural shingles run $3–$10 per sq ft installed. A 1,000 sq ft flat roof is typically $5,000–$13,000, which is the most affordable of the boroughs because homes are easier to access."
   - q: "Do Staten Island roofs need permits?"
     a: "A like-for-like reroof on a one- or two-family home usually doesn't need a DOB permit. Replacing the deck, changing the roof type or commercial work generally does. We check for every job and file when needed."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Roofing for every kind of Staten Island home
 

@@ -44,7 +44,7 @@ faq:
     a: "All of Brooklyn, including Bay Ridge, Dyker Heights, Bensonhurst, Sunset Park, Park Slope, Windsor Terrace, Carroll Gardens, Cobble Hill, Brooklyn Heights, DUMBO, Fort Greene, Clinton Hill, Bed-Stuy, Crown Heights, Flatbush, Midwood, Sheepshead Bay, Marine Park, Canarsie, Bushwick, Williamsburg and Greenpoint."
   - q: "Do you offer emergency roof repair in Brooklyn?"
     a: "Yes. Call (929) 370-1552, 24/7. We respond the same day to active leaks with tarping or temporary repairs."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## What makes Brooklyn roofs different
 

@@ -6,4 +6,5 @@ description: "Straight answers about roofing in New York City: what roofs cost, 
 kicker: "Roofing guides"
 h1: "Roofing guides for New York homeowners"
 intro: "Real prices, permit rules and plain-English advice from the family-owned crew that installs these roofs every week on Staten Island, Brooklyn, Manhattan and Queens."
+modified: "2026-10-22"
 ---

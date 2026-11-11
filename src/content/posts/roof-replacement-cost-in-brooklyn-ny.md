@@ -9,7 +9,7 @@ intro: "Brooklyn roofs are mostly flat, attached and layered with decades of old
 image: "/wp-content/uploads/2024/04/Brooklyn-AlterPhaseRoofing.webp"
 imageAlt: "Brooklyn row houses and rooftops"
 published: "2025-10-11"
-modified: "2026-10-22"
+modified: "2026-10-26"
 estimator: true
 answer: "A roof replacement in Brooklyn typically costs <strong>$6,500–$17,000</strong> for a 1,000 sq ft flat roof. Flat roof systems run $5–$12 per sq ft for EPDM, $9–$13 for modified bitumen and $9–$14 for TPO. Detached homes with shingle roofs in southern Brooklyn run about $3–$10 per sq ft. Brooklyn costs more than Staten Island or Queens because of access, attached walls and board requirements."
 takeaways:

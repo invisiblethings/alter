@@ -33,7 +33,7 @@ faq:
     a: "Yes. We inspect your roof, take photos and give you a written estimate at no charge and with no obligation."
   - q: "How do I know if I need a repair or a new roof?"
     a: "A repair usually makes sense when the roof is under about 15 years old and the damage is in one area. If it's over 20 years old, leaks in several places or the deck feels soft, replacement is often the better buy. When it's close, we give you both prices."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Home roofing services
 

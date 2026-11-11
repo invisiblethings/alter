@@ -34,7 +34,7 @@ faq:
     a: "Not necessarily. Condensation on the inside of the glass in winter is usually a humidity and ventilation issue. Fog between the panes means the seal has failed and the unit should be replaced."
   - q: "Do you offer emergency skylight repair?"
     a: "Yes. If a skylight is leaking or broken, call (929) 370-1552. We'll make it watertight the same day and plan the permanent fix."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Skylight services
 

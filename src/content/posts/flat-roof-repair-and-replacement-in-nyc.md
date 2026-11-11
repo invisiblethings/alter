@@ -9,7 +9,7 @@ intro: "Flat roofs cover most of New York City, from Brooklyn brownstones to Que
 image: "/wp-content/uploads/2024/10/Flat-Roofing-AlterPhaseRoofing.webp"
 imageAlt: "Flat roof in New York City"
 published: "2024-10-09"
-modified: "2026-10-22"
+modified: "2026-10-26"
 answer: "Repair a flat roof when it's under about 15 years old, the problem is in one area, and the membrane is still flexible. Most flat roof leak repairs in NYC cost <strong>$400–$1,200</strong>. Replace it when it's 20+ years old, the insulation is wet over large areas, or leaks keep returning. Replacement costs about <strong>$5–$14 per sq ft</strong>."
 takeaways:
   - "Flat roof repairs usually cost <strong>$400–$1,200</strong>; replacement about <strong>$5–$14 per sq ft</strong>."

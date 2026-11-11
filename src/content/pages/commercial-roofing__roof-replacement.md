@@ -35,7 +35,7 @@ faq:
     a: "A reflective roof absorbs much less heat than a dark one. That helps keep top floors cooler in summer and eases the load on rooftop AC. NYC's cool-roof rules require reflective surfaces on most low-slope roofs for that reason."
   - q: "Can we repair instead of replacing?"
     a: "Often, yes, if the insulation is mostly dry and the problems are local. A commercial roof inspection with photos shows which situation you're in, and we'll price both when it's close."
-modified: "2026-10-22"
+modified: "2026-10-27"
 ---
 ## When to replace a commercial roof
 

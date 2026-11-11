@@ -92,7 +92,8 @@ export function ownerNode() {
     jobTitle: 'Owner',
     url: `${SITE}/about/`,
     worksFor: { '@id': business.id },
-    knowsAbout: ['Roofing', 'Flat roofing', 'Roof replacement', 'NYC building permits'],
+    description: `Owner of ${business.name}, a family-owned roofing contractor on Staten Island, with ${business.yearsInRoofing}+ years in roofing. Part of every job the company does.`,
+    knowsAbout: ['Roofing', 'Flat roofing', 'Roof replacement', 'Roof leak detection', 'NYC building permits'],
   };
 }
 
@@ -155,6 +156,8 @@ export function pageGraph(p: PageInput) {
 
   if (p.kind === 'home' || p.kind === 'contact') graph.push(websiteNode(), businessNode(), ownerNode());
   else graph.push(businessRefNode());
+  // The About page is where the owner/author is described, so it carries his Person node.
+  if (p.kind === 'about') graph.push(ownerNode());
 
   if (p.kind === 'service') {
     graph.push({

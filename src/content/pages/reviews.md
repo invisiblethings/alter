@@ -12,7 +12,7 @@ faq:
     a: "Yes. They were written by customers on Google, Yelp, HomeAdvisor, Angi and the BBB and are shown here word for word. You can read all of them, including the two that aren't five stars, on our public review profiles."
   - q: "Where can I leave a review?"
     a: "On our Google Business Profile. Search for Alter Phase Roofing Contracting on Google Maps, or use the link on this page. It helps other Staten Island homeowners find an honest roofer."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## What 157 reviews have in common
 

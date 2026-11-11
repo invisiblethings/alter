@@ -32,7 +32,7 @@ faq:
     a: "Yes. We hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP) and are fully insured."
   - q: "Do you handle NYC roofing permits?"
     a: "Yes. We determine whether your project needs a DOB permit and file it when required. Permit costs are included in your written estimate."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Roofing in every borough we serve
 

@@ -9,7 +9,7 @@ intro: "The right roof for a detached house on Staten Island isn't the right roo
 image: "/wp-content/uploads/2024/11/Top-Roofing-Materials-New-York-AlterPhaseRoofing.jpg"
 imageAlt: "Roofing materials for homes in New York"
 published: "2024-11-14"
-modified: "2026-10-22"
+modified: "2026-10-26"
 answer: "For most pitched-roof homes in New York, <strong>architectural asphalt shingles</strong> ($3–$10/sq ft, 20–30 years) are the best value. <strong>Metal</strong> ($12–$18, 40–70 years) and <strong>slate</strong> ($20–$40, 75–100+ years) last far longer for more money. For flat roofs, <strong>EPDM</strong> ($5–$12) is the budget choice and <strong>TPO</strong> ($9–$14) the energy-efficient one."
 takeaways:
   - "Best value for pitched roofs: <strong>architectural asphalt shingles</strong>."

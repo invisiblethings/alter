@@ -18,7 +18,7 @@ faq:
     a: "Your roof is installed by our own crew, with the owner involved from the first inspection to the final walkthrough."
   - q: "What certifications do you have?"
     a: "We are GAF Master Elite® and BBB accredited, and we hold an active NYC Department of Consumer and Worker Protection Home Improvement Contractor license (#2129904-DCWP). We're fully insured."
-modified: "2026-10-22"
+modified: "2026-10-27"
 ---
 ## How we're different
 

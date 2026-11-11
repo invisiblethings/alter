@@ -31,7 +31,7 @@ faq:
     a: "Usually the gutters are too small for the roof area, pitched the wrong way, or have too few downspouts. We size and pitch them for the roof they serve."
   - q: "How often should gutters be cleaned?"
     a: "At least twice a year, in late spring and late fall, and more often if trees hang over your roof. Gutter guards reduce how often you need it."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Gutter services
 

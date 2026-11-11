@@ -20,7 +20,7 @@ estimator: true
 image: "/wp-content/uploads/2025/04/AlterPhaseRoofing-BG-Home.webp"
 imageAlt: "New roof replaced by Alter Phase Roofing Contracting in Staten Island"
 answer: "Small, simple Staten Island roofs start at about $5,500. Most homes land between $10,000 and $30,000 depending on size, layers to remove and the material you choose. Architectural shingles run $3–$10 per sq ft installed."
-modified: "2026-10-22"
+modified: "2026-10-29"
 ---
 ## What's included
 

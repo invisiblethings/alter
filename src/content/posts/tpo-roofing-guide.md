@@ -9,7 +9,7 @@ intro: "TPO has become one of the most popular flat roof membranes on commercial
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-7-1.jpg"
 imageAlt: "TPO roof installation in progress on a Brooklyn building"
 published: "2024-05-10"
-modified: "2026-10-22"
+modified: "2026-10-26"
 categories: [13, 1]
 answer: "TPO (thermoplastic polyolefin) is a single-ply white roofing membrane for flat and low-slope roofs. Its seams are heat-welded and its white surface reflects sunlight, keeping buildings cooler. Installed TPO costs about <strong>$9–$14 per sq ft</strong> in New York City and typically lasts <strong>20–30 years</strong>. It's best for larger flat roofs and anyone who wants lower cooling costs."
 takeaways:

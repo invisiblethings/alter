@@ -30,7 +30,7 @@ faq:
     a: "It's common on attached row homes. We document where the water is coming from with photos, repair your side and the shared flashing where we can, and give you what you need to talk to your neighbor or their insurer."
   - q: "Can you repair just part of a flat roof?"
     a: "Yes, if the rest of the membrane is in good shape. If the roof is old and the insulation is wet over a large area, we'll tell you honestly that a replacement will save money."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## The Brooklyn roof leaks we fix most
 

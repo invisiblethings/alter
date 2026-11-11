@@ -29,7 +29,7 @@ faq:
     a: "Yes. Attached rows in Ridgewood, Middle Village, Astoria, Woodside and Jackson Heights are mostly flat roofs with shared walls, the same kind of roof we work on all over Brooklyn."
   - q: "Do you offer emergency roof repair in Queens?"
     a: "Yes. Call (929) 370-1552, 24/7. We'll make the roof watertight as quickly as possible and schedule the permanent repair."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Queens homes and their roofs
 

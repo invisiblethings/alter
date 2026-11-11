@@ -9,7 +9,7 @@ intro: "A cheap roof and an affordable roof aren't the same thing. The cheapest 
 image: "/wp-content/uploads/2024/11/Affordable-Roofing-Staten-Island-AlterPhaseRoofing.jpg"
 imageAlt: "Affordable roofing on Staten Island"
 published: "2024-11-02"
-modified: "2026-10-22"
+modified: "2026-10-26"
 answer: "Staten Island is the most affordable NYC borough for roofing: a 1,000 sq ft flat roof runs about <strong>$5,000–$13,000</strong> and shingles <strong>$3–$10 per sq ft</strong>. The best ways to save are repairing instead of replacing when the roof allows it, acting before damage spreads, choosing value materials like architectural shingles or EPDM, and comparing itemized estimates."
 takeaways:
   - "Staten Island is the <strong>least expensive borough</strong> for roofing because homes are easy to access."

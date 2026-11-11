@@ -37,7 +37,7 @@ faq:
     a: "No. If your roof is in good shape, we'll say so and show you the photos. If it needs work, you get a written estimate with options and no pressure."
   - q: "Can you inspect a house I'm buying?"
     a: "Yes. A dedicated roof inspection gives you far more detail than a general home inspection, which often only looks from the ground. Call us before your contingency deadline."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## What we check
 

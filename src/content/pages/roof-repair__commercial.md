@@ -34,7 +34,7 @@ faq:
     a: "Yes. We repair all common commercial flat roof systems no matter who installed them. If the roof is still under a manufacturer warranty, tell us so we can protect it."
   - q: "Should we repair or replace our commercial roof?"
     a: "If the membrane is mostly sound and the leaks are local, repair. If the insulation underneath is wet over large areas, the roof is near the end of its life, or repairs keep repeating, replacement is usually the cheaper path over the next ten years. Our photo report shows you which situation you're in."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Commercial roof problems we fix
 

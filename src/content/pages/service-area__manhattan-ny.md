@@ -32,7 +32,7 @@ faq:
     a: "Parapet and coping issues often come up during facade (FISP / Local Law 11) inspections, and roofing work at the parapet is part of what we do. For structural facade work your building's engineer will specify the repair."
   - q: "Do you work on Manhattan townhouses?"
     a: "Yes. Brownstone and townhouse roofs are similar to Brooklyn row homes: flat roofs, parapets and shared walls, which we work on every week."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## Manhattan roofing services
 

@@ -38,7 +38,7 @@ faq:
     a: "Up to 50 years on materials from the manufacturer and up to 25 years on our workmanship, both in writing."
   - q: "Do I need to be home during the replacement?"
     a: "No, but we'll walk the job with you before we start and after we finish. Expect noise during the tear-off; pets are usually happier elsewhere that day."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## Signs it's time for a new roof
 

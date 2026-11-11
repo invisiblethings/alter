@@ -9,7 +9,7 @@ intro: "New York City is hard on roofs: nor'easters, freeze-thaw winters, hot su
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "Aerial view of New York City rooftops"
 published: "2024-10-07"
-modified: "2026-10-22"
+modified: "2026-10-26"
 answer: "Most roof repairs in NYC cost <strong>$300–$1,200</strong>. The most common problems are failed flashing at chimneys and walls, wind-damaged shingles, open seams and ponding on flat roofs, and leaking skylights. Repair when the roof is under ~15 years old and the damage is localized; hire a contractor with an active NYC DCWP license."
 takeaways:
   - "Most repairs: <strong>$300–$1,200</strong>; storm or deck damage up to about $3,500."

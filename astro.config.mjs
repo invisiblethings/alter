@@ -9,7 +9,7 @@ const NOINDEX = ['/roofing-lp/', '/brooklyn-roofing-solutions/', '/vinyl-siding-
 // lastmod for the sitemap, read straight from content frontmatter (dates edited by hand
 // when content really changes, so builds never move them). The homepage isn't a content
 // file: update HOME_MODIFIED when its copy changes.
-const HOME_MODIFIED = '2026-10-22';
+const HOME_MODIFIED = '2026-11-11';
 const lastmod = new Map([['/', HOME_MODIFIED]]);
 for (const dir of ['src/content/pages', 'src/content/posts']) {
   for (const f of fs.readdirSync(dir)) {

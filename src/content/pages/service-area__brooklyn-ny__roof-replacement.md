@@ -30,7 +30,7 @@ faq:
     a: "Yes, regardless of whether a DOB permit is needed. Boards usually ask for a scope of work, insurance certificates and a contractor application. We prepare those documents; allow a few weeks for approval."
   - q: "How long does a roof replacement take on a Brooklyn row home?"
     a: "Usually a few days, depending on size, layers to remove and weather. We keep the roof watertight at the end of every day."
-modified: "2026-10-22"
+modified: "2026-10-26"
 ---
 ## What a Brooklyn roof replacement includes
 

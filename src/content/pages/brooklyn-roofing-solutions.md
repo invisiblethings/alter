@@ -28,7 +28,7 @@ faq:
     a: "Not always. If the roof is under about 15 years old and the problem is at a seam, drain or the wall flashing, a repair usually fixes it. We show you photos and give you both options when it's close."
   - q: "Are you licensed and insured?"
     a: "Yes. NYC DCWP Home Improvement Contractor license #2129904-DCWP, fully insured, a GAF Master Elite® contractor and BBB accredited."
-modified: "2026-10-22"
+modified: "2026-10-29"
 ---
 ## Sound familiar?
 

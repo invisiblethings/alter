@@ -38,7 +38,7 @@ faq:
     a: "Not for most outside repairs. If the leak affected the inside of the house, we'll want to check the attic or ceiling before and after."
   - q: "Is a roof repair worth it on an old roof?"
     a: "If the roof is over 20 years old and leaking in more than one place, repairs often turn into a cycle. We'll tell you honestly and give you both a repair price and a replacement price."
-modified: "2026-10-22"
+modified: "2026-11-11"
 ---
 ## The repairs Staten Island homeowners call us for most
 
