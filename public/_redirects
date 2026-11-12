@@ -137,5 +137,3 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 /services/emergency-services/          /roof-repair/emergency-service/          301
 /services/emergency-services.html      /roof-repair/emergency-service/          301
 /services/index.html                   /services/                               301!
-# Any other old /services/<name> URL: the services overview (never shadows a real page).
-/services/*                            /services/                               301
