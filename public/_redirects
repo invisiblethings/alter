@@ -114,3 +114,28 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 / page_id=432 /free-estimate/ 301
 / page_id=423 /contact/ 301
 / page_id=244 / 301
+
+# --- Older pre-WordPress static site (alterphaseroofingcontracting.netlify.app,
+# sitemap listed these on alterphaseroofing.com): /services/<name>, with and
+# without a trailing slash or .html, to the matching page today.
+/services/roof-repair                  /roof-repair/                            301
+/services/roof-repair/                 /roof-repair/                            301
+/services/roof-repair.html             /roof-repair/                            301
+/services/roof-replacement             /residential-roofing/roof-replacement/   301
+/services/roof-replacement/            /residential-roofing/roof-replacement/   301
+/services/roof-replacement.html        /residential-roofing/roof-replacement/   301
+/services/new-installation             /residential-roofing/roof-replacement/   301
+/services/new-installation/            /residential-roofing/roof-replacement/   301
+/services/new-installation.html        /residential-roofing/roof-replacement/   301
+/services/flat-roofing                 /flat-roofing/                           301
+/services/flat-roofing/                /flat-roofing/                           301
+/services/flat-roofing.html            /flat-roofing/                           301
+/services/commercial-roofing           /commercial-roofing/                     301
+/services/commercial-roofing/          /commercial-roofing/                     301
+/services/commercial-roofing.html      /commercial-roofing/                     301
+/services/emergency-services           /roof-repair/emergency-service/          301
+/services/emergency-services/          /roof-repair/emergency-service/          301
+/services/emergency-services.html      /roof-repair/emergency-service/          301
+/services/index.html                   /services/                               301!
+# Any other old /services/<name> URL: the services overview (never shadows a real page).
+/services/*                            /services/                               301
