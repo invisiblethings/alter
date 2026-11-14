@@ -60,6 +60,10 @@ Free photo reports before buying, selling or after storms.
 
 Leak repair, reflashing, replacement and new installs.
 
+### [Attic ventilation](/residential-roofing/attic-ventilation/)
+
+Ridge vents, soffit vents and vent leak repairs, so the attic stays cool in summer and dry in winter and your shingle warranty stays valid.
+
 ## Gutters & siding
 
 ### [Gutters](/siding-gutter/gutter-installation-repair/)

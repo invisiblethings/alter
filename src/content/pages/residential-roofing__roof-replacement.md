@@ -75,6 +75,10 @@ Synthetic underlayment over the whole roof, with ice and water protection at eav
 
 Fresh metal at chimneys, walls, valleys and vents. Reusing old flashing is one of the most common shortcuts in roofing.
 
+### Ventilation
+
+We check your attic's intake and exhaust vents on every replacement and list any ridge or soffit vent work the roof needs in your written estimate. Proper [attic ventilation](/residential-roofing/attic-ventilation/) protects the deck and keeps the shingle warranty valid.
+
 ### Shingles or membrane
 
 [GAF architectural shingles](/types-of-asphalt-shingles/) for pitched roofs; TPO, EPDM or modified bitumen for [flat roofs](/flat-roofing/).

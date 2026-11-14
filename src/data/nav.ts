@@ -16,6 +16,7 @@ export const services: NavLink[] = [
     children: [
       { title: 'Residential Roofing', url: '/residential-roofing/' },
       { title: 'Roof Inspections', url: '/residential-roofing/roof-inspections/' },
+      { title: 'Attic Ventilation', url: '/residential-roofing/attic-ventilation/' },
       { title: 'Skylight Repair & Installation', url: '/residential-roofing/skylight-installation-repair/' },
     ],
   },

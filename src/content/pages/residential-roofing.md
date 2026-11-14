@@ -53,6 +53,10 @@ A photo report of your roof's condition before you buy, sell, or after a big sto
 
 Leak repair, reflashing and replacement for Velux, Fakro and other brands.
 
+### [Attic ventilation](/residential-roofing/attic-ventilation/)
+
+Ridge vents, soffit vents and vent leak repairs, so your attic stays cool in summer and dry in winter.
+
 ### [Gutters](/siding-gutter/gutter-installation-repair/)
 
 Seamless gutters, guards and downspouts that carry roof water away from your walls and foundation.
