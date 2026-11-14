@@ -1,16 +1,17 @@
 ---
 path: "/siding-gutter/gutter-installation-repair/"
 template: service
-seoTitle: "Gutter Installation & Repair Staten Island | Alter Phase"
-description: "Seamless gutter installation, gutter repair, guards and downspouts on Staten Island. Stop overflow, fascia rot and wet basements. Repairs $150–$500."
-kicker: "Gutter installation & repair · Staten Island"
-h1: "Seamless gutter installation and repair on Staten Island, sized to stop overflow"
-intro: "Gutters that sag, leak at the seams or overflow in every storm are sending water where it does the most damage: your fascia, your walls and your foundation. We repair them, or replace them with seamless gutters made to fit your house."
+seoTitle: "Gutter Installation, Repair & Cleaning Staten Island"
+description: "Seamless gutter installation, gutter repair, gutter cleaning, guards and downspouts on Staten Island. Stop overflow, fascia rot and wet basements."
+kicker: "Gutter installation, repair & cleaning · Staten Island"
+h1: "Gutter installation, repair and cleaning on Staten Island"
+intro: "Gutters that are clogged, sag, leak at the seams or overflow in every storm are sending water where it does the most damage: your fascia, your walls and your foundation. We clean them, repair them, or replace them with seamless gutters made to fit your house."
 highlights:
   - "Seamless gutters with fewer joints to leak"
   - "Downspouts routed away from your foundation"
+  - "Gutter cleaning, with downspouts flushed and debris hauled away"
   - "Gutter guards for tree-lined streets"
-service: "Gutter installation and repair"
+service: "Gutter installation, repair and cleaning"
 area: "Staten Island"
 wizard: "Gutters / siding / skylight"
 prices: ["repairs"]
@@ -23,6 +24,8 @@ related:
   - "/residential-roofing/roof-replacement/"
   - "/all-seasons-roofing-staten-island/"
 faq:
+  - q: "Do you offer gutter cleaning?"
+    a: "Yes. We clear gutters and downspouts by hand, flush the downspouts to make sure they drain, and bag and haul away the debris. We also check the hangers, seams, pitch and roof edge while we're up there and show you photos of anything that needs fixing."
   - q: "How much does gutter repair cost on Staten Island?"
     a: "Most gutter and downspout repairs cost $150 to $500. Resealing a corner or rehanging a sagging section is at the low end; replacing several sections or downspouts is at the high end. You get a written price before we start."
   - q: "What's the difference between seamless and sectional gutters?"
@@ -31,7 +34,7 @@ faq:
     a: "Usually the gutters are too small for the roof area, pitched the wrong way, or have too few downspouts. We size and pitch them for the roof they serve."
   - q: "How often should gutters be cleaned?"
     a: "At least twice a year, in late spring and late fall, and more often if trees hang over your roof. Gutter guards reduce how often you need it."
-modified: "2026-11-11"
+modified: "2026-11-14"
 ---
 ## Gutter services
 
@@ -55,9 +58,9 @@ Screens and covers that keep leaves and debris out, cutting down on clogs and cl
 
 Rotted fascia boards and missing drip edge fixed so water goes into the gutter, not behind it.
 
-### Cleaning
+### Gutter cleaning
 
-Clogs and debris cleared, with a check for damage while we're up there.
+Gutters and downspouts cleared by hand, downspouts flushed with water to make sure they drain, and all debris bagged and taken away. While we're up there we check the hangers, seams and pitch, and look at the roof edge, and you get photos of anything that needs attention.
 
 ## Signs your gutters need attention
 
@@ -77,6 +80,10 @@ Heavy summer storms dump more water than undersized gutters can carry. Every fal
 ### Repair or replace?
 
 If the gutters are mostly sound and the problem is a few seams or hangers, repair. If they sag along the whole run, leak at many joints or are the wrong size for your roof, replace them with seamless gutters.
+
+### How often should gutters be cleaned?
+
+At least twice a year: in late spring, after the trees drop their seeds and blossoms, and in late fall, after the leaves come down. Homes under big trees may need it more often. Gutter guards cut down how often cleaning is needed.
 
 ### Are gutter guards worth it?
 

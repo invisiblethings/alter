@@ -68,7 +68,7 @@ Ridge vents, soffit vents and vent leak repairs, so the attic stays cool in summ
 
 ### [Gutters](/siding-gutter/gutter-installation-repair/)
 
-Seamless gutters, guards, downspouts and repairs.
+Seamless gutters, guards, downspouts, repairs and gutter cleaning.
 
 ### [Siding](/siding-gutter/siding-installation-repair/)
 

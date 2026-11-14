@@ -59,7 +59,7 @@ Ridge vents, soffit vents and vent leak repairs, so your attic stays cool in sum
 
 ### [Gutters](/siding-gutter/gutter-installation-repair/)
 
-Seamless gutters, guards and downspouts that carry roof water away from your walls and foundation.
+Seamless gutters, guards, downspouts and gutter cleaning, so roof water ends up away from your walls and foundation.
 
 ### [Siding](/siding-gutter/siding-installation-repair/)
 

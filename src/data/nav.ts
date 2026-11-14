@@ -32,7 +32,7 @@ export const services: NavLink[] = [
     ],
   },
   {
-    title: 'Gutters', url: '/siding-gutter/gutter-installation-repair/', blurb: 'Seamless gutters, guards, repairs', icon: 'gutter',
+    title: 'Gutters', url: '/siding-gutter/gutter-installation-repair/', blurb: 'Seamless gutters, guards, repairs, cleaning', icon: 'gutter',
     children: [],
   },
   {
