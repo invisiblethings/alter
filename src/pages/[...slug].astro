@@ -4,6 +4,8 @@ import Base from '../layouts/Base.astro';
 import ServiceView from '../components/ServiceView.astro';
 import PostView from '../components/PostView.astro';
 import GuideHybridView from '../components/GuideHybridView.astro';
+import LeakCostView from '../components/LeakCostView.astro';
+import { leakImages } from '../data/leakGuide';
 import SimpleView from '../components/SimpleView.astro';
 import LandingView from '../components/LandingView.astro';
 import { allEntries, crumbsFor, type Entry, type PageEntry, type PostEntry } from '../lib/content';
@@ -44,13 +46,15 @@ const schema = pageGraph({
   published: d.published, modified: d.modified, crumbs, kind, h1: d.h1,
   serviceArea: 'area' in d ? d.area : undefined,
   neighborhood: 'neighborhood' in d ? d.neighborhood : undefined,
+  images: 'layout' in d && d.layout === 'leak' ? Object.values(leakImages).map((i) => i.src) : undefined,
   serviceName: 'service' in d ? d.service : undefined,
   price, faq: d.faq,
 });
 ---
 <Base title={d.seoTitle} description={d.description} path={d.path} image={d.image} imageAlt={d.imageAlt} noindex={d.noindex}
   ogType={t === 'post' ? 'article' : 'website'} published={d.published} modified={d.modified} schema={schema} bare={t === 'landing'}>
-  {t === 'post' && 'layout' in d && d.layout === 'hybrid' ? <GuideHybridView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
+  {t === 'post' && 'layout' in d && d.layout === 'leak' ? <LeakCostView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
+    : t === 'post' && 'layout' in d && d.layout === 'hybrid' ? <GuideHybridView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
     : t === 'post' ? <PostView entry={entry as PostEntry} html={html} crumbs={crumbs} headings={headings} />
     : t === 'landing' ? <LandingView entry={entry as PageEntry} html={html} />
     : ['company', 'legal', 'reviews'].includes(t) ? <SimpleView entry={entry as PageEntry} html={html} crumbs={crumbs} />

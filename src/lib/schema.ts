@@ -130,6 +130,7 @@ interface PageInput {
   h1: string;
   serviceArea?: string;
   neighborhood?: string;
+  images?: string[]; // extra article images (infographics), after the main image
   serviceName?: string;
   price?: { min: number; max: number; unit?: string };
   faq?: { q: string; a: string }[];
@@ -193,7 +194,7 @@ export function pageGraph(p: PageInput) {
       '@id': `${url}#article`,
       headline: p.h1,
       description: p.description || undefined,
-      image: p.image ? abs(p.image) : undefined,
+      image: p.images?.length ? [...new Set([p.image, ...p.images].filter(Boolean).map((i) => abs(i!)))] : p.image ? abs(p.image) : undefined,
       datePublished: p.published,
       dateModified: p.modified,
       author: { '@id': business.owner.id },

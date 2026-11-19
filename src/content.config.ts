@@ -44,7 +44,7 @@ const posts = defineCollection({
     template: z.literal('post').default('post'),
     cardTitle: z.string().optional(),
     // 'hybrid': guide that also sells the service (GuideHybridView).
-    layout: z.enum(['article', 'hybrid']).default('article'),
+    layout: z.enum(['article', 'hybrid', 'leak']).default('article'),
     takeaways: z.array(z.string()).default([]),
     categories: z.array(z.number()).default([1]),
   }),

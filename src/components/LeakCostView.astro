@@ -1,0 +1,270 @@
+---
+// Roof leak repair cost guide that also works as the roof leak repair service
+// page (layout: leak), built for /cost-to-repair-roof-leak/: service hero with
+// the quote form, "leaking right now?" steps, prices from our own jobs with a
+// chart and calculator, the leak-source diagram, the repair-or-replace check,
+// then the article, reviews and FAQ. Images and leak sources: src/data/leakGuide.ts.
+import Icon from './Icon.astro';
+import CallButton from './CallButton.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import QuoteWizard from './QuoteWizard.astro';
+import PriceTables from './PriceTables.astro';
+import LeadCalculator from './LeadCalculator.astro';
+import ReplaceCheck from './ReplaceCheck.astro';
+import ContentSections from './ContentSections.astro';
+import Reviews from './Reviews.astro';
+import Faq from './Faq.astro';
+import FinalCta from './FinalCta.astro';
+import { business, telHref } from '../data/business';
+import { leakImages as img, leakSources } from '../data/leakGuide';
+import { allEntries, readTime, fmtDate, type PostEntry } from '../lib/content';
+
+interface Props { entry: PostEntry; html: string; crumbs: { name: string; url: string }[]; headings: { depth: number; slug: string; text: string }[] }
+const { entry, html, crumbs, headings } = Astro.props;
+const d = entry.data;
+const mins = readTime(entry);
+const form = '#pg-wizard';
+const short = (t: string) => /affect|cost more/i.test(t) ? 'Price factors' : /wait/i.test(t) ? 'Cost of waiting' : /find/i.test(t) ? 'Finding the leak'
+  : /handyman/i.test(t) ? 'Handyman or roofer?' : /insurance/i.test(t) ? 'Insurance' : /quote/i.test(t) ? 'Comparing quotes' : /included/i.test(t) ? "What's included" : /who/i.test(t) ? 'Who to call' : t;
+const jump = [
+  { id: 'leaking-now', t: 'Leaking now?' },
+  { id: 'costs', t: 'Costs' },
+  { id: 'where', t: 'Where roofs leak' },
+  { id: 'repair-or-replace', t: 'Repair or replace?' },
+  ...headings.filter((h) => h.depth === 2).map((h) => ({ id: h.slug, t: short(h.text) })),
+  ...(d.faq.length ? [{ id: 'faq', t: 'FAQ' }] : []),
+];
+const entries = await allEntries();
+const related = d.related.map((u) => entries.find((e) => e.data.path === u)).filter(Boolean) as typeof entries;
+const facts = [
+  { i: 'camera', t: 'Infrared leak detection', s: 'Hidden moisture found, no guesswork' },
+  { i: 'bolt', t: 'Emergency calls 24/7', s: 'We stop the water the same day' },
+  { i: 'file', t: 'Written price in 24 hours', s: 'Itemized, before any work starts' },
+  { i: 'shield', t: 'Written repair warranty', s: 'If our repair leaks, we come back' },
+];
+const steps = [
+  ['Catch the water', 'Move furniture and valuables, then put buckets and towels under every drip.'],
+  ['Mind the electrics', 'Keep away from wet light fixtures and outlets, and switch off that circuit if water is near them.'],
+  ['Relieve a bulging ceiling', 'If the ceiling sags with water, a small hole at the lowest point lets it drain into a bucket instead of collapsing.'],
+  ['Take photos', 'Photograph the stain, the drip and any damage. Your insurance company will ask for them.'],
+  ['Stay off the roof and call', 'Wet roofs are dangerous. Call a licensed roofer to stop the water the same day.'],
+];
+---
+<section class="hero gh-hero">
+  <div class="hero-bg"><img src={img.photo.src} alt={img.photo.alt} width={img.photo.w} height={img.photo.h} loading="eager" fetchpriority="high" decoding="async" /></div>
+  <div class="wrap">
+    <div>
+      <Breadcrumbs crumbs={crumbs} />
+      <span class="kicker">{d.kicker}</span>
+      <h1>{d.h1}</h1>
+      {d.intro && <p class="lead">{d.intro}</p>}
+      <ul class="ticks" style="margin-top:1.25rem">
+        <li><Icon name="check" /> <span>Most roof leak repairs: <strong>$300–$1,200</strong>, priced in writing first</span></li>
+        <li><Icon name="check" /> <span><strong>Infrared camera</strong> finds the real leak, not just the stain</span></li>
+        <li><Icon name="check" /> <span>Emergency leak repair <strong>24/7</strong> across all five boroughs</span></li>
+      </ul>
+      <div class="cta-row">
+        <CallButton label="Roof leaking? Call 24/7" />
+      </div>
+      <ul class="hero-proof">
+        <li><span class="stars" aria-hidden="true">{[1, 2, 3, 4, 5].map(() => <Icon name="star" />)}</span><span><strong>{business.rating.value}</strong> from {business.rating.count} reviews</span></li>
+        <li><img class="gaf-badge gaf-xs" src="/images/gaf-master-elite.webp" alt="GAF Master Elite® Residential Roofing Contractor" width="256" height="256" loading="eager" decoding="async" /><span><strong>GAF Master Elite®</strong></span></li>
+        <li><Icon name="license" /><span>Lic. <strong>#{business.license.number}</strong></span></li>
+      </ul>
+      <p class="gh-by">
+        <span class="avatar-s" aria-hidden="true">M</span>
+        <span>By <a href="/about/"><strong>Marke</strong></a>, owner · Updated <time datetime={d.modified || d.published}>{fmtDate(d.modified || d.published)}</time> · {mins} min read</span>
+      </p>
+    </div>
+    <QuoteWizard id="pg" service="Roof leak / repair" title="Get your free roof leak inspection" />
+  </div>
+</section>
+
+<section class="answer-band" aria-label="The short answer">
+  <div class="wrap">
+    {d.answer && (
+      <div class="ab-answer" data-reveal>
+        <span class="ab-k"><Icon name="bolt" /> The short answer</span>
+        <p set:html={d.answer} />
+      </div>
+    )}
+    <ul class="ab-facts" data-reveal data-reveal-d="1">
+      {facts.map((f) => <li><span class="ab-ico"><Icon name={f.i as any} /></span><span><strong>{f.t}</strong>{f.s}</span></li>)}
+    </ul>
+  </div>
+</section>
+
+<section class="sec lk-now" id="leaking-now" aria-labelledby="now-h">
+  <div class="wrap lk-split">
+    <div data-reveal>
+      <span class="kicker lk-red">Roof leaking right now?</span>
+      <h2 id="now-h">What to do if your roof is leaking: 5 things to do first</h2>
+      <ol class="lk-steps">
+        {steps.map(([t, s]) => <li><strong>{t}</strong><span>{s}</span></li>)}
+      </ol>
+      <div class="cta-row"><CallButton label="Emergency leak repair · 24/7" /></div>
+    </div>
+    <figure class="lk-fig" data-reveal data-reveal-d="1">
+      <a href={img.now.src}><img src={img.now.src} alt={img.now.alt} width={img.now.w} height={img.now.h} loading="lazy" decoding="async" /></a>
+      <figcaption>{img.now.caption}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<nav class="gh-jump" aria-label="On this page">
+  <div class="wrap"><span>Jump to</span><ul>{jump.map((j) => <li><a href={`#${j.id}`}>{j.t}</a></li>)}</ul></div>
+</nav>
+
+<section class="sec dark price-sec" id="costs" aria-labelledby="costs-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">2026 prices from our own jobs</span><h2 id="costs-h">How much does it cost to repair a roof leak in NYC?</h2></div>
+      <p class="lead">Most roof leak repairs in NYC cost <strong>$300–$1,200</strong>. These are {business.name}'s average prices from hundreds of jobs we've done across Manhattan, Brooklyn, Queens, the Bronx and Staten Island, not national estimates.</p>
+    </div>
+    <div class="lk-cost">
+      <figure class="lk-fig lk-fig-dark" data-reveal>
+        <a href={img.chart.src}><img src={img.chart.src} alt={img.chart.alt} width={img.chart.w} height={img.chart.h} loading="lazy" decoding="async" /></a>
+        <figcaption>{img.chart.caption}</figcaption>
+      </figure>
+      <div data-reveal data-reveal-d="1"><PriceTables kinds={['repairs', 'tiers']} /></div>
+    </div>
+    <div style="margin-top:2.5rem" data-reveal>
+      <p class="lk-calc-h">Pick your problem and see the price</p>
+      <LeadCalculator area="Staten Island" start="repair" pickArea id="lcalc" />
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="where" aria-labelledby="where-h">
+  <div class="wrap lk-split lk-split-r">
+    <div data-reveal>
+      <span class="kicker">Where roofs leak</span>
+      <h2 id="where-h">Roof leak repair cost by leak source</h2>
+      <p class="lead">The price depends mostly on where the water gets in. These are the 7 places we find leaks on NYC homes, with our average price to fix each one.</p>
+      <ol class="lk-src">
+        {leakSources.map((s, i) => <li><span class="lk-n">{i + 1}</span><div><p class="lk-src-t"><strong>{s.n}</strong><b>{s.p}</b></p><p>{s.fix}</p></div></li>)}
+      </ol>
+    </div>
+    <figure class="lk-fig" data-reveal data-reveal-d="1">
+      <a href={img.diagram.src}><img src={img.diagram.src} alt={img.diagram.alt} width={img.diagram.w} height={img.diagram.h} loading="lazy" decoding="async" /></a>
+      <figcaption>{img.diagram.caption}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec bone" id="repair-or-replace" aria-labelledby="rr-h">
+  <div class="wrap">
+    <div class="head-split" data-reveal>
+      <div><span class="kicker">Before you spend money</span><h2 id="rr-h">Repair the leak, or replace the roof?</h2></div>
+      <p class="lead">Most leaks only need a repair. Tick what you've noticed for an honest first read, and we'll confirm it with photos at a free inspection.</p>
+    </div>
+    <ReplaceCheck formHref={form} />
+    <figure class="lk-fig lk-fig-c" data-reveal>
+      <a href={img.decide.src}><img src={img.decide.src} alt={img.decide.alt} width={img.decide.w} height={img.decide.h} loading="lazy" decoding="async" /></a>
+      <figcaption>{img.decide.caption}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<ContentSections html={html} formHref={form} />
+
+<Reviews limit={6} tags={['leak', 'repair', 'honest']} title="What homeowners say after we fixed their leak" />
+
+{d.faq.length > 0 && (
+  <section class="sec bone" id="faq">
+    <div class="wrap faq-split">
+      <div data-reveal>
+        <span class="kicker">FAQ</span>
+        <h2>Roof leak repair cost: your questions, answered</h2>
+        <p class="lead">Don't see yours? Call or text and you'll talk to someone who actually works on roofs.</p>
+        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+      </div>
+      <div data-reveal data-reveal-d="1"><Faq items={d.faq} title="Roof leak repair: common questions" bare /></div>
+    </div>
+  </section>
+)}
+
+<section class="sec" aria-label="About the author">
+  <div class="wrap">
+    <div class="author gh-author">
+      <span class="avatar-s" aria-hidden="true">M</span>
+      <div>
+        <h2>Written by Marke, owner of {business.name}</h2>
+        <p>Marke runs {business.name}, a family-owned roofing contractor based on Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Queens, Manhattan and the Bronx. The prices on this page are the company's average prices from hundreds of leak repairs across New York City. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+      </div>
+    </div>
+    {related.length > 0 && (
+      <div class="gh-related">
+        <h2>Keep reading</h2>
+        <div class="rel-grid">
+          {related.map((r) => (
+            <a class="rel" href={r.data.path}>
+              {r.data.image ? <img src={r.data.image} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
+              <span class="rel-b"><em>Guide</em><strong>{('cardTitle' in r.data && r.data.cardTitle) || r.data.h1}</strong><span class="link-arrow">Read the guide <Icon name="arrow" /></span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<FinalCta title="Stop the leak before it spreads." text="Free inspection with an infrared scan, photos of the real cause and a written price. If a small repair will do, that's all we'll quote." service="Roof leak / repair" />
+
+<style>
+  .gh-by { display: flex; align-items: center; gap: 0.6rem; margin: 1.25rem 0 0; font-size: 0.86rem; color: #c8d3e8; }
+  .gh-by a { color: #fff; }
+  .gh-by .avatar-s { background: var(--gold); color: var(--ink); }
+  .gh-jump { position: sticky; top: var(--head); z-index: 20; background: rgb(255 255 255 / 0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); }
+  .gh-jump .wrap { display: flex; align-items: center; gap: 0.9rem; overflow-x: auto; scrollbar-width: none; padding-block: 0.6rem; }
+  .gh-jump .wrap::-webkit-scrollbar { display: none; }
+  .gh-jump span { flex: none; font-size: 0.72rem; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .gh-jump ul { display: flex; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+  .gh-jump a { display: block; white-space: nowrap; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--bone); color: var(--ink); font-weight: 700; font-size: 0.86rem; text-decoration: none; }
+  .gh-jump a:hover, .gh-jump a.on { background: var(--navy); color: #fff; }
+  #leaking-now, #costs, #where, #repair-or-replace, #faq, :global(.csec) { scroll-margin-top: calc(var(--head) + 3rem); }
+  .gh-author { margin: 0; }
+  .gh-related { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+  .gh-related h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); margin: 0 0 1.25rem; }
+
+  .lk-now { padding-top: clamp(4rem, 8vw, 6rem); }
+  .lk-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+  .lk-split-r { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+  .lk-red { color: var(--red); }
+  .lk-steps { list-style: none; counter-reset: s; margin: 1.25rem 0 1.5rem; padding: 0; display: grid; gap: 0.7rem; }
+  .lk-steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; column-gap: 0.85rem; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+  .lk-steps li::before { content: counter(s); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--gold); display: grid; place-items: center; font-weight: 900; }
+  .lk-steps strong { font-size: 1.05rem; }
+  .lk-steps span { color: var(--muted); font-size: 0.95rem; }
+  .lk-fig { margin: 0; }
+  .lk-fig a { display: block; border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); }
+  .lk-fig img { display: block; width: 100%; height: auto; }
+  .lk-fig figcaption { margin-top: 0.6rem; font-size: 0.86rem; color: var(--muted); text-align: center; }
+  .lk-fig-dark figcaption { color: var(--muted-d); }
+  .lk-fig-c { max-width: 560px; margin: clamp(2rem, 4vw, 3rem) auto 0; }
+  .lk-cost { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: start; }
+  .lk-calc-h { font-weight: 850; font-size: 1.2rem; color: #fff; margin: 0 0 1rem; }
+  .lk-src { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; }
+  .lk-src li { display: grid; grid-template-columns: 40px 1fr; gap: 0.85rem; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+  .lk-n { width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: var(--ink); display: grid; place-items: center; font-weight: 900; }
+  .lk-src p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  .lk-src .lk-src-t { display: flex; justify-content: space-between; gap: 1rem; color: var(--ink); font-size: 1.02rem; margin-bottom: 0.2rem; }
+  .lk-src .lk-src-t b { color: var(--navy); white-space: nowrap; }
+  @media (max-width: 960px) {
+    .lk-split, .lk-split-r, .lk-cost { grid-template-columns: minmax(0, 1fr); }
+    .lk-fig { max-width: 560px; margin-inline: auto; }
+  }
+</style>
+
+<script>
+  // Highlight the jump-nav chip for the section in view.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.gh-jump a')];
+  const map = new Map(links.map((a) => [a.hash.slice(1), a]));
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    links.forEach((a) => a.classList.remove('on'));
+    const a = map.get(e.target.id) || map.get(e.target.getAttribute('aria-labelledby') || '');
+    if (a) { a.classList.add('on'); const bar = a.closest('.wrap')!; bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' }); }
+  }), { rootMargin: '-40% 0px -55% 0px' });
+  map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el.closest('section') || el); });
+</script>
