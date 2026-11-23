@@ -45,13 +45,17 @@ faq:
     a: "It depends on the framing work involved. Before we start, we tell you whether a DOB permit is needed and file it when it is."
   - q: "Why do people remove skylights?"
     a: "Repeated leaks, heat loss in winter, heat gain and glare in summer, or a renovation that no longer needs the light. Removing an old skylight you don't want is often a better investment than repairing or replacing it."
+  - q: "How long does a skylight replacement take?"
+    a: "A same-size skylight replacement is usually finished in one day, working from the roof. A new skylight installation, with a new opening and an interior light well, can take one to two days."
+  - q: "Can you install a skylight on a flat roof?"
+    a: "Yes. On a flat roof the skylight sits on a raised curb, and the roof membrane is carried up and sealed to the curb, so water drains away from the opening."
 modified: "2026-11-23"
 ---
 ## Skylight services
 
 ### Skylight leak repair
 
-Pinpoint diagnosis and repair of leaks from failed sealant, cracked flashing, damaged glass or worn weather stripping.
+Pinpoint diagnosis and repair of leaks from failed sealant, cracked flashing, damaged glass or worn weather stripping. [More on skylight repair](#Skylight_repair_on_Staten_Island_stop_the_leak_at_its_source).
 
 ### Flashing replacement
 
@@ -59,11 +63,11 @@ Lifted, rusted or poorly installed flashing is the most common cause of skylight
 
 ### Skylight replacement
 
-Old, fogged or cracked units removed and replaced with new energy-efficient skylights and new flashing.
+Old, fogged or cracked units removed and replaced with new energy-efficient skylights and new flashing. [More on skylight replacement](#Skylight_replacement_a_new_skylight_with_new_flashing).
 
 ### New installation
 
-New skylights framed, flashed and finished inside, with permits handled when required.
+New skylights framed, flashed and finished inside, with permits handled when required. [More on skylight installation](#Skylight_installation_add_natural_light_the_right_way).
 
 ### Venting skylights
 
@@ -85,6 +89,46 @@ Storm damage, broken glass or sudden leaks: same-day [emergency service](/roof-r
 - **Rusted, lifted or cracked flashing** visible from outside
 - **Cracked or chipped glass**
 - The skylight is **15–20 years old or more**
+
+## Skylight repair on Staten Island: stop the leak at its source
+
+Most skylight problems don't need a new skylight. Skylight repairs cost **$450–$1,500**, and a typical skylight leak repair **$500–$1,200**, a fraction of a replacement. Before we fix anything, we find out exactly where the water gets in, because on most homes it isn't the glass.
+
+- **Flashing repair.** Lifted, rusted or caulked-over flashing is the number one cause of skylight leaks. We replace it with a proper flashing kit woven into the shingles.
+- **Seals and gaskets.** Dried-out glazing seals and weather stripping replaced so rain and drafts stay out.
+- **The roof around it.** Damaged shingles, underlayment or flat-roof membrane around the curb repaired, so water stops running down to the frame.
+- **Venting skylights.** Motors, rain sensors, remotes and hinges on manual and electric venting skylights repaired.
+- **Condensation problems.** Blocked weep holes and condensation channels cleared, and ventilation checked when the "leak" is really moisture.
+
+We scan the area with an infrared (thermal imaging) camera, photograph the cause and send a written price, usually within 24 hours. Every repair comes with a written workmanship warranty. Leaking right now? Call (929) 370-1552, we answer 24/7, or [book a free skylight inspection](/free-estimate/).
+
+## Skylight replacement: a new skylight with new flashing
+
+When the glass is fogged between the panes, the frame is cracked or rotted, or the skylight is 15–20 years old and keeps leaking, replacing it costs less over time than repairing it again. A skylight replacement on Staten Island typically costs **$2,000–$5,300**, depending on the size, the type and the roof.
+
+- **Old unit and flashing removed.** Nothing old is left behind to fail later.
+- **Curb and deck checked.** Rotted wood around the opening is replaced before the new skylight goes in.
+- **New energy-efficient skylight.** Fixed or venting units from leading manufacturers such as Velux and Fakro, with low-E glass that cuts heat loss in winter and heat gain in summer.
+- **New flashing kit and ice-and-water shield.** Tied into your shingles or flat-roof membrane, never sealed with caulk alone.
+- **Cleanup and haul-away.** Floors and furniture covered inside, every scrap taken away.
+
+A same-size replacement usually works from the roof and is finished in a day. Thinking about a [new roof](/residential-roofing/roof-replacement/) in the next few years? Replacing the skylight at the same time saves money, because the new flashing ties straight into the new roof.
+
+**Get a free skylight replacement estimate:** call or text (929) 370-1552, or [request your free estimate online](/free-estimate/).
+
+## Skylight installation: add natural light the right way
+
+A new skylight brings daylight into kitchens, bathrooms, stairwells and attic rooms, and a venting skylight lets heat and moisture out. New skylight installation on Staten Island typically costs **$2,500–$6,000**, including the opening, the unit, the flashing, the interior finish and permits when required.
+
+1. **Free consultation.** We check the roof framing and the room below, and help you choose the size, position and type: fixed, manual venting or electric venting.
+2. **Written price.** Itemized, usually within 24 hours, with permits included when the work requires one.
+3. **Cut and frame the opening.** New headers frame the opening between the rafters, so the roof stays as strong as before.
+4. **Install and flash.** Deck-mounted on a pitched roof with a manufacturer flashing kit, or curb-mounted on a flat roof with the membrane carried up the curb. Ice-and-water shield goes around every side.
+5. **Finish inside.** The light well is framed and finished, and we clean up before we leave.
+
+The installation is only as good as the flashing, which is why we install skylights as roofers: the same crew that builds your roof seals the skylight into it. Most skylight leaks we're called to fix come from installs that skipped this step.
+
+**Planning a new skylight?** Call or text (929) 370-1552, or [get a free installation estimate](/free-estimate/).
 
 ## Skylight removal: close the opening for good
 
