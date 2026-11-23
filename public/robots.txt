@@ -1,124 +1,86 @@
-# robots.txt for alterphaseroofing.com
-# Alter Phase Roofing Contracting: roofing in Staten Island, Brooklyn, Queens,
-# Manhattan and the Bronx, NY.
-#
-# Every search engine and AI assistant is welcome to crawl, cite and learn from
-# this site. A summary for AI assistants is at https://alterphaseroofing.com/llms.txt
-#
-# Each bot below has its own group. A bot follows only the group that names it,
-# so every group repeats the same rules.
+# robots.txt for https://alterphaseroofing.com
+# Alter Phase Roofing Contracting, roofing contractor in New York City.
+# All crawlers are allowed. AI summary: https://alterphaseroofing.com/llms.txt
 
-# ======================================================================
 # Search engines
-# ======================================================================
 
-# Google Search, AI Overviews and AI Mode
 User-agent: Googlebot
 Allow: /
 
-# Google Images
 User-agent: Googlebot-Image
 Allow: /
 
-# Bing, and Microsoft Copilot answers
 User-agent: Bingbot
 Allow: /
 
-# Siri, Spotlight and Safari suggestions
 User-agent: Applebot
 Allow: /
 
-# DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
 
-# Yandex
 User-agent: YandexBot
 Allow: /
 
-# ======================================================================
-# AI search and answer engines (crawl pages to cite them in answers)
-# ======================================================================
+# AI search crawlers
 
-# ChatGPT search
 User-agent: OAI-SearchBot
 Allow: /
 
-# ChatGPT opening a page for a user
 User-agent: ChatGPT-User
 Allow: /
 
-# Claude search
 User-agent: Claude-SearchBot
 Allow: /
 
-# Claude opening a page for a user
 User-agent: Claude-User
 Allow: /
 
-# Perplexity search
 User-agent: PerplexityBot
 Allow: /
 
-# Perplexity opening a page for a user
 User-agent: Perplexity-User
 Allow: /
 
-# DuckDuckGo AI answers
 User-agent: DuckAssistBot
 Allow: /
 
-# Mistral Le Chat
 User-agent: MistralAI-User
 Allow: /
 
-# Meta AI opening a page for a user
 User-agent: Meta-ExternalFetcher
 Allow: /
 
-# You.com
 User-agent: YouBot
 Allow: /
 
-# ======================================================================
-# AI models (training lets assistants know the business by name)
-# ======================================================================
+# AI crawlers
 
-# OpenAI
 User-agent: GPTBot
 Allow: /
 
-# Anthropic
 User-agent: ClaudeBot
 Allow: /
 
-# Gemini
 User-agent: Google-Extended
 Allow: /
 
-# Apple Intelligence
 User-agent: Applebot-Extended
 Allow: /
 
-# Alexa and Amazon AI
 User-agent: Amazonbot
 Allow: /
 
-# Meta AI
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# Common Crawl, used by many AI models
 User-agent: CCBot
 Allow: /
 
-# Cohere
 User-agent: cohere-ai
 Allow: /
 
-# ======================================================================
-# Everyone else
-# ======================================================================
+# All other crawlers
 
 User-agent: *
 Allow: /
