@@ -44,7 +44,7 @@ Most common on Staten Island and Queens houses.
 
 ### Flat roofs
 
-Most common on Brooklyn, Manhattan and Queens row homes and commercial buildings.
+Most common on Brooklyn, Queens, Manhattan and Bronx row homes and commercial buildings.
 
 - **Open seams** on EPDM and TPO
 - **Ponding water** from clogged drains or low spots

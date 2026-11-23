@@ -1,8 +1,8 @@
 ---
 path: "/reviews/"
 template: reviews
-seoTitle: "Alter Phase Roofing Reviews | 5.0 Stars, 154 Reviews"
-description: "154 real reviews, 5.0 stars: Staten Island homeowners on one-day roof replacements, honest repair advice, fair prices and spotless cleanup."
+seoTitle: "Alter Phase Roofing Reviews | 5.0 Stars, 157 Reviews"
+description: "157 real reviews, 5.0 stars: Staten Island homeowners on one-day roof replacements, honest repair advice, fair prices and spotless cleanup."
 kicker: "Customer reviews"
 h1: "5.0 stars from 157 reviews. Here's what our customers say."
 intro: "Every review on this page was written by a real customer on Google, Yelp, HomeAdvisor, Angi or the BBB. Filter by the kind of job you need and read what it was like to hire us."

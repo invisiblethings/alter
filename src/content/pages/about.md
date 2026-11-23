@@ -8,7 +8,7 @@ h1: "A family-owned roofing company where the owner is on every job"
 intro: "Alter Phase Roofing Contracting is a local, family-owned roofing contractor based on Staten Island. We've been in roofing for 19+ years, and we still run the business the way we started it: honest advice, careful work, and our name on every roof."
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-15.jpg"
 imageAlt: "The Alter Phase Roofing Contracting crew on a roof in Staten Island"
-answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY, serving Staten Island, Brooklyn, Manhattan and Queens. Owner Marke is part of every job. The company is a GAF Master Elite® contractor, BBB accredited, and licensed by NYC DCWP (#2129904-DCWP)."
+answer: "Alter Phase Roofing Contracting is a family-owned roofing contractor based on Staten Island, NY, serving Staten Island, Brooklyn, Manhattan, Queens and the Bronx. Owner Marke is part of every job. The company is a GAF Master Elite® contractor, BBB accredited, and licensed by NYC DCWP (#2129904-DCWP)."
 faq:
   - q: "Who owns Alter Phase Roofing Contracting?"
     a: "The company is family-owned and run by Marke, who is part of every job it does."

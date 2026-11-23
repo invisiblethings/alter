@@ -24,7 +24,7 @@ const fromNav = (l: NavLink): Item => ({ title: l.title, url: l.url, note: l.blu
 
 const guideList = (await posts()).map((p) => ({ title: p.data.cardTitle || p.data.h1, url: p.data.path }));
 const groups: { id: string; icon: string; title: string; items: Item[] }[] = [
-  { id: 'main', icon: 'home', title: 'Main pages', items: [
+  { id: 'main-pages', icon: 'home', title: 'Main pages', items: [
     { title: 'Home', url: '/', note: 'Staten Island roofing company' },
     { title: 'Free estimate', url: '/free-estimate/', note: 'Free inspection, written price in 24 hours' },
     { title: 'Contact us', url: '/contact/' },

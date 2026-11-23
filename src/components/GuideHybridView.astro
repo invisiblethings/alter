@@ -4,6 +4,7 @@
 // the guide as interactive tools (calculator, borough prices, repair-or-
 // replace check, permit check) and designed sections, with proof and a
 // form at the end. Keeps the guide's author, dates and FAQ for search.
+import { thumb } from '../lib/thumb';
 import Icon from './Icon.astro';
 import CallButton from './CallButton.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
@@ -239,7 +240,7 @@ const facts = [
         <p class="lead">Don't see yours? Call or text and you'll talk to someone who actually works on roofs.</p>
         <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
       </div>
-      <div data-reveal data-reveal-d="1"><Faq items={d.faq} title="NYC roof replacement: common questions" bare /></div>
+      <div data-reveal data-reveal-d="1"><Faq items={d.faq} id="faq-list" title="NYC roof replacement: common questions" bare /></div>
     </div>
   </section>
 )}
@@ -259,7 +260,7 @@ const facts = [
         <div class="rel-grid">
           {related.map((r) => (
             <a class="rel" href={r.data.path}>
-              {r.data.image ? <img src={r.data.image} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
+              {r.data.image ? <img src={thumb(r.data.image)} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
               <span class="rel-b"><em>Guide</em><strong>{('cardTitle' in r.data && r.data.cardTitle) || r.data.h1}</strong><span class="link-arrow">Read the guide <Icon name="arrow" /></span></span>
             </a>
           ))}

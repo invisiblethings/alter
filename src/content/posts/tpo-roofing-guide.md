@@ -106,4 +106,4 @@ A well-installed TPO roof typically lasts **20–30 years**. To get there: keep 
 
 **Consider something else:** restaurant roofs with grease exhaust (PVC), roofs with heavy foot traffic (modified bitumen), or tight budgets on small row-home roofs (EPDM).
 
-We install TPO across Staten Island, Brooklyn, Manhattan and Queens. See our [flat roofing services](/flat-roofing/), [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/) and [commercial roof replacement](/commercial-roofing/roof-replacement/).
+We install TPO across Staten Island, Brooklyn, Manhattan, Queens and the Bronx. See our [flat roofing services](/flat-roofing/), [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/) and [commercial roof replacement](/commercial-roofing/roof-replacement/).

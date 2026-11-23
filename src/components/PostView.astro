@@ -1,4 +1,5 @@
 ---
+import { thumb } from '../lib/thumb';
 import Icon from './Icon.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import Estimator from './Estimator.astro';
@@ -60,7 +61,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
         <span class="avatar-s" aria-hidden="true">M</span>
         <div>
           <h2>Written by Marke, owner of Alter Phase Roofing Contracting</h2>
-          <p>Marke runs Alter Phase Roofing Contracting, a family-owned roofing contractor in Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Manhattan and Queens. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
+          <p>Marke runs Alter Phase Roofing Contracting, a family-owned roofing contractor in Staten Island with {business.yearsInRoofing}+ years in roofing, and is part of every job the company does across Staten Island, Brooklyn, Manhattan, Queens and the Bronx. GAF Master Elite® contractor · NYC DCWP Home Improvement Contractor #{business.license.number}.</p>
         </div>
       </section>
     </article>
@@ -84,7 +85,7 @@ const more = [...relatedPinned, ...related].slice(0, 3);
     <div class="grid-3">
       {more.map((p) => (
         <a class="post-card" href={p.data.path} data-reveal>
-          <div class="img">{p.data.image && <img src={p.data.image} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
+          <div class="img">{p.data.image && <img src={thumb(p.data.image)} alt={p.data.imageAlt || ''} width="640" height="400" loading="lazy" decoding="async" />}</div>
           <span class="meta">{readTime(p)} min read</span><h3>{p.data.cardTitle || p.data.h1}</h3><p>{p.data.description}</p>
         </a>
       ))}

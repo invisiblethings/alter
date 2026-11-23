@@ -77,4 +77,4 @@ Most early flat roof failures we see come from the same few things: **water that
 
 ## Get an honest answer
 
-We repair and replace flat roofs across Staten Island, Brooklyn, Manhattan and Queens. We'll inspect your roof for free, show you photos and tell you straight whether it needs a patch or a new roof. See [flat roofing](/flat-roofing/) or [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/).
+We repair and replace flat roofs across Staten Island, Brooklyn, Manhattan, Queens and the Bronx. We'll inspect your roof for free, show you photos and tell you straight whether it needs a patch or a new roof. See [flat roofing](/flat-roofing/) or [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/).

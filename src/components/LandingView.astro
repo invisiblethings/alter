@@ -3,6 +3,7 @@
 // one goal (a call or a form), no navigation or exits, the headline matched
 // to the ad's search term, the offer stacked above the fold, proof at every
 // scroll depth, objections answered, and the same CTA repeated.
+import { thumb } from '../lib/thumb';
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
 import Icon from './Icon.astro';
@@ -129,7 +130,7 @@ const steps = [
   <div class="wrap">
     <div class="lp-head" data-reveal><span class="kicker">See the work</span><h2 id="gal-h">{L.galleryTitle}</h2></div>
     <div class="lp-gallery">
-      {L.gallery.map((g) => <figure data-reveal><img src={g.img} alt={g.t} width="600" height="600" loading="lazy" decoding="async" /><figcaption>{g.t}</figcaption></figure>)}
+      {L.gallery.map((g) => <figure data-reveal><img src={thumb(g.img)} alt={g.t} width="600" height="600" loading="lazy" decoding="async" /><figcaption>{g.t}</figcaption></figure>)}
     </div>
   </div>
 </section>
@@ -165,11 +166,11 @@ const steps = [
   </div>
 </section>
 
-<section class="lp-sec lp-bone" aria-labelledby="faq-h">
+<section class="lp-sec lp-bone" aria-labelledby="lp-faq-h">
   <div class="wrap faq-split">
     <div>
       <span class="kicker">Questions</span>
-      <h2 id="faq-h">Before you call</h2>
+      <h2 id="lp-faq-h">Before you call</h2>
       <p class="lead">Or skip the reading and ask us. You'll talk to someone who actually works on roofs.</p>
       <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
     </div>

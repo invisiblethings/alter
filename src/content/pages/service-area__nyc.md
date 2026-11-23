@@ -2,12 +2,12 @@
 path: "/service-area/nyc/"
 template: location
 seoTitle: "NYC Roofing Contractor | Repair & Replacement | Alter Phase"
-description: "Family-owned NYC roofing contractor based on Staten Island, serving Brooklyn, Manhattan and Queens. Roof repair, replacement, flat roofs."
+description: "Family-owned NYC roofing contractor based on Staten Island, serving Brooklyn, Manhattan, Queens and the Bronx. Roof repair, replacement, flat roofs."
 kicker: "Roofing in New York City"
 h1: "NYC roofing contractor, family-owned and based on Staten Island"
 intro: "From shingle roofs on Staten Island to brownstones in Brooklyn and co-ops in Manhattan, New York City roofs come in every shape. We've built our business on doing them properly, with the owner on every job."
 highlights:
-  - "Staten Island, Brooklyn, Manhattan and Queens"
+  - "Staten Island, Brooklyn, Manhattan, Queens and the Bronx"
   - "Residential, commercial and multi-family"
   - "NYC permits, cool-roof and LL92/94 rules handled"
 service: "Roofing"
@@ -15,7 +15,7 @@ area: "New York City"
 prices: ["boroughs", "flat", "pitched"]
 image: "/wp-content/uploads/2024/04/NYC-Roofs-From-Above.jpg"
 imageAlt: "Aerial view of New York City rooftops"
-answer: "Alter Phase Roofing Contracting is a family-owned NYC roofing contractor based on Staten Island and serving Staten Island, Brooklyn, Manhattan and Queens. Most NYC roof repairs cost $300–$1,200 and full replacements $10,000–$30,000+, depending on the borough, roof type and access."
+answer: "Alter Phase Roofing Contracting is a family-owned NYC roofing contractor based on Staten Island and serving Staten Island, Brooklyn, Manhattan, Queens and the Bronx. Most NYC roof repairs cost $300–$1,200 and full replacements $10,000–$30,000+, depending on the borough, roof type and access."
 related:
   - "/service-area/staten-island-ny/"
   - "/service-area/brooklyn-ny/"
@@ -25,7 +25,7 @@ related:
   - "/roof-replacement-guide-nyc/"
 faq:
   - q: "Which parts of NYC do you serve?"
-    a: "We're based on Staten Island and work across Staten Island, Brooklyn, Manhattan and Queens."
+    a: "We're based on Staten Island and work across Staten Island, Brooklyn, Manhattan, Queens and the Bronx."
   - q: "How much does a new roof cost in NYC?"
     a: "Most NYC roof replacements cost $10,000–$30,000+. A 1,000 sq ft flat roof ranges from about $5,000–$13,000 on Staten Island to $8,000–$22,000+ in Manhattan. Our NYC cost guide breaks it down by material and borough."
   - q: "Are you licensed to work in New York City?"

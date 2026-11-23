@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "migrate": "node scripts/migrate/run.mjs",
     "check:seo": "node scripts/qa/seo.mjs",
-    "check:links": "node scripts/qa/links.mjs"
+    "check:links": "node scripts/qa/links.mjs",
+    "thumbs": "node scripts/images/thumbs.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

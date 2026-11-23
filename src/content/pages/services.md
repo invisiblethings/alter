@@ -27,7 +27,7 @@ faq:
   - q: "Do you do both residential and commercial roofing?"
     a: "Yes. Homes are most of our work: colonials, capes, high-ranches, two-families and attached townhouses. We also repair and replace flat roofs on stores, offices, mixed-use and multi-family buildings."
   - q: "What areas do you serve?"
-    a: "We're based at 61 Appleby Ave on Staten Island and work in every Staten Island neighborhood. We also serve Brooklyn, Manhattan and Queens."
+    a: "We're based at 61 Appleby Ave on Staten Island and work in every Staten Island neighborhood. We also serve Brooklyn, Manhattan, Queens and the Bronx."
   - q: "How quickly can you give me a price?"
     a: "After a free on-site inspection, you usually get a written, itemized estimate within 24 hours."
   - q: "Do you use subcontractors?"

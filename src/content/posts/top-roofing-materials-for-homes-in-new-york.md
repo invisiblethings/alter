@@ -65,7 +65,7 @@ Clay and concrete tile suit specific architectural styles and last 50+ years, bu
 
 ## Flat roof materials
 
-Most Brooklyn, Manhattan and Queens row homes have flat roofs. The main options are **EPDM** (rubber), the affordable workhorse; **TPO**, white and reflective with welded seams (see our [TPO guide](/tpo-roofing-guide/)); **modified bitumen**, multi-ply and tough underfoot; and **PVC**, for restaurants and chemical exposure. Compare them in [flat roof repair vs. replacement](/flat-roof-repair-and-replacement-in-nyc/).
+Most Brooklyn, Queens, Manhattan and Bronx row homes have flat roofs. The main options are **EPDM** (rubber), the affordable workhorse; **TPO**, white and reflective with welded seams (see our [TPO guide](/tpo-roofing-guide/)); **modified bitumen**, multi-ply and tough underfoot; and **PVC**, for restaurants and chemical exposure. Compare them in [flat roof repair vs. replacement](/flat-roof-repair-and-replacement-in-nyc/).
 
 ## The best roofing brands
 

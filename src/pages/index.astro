@@ -1,4 +1,5 @@
 ---
+import { thumb } from '../lib/thumb';
 import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
@@ -315,7 +316,7 @@ import CallButton from '../components/CallButton.astro';
       <div class="mosaic">
         {projects.map((p, i) => (
           <figure data-reveal data-reveal-d={String(i % 3)}>
-            <img src={p.img} alt={`${p.t} in ${p.w} by ${business.name}`} width="1024" height="1024" loading="lazy" decoding="async" />
+            <img src={thumb(p.img)} alt={`${p.t} in ${p.w} by ${business.name}`} width="1024" height="1024" loading="lazy" decoding="async" />
             <figcaption><h3>{p.t}</h3>{p.w}</figcaption>
           </figure>
         ))}

@@ -4,6 +4,7 @@
 // the quote form, "leaking right now?" steps, prices from our own jobs with a
 // chart and calculator, the leak-source diagram, the repair-or-replace check,
 // then the article, reviews and FAQ. Images and leak sources: src/data/leakGuide.ts.
+import { thumb } from '../lib/thumb';
 import Icon from './Icon.astro';
 import CallButton from './CallButton.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
@@ -179,7 +180,7 @@ const steps = [
         <p class="lead">Don't see yours? Call or text and you'll talk to someone who actually works on roofs.</p>
         <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
       </div>
-      <div data-reveal data-reveal-d="1"><Faq items={d.faq} title="Roof leak repair: common questions" bare /></div>
+      <div data-reveal data-reveal-d="1"><Faq items={d.faq} id="faq-list" title="Roof leak repair: common questions" bare /></div>
     </div>
   </section>
 )}
@@ -199,7 +200,7 @@ const steps = [
         <div class="rel-grid">
           {related.map((r) => (
             <a class="rel" href={r.data.path}>
-              {r.data.image ? <img src={r.data.image} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
+              {r.data.image ? <img src={thumb(r.data.image)} alt="" width="400" height="260" loading="lazy" decoding="async" /> : <span class="rel-ph"><Icon name="roof" /></span>}
               <span class="rel-b"><em>Guide</em><strong>{('cardTitle' in r.data && r.data.cardTitle) || r.data.h1}</strong><span class="link-arrow">Read the guide <Icon name="arrow" /></span></span>
             </a>
           ))}
