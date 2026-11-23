@@ -69,6 +69,7 @@ export const business = {
     { name: 'Brooklyn', url: '/service-area/brooklyn-ny/' },
     { name: 'Manhattan', url: '/service-area/manhattan-ny/' },
     { name: 'Queens', url: '/service-area/queens-ny/' },
+    { name: 'Bronx', url: '/service-area/bronx-ny/' },
   ],
   gtmId: 'GTM-M77VVM4Q',
 } as const;

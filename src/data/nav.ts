@@ -62,6 +62,7 @@ export const areas: NavLink[] = [
   },
   { title: 'Manhattan', url: '/service-area/manhattan-ny/', blurb: 'Co-ops, condos, commercial' },
   { title: 'Queens', url: '/service-area/queens-ny/', blurb: 'Detached homes & attached rows' },
+  { title: 'Bronx', url: '/service-area/bronx-ny/', blurb: 'Row houses & two-families' },
   { title: 'All of NYC', url: '/service-area/nyc/', blurb: 'Every borough we serve' },
 ];
 

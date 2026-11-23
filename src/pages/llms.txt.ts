@@ -34,7 +34,7 @@ export const GET: APIRoute = async () => {
     { name: 'Manhattan, NY', note: 'co-ops, condos, walk-ups, brownstones and commercial flat roofs', path: '/service-area/manhattan-ny/' },
     { name: 'Brooklyn, NY', note: 'row houses, brownstones and flat roofs; shingle roofs in southern Brooklyn', path: '/service-area/brooklyn-ny/' },
     { name: 'Queens, NY', note: 'attached row houses with flat roofs and detached shingle-roofed homes', path: '/service-area/queens-ny/' },
-    { name: 'The Bronx, NY', note: 'row houses and two- and three-family homes, mostly flat roofs; shingle roofs on detached houses', path: '', hoods: 'Riverdale, Kingsbridge, Throgs Neck, Pelham Bay, Country Club, Morris Park, Parkchester, Castle Hill, Soundview, Williamsbridge, Wakefield and City Island' },
+    { name: 'The Bronx, NY', note: 'row houses and two- and three-family homes, mostly flat roofs; shingle roofs on detached houses', path: '/service-area/bronx-ny/', hoods: 'Riverdale, Kingsbridge, Throgs Neck, Pelham Bay, Country Club, Morris Park, Parkchester, Castle Hill, Soundview, Williamsbridge, Wakefield and City Island' },
   ].map((a) => {
     const h = a.hoods || (a.path ? hoods(a.path) : '');
     return `### ${a.name}\n${a.path ? `Page: ${SITE}${a.path}\n` : ''}Typical work: ${a.note}.${h ? `\nNeighborhoods: ${h}.` : ''}`;

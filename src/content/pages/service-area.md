@@ -21,6 +21,7 @@ related:
   - "/service-area/brooklyn-ny/"
   - "/service-area/manhattan-ny/"
   - "/service-area/queens-ny/"
+  - "/service-area/bronx-ny/"
   - "/service-area/nyc/"
 modified: "2026-10-26"
 ---
@@ -41,6 +42,10 @@ Co-ops, condos, townhouses and commercial buildings.
 ### [Queens](/service-area/queens-ny/)
 
 Detached homes, attached rows and two-families.
+
+### [Bronx](/service-area/bronx-ny/)
+
+Row houses, two- and three-family homes and detached houses.
 
 ## Why borough matters for your roof
 

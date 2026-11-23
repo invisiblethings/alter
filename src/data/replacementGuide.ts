@@ -62,6 +62,7 @@ const guides: BoroughGuide[] = [
       'Street staging and debris haul-away are planned before the job and itemized in your estimate.',
       'Flat roofs here are a good fit for white TPO, which also meets NYC cool-roof rules.',
     ],
+    link: { url: '/service-area/bronx-ny/', label: 'Roofing in the Bronx' },
   },
   {
     name: 'Staten Island', slug: 'staten-island', in: 'on Staten Island',

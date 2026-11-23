@@ -21,6 +21,7 @@ related:
   - "/service-area/brooklyn-ny/"
   - "/service-area/manhattan-ny/"
   - "/service-area/queens-ny/"
+  - "/service-area/bronx-ny/"
   - "/commercial-roofing/"
   - "/roof-replacement-guide-nyc/"
 faq:
@@ -51,6 +52,10 @@ Co-ops, condos, townhouses and commercial buildings, with board paperwork and lo
 ### [Queens](/service-area/queens-ny/)
 
 Detached homes, attached rows and two-families, often with both pitched and flat sections.
+
+### [Bronx](/service-area/bronx-ny/)
+
+Row houses and two- and three-family homes with flat roofs, plus shingle-roofed detached houses.
 
 ## What every NYC roof job needs
 
