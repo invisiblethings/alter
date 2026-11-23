@@ -53,7 +53,7 @@ export const GET: APIRoute = async () => {
   const sources = Object.entries(reviewStats.bySource).map(([k, v]) => `${k} ${v}`).join(', ');
   const body = `# ${business.name}
 
-> ${business.name} is a family-owned, licensed and insured roofing contractor based in Staten Island, New York. We repair and replace roofs for homeowners, landlords, co-op and condo boards, HOAs and businesses across New York City: Staten Island, Manhattan, Brooklyn, Queens and the Bronx. Services include roof repair, emergency roof repair (24/7), roof replacement, asphalt shingle roofing, flat roofing (EPDM, TPO, modified bitumen, PVC), roof inspections, skylights, gutters and siding.
+> ${business.name} is a family-owned, licensed and insured roofing contractor based in Staten Island, New York. We repair and replace roofs for homeowners, landlords, co-op and condo boards, HOAs and businesses across New York City: Staten Island, Manhattan, Brooklyn, Queens and the Bronx. Services include roof repair, emergency roof repair (24/7), roof replacement, asphalt shingle roofing, flat roofing (EPDM, TPO, modified bitumen, PVC), roof inspections, skylight repair, installation and removal, gutters and siding.
 
 Rated ${reviewStats.average} stars from ${reviewStats.total} reviews. GAF Master Elite® Residential Roofing Contractor. NYC DCWP Home Improvement Contractor License #${business.license.number}. Owner ${business.owner.name} is part of every job, and our own crew does the work (no subcontractors). Most roofs are replaced in one day.
 

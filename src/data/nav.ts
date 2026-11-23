@@ -17,7 +17,7 @@ export const services: NavLink[] = [
       { title: 'Residential Roofing', url: '/residential-roofing/' },
       { title: 'Roof Inspections', url: '/residential-roofing/roof-inspections/' },
       { title: 'Attic Ventilation', url: '/residential-roofing/attic-ventilation/' },
-      { title: 'Skylight Repair & Installation', url: '/residential-roofing/skylight-installation-repair/' },
+      { title: 'Skylight Repair, Installation & Removal', url: '/residential-roofing/skylight-installation-repair/' },
     ],
   },
   {
