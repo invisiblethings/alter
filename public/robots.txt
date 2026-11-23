@@ -1,88 +1,220 @@
 # robots.txt for https://alterphaseroofing.com
-# Alter Phase Roofing Contracting, roofing contractor in New York City.
-# All crawlers are allowed. AI summary: https://alterphaseroofing.com/llms.txt
+# Alter Phase Roofing Contracting, roofing contractor in Staten Island, NY.
+# Roof repair, roof replacement, flat roofing, siding and gutters for homes in
+# Staten Island, Brooklyn, Queens, Manhattan and the Bronx. Phone: (929) 370-1552.
+#
+# All search engines and AI crawlers are allowed to crawl, index, cite and
+# summarize every page, and to use the content for AI answers and training.
+# AI summary of the business: https://alterphaseroofing.com/llms.txt
+# HTML sitemap: https://alterphaseroofing.com/sitemap/
+#
+# Content-Signal: search=yes (index and link to pages), ai-input=yes (use pages
+# in AI answers), ai-train=yes (train AI models).
 
 # Search engines
 
 User-agent: Googlebot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Googlebot-Image
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Googlebot-Video
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Googlebot-News
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Storebot-Google
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Google-InspectionTool
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: GoogleOther
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: AdsBot-Google
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Mediapartners-Google
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Bingbot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: MicrosoftPreview
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Slurp
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Applebot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: DuckDuckBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: YandexBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-# AI search crawlers
+User-agent: Kagibot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: PetalBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# AI search and answer crawlers
 
 User-agent: OAI-SearchBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: ChatGPT-User
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Claude-SearchBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Claude-User
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: PerplexityBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Perplexity-User
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: DuckAssistBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: MistralAI-User
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Meta-ExternalFetcher
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Google-CloudVertexBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: YouBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # AI crawlers
 
 User-agent: GPTBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: ClaudeBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Google-Extended
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Applebot-Extended
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Amazonbot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: CCBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: cohere-ai
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: cohere-training-data-crawler
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: AI2Bot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Diffbot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Bytespider
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# Social and link preview crawlers
+
+User-agent: facebookexternalhit
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: FacebookBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: LinkedInBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Twitterbot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Pinterestbot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: Slackbot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: WhatsApp
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # All other crawlers
 
 User-agent: *
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 Sitemap: https://alterphaseroofing.com/sitemap-index.xml
