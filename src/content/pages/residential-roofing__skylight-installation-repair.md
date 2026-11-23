@@ -1,7 +1,7 @@
 ---
 path: "/residential-roofing/skylight-installation-repair/"
 template: service
-seoTitle: "Skylight Repair, Installation & Removal | Staten Island"
+seoTitle: "Skylight Repair & Replacement Staten Island | Alter Phase Roofing Contracting"
 description: "Leaking or unwanted skylight on Staten Island? We repair, replace and install skylights, or remove them and roof over the opening. Repairs from $450."
 kicker: "Skylight repair, installation & removal · Staten Island"
 h1: "Skylight repair, installation and removal on Staten Island"
