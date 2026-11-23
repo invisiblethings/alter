@@ -194,6 +194,27 @@ const facts = [
 
 <Reviews limit={6} tags={['replacement', 'oneday']} title="What homeowners say about their new roof" />
 
+<section class="sec gh-map-sec" id="map" aria-labelledby="map-h">
+  <div class="wrap gh-map">
+    <div data-reveal>
+      <span class="kicker">Find us</span>
+      <h2 id="map-h">Your NYC roof replacement company, based on Staten Island</h2>
+      <p class="lead">{business.name} works from {business.address.street}, {business.address.city}, {business.address.region} {business.address.zip}, and replaces roofs in Manhattan, Brooklyn, Queens, the Bronx and Staten Island.</p>
+      <div class="gh-map-btns">
+        <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+        <a class="btn btn-lg btn-line" href={business.googleMapsUrl} target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+    <div class="gh-map-frame" data-reveal data-reveal-d="1">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.7393252074594!2d-74.0798322!3d40.59150899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24f207d62db57%3A0xdb31f8bee66a72e9!2sAlter%20Phase%20Roofing%20Contracting!5e0!3m2!1sen!2sus!4v1795419027170!5m2!1sen!2sus"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        title="Best Roof Replacement Company NYC" aria-label="Best Roof Replacement Company NYC"></iframe>
+    </div>
+  </div>
+</section>
+
 {d.faq.length > 0 && (
   <section class="sec bone" id="faq">
     <div class="wrap faq-split">
@@ -236,6 +257,12 @@ const facts = [
 <FinalCta title="Ready for a roof you won't think about for 30 years?" text="Free inspection with photos and a written, itemized price. If a repair will do, we'll tell you." service="Roof replacement" />
 
 <style>
+
+  .gh-map { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .gh-map-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+  .gh-map-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(10, 25, 55, .12); aspect-ratio: 4 / 3; background: #e9eef5; }
+  .gh-map-frame iframe { display: block; width: 100%; height: 100%; }
+  @media (max-width: 860px) { .gh-map { grid-template-columns: 1fr; } }
   .gh-by { display: flex; align-items: center; gap: 0.6rem; margin: 1.25rem 0 0; font-size: 0.86rem; color: #c8d3e8; }
   .gh-by a { color: #fff; }
   .gh-by .avatar-s { background: var(--gold); color: var(--ink); }
