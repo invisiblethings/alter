@@ -130,6 +130,7 @@ interface PageInput {
   h1: string;
   serviceArea?: string;
   neighborhood?: string;
+  hasMap?: string; // Google Maps link for the neighborhood Place
   images?: string[]; // extra article images (infographics), after the main image
   serviceName?: string;
   price?: { min: number; max: number; unit?: string };
@@ -171,7 +172,7 @@ export function pageGraph(p: PageInput) {
       description: p.description || undefined,
       provider: { '@id': business.id },
       areaServed: p.neighborhood
-        ? { '@type': 'Place', name: `${p.neighborhood}, Staten Island, NY`, containedInPlace: { '@type': 'City', name: p.serviceArea || 'Staten Island' } }
+        ? { '@type': 'Place', name: `${p.neighborhood}, Staten Island, NY`, ...(p.hasMap ? { hasMap: p.hasMap } : {}), containedInPlace: { '@type': 'City', name: p.serviceArea || 'Staten Island' } }
         : p.serviceArea ? { '@type': 'City', name: p.serviceArea } : { '@type': 'City', name: 'New York City' },
       offers: p.price ? {
         '@type': 'Offer',

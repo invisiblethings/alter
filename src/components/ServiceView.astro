@@ -152,6 +152,25 @@ const service = d.service || d.h1.split(':')[0];
   </section>
 )}
 
+{d.map && (
+  <section class="sec sv-map-sec" id="map" aria-labelledby="map-h">
+    <div class="wrap sv-map">
+      <div data-reveal>
+        <span class="kicker">Service area map</span>
+        <h2 id="map-h">{d.map.heading}</h2>
+        <p class="lead">{d.map.text}</p>
+        <div class="sv-map-btns">
+          <a class="btn btn-lg" href={telHref}><Icon name="phone" /> {business.phone}</a>
+          <a class="btn btn-lg btn-line" href={d.map.link} target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+      <div class="sv-map-frame" data-reveal data-reveal-d="1">
+        <iframe src={d.map.src} width="400" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title={d.map.title} aria-label={d.map.title}></iframe>
+      </div>
+    </div>
+  </section>
+)}
+
 {related.length > 0 && (
   <nav class="sec related-sec" aria-labelledby="rel-h">
     <div class="wrap">
@@ -186,4 +205,9 @@ const service = d.service || d.h1.split(':')[0];
   .sv-fig img { display: block; width: 100%; height: auto; border-radius: var(--r); box-shadow: var(--sh); }
   .sv-fig figcaption { margin-top: 0.6rem; font-size: 0.86rem; color: var(--muted); text-align: center; }
   @media (max-width: 760px) { .sv-figs { grid-template-columns: 1fr; } }
+  .sv-map { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .sv-map-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+  .sv-map-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(10, 25, 55, .12); aspect-ratio: 4 / 3; background: #e9eef5; }
+  .sv-map-frame iframe { display: block; width: 100%; height: 100%; }
+  @media (max-width: 860px) { .sv-map { grid-template-columns: 1fr; } }
 </style>

@@ -13,6 +13,12 @@ highlights:
 service: "Roofing"
 area: "Staten Island"
 neighborhood: "Great Kills"
+map:
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12126.746017674215!2d-74.14925201298567!3d40.54851474269769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24bbbfca9763d%3A0x7daddb8d940bf1f2!2sGreat%20Kills%2C%20Staten%20Island%2C%20NY!5e0!3m2!1sen!2sus!4v1795441570416!5m2!1sen!2sus"
+  title: "Map of Great Kills, Staten Island, NY: roofing service area of Alter Phase Roofing Contracting"
+  heading: "Roofers serving all of Great Kills, Staten Island"
+  text: "We repair and replace roofs on every street in Great Kills (ZIP 10308), from the homes around Great Kills Harbor and Great Kills Park to the blocks along Hylan Boulevard and Amboy Road. Free inspections, and emergency leak repair 24/7."
+  link: "https://www.google.com/maps/place/Great+Kills,+Staten+Island,+NY/"
 wizard: "Roof replacement"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2024/04/AlterPhaseRoofingProjects-9.jpg"
@@ -50,7 +56,7 @@ faq:
   - q: "How long does a roof replacement take in Great Kills?"
     a: "Most homes are finished in a single day, including tear-off and cleanup. Larger roofs or roofs that need deck repairs can take a second day."
 published: "2026-11-11"
-modified: "2026-11-11"
+modified: "2026-11-23"
 ---
 ## Roofing in Great Kills: what we see on these homes
 
