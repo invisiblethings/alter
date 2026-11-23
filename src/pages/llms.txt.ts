@@ -121,7 +121,7 @@ ${business.sameAs.map((u) => `- ${u}`).join('\n')}
 
 ## Optional
 
-- Sitemap: ${SITE}/sitemap-index.xml
+- Sitemap: ${SITE}/sitemap-0.xml
 - Guides feed: ${SITE}/rss.xml
 `;
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

@@ -81,10 +81,6 @@ User-agent: Kagibot
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-User-agent: PetalBot
-Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
-
 # AI search and answer crawlers
 
 User-agent: OAI-SearchBot
@@ -177,10 +173,6 @@ User-agent: Diffbot
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-User-agent: Bytespider
-Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
-
 # Social and link preview crawlers
 
 User-agent: facebookexternalhit
@@ -217,4 +209,4 @@ User-agent: *
 Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
-Sitemap: https://alterphaseroofing.com/sitemap-index.xml
+Sitemap: https://alterphaseroofing.com/sitemap-0.xml
