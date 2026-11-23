@@ -13,7 +13,6 @@ highlights:
 service: "Townhouse roof replacement"
 area: "Brooklyn"
 wizard: "Roof replacement"
-prices: ["flat", "boroughs"]
 image: "/wp-content/uploads/2025/04/flat-roof-on-a-typical-Brooklyn-building.webp"
 imageAlt: "Flat roof on a Brooklyn townhouse, replaced by Alter Phase Roofing Contracting"
 answer: "Townhouse roof replacement in Brooklyn typically costs <strong>$6,500–$17,000</strong> for a 1,000 sq ft flat roof, or about $6.50–$17 per sq ft, based on Alter Phase Roofing Contracting's average prices from hundreds of Brooklyn townhouse, row house and brownstone roofs. Smaller row house roofs (600–800 sq ft) cost about $3,900–$13,600. Most townhouse roof repairs cost $400–$1,200."
