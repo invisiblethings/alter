@@ -32,8 +32,8 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 /privacy-policy                                              /privacy-policy-2/ 301
 
 # --- Yoast/Rank Math sitemaps -> Astro sitemap
-/sitemap_index.xml      /sitemap-index.xml   301
-/sitemap.xml            /sitemap-index.xml   301
+/sitemap_index.xml      /sitemap-0.xml   301
+/sitemap.xml            /sitemap-0.xml   301
 /wp-sitemap.xml         /sitemap-0.xml   301
 /post-sitemap.xml       /sitemap-0.xml   301
 /page-sitemap.xml       /sitemap-0.xml   301
