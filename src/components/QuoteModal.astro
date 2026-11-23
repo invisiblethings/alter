@@ -3,6 +3,8 @@
 // estimate", "Free inspection"...) and any link that jumps to an on-page
 // quote form opens this instead, so visitors never leave the page they're
 // reading. Without JavaScript the links still go to the page or form as before.
+// Links marked data-no-modal (the estimator's "Get my exact price") keep going
+// to the full /free-estimate/ page.
 import Icon from './Icon.astro';
 import QuoteWizard from './QuoteWizard.astro';
 ---
@@ -24,7 +26,7 @@ import QuoteWizard from './QuoteWizard.astro';
     document.addEventListener('click', (e) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = (e.target as Element).closest<HTMLAnchorElement>('a[href]');
-      if (!a || dlg.contains(a) || a.target === '_blank' || !isFormLink(a)) return;
+      if (!a || dlg.contains(a) || a.target === '_blank' || a.hasAttribute('data-no-modal') || !isFormLink(a)) return;
       e.preventDefault();
       const drawer = document.getElementById('drawer');
       if (drawer && !drawer.hidden) drawer.querySelector<HTMLButtonElement>('.drawer-close')?.click();
