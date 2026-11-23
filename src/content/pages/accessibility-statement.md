@@ -1,4 +1,5 @@
 ---
+noindex: true
 path: "/accessibility-statement/"
 template: legal
 seoTitle: "Accessibility Statement | Alter Phase Roofing Contracting"

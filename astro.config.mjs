@@ -17,8 +17,8 @@ for (const dir of ['src/content/pages', 'src/content/posts']) {
     const p = src.match(/^path: "(.*)"$/m)?.[1];
     const m = src.match(/^modified: "(.*)"$/m)?.[1];
     if (p && m) lastmod.set(p, m);
-    // Pages whose canonical points elsewhere stay out of the sitemap.
-    if (p && /^canonical: /m.test(src)) NOINDEX.push(p);
+    // Noindex pages, and pages whose canonical points elsewhere, stay out of the sitemap.
+    if (p && /^(canonical: |noindex: true)/m.test(src)) NOINDEX.push(p);
   }
 }
 

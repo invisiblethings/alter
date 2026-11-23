@@ -1,4 +1,5 @@
 ---
+noindex: true
 path: "/privacy-policy-2/"
 template: legal
 seoTitle: "Privacy Policy | Alter Phase Roofing Contracting"

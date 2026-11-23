@@ -1,4 +1,5 @@
 ---
+noindex: true
 path: "/terms-and-conditions/"
 template: legal
 seoTitle: "Terms of Use | Alter Phase Roofing Contracting"
