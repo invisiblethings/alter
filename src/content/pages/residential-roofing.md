@@ -23,7 +23,7 @@ related:
   - "/residential-roofing/skylight-installation-repair/"
   - "/siding-gutter/gutter-installation-repair/"
   - "/siding-gutter/siding-installation-repair/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "What types of home roofs do you work on?"
     a: "Asphalt shingle roofs, which are the most common on Staten Island, flat roofs on extensions, garages and attached homes (EPDM, TPO, modified bitumen), and metal roofs. We also repair skylights, gutters and siding."
@@ -87,7 +87,7 @@ That's why we inspect the whole roof, not just the stain on your ceiling, and wh
 
 ## What a home roof costs
 
-Most homeowners want a number before anything else, so the price table below shows our real ranges for shingle and sloped roofs. For a closer estimate, read the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) or the [roof leak repair cost guide](/cost-to-repair-roof-leak/), or ask for a free inspection.
+Most homeowners want a number before anything else, so the price table below shows our real ranges for shingle and sloped roofs. For a closer estimate, read the [roof replacement cost guide](/roof-replacement-guide-nyc/) or the [roof leak repair cost guide](/cost-to-repair-roof-leak/), or ask for a free inspection.
 
 **Next step:** call or text (929) 370-1552. We're open Mon–Fri 8–8 and Sat 8–5, and we answer emergencies 24/7. We work in every neighborhood, from St. George and West Brighton to New Springville, Annadale and Tottenville.
 

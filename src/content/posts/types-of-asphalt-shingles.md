@@ -20,7 +20,7 @@ takeaways:
 related:
   - "/top-roofing-materials-for-homes-in-new-york/"
   - "/roof-sheathing-explained/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "What's the difference between 3-tab and architectural shingles?"
     a: "3-tab shingles are a single flat layer cut into three tabs, giving a uniform look. Architectural shingles are two layers laminated together, so they're thicker, more dimensional, more wind-resistant and longer-lasting."
@@ -81,4 +81,4 @@ For almost every pitched-roof home on Staten Island, in Queens or in southern Br
 
 A shingle roof is a system. What's under the shingles decides how long it lasts: solid [roof sheathing](/roof-sheathing-explained/), synthetic underlayment, ice and water protection at eaves and valleys, proper ventilation, and new flashing. As a GAF Master Elite® contractor, we install complete GAF systems, which is what qualifies a roof for GAF's enhanced warranties.
 
-Compare shingles with metal, slate and flat roof options in our [best roofing materials guide](/top-roofing-materials-for-homes-in-new-york/), or see prices in the [NYC roof cost guide](/roof-replacement-cost-in-nyc/).
+Compare shingles with metal, slate and flat roof options in our [best roofing materials guide](/top-roofing-materials-for-homes-in-new-york/), or see prices in the [NYC roof cost guide](/roof-replacement-guide-nyc/).

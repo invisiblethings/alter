@@ -9,14 +9,12 @@ import pyexiv2
 from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-DIR = ROOT / 'public/images/guides/roof-leak-repair-cost'
 SITE = 'https://alterphaseroofing.com'
-PAGE = SITE + '/cost-to-repair-roof-leak/'
 BRAND = 'Alter Phase Roofing Contracting'
 COPY = '© 2026 Alter Phase Roofing Contracting. All rights reserved.'
-BASE_KW = ['roof leak repair', 'roof leak repair cost', 'NYC roofing', 'Staten Island roofer', BRAND]
-
-IMAGES = {
+# Each guide: image folder, page URL, base keywords and images
+# (file -> title, description, extra keywords).
+LEAK = {
     'roof-leak-repair-nyc-flashing-repair.jpg': (
         'Roof leak repair in NYC: sealing roof flashing',
         'An Alter Phase Roofing Contracting roofer sealing new flashing on a flat roof to stop a roof leak in New York City.',
@@ -44,9 +42,36 @@ IMAGES = {
     ),
 }
 
-for name, (title, desc, kw) in IMAGES.items():
-    path = DIR / name
-    keywords = BASE_KW + kw
+REPLACE = {
+    'roof-replacement-cost-nyc-by-roof-size.jpg': (
+        'Roof replacement cost in NYC by roof size (2026)',
+        'Roof replacement cost in NYC by roof size, 2026: 1,000 sq ft asphalt shingle roof $3,000-$10,000 and flat roof $5,000-$14,000; 1,500 sq ft $4,500-$15,000 and $7,500-$21,000; 2,000 sq ft $6,000-$20,000 and $10,000-$28,000; 3,000 sq ft $9,000-$30,000 and $15,000-$42,000. Average prices from Alter Phase Roofing Contracting jobs.',
+        ['roof replacement cost by size', '2,000 sq ft roof cost', 'new roof cost', 'infographic'],
+    ),
+    'roof-replacement-cost-per-square-foot-by-material.jpg': (
+        'Roof replacement cost per square foot by material, NYC 2026',
+        'Installed roof replacement cost per square foot in NYC, 2026: asphalt shingles $3-$10, EPDM $5-$12, modified bitumen $9-$13, TPO $9-$14, PVC $10-$16, metal $12-$18, tile $15-$25, slate $20-$40, with lifespans.',
+        ['roof cost per square foot', 'roofing materials cost', 'shingle roof cost', 'flat roof cost', 'infographic'],
+    ),
+    'flat-roof-replacement-cost-by-nyc-borough.jpg': (
+        'Flat roof replacement cost by NYC borough (2026)',
+        'Typical cost to replace a 1,000 sq ft flat roof in 2026: Manhattan $8,000-$22,000+, Brooklyn $6,500-$17,000, Queens $5,500-$15,000, Bronx $6,000-$16,000, Staten Island $5,000-$13,000.',
+        ['flat roof replacement cost', 'Manhattan roof cost', 'Brooklyn roof cost', 'Queens roof cost', 'Bronx roof cost', 'infographic'],
+    ),
+}
+
+GUIDES = [
+    ('public/images/guides/roof-leak-repair-cost', '/cost-to-repair-roof-leak/',
+     ['roof leak repair', 'roof leak repair cost', 'NYC roofing', 'Staten Island roofer', BRAND], LEAK),
+    ('public/images/guides/roof-replacement-cost-nyc', '/roof-replacement-guide-nyc/',
+     ['roof replacement cost NYC', 'roof replacement NYC', 'new roof cost', 'NYC roofing', BRAND], REPLACE),
+]
+
+for folder, page, base_kw, images in GUIDES:
+  PAGE = SITE + page
+  for name, (title, desc, kw) in images.items():
+    path = ROOT / folder / name
+    keywords = base_kw + kw
     with pyexiv2.Image(str(path)) as img:
         img.modify_exif({
             'Exif.Image.ImageDescription': desc,

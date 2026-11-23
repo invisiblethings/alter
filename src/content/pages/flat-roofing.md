@@ -24,7 +24,7 @@ related:
   - "/flat-roof-repair-and-replacement-in-nyc/"
   - "/tpo-roofing-guide/"
   - "/cost-to-repair-roof-leak/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/service-area/staten-island-ny/"
 faq:
   - q: "How do you find a leak in a flat roof?"
@@ -79,7 +79,7 @@ $10–$16 per sq ft. Resists grease and chemicals. Mostly used on restaurants an
 
 **Replace** if the roof is near or past 20 years, the insulation underneath is wet over large areas, it leaks in more than one place, or you've already paid for the same repair twice.
 
-When it's close, we give you both prices and photos of what we found, so you can decide with real numbers. Our guide to [flat roof repair vs. replacement](/flat-roof-repair-and-replacement-in-nyc/) goes deeper, and the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) breaks down full-roof prices.
+When it's close, we give you both prices and photos of what we found, so you can decide with real numbers. Our guide to [flat roof repair vs. replacement](/flat-roof-repair-and-replacement-in-nyc/) goes deeper, and the [roof replacement cost guide](/roof-replacement-guide-nyc/) breaks down full-roof prices.
 
 ## What homeowners ask before they call
 

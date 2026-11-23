@@ -17,7 +17,7 @@ takeaways:
   - "Fixing small leaks early prevents <strong>deck, insulation and ceiling damage</strong>."
   - "A quote far below the others usually means <strong>uninsured labor or missing items</strong>."
 related:
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/cost-to-repair-roof-leak/"
   - "/all-seasons-roofing-staten-island/"
 faq:
@@ -90,4 +90,4 @@ Hire a manufacturer-certified, licensed installer so a long warranty actually pr
 
 ## Affordable doesn't mean cutting corners
 
-We're a family-owned roofer based on Staten Island, and we keep prices fair by being local, running our own crew and not paying for a sales team. Every job gets a free inspection, a written itemized estimate and warranties in writing. See our [Staten Island roofing](/service-area/staten-island-ny/) page or the full [NYC roof cost guide](/roof-replacement-cost-in-nyc/).
+We're a family-owned roofer based on Staten Island, and we keep prices fair by being local, running our own crew and not paying for a sales team. Every job gets a free inspection, a written itemized estimate and warranties in writing. See our [Staten Island roofing](/service-area/staten-island-ny/) page or the full [NYC roof cost guide](/roof-replacement-guide-nyc/).

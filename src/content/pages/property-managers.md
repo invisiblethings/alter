@@ -91,7 +91,7 @@ New roofs carry up to 50-year manufacturer and up to 25-year workmanship warrant
 
 ## A maintenance program that saves money
 
-Flat roofs fail early when nobody looks at them, and Staten Island's nor'easters and freeze-thaw winters find every neglected seam. We recommend a simple routine: an inspection each spring and fall, small repairs fixed right away, drains cleared, and a written report after every visit. It costs far less than one emergency, and it gives your board the paper trail it needs for capital planning. To see typical numbers, check our [roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+Flat roofs fail early when nobody looks at them, and Staten Island's nor'easters and freeze-thaw winters find every neglected seam. We recommend a simple routine: an inspection each spring and fall, small repairs fixed right away, drains cleared, and a written report after every visit. It costs far less than one emergency, and it gives your board the paper trail it needs for capital planning. To see typical numbers, check our [roof replacement cost guide](/roof-replacement-guide-nyc/).
 
 ## Who you'll be working with
 

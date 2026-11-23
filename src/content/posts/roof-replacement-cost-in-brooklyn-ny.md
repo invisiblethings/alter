@@ -18,8 +18,8 @@ takeaways:
   - "Old layers, parapet work and access are the biggest cost drivers."
   - "Co-op, condo and landmark buildings add approvals and time, not just cost."
 related:
-  - "/roof-replacement-cost-in-nyc/"
   - "/roof-replacement-guide-nyc/"
+  - "/cost-to-repair-roof-leak/"
   - "/flat-roof-repair-and-replacement-in-nyc/"
 faq:
   - q: "How much does a new flat roof cost in Brooklyn?"
@@ -71,7 +71,7 @@ Co-op and condo boards, and Landmarks Preservation Commission review in historic
 
 ## Brooklyn compared with other boroughs
 
-A ~1,000 sq ft flat roof typically costs **$5,000–$13,000 on Staten Island**, **$5,500–$15,000 in Queens**, **$6,500–$17,000 in Brooklyn** and **$8,000–$22,000+ in Manhattan**. See the full [NYC roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+A ~1,000 sq ft flat roof typically costs **$5,000–$13,000 on Staten Island**, **$5,500–$15,000 in Queens**, **$6,500–$17,000 in Brooklyn** and **$8,000–$22,000+ in Manhattan**. See the full [NYC roof replacement cost guide](/roof-replacement-guide-nyc/).
 
 ## Repair or replace your Brooklyn roof?
 

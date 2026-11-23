@@ -17,7 +17,7 @@ related:
   - "/roof-repair/emergency-service/"
   - "/flat-roof-repair-and-replacement-in-nyc/"
   - "/roof-repair-in-nyc-what-homeowners-need-to-know/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "How much does it cost to repair a roof leak?"
     a: "In New York City, most roof leak repairs cost $300 to $1,200. These are Alter Phase Roofing Contracting's average prices from hundreds of jobs across the five boroughs. The exact price depends on where the water gets in, the type of roof and whether the deck underneath is damaged."

@@ -18,6 +18,7 @@ import Reviews from './Reviews.astro';
 import Faq from './Faq.astro';
 import FinalCta from './FinalCta.astro';
 import { business, telHref } from '../data/business';
+import { replaceImages as img } from '../data/replaceGuide';
 import { typicalReplacement, money } from '../data/costs';
 import { allEntries, readTime, fmtDate, type PostEntry } from '../lib/content';
 
@@ -27,7 +28,9 @@ const d = entry.data;
 const mins = readTime(entry);
 const form = '#pg-wizard';
 // Short chip labels for the article's own sections.
-const short = (t: string) => /estimate/i.test(t) ? 'What to expect in a quote' : /rules/i.test(t) ? 'NYC rules' : /step by step|process/i.test(t) ? 'The process'
+const short = (t: string) => /by roof size/i.test(t) ? 'Cost by size' : /by material/i.test(t) ? 'Cost by material' : /^flat roof/i.test(t) ? 'Flat roofs'
+  : /commercial/i.test(t) ? 'Commercial' : /changes the price/i.test(t) ? 'Price factors' : /signs/i.test(t) ? 'Signs you need a new roof' : /lower the cost/i.test(t) ? 'Saving money'
+  : /estimate/i.test(t) ? 'What to expect in a quote' : /rules/i.test(t) ? 'NYC rules' : /step by step|process/i.test(t) ? 'The process'
   : /choose a roofing/i.test(t) ? 'Hiring a roofer' : /why/i.test(t) ? 'Why us' : t;
 const jump = [
   { id: 'services', t: 'Services' },
@@ -127,6 +130,14 @@ const facts = [
     </div>
     <div data-reveal><LeadCalculator area="Manhattan" start="flat" pickArea areaOrder={["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"]} id="gcalc" /></div>
     <div style="margin-top:2.5rem" data-reveal><PriceTables kinds={['pitched', 'flat']} /></div>
+    <div class="gh-figs">
+      {[img.size, img.material].map((f, i) => (
+        <figure class="gh-fig" data-reveal data-reveal-d={String(i)}>
+          <a href={f.src}><img src={f.src} alt={f.alt} width={f.w} height={f.h} loading="lazy" decoding="async" /></a>
+          <figcaption>{f.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
   </div>
 </section>
 
@@ -137,6 +148,10 @@ const facts = [
       <p class="lead">Same roof, different borough, different price: access, attached walls and building rules change the job. Pick yours.</p>
     </div>
     <BoroughExplorer formHref={form} />
+    <figure class="gh-fig gh-fig-c" data-reveal>
+      <a href={img.borough.src}><img src={img.borough.src} alt={img.borough.alt} width={img.borough.w} height={img.borough.h} loading="lazy" decoding="async" /></a>
+      <figcaption>{img.borough.caption}</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -282,6 +297,14 @@ const facts = [
   .gh-svc-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
   @media (max-width: 1000px) { .gh-svc { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .gh-svc { grid-template-columns: minmax(0, 1fr); } }
+  .gh-figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin-top: clamp(2rem, 4vw, 3rem); }
+  .gh-fig { margin: 0; }
+  .gh-fig a { display: block; border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); }
+  .gh-fig img { display: block; width: 100%; height: auto; }
+  .gh-fig figcaption { margin-top: 0.6rem; font-size: 0.86rem; color: var(--muted); text-align: center; }
+  .dark .gh-fig figcaption { color: var(--muted-d); }
+  .gh-fig-c { max-width: 560px; margin: clamp(2rem, 4vw, 3rem) auto 0; }
+  @media (max-width: 760px) { .gh-figs { grid-template-columns: 1fr; } }
   .gh-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(2rem, 4vw, 3rem); }
   .gh-rule { border: 1px solid var(--line); border-radius: var(--r); padding: 1.3rem 1.4rem; background: #f3faf6; }
   .gh-rule-y { background: #fff8ea; }

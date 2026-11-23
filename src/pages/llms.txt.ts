@@ -97,7 +97,7 @@ ${flat.map((m) => `- ${m.name} flat roof: $${m.low}–$${m.high} per sq ft insta
 - New flat roof, about 1,000 sq ft, by borough: ${boroughs.map((b) => `${b.name} ${money(b.low)}–${money(b.high)}`).join('; ')}
 ${repairs.map((r) => `- ${r.name}: ${range(r.low, r.high)}`).join('\n')}
 ${skylights.map((s) => `- ${s.name}: ${range(s.low, s.high)}`).join('\n')}
-- Roof cost guide: ${SITE}/roof-replacement-cost-in-nyc/
+- Roof cost guide: ${SITE}/roof-replacement-guide-nyc/
 
 ## Frequently asked questions
 

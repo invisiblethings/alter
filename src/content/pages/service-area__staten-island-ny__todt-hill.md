@@ -78,7 +78,7 @@ Wooded lots near the Greenbelt drop leaves and needles into valleys and gutters,
 
 ## What a roof costs in Todt Hill
 
-Todt Hill uses the same Staten Island prices as the rest of the island. Most roof repairs cost **$300–$1,200**, and asphalt shingle roofs cost **$3–$10 per sq ft** installed, so most full replacements on Staten Island land between **$10,000 and $30,000**. Large, steep Todt Hill roofs usually sit at the upper end. Your exact price depends on the size and pitch of the roof, how many layers come off and the condition of the deck. You get it in writing, usually within 24 hours of a free inspection. See the full [roof replacement cost guide](/roof-replacement-cost-in-nyc/) or [what a leak repair costs](/cost-to-repair-roof-leak/).
+Todt Hill uses the same Staten Island prices as the rest of the island. Most roof repairs cost **$300–$1,200**, and asphalt shingle roofs cost **$3–$10 per sq ft** installed, so most full replacements on Staten Island land between **$10,000 and $30,000**. Large, steep Todt Hill roofs usually sit at the upper end. Your exact price depends on the size and pitch of the roof, how many layers come off and the condition of the deck. You get it in writing, usually within 24 hours of a free inspection. See the full [roof replacement cost guide](/roof-replacement-guide-nyc/) or [what a leak repair costs](/cost-to-repair-roof-leak/).
 
 ## Why Todt Hill homeowners call Alter Phase Roofing Contracting
 

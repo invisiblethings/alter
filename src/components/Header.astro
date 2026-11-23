@@ -30,10 +30,10 @@ const bizLinks = [
   { t: 'Property managers & HOAs', u: '/property-managers/' },
 ];
 const costLinks = [
-  { t: 'New roof cost', s: 'Typical Staten Island home', v: `${range(typicalReplacement.low, typicalReplacement.high)}`, u: '/roof-replacement-cost-in-nyc/' },
+  { t: 'NYC roof replacement cost', s: 'By material, size & borough', v: `${range(typicalReplacement.low, typicalReplacement.high)}`, u: '/roof-replacement-guide-nyc/' },
   { t: 'Roof leak repair cost', s: 'Most leaks, fixed properly', v: range(300, 1200), u: '/cost-to-repair-roof-leak/' },
   { t: 'Best roofing materials', s: 'Shingles, metal, flat systems', v: 'Compared', u: '/top-roofing-materials-for-homes-in-new-york/' },
-  { t: 'Roof replacement guide', s: 'Permits, timing, what to ask', v: 'Step by step', u: '/roof-replacement-guide-nyc/' },
+  { t: 'Brooklyn roof cost', s: 'Row houses & brownstones', v: 'Brooklyn', u: '/roof-replacement-cost-in-brooklyn-ny/' },
   { t: 'TPO flat roof guide', s: 'Cost, lifespan, pros & cons', v: 'Flat roofs', u: '/tpo-roofing-guide/' },
 ];
 const siKids = areas.find((a) => a.title === 'Staten Island')?.children || [];
@@ -87,7 +87,7 @@ const imgUrls = homeServices.map((s) => s.img);
         </div>
       </div>
       <div class="nav-item" data-menu>
-        <a class="nav-link" href="/roof-replacement-cost-in-nyc/" aria-current={cur('/roof-replacement-cost-in-nyc/')} aria-haspopup="true" aria-expanded="false">Costs <Icon name="chevron" /></a>
+        <a class="nav-link" href="/roof-replacement-guide-nyc/" aria-current={cur('/roof-replacement-guide-nyc/')} aria-haspopup="true" aria-expanded="false">Costs <Icon name="chevron" /></a>
         <div class="panel">
           <div class="wrap panel-grid">
             <div>

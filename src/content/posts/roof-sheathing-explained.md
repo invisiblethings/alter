@@ -19,7 +19,7 @@ takeaways:
 related:
   - "/types-of-asphalt-shingles/"
   - "/roof-replacement-guide-nyc/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/flat-roof-repair-and-replacement-in-nyc/"
 faq:
   - q: "What is roof sheathing?"
     a: "The flat panels, usually plywood or OSB, nailed to the roof rafters. It's the base for underlayment and shingles or membrane, and it ties the roof structure together."

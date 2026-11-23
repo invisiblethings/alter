@@ -78,7 +78,7 @@ Homes closer to the water and the Narrows catch more wind, which lifts shingles 
 
 ## What a roof costs in Arrochar
 
-Arrochar uses the same Staten Island prices as the rest of the island. Most roof repairs cost **$300–$1,200**, asphalt shingle roofs cost **$3–$10 per sq ft** installed and flat roofs **$5–$16 per sq ft**, so most full replacements on Staten Island land between **$10,000 and $30,000**. Your exact price depends on the size and pitch of the roof, how many layers come off and the condition of the deck. You get it in writing, usually within 24 hours of a free inspection. See the full [roof replacement cost guide](/roof-replacement-cost-in-nyc/) or [what a leak repair costs](/cost-to-repair-roof-leak/).
+Arrochar uses the same Staten Island prices as the rest of the island. Most roof repairs cost **$300–$1,200**, asphalt shingle roofs cost **$3–$10 per sq ft** installed and flat roofs **$5–$16 per sq ft**, so most full replacements on Staten Island land between **$10,000 and $30,000**. Your exact price depends on the size and pitch of the roof, how many layers come off and the condition of the deck. You get it in writing, usually within 24 hours of a free inspection. See the full [roof replacement cost guide](/roof-replacement-guide-nyc/) or [what a leak repair costs](/cost-to-repair-roof-leak/).
 
 ## Why Arrochar homeowners call Alter Phase Roofing Contracting
 

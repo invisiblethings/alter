@@ -112,7 +112,7 @@ Yes. NYC DCWP license #2129904-DCWP, fully insured, a GAF Master Elite® contrac
 
 ## Repair or replace? Our rule of thumb
 
-Repair is usually right when the roof is **under about 15 years old**, the damage is **in one area**, and the shingles or membrane around it are **still flexible**. Replacement makes more sense when the roof is **over 20 years old**, leaks in **several places**, or the deck feels **soft**. When it's close, you get both prices. Leaning toward a new roof? See [roof replacement on Staten Island](/residential-roofing/roof-replacement/) and the [roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+Repair is usually right when the roof is **under about 15 years old**, the damage is **in one area**, and the shingles or membrane around it are **still flexible**. Replacement makes more sense when the roof is **over 20 years old**, leaks in **several places**, or the deck feels **soft**. When it's close, you get both prices. Leaning toward a new roof? See [roof replacement on Staten Island](/residential-roofing/roof-replacement/) and the [roof replacement cost guide](/roof-replacement-guide-nyc/).
 
 ## Why Staten Island homeowners call us
 

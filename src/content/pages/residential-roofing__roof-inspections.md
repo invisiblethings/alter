@@ -22,7 +22,7 @@ related:
   - "/residential-roofing/roof-replacement/"
   - "/all-seasons-roofing-staten-island/"
   - "/cost-to-repair-roof-leak/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/commercial-roofing/roof-inspection/"
 faq:
   - q: "Do you use infrared cameras in your roof inspections?"
@@ -81,7 +81,7 @@ An infrared (thermal imaging) scan of the roof and ceilings, which shows wet ins
 
 A summary of your roof's condition, photos of anything that needs attention, an estimate of remaining life, and a clear list of what to fix now, what to watch and what can wait. If repairs are needed, you get a written price, usually within 24 hours.
 
-Wondering what those repairs might cost? Most home roof repairs run $300–$1,200; see the [roof leak repair cost guide](/cost-to-repair-roof-leak/). If the roof is near the end of its life, the [roof replacement cost guide](/roof-replacement-cost-in-nyc/) shows the full-roof numbers.
+Wondering what those repairs might cost? Most home roof repairs run $300–$1,200; see the [roof leak repair cost guide](/cost-to-repair-roof-leak/). If the roof is near the end of its life, the [roof replacement cost guide](/roof-replacement-guide-nyc/) shows the full-roof numbers.
 
 ## Why our inspections are worth your time
 

@@ -19,7 +19,7 @@ takeaways:
 related:
   - "/types-of-asphalt-shingles/"
   - "/tpo-roofing-guide/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "What is the best roofing material for New York weather?"
     a: "For pitched roofs, wind-rated architectural asphalt shingles offer the best balance of cost and durability against nor'easters and freeze-thaw cycles; metal and slate last longer. For flat roofs, EPDM and TPO both perform well in NYC's climate."
@@ -83,6 +83,6 @@ When comparing quotes, ask which product line (not just which brand) is included
 2. **How long you'll stay:** under 15 years, shingles usually win on value; longer, consider metal.
 3. **Building and neighborhood:** landmarked buildings may need specific materials; heavy materials need a structural check.
 4. **Energy:** a white TPO roof keeps top floors cooler and meets NYC cool-roof rules.
-5. **Budget:** see real prices in our [NYC roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+5. **Budget:** see real prices in our [NYC roof replacement cost guide](/roof-replacement-guide-nyc/).
 
 Not sure? We'll inspect your roof, explain the options that fit your house, and give you prices for each, with no upselling. [Request a free estimate](/free-estimate/).

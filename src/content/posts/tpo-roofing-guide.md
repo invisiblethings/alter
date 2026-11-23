@@ -19,7 +19,7 @@ takeaways:
   - "Installation quality matters more than brand: <strong>seam welding is everything</strong>."
 related:
   - "/flat-roof-repair-and-replacement-in-nyc/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/top-roofing-materials-for-homes-in-new-york/"
 faq:
   - q: "What is a TPO roof?"
@@ -69,7 +69,7 @@ In New York City, installed TPO typically runs **$9–$14 per square foot**, abo
 - **Penetrations and details:** vents, HVAC curbs, parapets and skylights
 - **Access and borough:** Manhattan and Brooklyn cost more than Staten Island and Queens
 
-See how TPO compares on cost with other materials in our [NYC roof cost guide](/roof-replacement-cost-in-nyc/), or use the calculator there.
+See how TPO compares on cost with other materials in our [NYC roof cost guide](/roof-replacement-guide-nyc/), or use the calculator there.
 
 ## TPO vs. other flat roof systems
 

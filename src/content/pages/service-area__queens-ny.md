@@ -21,7 +21,7 @@ related:
   - "/residential-roofing/roof-replacement/"
   - "/flat-roofing/"
   - "/siding-gutter/gutter-installation-repair/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
 faq:
   - q: "How much does a new roof cost in Queens?"
     a: "A 1,000 sq ft flat roof typically runs $5,500–$15,000 in Queens. Shingle roofs on detached homes cost about $3–$10 per sq ft installed, so a 1,500 sq ft roof is roughly $4,500–$15,000. Wider streets make Queens a little less expensive than Brooklyn or Manhattan."
@@ -61,4 +61,4 @@ Storefronts with apartments above along the main avenues. See [commercial roofin
 
 Astoria · Long Island City · Sunnyside · Woodside · Jackson Heights · Elmhurst · Corona · Maspeth · Ridgewood · Middle Village · Glendale · Rego Park · Forest Hills · Kew Gardens · Richmond Hill · Woodhaven · Ozone Park · Howard Beach · Flushing · College Point · Whitestone · Bayside · Douglaston · Little Neck · Fresh Meadows · Jamaica · Hollis · Queens Village · Rockaway.
 
-See what a new roof costs in each borough in our [NYC roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+See what a new roof costs in each borough in our [NYC roof replacement cost guide](/roof-replacement-guide-nyc/).

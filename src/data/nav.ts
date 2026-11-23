@@ -74,8 +74,8 @@ export const company: NavLink[] = [
 ];
 
 export const guides: NavLink[] = [
-  { title: 'Roof Replacement Cost NYC', url: '/roof-replacement-cost-in-nyc/' },
-  { title: 'NYC Roof Replacement Guide', url: '/roof-replacement-guide-nyc/' },
+  { title: 'Roof Replacement Cost NYC', url: '/roof-replacement-guide-nyc/' },
+  { title: 'Roof Replacement Cost Brooklyn', url: '/roof-replacement-cost-in-brooklyn-ny/' },
   { title: 'Roof Leak Repair Cost', url: '/cost-to-repair-roof-leak/' },
   { title: 'TPO Roofing Guide', url: '/tpo-roofing-guide/' },
   { title: 'Best Roofing Materials NY', url: '/top-roofing-materials-for-homes-in-new-york/' },

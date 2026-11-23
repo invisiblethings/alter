@@ -12,8 +12,10 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 /index.html             /                    301!
 
 # --- Consolidated pages (duplicate / competing content merged in the rebuild)
-/roofing-costs-in-nyc/                                       /roof-replacement-cost-in-nyc/ 301
-/roofing-costs-in-nyc                                        /roof-replacement-cost-in-nyc/ 301
+/roof-replacement-cost-in-nyc/                               /roof-replacement-guide-nyc/ 301
+/roof-replacement-cost-in-nyc                                /roof-replacement-guide-nyc/ 301
+/roofing-costs-in-nyc/                                       /roof-replacement-guide-nyc/ 301
+/roofing-costs-in-nyc                                        /roof-replacement-guide-nyc/ 301
 /guide-roofing-material-for-home-staten-island-brooklyn/     /top-roofing-materials-for-homes-in-new-york/ 301
 /guide-roofing-material-for-home-staten-island-brooklyn      /top-roofing-materials-for-homes-in-new-york/ 301
 /flat-roofing-brooklyn/                                      /service-area/brooklyn-ny/flat-roofing/ 301
@@ -59,14 +61,14 @@ https://www.alterphaseroofing.com/*  https://alterphaseroofing.com/:splat 301!
 
 # --- Old plain permalinks (?p= / ?page_id=) -> pretty URLs
 / p=1331 /roof-replacement-cost-in-brooklyn-ny/ 301
-/ p=2555 /roof-replacement-cost-in-nyc/ 301
+/ p=2555 /roof-replacement-guide-nyc/ 301
 / p=1001 /roof-replacement-guide-nyc/ 301
 / p=1947 /top-roofing-materials-for-homes-in-new-york/ 301
 / p=1724 /all-seasons-roofing-staten-island/ 301
 / p=1670 /affordable-roofing-staten-island/ 301
 / p=1435 /roof-sheathing-explained/ 301
 / p=1371 /cost-to-repair-roof-leak/ 301
-/ p=1328 /roof-replacement-cost-in-nyc/ 301
+/ p=1328 /roof-replacement-guide-nyc/ 301
 / p=1271 /flat-roof-repair-and-replacement-in-nyc/ 301
 / p=1269 /roof-repair-in-nyc-what-homeowners-need-to-know/ 301
 / p=1216 /types-of-asphalt-shingles/ 301

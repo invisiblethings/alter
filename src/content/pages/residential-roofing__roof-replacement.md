@@ -19,7 +19,6 @@ image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
 imageAlt: "New architectural shingle roof installed by Alter Phase Roofing Contracting on a home in Staten Island 10314"
 answer: "A roof replacement on a Staten Island home typically costs <strong>$10,000–$30,000</strong>. Asphalt shingles run $3–$10 per sq ft installed, and a 1,000 sq ft flat roof $5,000–$13,000. Most homes are finished in a single day. Replace when the roof is 20+ years old, leaks in several places, or the deck is soft."
 related:
-  - "/roof-replacement-cost-in-nyc/"
   - "/roof-replacement-guide-nyc/"
   - "/top-roofing-materials-for-homes-in-new-york/"
   - "/types-of-asphalt-shingles/"
@@ -55,7 +54,7 @@ If only one area is damaged, a [repair](/roof-repair/) may be all you need. We'l
 
 Most Staten Island homes, from colonials and capes to high-ranches and two-families, have pitched roofs, and architectural asphalt shingles run $3–$10 per sq ft installed. Flat roofs over extensions and garages run $5–$14 per sq ft depending on the system. Staten Island is usually the least expensive borough for roofing because driveways and wider streets make staging and debris removal easier.
 
-The price tables and estimator below show the ranges for your roof size. For the full breakdown, read our [roof replacement cost guide](/roof-replacement-cost-in-nyc/).
+The price tables and estimator below show the ranges for your roof size. For the full breakdown, read our [roof replacement cost guide](/roof-replacement-guide-nyc/).
 
 ## What's included in every replacement
 

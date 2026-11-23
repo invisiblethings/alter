@@ -22,7 +22,7 @@ related:
   - "/roof-repair/commercial/"
   - "/commercial-roofing/roof-inspection/"
   - "/tpo-roofing-guide/"
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/property-managers/"
 faq:
   - q: "How long does a commercial roof replacement take?"
@@ -49,7 +49,7 @@ Not sure? A [commercial roof inspection](/commercial-roofing/roof-inspection/) w
 
 ## What a new commercial roof costs
 
-The biggest price drivers are the system you choose, how many old layers come off, how much insulation is wet, and how easy the roof is to reach. Staten Island usually costs less than the other boroughs because streets are wider and staging is easier. The price tables below show current ranges per square foot, and our [roof replacement cost guide](/roof-replacement-cost-in-nyc/) goes into more detail. Permit costs are included in your written estimate.
+The biggest price drivers are the system you choose, how many old layers come off, how much insulation is wet, and how easy the roof is to reach. Staten Island usually costs less than the other boroughs because streets are wider and staging is easier. The price tables below show current ranges per square foot, and our [roof replacement cost guide](/roof-replacement-guide-nyc/) goes into more detail. Permit costs are included in your written estimate.
 
 ## Our commercial replacement process
 

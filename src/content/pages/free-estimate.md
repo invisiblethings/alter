@@ -12,7 +12,7 @@ highlights:
   - "No pressure. Take your time and compare"
 answer: "Alter Phase Roofing Contracting offers free roofing estimates on Staten Island, Brooklyn, Manhattan and Queens. We inspect the roof in person, photograph what we find and send a written, itemized estimate, usually within 24 hours, with no obligation. Call (929) 370-1552 or use the form."
 related:
-  - "/roof-replacement-cost-in-nyc/"
+  - "/roof-replacement-guide-nyc/"
   - "/how-we-work/"
   - "/reviews/"
   - "/contact/"
@@ -34,6 +34,6 @@ modified: "2026-10-22"
 3. **You get a written estimate** within about 24 hours, itemized, with options when there's more than one way to fix it.
 4. **You decide.** No pressure, no follow-up calls every day.
 
-Want a ballpark first? Try the cost estimator in our [NYC roof cost guide](/roof-replacement-cost-in-nyc/).
+Want a ballpark first? Try the cost estimator in our [NYC roof cost guide](/roof-replacement-guide-nyc/).
 
 Water coming in right now? Don't wait for the form. Call [(929) 370-1552](tel:+19293701552) for [emergency roof repair](/roof-repair/emergency-service/).

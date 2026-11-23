@@ -90,7 +90,7 @@ We're licensed by NYC DCWP (#2129904-DCWP), fully insured and BBB Accredited, wi
 
 ## When we'll tell you not to repair
 
-If your roof is over 20 years old, leaks in several places, has a soft or sagging deck, or has already been patched more than once, more repairs usually mean paying twice. In that case we show you the photos and give you a [roof replacement](/residential-roofing/roof-replacement/) price next to the repair price, so you can decide with real numbers. The [roof replacement cost guide](/roof-replacement-cost-in-nyc/) shows what a full roof usually runs.
+If your roof is over 20 years old, leaks in several places, has a soft or sagging deck, or has already been patched more than once, more repairs usually mean paying twice. In that case we show you the photos and give you a [roof replacement](/residential-roofing/roof-replacement/) price next to the repair price, so you can decide with real numbers. The [roof replacement cost guide](/roof-replacement-guide-nyc/) shows what a full roof usually runs.
 
 ## Who you're hiring
 

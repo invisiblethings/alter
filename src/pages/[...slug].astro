@@ -6,6 +6,7 @@ import PostView from '../components/PostView.astro';
 import GuideHybridView from '../components/GuideHybridView.astro';
 import LeakCostView from '../components/LeakCostView.astro';
 import { leakImages } from '../data/leakGuide';
+import { replaceImages } from '../data/replaceGuide';
 import SimpleView from '../components/SimpleView.astro';
 import LandingView from '../components/LandingView.astro';
 import { allEntries, crumbsFor, type Entry, type PageEntry, type PostEntry } from '../lib/content';
@@ -46,7 +47,8 @@ const schema = pageGraph({
   published: d.published, modified: d.modified, crumbs, kind, h1: d.h1,
   serviceArea: 'area' in d ? d.area : undefined,
   neighborhood: 'neighborhood' in d ? d.neighborhood : undefined,
-  images: 'layout' in d && d.layout === 'leak' ? Object.values(leakImages).map((i) => i.src) : undefined,
+  images: 'layout' in d && d.layout === 'leak' ? Object.values(leakImages).map((i) => i.src)
+    : d.path === '/roof-replacement-guide-nyc/' ? [d.image, ...Object.values(replaceImages).map((i) => i.src)].filter(Boolean) as string[] : undefined,
   serviceName: 'service' in d ? d.service : undefined,
   price, faq: d.faq,
 });
