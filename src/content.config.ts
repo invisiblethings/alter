@@ -5,7 +5,7 @@ const faq = z.array(z.object({ q: z.string(), a: z.string() })).default([]);
 
 const base = {
   path: z.string().regex(/^\/(.*\/)?$/),
-  seoTitle: z.string().max(70),
+  seoTitle: z.string().max(80),
   description: z.string().min(70).max(170),
   h1: z.string(),
   kicker: z.string().optional(),
