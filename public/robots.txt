@@ -15,32 +15,26 @@
 # Google Search, AI Overviews and AI Mode
 User-agent: Googlebot
 Allow: /
-Disallow: /.netlify/
 
 # Google Images
 User-agent: Googlebot-Image
 Allow: /
-Disallow: /.netlify/
 
 # Bing, and Microsoft Copilot answers
 User-agent: Bingbot
 Allow: /
-Disallow: /.netlify/
 
 # Siri, Spotlight and Safari suggestions
 User-agent: Applebot
 Allow: /
-Disallow: /.netlify/
 
 # DuckDuckGo
 User-agent: DuckDuckBot
 Allow: /
-Disallow: /.netlify/
 
 # Yandex
 User-agent: YandexBot
 Allow: /
-Disallow: /.netlify/
 
 # ======================================================================
 # AI search and answer engines (crawl pages to cite them in answers)
@@ -49,52 +43,42 @@ Disallow: /.netlify/
 # ChatGPT search
 User-agent: OAI-SearchBot
 Allow: /
-Disallow: /.netlify/
 
 # ChatGPT opening a page for a user
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /.netlify/
 
 # Claude search
 User-agent: Claude-SearchBot
 Allow: /
-Disallow: /.netlify/
 
 # Claude opening a page for a user
 User-agent: Claude-User
 Allow: /
-Disallow: /.netlify/
 
 # Perplexity search
 User-agent: PerplexityBot
 Allow: /
-Disallow: /.netlify/
 
 # Perplexity opening a page for a user
 User-agent: Perplexity-User
 Allow: /
-Disallow: /.netlify/
 
 # DuckDuckGo AI answers
 User-agent: DuckAssistBot
 Allow: /
-Disallow: /.netlify/
 
 # Mistral Le Chat
 User-agent: MistralAI-User
 Allow: /
-Disallow: /.netlify/
 
 # Meta AI opening a page for a user
 User-agent: Meta-ExternalFetcher
 Allow: /
-Disallow: /.netlify/
 
 # You.com
 User-agent: YouBot
 Allow: /
-Disallow: /.netlify/
 
 # ======================================================================
 # AI models (training lets assistants know the business by name)
@@ -103,42 +87,34 @@ Disallow: /.netlify/
 # OpenAI
 User-agent: GPTBot
 Allow: /
-Disallow: /.netlify/
 
 # Anthropic
 User-agent: ClaudeBot
 Allow: /
-Disallow: /.netlify/
 
 # Gemini
 User-agent: Google-Extended
 Allow: /
-Disallow: /.netlify/
 
 # Apple Intelligence
 User-agent: Applebot-Extended
 Allow: /
-Disallow: /.netlify/
 
 # Alexa and Amazon AI
 User-agent: Amazonbot
 Allow: /
-Disallow: /.netlify/
 
 # Meta AI
 User-agent: Meta-ExternalAgent
 Allow: /
-Disallow: /.netlify/
 
 # Common Crawl, used by many AI models
 User-agent: CCBot
 Allow: /
-Disallow: /.netlify/
 
 # Cohere
 User-agent: cohere-ai
 Allow: /
-Disallow: /.netlify/
 
 # ======================================================================
 # Everyone else
@@ -146,6 +122,5 @@ Disallow: /.netlify/
 
 User-agent: *
 Allow: /
-Disallow: /.netlify/
 
 Sitemap: https://alterphaseroofing.com/sitemap-index.xml
