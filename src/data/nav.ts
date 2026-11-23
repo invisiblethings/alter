@@ -58,6 +58,7 @@ export const areas: NavLink[] = [
       { title: 'Flat Roofing Brooklyn', url: '/service-area/brooklyn-ny/flat-roofing/' },
       { title: 'Roof Repair Brooklyn', url: '/service-area/brooklyn-ny/roof-repair/' },
       { title: 'Roof Replacement Brooklyn', url: '/service-area/brooklyn-ny/roof-replacement/' },
+      { title: 'Townhouse Roof Replacement Brooklyn', url: '/service-area/brooklyn-ny/townhouse-roof-replacement/' },
     ],
   },
   { title: 'Manhattan', url: '/service-area/manhattan-ny/', blurb: 'Co-ops, condos, commercial' },

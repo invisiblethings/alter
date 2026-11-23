@@ -34,6 +34,8 @@ const pages = defineCollection({
     wizard: z.string().optional(),
     trackingPhone: z.string().regex(/^\(\d{3}\) \d{3}-\d{4}$/).optional(), // ads landing pages only
     projects: z.array(z.object({ title: z.string(), location: z.string(), image: z.string() })).default([]),
+    // Infographics shown after the prices (and listed as page images in the schema).
+    figures: z.array(z.object({ src: z.string(), w: z.number(), h: z.number(), alt: z.string(), caption: z.string() })).default([]),
   }),
 });
 

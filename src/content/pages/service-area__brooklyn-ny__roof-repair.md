@@ -20,6 +20,7 @@ answer: "Most roof repairs in Brooklyn cost <strong>$400–$1,500</strong>: flat
 related:
   - "/service-area/brooklyn-ny/"
   - "/service-area/brooklyn-ny/flat-roofing/"
+  - "/service-area/brooklyn-ny/townhouse-roof-replacement/"
   - "/roof-repair/"
   - "/roof-repair/emergency-service/"
   - "/cost-to-repair-roof-leak/"

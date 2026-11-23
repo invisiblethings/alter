@@ -79,4 +79,4 @@ If your roof is under about 15 years old and the leak is at one parapet, seam or
 
 ## Get a written price for your Brooklyn roof
 
-We inspect for free, photograph the roof and parapets, and send an itemized estimate, usually within 24 hours. Learn more about our [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/) work or call [(929) 370-1552](tel:+19293701552).
+We inspect for free, photograph the roof and parapets, and send an itemized estimate, usually within 24 hours. Own a brownstone or row house? See [townhouse roof replacement costs in Brooklyn](/service-area/brooklyn-ny/townhouse-roof-replacement/) by roof size. Learn more about our [Brooklyn flat roofing](/service-area/brooklyn-ny/flat-roofing/) work or call [(929) 370-1552](tel:+19293701552).

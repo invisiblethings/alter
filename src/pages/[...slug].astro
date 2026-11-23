@@ -11,7 +11,7 @@ import SimpleView from '../components/SimpleView.astro';
 import LandingView from '../components/LandingView.astro';
 import { allEntries, crumbsFor, type Entry, type PageEntry, type PostEntry } from '../lib/content';
 import { pageGraph } from '../lib/schema';
-import { materials, repairs, repairTiers, skylights } from '../data/costs';
+import { materials, repairs, repairTiers, skylights, boroughs } from '../data/costs';
 
 export async function getStaticPaths() {
   return (await allEntries())
@@ -29,7 +29,10 @@ const t = d.template;
 const prices = 'prices' in d ? d.prices : [];
 const flat = materials.filter((m) => m.type === 'flat');
 const pitched = materials.filter((m) => m.type === 'pitched');
-const price = prices.includes('skylights') ? { min: skylights[0].low, max: skylights[2].high }
+// Townhouse page: the Brooklyn 1,000 sq ft flat roof range, for a whole job.
+const bk = boroughs.find((b) => b.name === 'Brooklyn')!;
+const price = d.path === '/service-area/brooklyn-ny/townhouse-roof-replacement/' ? { min: bk.low, max: bk.high }
+  : prices.includes('skylights') ? { min: skylights[0].low, max: skylights[2].high }
   : prices.includes('tiers') ? { min: repairTiers[0].low, max: repairTiers[2].high }
   : prices.includes('repairs') ? { min: Math.min(...repairs.map((r) => r.low)), max: Math.max(...repairs.map((r) => r.high)) }
   : prices.includes('flat') ? { min: Math.min(...flat.map((m) => m.low)), max: Math.max(...flat.map((m) => m.high)), unit: 'square foot' }
@@ -48,7 +51,8 @@ const schema = pageGraph({
   serviceArea: 'area' in d ? d.area : undefined,
   neighborhood: 'neighborhood' in d ? d.neighborhood : undefined,
   images: 'layout' in d && d.layout === 'leak' ? Object.values(leakImages).map((i) => i.src)
-    : d.path === '/roof-replacement-guide-nyc/' ? [d.image, ...Object.values(replaceImages).map((i) => i.src)].filter(Boolean) as string[] : undefined,
+    : d.path === '/roof-replacement-guide-nyc/' ? [d.image, ...Object.values(replaceImages).map((i) => i.src)].filter(Boolean) as string[]
+    : 'figures' in d && d.figures.length ? d.figures.map((f) => f.src) : undefined,
   serviceName: 'service' in d ? d.service : undefined,
   price, faq: d.faq,
 });

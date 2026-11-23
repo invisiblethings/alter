@@ -33,6 +33,7 @@ related:
   - "/service-area/brooklyn-ny/flat-roofing/"
   - "/service-area/brooklyn-ny/roof-repair/"
   - "/service-area/brooklyn-ny/roof-replacement/"
+  - "/service-area/brooklyn-ny/townhouse-roof-replacement/"
   - "/roof-replacement-cost-in-brooklyn-ny/"
   - "/flat-roofing/"
 faq:
@@ -77,6 +78,7 @@ Co-ops, condos and historic districts come with approvals and paperwork. We prov
 - **[Flat roofing in Brooklyn](/service-area/brooklyn-ny/flat-roofing/):** installation, repair and replacement for row homes and brownstones
 - **[Roof repair in Brooklyn](/service-area/brooklyn-ny/roof-repair/):** leaks, flashing, parapets and storm damage
 - **[Roof replacement in Brooklyn](/service-area/brooklyn-ny/roof-replacement/):** full tear-offs with new insulation and drainage where needed
+- **[Townhouse roof replacement and repair](/service-area/brooklyn-ny/townhouse-roof-replacement/):** brownstone and row house roofs, with costs by roof size
 - **[Commercial roofing](/commercial-roofing/):** storefronts, mixed-use and multi-family buildings
 - **[Skylights](/residential-roofing/skylight-installation-repair/)** and **[gutters](/siding-gutter/gutter-installation-repair/)**
 

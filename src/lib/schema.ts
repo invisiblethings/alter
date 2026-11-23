@@ -184,6 +184,7 @@ export function pageGraph(p: PageInput) {
           ...(p.price.unit ? { unitText: p.price.unit } : {}),
         },
       } : undefined,
+      image: p.images?.length ? [...new Set([p.image, ...p.images].filter(Boolean).map((i) => abs(i!)))] : undefined,
       mainEntityOfPage: { '@id': `${url}#webpage` },
     });
   }

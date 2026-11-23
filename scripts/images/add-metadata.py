@@ -60,15 +60,31 @@ REPLACE = {
     ),
 }
 
+TOWNHOUSE = {
+    'townhouse-roof-replacement-cost-brooklyn.jpg': (
+        'Townhouse roof replacement cost in Brooklyn (2026)',
+        'Townhouse roof replacement cost in Brooklyn, 2026: 600 sq ft row house roof $3,900-$10,200, 800 sq ft $5,200-$13,600, 1,000 sq ft brownstone $6,500-$17,000, 1,200 sq ft $7,800-$20,400. Most townhouse roof repairs $400-$1,200. Average prices from hundreds of Alter Phase Roofing Contracting jobs.',
+        ['townhouse roof replacement cost', 'brownstone roof replacement', 'row house roof cost', 'infographic'],
+    ),
+    'townhouse-roof-anatomy-brooklyn-row-house.jpg': (
+        'Anatomy of a Brooklyn townhouse roof',
+        'Diagram of a Brooklyn townhouse flat roof: parapet wall and coping, base and counter flashing, party-wall flashing, roof membrane, tapered insulation, roof deck, roof hatch or skylight, and drain.',
+        ['townhouse roof', 'row house roof', 'brownstone roof', 'flat roof parts', 'diagram'],
+    ),
+}
+
 GUIDES = [
     ('public/images/guides/roof-leak-repair-cost', '/cost-to-repair-roof-leak/',
      ['roof leak repair', 'roof leak repair cost', 'NYC roofing', 'Staten Island roofer', BRAND], LEAK),
     ('public/images/guides/roof-replacement-cost-nyc', '/roof-replacement-guide-nyc/',
      ['roof replacement cost NYC', 'roof replacement NYC', 'new roof cost', 'NYC roofing', BRAND], REPLACE),
+    ('public/images/guides/brooklyn-townhouse-roof', '/service-area/brooklyn-ny/townhouse-roof-replacement/',
+     ['townhouse roof replacement', 'townhouse roof repair Brooklyn', 'Brooklyn roofer', BRAND], TOWNHOUSE),
 ]
 
 for folder, page, base_kw, images in GUIDES:
   PAGE = SITE + page
+  city = 'Brooklyn' if 'brooklyn' in folder else 'Staten Island'
   for name, (title, desc, kw) in images.items():
     path = ROOT / folder / name
     keywords = base_kw + kw
@@ -88,7 +104,7 @@ for folder, page, base_kw, images in GUIDES:
             'Iptc.Application2.Credit': BRAND,
             'Iptc.Application2.Source': SITE,
             'Iptc.Application2.Copyright': COPY,
-            'Iptc.Application2.City': 'Staten Island',
+            'Iptc.Application2.City': city,
             'Iptc.Application2.ProvinceState': 'NY',
             'Iptc.Application2.CountryName': 'United States',
         })
@@ -100,7 +116,7 @@ for folder, page, base_kw, images in GUIDES:
             'Xmp.dc.rights': {'lang="x-default"': COPY},
             'Xmp.photoshop.Headline': title,
             'Xmp.photoshop.Credit': BRAND,
-            'Xmp.photoshop.City': 'Staten Island',
+            'Xmp.photoshop.City': city,
             'Xmp.photoshop.State': 'NY',
             'Xmp.photoshop.Country': 'United States',
             'Xmp.xmpRights.Marked': 'True',
