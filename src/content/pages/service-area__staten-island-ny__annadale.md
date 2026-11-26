@@ -13,6 +13,12 @@ highlights:
 service: "Roofing"
 area: "Staten Island"
 neighborhood: "Annadale"
+map:
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24259.479881926046!2d-74.18087286299321!3d40.531978042739105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24a587bd3a40f%3A0x3a3d81d977b99e8e!2sAnnadale%2C%20Staten%20Island%2C%20NY%2010312!5e0!3m2!1sen!2sus!4v1795685632718!5m2!1sen!2sus"
+  title: "Map of Annadale, Staten Island, NY 10312: roofing service area of Alter Phase Roofing Contracting"
+  heading: "Roofers serving all of Annadale, Staten Island"
+  text: "We repair and replace roofs across Annadale (ZIP 10312), from the homes around Blue Heron Park Preserve and the Annadale Staten Island Railway station to the blocks off Annadale Road, Arden Avenue and Hylan Boulevard. Free inspections, and emergency leak repair 24/7."
+  link: "https://www.google.com/maps/place/Annadale,+Staten+Island,+NY+10312/"
 wizard: "Roof replacement"
 prices: ["pitched", "skylights"]
 image: "/wp-content/uploads/2025/05/IMG-d52b89e8d54e11c5b9d6a9577467ad33-V.jpg"

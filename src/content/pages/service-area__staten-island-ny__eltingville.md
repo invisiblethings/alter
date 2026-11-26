@@ -13,6 +13,12 @@ highlights:
 service: "Roofing"
 area: "Staten Island"
 neighborhood: "Eltingville"
+map:
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24254.401493155328!2d-74.16832941298684!3d40.54600344270397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24a4caf45927f%3A0xf6fdae64b1d9e28c!2sEltingville%2C%20Staten%20Island%2C%20NY!5e0!3m2!1sen!2sus!4v1795685605341!5m2!1sen!2sus"
+  title: "Map of Eltingville, Staten Island, NY: roofing service area of Alter Phase Roofing Contracting"
+  heading: "Roofers serving all of Eltingville, Staten Island"
+  text: "We repair and replace roofs on every street in Eltingville (ZIP 10312), from the blocks around the Eltingville Staten Island Railway station to the homes off Richmond Avenue, Amboy Road and Hylan Boulevard. Free inspections, and emergency leak repair 24/7."
+  link: "https://www.google.com/maps/place/Eltingville,+Staten+Island,+NY/"
 wizard: "Roof replacement"
 prices: ["pitched", "repairs"]
 image: "/wp-content/uploads/2025/04/Replaced-Roof-10305-Staten-Island-10304.jpg"

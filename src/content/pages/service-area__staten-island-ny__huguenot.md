@@ -13,6 +13,12 @@ highlights:
 service: "Roofing"
 area: "Staten Island"
 neighborhood: "Huguenot"
+map:
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24257.543335000492!2d-74.19973824890384!3d40.53732683568177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24ac2aacff8f7%3A0x58826aa6f63824ee!2sHuguenot%2C%20Staten%20Island%2C%20NY%2010312!5e0!3m2!1sen!2sus!4v1795685815933!5m2!1sen!2sus"
+  title: "Map of Huguenot, Staten Island, NY 10312: roofing service area of Alter Phase Roofing Contracting"
+  heading: "Roofers serving all of Huguenot, Staten Island"
+  text: "We repair and replace roofs throughout Huguenot (ZIP 10312), from the streets around the Huguenot Staten Island Railway station and Wolfe's Pond Park to the homes off Huguenot Avenue, Amboy Road and Hylan Boulevard. Storm damage? We answer 24/7."
+  link: "https://www.google.com/maps/place/Huguenot,+Staten+Island,+NY+10312/"
 wizard: "Roof leak / repair"
 prices: ["repairs", "pitched"]
 image: "/wp-content/uploads/2025/05/New-Roof-10314-Staten-Island-NY.jpg"
